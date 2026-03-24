@@ -1,4 +1,203 @@
-/* 组网架构图样式 - 最早的 ASCII 图表版本 */
+/**
+ * Network Diagram Styles
+ * 组网架构图样式 - 支持多种显示模式
+ */
+
+/* ========================================
+   新版可视化组网架构图样式
+   ======================================== */
+
+.network-diagram {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 20px 0;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 云平台层 */
+.network-cloud {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 16px;
+    padding: 25px 40px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+}
+
+.network-cloud .network-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.network-cloud .network-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+.network-cloud .network-desc {
+    font-size: 0.9rem;
+    color: #3b82f6;
+}
+
+/* 层级容器 */
+.network-layer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 节点样式 */
+.network-node {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.network-node:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.network-node .network-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.network-node .network-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.network-node .network-desc {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* 节点类型颜色 */
+.network-node.core {
+    border-color: #dc2626;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.network-node.core .network-label {
+    color: #991b1b;
+}
+
+.network-node.aggregation {
+    border-color: #ea580c;
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+.network-node.aggregation .network-label {
+    color: #9a3412;
+}
+
+.network-node.access {
+    border-color: #16a34a;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.network-node.access .network-label {
+    color: #166534;
+}
+
+/* 连接线 */
+.network-connector {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    position: relative;
+}
+
+.network-connector::before,
+.network-connector::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.network-connector::before {
+    top: -4px;
+}
+
+.network-connector::after {
+    bottom: -4px;
+}
+
+/* 水平连接线 */
+.network-connector-horizontal {
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    margin: 0 10px;
+}
+
+/* 图例 */
+.network-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.network-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.network-legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 2px solid;
+}
+
+.network-legend-color.core {
+    background: #fef2f2;
+    border-color: #dc2626;
+}
+
+.network-legend-color.aggregation {
+    background: #fff7ed;
+    border-color: #ea580c;
+}
+
+.network-legend-color.access {
+    background: #f0fdf4;
+    border-color: #16a34a;
+}
+
+/* ========================================
+   ASCII 图表样式（保留兼容）
+   ======================================== */
+
 .network-diagram-ascii {
     background: #f8fafc;
     border-radius: 8px;
@@ -18,4 +217,41 @@
     white-space: pre;
     line-height: 2.5;
     font-size: 1rem;
+}
+
+/* ========================================
+   响应式设计
+   ======================================== */
+
+@media (max-width: 768px) {
+    .network-diagram {
+        padding: 20px;
+        min-height: 400px;
+    }
+    
+    .network-cloud {
+        min-width: 250px;
+        padding: 20px 30px;
+    }
+    
+    .network-cloud .network-icon {
+        font-size: 2.5rem;
+    }
+    
+    .network-layer {
+        gap: 15px;
+    }
+    
+    .network-node {
+        min-width: 140px;
+        padding: 15px 20px;
+    }
+    
+    .network-node .network-icon {
+        font-size: 2rem;
+    }
+    
+    .network-legend {
+        gap: 15px;
+    }
 }
