@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为 MA5800 OLT 产品规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <style>
+        .spec-section {
+            margin: 40px 0;
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .spec-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .spec-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .spec-table tr:hover {
+            background: #f8fafc;
+        }
+        .spec-category {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .feature-card h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+        }
+        .model-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 3px;
+        }
+        .model-x17 { background: #fef2f2; color: #dc2626; }
+        .model-x15 { background: #fff7ed; color: #ea580c; }
+        .model-x7 { background: #f0fdf4; color: #16a34a; }
+        .model-x2 { background: #eff6ff; color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            MA5800 产品规格
+        </div>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🔌</div>
+            <h1>华为 SmartAX MA5800 OLT</h1>
+            <p style="font-size: 1.2rem; color: #6b7280; max-width: 800px; margin: 20px auto;">
+                业界首个分布式架构的智能汇聚OLT平台，定位为面向NG-PON的下一代OLT，
+                为用户提供超宽、绿色、智能的全光接入网络。
+            </p>
+            <div style="margin-top: 20px;">
+                <span class="model-badge model-x17">MA5800-X17</span>
+                <span class="model-badge model-x15">MA5800-X15</span>
+                <span class="model-badge model-x7">MA5800-X7</span>
+                <span class="model-badge model-x2">MA5800-X2</span>
+            </div>
+        </div>
+
+        <!-- 核心规格 -->
+        <section class="spec-section">
+            <h2 style="color: var(--primary); margin-bottom: 25px;">📊 核心性能规格</h2>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>规格参数</th>
+                        <th>MA5800-X17</th>
+                        <th>MA5800-X15</th>
+                        <th>MA5800-X7</th>
+                        <th>MA5800-X2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="spec-category">
+                        <td colspan="5">系统架构</td>
+                    </tr>
+                    <tr>
+                        <td><strong>主控板交换容量</strong></td>
+                        <td colspan="2">7 Tbit/s (MPLB)</td>
+                        <td>3.6 Tbit/s</td>
+                        <td>480 Gbit/s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>单槽位带宽</strong></td>
+                        <td colspan="2">200 Gbit/s</td>
+                        <td>100 Gbit/s</td>
+                        <td>80 Gbit/s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>系统包转发率</strong></td>
+                        <td colspan="2">10357 Mpps</td>
+                        <td>5298 Mpps</td>
+                        <td>714 Mpps</td>
+                    </tr>
+                    <tr class="spec-category">
+                        <td colspan="5">端口规格</td>
+                    </tr>
+                    <tr>
+                        <td>GPON/EPON端口</td>
+                        <td>272</td>
+                        <td>240</td>
+                        <td>112</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>XG-PON端口</td>
+                        <td>272</td>
+                        <td>240</td>
+                        <td>112</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>XGS-PON端口</td>
+                        <td>272</td>
+                        <td>240</td>
+                        <td>112</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>10G EPON端口</td>
+                        <td>136</td>
+                        <td>120</td>
+                        <td>56</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>GE/10GE上行</td>
+                        <td>272</td>
+                        <td>240</td>
+                        <td>168</td>
+                        <td>48</td>
+                    </tr>
+                    <tr class="spec-category">
+                        <td colspan="5">物理规格</td>
+                    </tr>
+                    <tr>
+                        <td>尺寸(H×W×D mm)</td>
+                        <td>486×493×287</td>
+                        <td>486×442×287</td>
+                        <td>264×442×269</td>
+                        <td>88×442×269</td>
+                    </tr>
+                    <tr>
+                        <td>业务槽位</td>
+                        <td>17</td>
+                        <td>15</td>
+                        <td>7</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 软件特性 -->
+        <section class="spec-section">
+            <h2 style="color: var(--primary); margin-bottom: 25px;">🖥️ 软件特性</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🎯 QoS特性</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>支持基于VLAN、802.1P、DSCP流量分类</li>
+                        <li>支持CAR流量监管</li>
+                        <li>支持SP、WRR、DWRR队列调度</li>
+                        <li>支持WRED拥塞避免</li>
+                        <li>支持优先级映射</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🔒 安全特性</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>支持802.1X/MAC/Portal认证</li>
+                        <li>支持ACL访问控制</li>
+                        <li>支持DHCP Snooping防护</li>
+                        <li>支持IP Source Guard</li>
+                        <li>支持广播风暴抑制</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🛠️ 管理维护</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>支持CLI/SNMP/Telnet/SSH/Web</li>
+                        <li>支持U2000/NCE网管</li>
+                        <li>支持Syslog日志管理</li>
+                        <li>支持告警分级管理</li>
+                        <li>支持远程升级诊断</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🎬 视频优化</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>分布式大缓存防丢包</li>
+                        <li>内置VMOS/eMDI探针</li>
+                        <li>远程视频体验感知</li>
+                        <li>优化频道切换时延</li>
+                        <li>支持4K/8K无卡顿传输</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🔄 平滑演进</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>PON Combo技术支持</li>
+                        <li>GPON→XG(S)-PON演进</li>
+                        <li>支持50G PON升级</li>
+                        <li>无需更换ODN网络</li>
+                        <li>保护现有投资</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>📡 PON特性</h4>
+                    <ul style="line-height: 1.8;">
+                        <li>支持GPON/XG-PON/XGS-PON</li>
+                        <li>支持EPON/10G-EPON/50G-PON</li>
+                        <li>光功率检测诊断</li>
+                        <li>动态带宽分配DBA</li>
+                        <li>Type B/C/D保护</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 可靠性 -->
+        <section class="spec-section">
+            <h2 style="color: var(--primary); margin-bottom: 25px;">🛡️ 可靠性指标</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); padding: 25px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #166534;">99.999%</div>
+                    <div style="color: #15803d; margin-top: 10px;">系统可用度</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 25px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #1e40af;">45年</div>
+                    <div style="color: #1d4ed8; margin-top: 10px;">MTBF平均故障间隔</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: 25px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #92400e;">2小时</div>
+                    <div style="color: #b45309; margin-top: 10px;">FRU平均修复时间</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #f3e8ff, #d8b4fe); padding: 25px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #6b21a8;"><10⁻¹⁰</div>
+                    <div style="color: #7e22ce; margin-top: 10px;">满负荷误码率</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 官方资料 -->
+        <section class="spec-section">
+            <h2 style="color: var(--primary); margin-bottom: 25px;">📚 官方资料</h2>
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px;">
+                <ul style="line-height: 2;">
+                    <li><strong>华为企业业务：</strong> 
+                        <a href="https://e.huawei.com/cn/products/optical-access/ma5800" target="_blank" style="color: #3b82f6;">https://e.huawei.com/cn/products/optical-access/ma5800</a>
+                    </li>
+                    <li><strong>技术支持：</strong> 
+                        <a href="https://support.huawei.com/enterprise/zh/optical-access/smartax-ma5800-pid-21484577" target="_blank" style="color: #3b82f6;">https://support.huawei.com/enterprise/zh/optical-access/ma5800</a>
+                    </li>
+                    <li><strong>产品彩页：</strong> 
+                        <a href="https://carrier.huawei.com/~/media/cnbg/downloads/product/fixed%20network/access/chinese/ma5800--v2-0.pdf" target="_blank" style="color: #3b82f6;">MA5800产品彩页PDF下载</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="../huawei-f5g.html" class="btn">← 返回华为F5G方案</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/components.js"></script>
+</body>
+</html>
