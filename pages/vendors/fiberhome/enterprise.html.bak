@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烽火 企业光网方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+    <style>
+        .solution-hero { background: linear-gradient(135deg, #3B82F6, #60A5FA); color: white; padding: 80px 0 60px; text-align: center; }
+        .value-card { background: linear-gradient(135deg, #3B82F605, #60A5FA10); border-left: 4px solid #3B82F6; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="solution-hero">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🏢</div>
+            <h1>烽火 企业光网方案</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">全光园区，数字化转型基石</p>
+            <div style="margin-top: 30px;">
+                <a href="../fiberhome-pon.html" class="btn btn-secondary">← 返回烽火首页</a>
+                <a href="documents.html" class="btn btn-primary">📚 技术文档库</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2>🎯 方案概述</h2>
+                <p style="line-height: 1.8; margin: 20px 0;">
+                    烽火企业光网方案提供端到端POL解决方案，支持楼宇、园区全场景覆盖，
+                    助力企业构建绿色、智能、安全的网络基础设施。
+                </p>
+            </div>
+        </section>
+
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2>🌐 组网架构</h2>
+                <p style="line-height: 1.8; margin: 20px 0;">
+                    烽火企业光网采用三层架构设计：核心层（企业云/核心交换机）、汇聚层（OLT光线路终端）、接入层（ONU光网络单元），
+                    通过智能ODN无源光分配网络实现光纤到桌面的全覆盖。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">企业云/数据中心</div>
+                        <div class="network-desc">ERP/MES | 数据中心 | 云平台</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">S7800/S5800</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">AN6000系列</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">智能ODN无源光分配</div>
+                            <div class="network-desc">智能分光器 | 光纤管理</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">办公区ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">会议室ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">生产区ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">访客ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 40px;">
+            <h2>💎 方案价值</h2>
+            <div class="card-grid" style="margin-top: 30px;">
+                <div class="card value-card" style="padding: 25px;">
+                    <h4>🌱 绿色节能</h4>
+                    <p>降低50%能耗</p>
+                </div>
+                <div class="card value-card" style="padding: 25px;">
+                    <h4>🔧 易运维</h4>
+                    <p>无源网络免维护</p>
+                </div>
+                <div class="card value-card" style="padding: 25px;">
+                    <h4>📈 可扩展</h4>
+                    <p>支持平滑升级</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" style="background: linear-gradient(135deg, #3B82F605, #60A5FA10);">
+            <div class="card-body">
+                <h3>🔗 相关资源</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <a href="education.html" class="btn btn-secondary">🎓 教育方案</a>
+                    <a href="healthcare.html" class="btn btn-secondary">🏥 医疗方案</a>
+                    <a href="documents.html" class="btn btn-primary">📚 文档库</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div></div></footer>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

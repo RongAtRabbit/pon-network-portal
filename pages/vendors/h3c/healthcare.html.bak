@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华三 医疗光网方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+    <style>
+        .solution-hero {
+            background: linear-gradient(135deg, #10B981, #34D399);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .value-card { background: linear-gradient(135deg, #10B98105, #34D39910); border-left: 4px solid #10B981; }
+        .tech-highlight { background: linear-gradient(135deg, #fef3c7, #fde68a); border-left: 5px solid #f59e0b; padding: 25px; border-radius: 12px; margin: 25px 0; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 12px 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: 10px; }
+        .feature-list li::before { content: '✓'; color: #10B981; font-weight: bold; }
+        .product-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .product-table th { background: #374151; color: white; padding: 16px; text-align: left; }
+        .product-table td { padding: 16px; border-bottom: 1px solid #e5e7eb; }
+        .competitive-tag { display: inline-block; background: #E60012; color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 10px 5px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="solution-hero">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🏥</div>
+            <h1>华三 医疗光网方案</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 20px auto;">高可靠、低时延，构建智慧医院网络底座</p>
+            <div style="margin-top: 30px;">
+                <a href="../h3c-optical.html" class="btn btn-secondary">← 返回华三首页</a>
+                <a href="documents.html" class="btn btn-primary">📚 技术文档库</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 方案概述 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2>🎯 方案概述</h2>
+                <p style="line-height: 1.8; margin: 20px 0; font-size: 1.05rem;">
+                    华三医疗光网方案基于POL架构，为医院提供高可靠、低时延、高安全的网络基础设施。
+                    支持HIS、PACS、远程医疗等多业务统一承载，满足三甲医院核心业务系统严苛要求。
+                    SRv6网络切片实现内外网逻辑隔离，满足等保2.0三级要求。
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🏥</div>
+                        <h4>适用场景</h4>
+                        <p>三甲医院、专科医院、医联体</p>
+                    </div>
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">⏱️</div>
+                        <h4>时延保障</h4>
+                        <p>端到端<10ms低时延</p>
+                    </div>
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🛡️</div>
+                        <h4>安全等级</h4>
+                        <p>等保2.0三级合规</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网方案 -->
+        <section id="architecture" style="margin-bottom: 60px;">
+            <h2>🌐 组网架构</h2>
+            
+            <div class="card" style="padding: 30px; margin-top: 20px;">
+                <h3>智慧医院POL组网架构</h3>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">医院数据中心</div>
+                        <div class="network-desc">HIS/PACS | 区域影像 | 远程会诊</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">S12500R</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">S7610-OLT</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">ODN无源光分配</div>
+                            <div class="network-desc">分光器 | 光纤配线</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">门诊ONU</div>
+                            <div class="network-desc">EGT306</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">病房ONU</div>
+                            <div class="network-desc">EGT310</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">影像ONU</div>
+                            <div class="network-desc">EGT304-H</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">办公ONU</div>
+                            <div class="network-desc">EGT312</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-highlight">
+                    <h4>💡 组网优势</h4>
+                    <ul class="feature-list" style="margin-top: 15px;">
+                        <li><strong>SRv6网络切片:</strong> 内外网逻辑隔离，满足等保要求</li>
+                        <li><strong>低时延保障:</strong> 端到端<10ms，支持远程医疗</li>
+                        <li><strong>多网融合:</strong> 内网/外网/物联网统一承载</li>
+                        <li><strong>极简运维:</strong> AD-Campus统一管理</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案价值 -->
+        <section style="margin-bottom: 60px;">
+            <h2>💎 方案价值</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px;">
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">⏱️</div>
+                    <h3>低时延保障</h3>
+                    <p>端到端<10ms低时延，满足远程医疗、实时监控需求。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>远程会诊流畅</li>
+                        <li>PACS影像秒级传输</li>
+                        <li>实时监护无延迟</li>
+                    </ul>
+                </div>
+
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🔒</div>
+                    <h3>SRv6网络切片</h3>
+                    <p>SRv6技术实现业务隔离，等保2.0三级合规。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>内外网逻辑隔离</li>
+                        <li>医疗数据安全保护</li>
+                        <li>满足等保合规</li>
+                    </ul>
+                </div>
+
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🌱</div>
+                    <h3>绿色节能</h3>
+                    <p>无源光网络降低60%能耗，符合绿色医院建设。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>弱电间零能耗</li>
+                        <li>ONU低功耗设计</li>
+                        <li>机房空间节省80%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐产品 -->
+        <section style="margin-bottom: 60px;">
+            <h2>📦 推荐产品配置</h2>
+            
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>部署位置</th>
+                        <th>产品型号</th>
+                        <th>关键规格</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>核心机房</strong></td>
+                        <td>S7610-OLT</td>
+                        <td>4.8Tbps交换容量，SRv6切片支持</td>
+                        <td>三甲医院核心</td>
+                    </tr>
+                    <tr>
+                        <td><strong>影像科</strong></td>
+                        <td>EGT304-H</td>
+                        <td>4×10GE上行，CT/MRI高速传输</td>
+                        <td>影像科/放射科</td>
+                    </tr>
+                    <tr>
+                        <td><strong>病房</strong></td>
+                        <td>EGT310</td>
+                        <td>4GE+Wi-Fi 6，PoE++，物联网接入</td>
+                        <td>住院部/ICU</td>
+                    </tr>
+                    <tr>
+                        <td><strong>门诊</strong></td>
+                        <td>EGT306</td>
+                        <td>8×GE，桌面型，静音设计</td>
+                        <td>挂号/收费/诊室</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 关键技术 -->
+        <section style="margin-bottom: 60px;">
+            <h2>🔬 关键技术</h2>
+            
+            <div style="margin-top: 30px;">
+                <div class="tech-highlight">
+                    <h3>🌐 SRv6网络切片</h3>
+                    <p>基于SRv6技术实现业务逻辑隔离，不同业务流在网络层隔离，满足医疗等保要求。</p>
+                    <ul class="feature-list">
+                        <li>SRv6业务链编排</li>
+                        <li>多租户隔离</li>
+                        <li>可视化运维</li>
+                    </ul>
+                    
+                    <div class="competitive-tag">🏆 竞争力：华三SRv6技术领先，国内首个商用案例</div>
+                </div>
+
+                <div class="tech-highlight" style="background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-left-color: #db2777;">
+                    <h3>🧠 AD-Campus智能运维</h3>
+                    <p>SDN统一管控平台，实现网络自动化配置、故障快速定位、可视化运维。</p>
+                    
+                    <ul class="feature-list">
+                        <li>自动化业务发放</li>
+                        <li>故障根因分析</li>
+                        <li>网络可视化</li>
+                    </ul>
+                    
+                    <div class="competitive-tag" style="background: #db2777;">🏆 竞争力：AD-Campus国内SDN市场第一</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关资源 -->
+        <section class="card" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+            <div class="card-body">
+                <h3>🔗 相关资源</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <a href="education.html" class="btn btn-secondary">🎓 教育方案 →</a>
+                    <a href="enterprise.html" class="btn btn-secondary">🏢 企业方案 →</a>
+                    <a href="documents.html" class="btn btn-primary">📚 技术文档库 →</a>
+                    <a href="../h3c-optical.html" class="btn btn-secondary">← 返回华三首页</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PON Network Portal</h4>
+                    <p>专业的 PON 网络技术资讯平台</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PON Network Portal</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

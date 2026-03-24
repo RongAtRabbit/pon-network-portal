@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华三 企业光网方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+    <style>
+        .solution-hero {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .value-card { background: linear-gradient(135deg, #f59e0b05, #fbbf2410); border-left: 4px solid #f59e0b; }
+        .tech-highlight { background: linear-gradient(135deg, #fef3c7, #fde68a); border-left: 5px solid #f59e0b; padding: 25px; border-radius: 12px; margin: 25px 0; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 12px 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: 10px; }
+        .feature-list li::before { content: '✓'; color: #f59e0b; font-weight: bold; }
+        .product-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .product-table th { background: #374151; color: white; padding: 16px; text-align: left; }
+        .product-table td { padding: 16px; border-bottom: 1px solid #e5e7eb; }
+        .competitive-tag { display: inline-block; background: #E60012; color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 10px 5px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="solution-hero">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🏢</div>
+            <h1>华三 企业光网方案</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 20px auto;">极简架构，高性价比，构建智慧企业园区网络</p>
+            <div style="margin-top: 30px;">
+                <a href="../h3c-optical.html" class="btn btn-secondary">← 返回华三首页</a>
+                <a href="documents.html" class="btn btn-primary">📚 技术文档库</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 方案概述 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2>🎯 方案概述</h2>
+                <p style="line-height: 1.8; margin: 20px 0; font-size: 1.05rem;">
+                    华三企业光网方案采用POL架构，为办公楼宇、工业园区提供高性价比的网络解决方案。
+                    通过光纤直达工位，支持千兆到桌面、Wi-Fi 6全覆盖，满足企业办公、生产、会议等多场景需求。
+                    AD-Campus平台实现SDN统一管控，简化运维降低成本。
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🏢</div>
+                        <h4>适用场景</h4>
+                        <p>办公楼宇、工业园区、商业综合体</p>
+                    </div>
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💰</div>
+                        <h4>TCO降低</h4>
+                        <p>总拥有成本降低30%</p>
+                    </div>
+                    <div class="card" style="padding: 20px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🔧</div>
+                        <h4>运维简化</h4>
+                        <p>AD-Campus统一管理</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网方案 -->
+        <section id="architecture" style="margin-bottom: 60px;">
+            <h2>🌐 组网架构</h2>
+            
+            <div class="card" style="padding: 30px; margin-top: 20px;">
+                <h3>企业园区POL组网架构</h3>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">企业数据中心</div>
+                        <div class="network-desc">ERP/MES | 数据中心 | 云平台</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">S12500R</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">S7610-OLT</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">ODN无源光分配</div>
+                            <div class="network-desc">分光器 | 光纤配线</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">办公区ONU</div>
+                            <div class="network-desc">EGT310</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">会议室ONU</div>
+                            <div class="network-desc">EGT312</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">生产区ONU</div>
+                            <div class="network-desc">EGT304-H</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">访客ONU</div>
+                            <div class="network-desc">EGT306</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-highlight">
+                    <h4>💡 组网优势</h4>
+                    <ul class="feature-list" style="margin-top: 15px;">
+                        <li><strong>极简架构:</strong> 汇聚+接入两层架构，节省机房空间80%</li>
+                        <li><strong>灵活扩展:</strong> 分光器级联，按需扩展端口</li>
+                        <li><strong>统一管控:</strong> AD-Campus实现多园区统一管理</li>
+                        <li><strong>绿色节能:</strong> 无源分光降低能耗60%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案价值 -->
+        <section style="margin-bottom: 60px;">
+            <h2>💎 方案价值</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px;">
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">💰</div>
+                    <h3>成本优势</h3>
+                    <p>相比传统交换机方案，TCO降低30%，ROI提升显著。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>设备成本降低40%</li>
+                        <li>机房建设节省80%</li>
+                        <li>运维成本降低50%</li>
+                    </ul>
+                </div>
+
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🚀</div>
+                    <h3>快速部署</h3>
+                    <p>ONU即插即用，业务快速开通，缩短项目周期。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>即插即用零配置</li>
+                        <li>业务分钟级开通</li>
+                        <li>批量配置模板</li>
+                    </ul>
+                </div>
+
+                <div class="card value-card" style="padding: 30px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
+                    <h3>智能运维</h3>
+                    <p>AD-Campus平台实现可视化运维，故障快速定位。</p>
+                    <ul class="feature-list" style="font-size: 0.9rem;">
+                        <li>网络拓扑可视化</li>
+                        <li>故障自动告警</li>
+                        <li>流量实时监控</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐产品 -->
+        <section style="margin-bottom: 60px;">
+            <h2>📦 推荐产品配置</h2>
+            
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>部署位置</th>
+                        <th>产品型号</th>
+                        <th>关键规格</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>核心机房</strong></td>
+                        <td>S7610-OLT</td>
+                        <td>4.8Tbps交换容量，支持2,160 PON口</td>
+                        <td>大型企业园区核心</td>
+                    </tr>
+                    <tr>
+                        <td><strong>办公区</strong></td>
+                        <td>EGT310</td>
+                        <td>4GE+Wi-Fi 6，桌面型设计</td>
+                        <td>员工工位/办公室</td>
+                    </tr>
+                    <tr>
+                        <td><strong>会议室</strong></td>
+                        <td>EGT312</td>
+                        <td>4GE+Wi-Fi 6，高密接入</td>
+                        <td>会议室/培训室</td>
+                    </tr>
+                    <tr>
+                        <td><strong>生产区</strong></td>
+                        <td>EGT304-H</td>
+                        <td>工业级设计，宽温工作</td>
+                        <td>车间/产线</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 关键技术 -->
+        <section style="margin-bottom: 60px;">
+            <h2>🔬 关键技术</h2>
+            
+            <div style="margin-top: 30px;">
+                <div class="tech-highlight">
+                    <h3>🌐 极简POL架构</h3>
+                    <p>汇聚+接入两层架构，无源分光替代有源交换机，简化网络拓扑。</p>
+                    
+                    <ul class="feature-list">
+                        <li>两层网络架构</li>
+                        <li>无源分光器免维护</li>
+                        <li>机房空间节省80%</li>
+                    </ul>
+                    
+                    <div class="competitive-tag">🏆 竞争力：华三POL方案性价比最高，适合中小企业</div>
+                </div>
+
+                <div class="tech-highlight" style="background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-left-color: #db2777;">
+                    <h3>🧠 AD-Campus智能管控</h3>
+                    <p>SDN统一管控平台，支持多园区管理、自动化运维、策略统一管理。</p>
+                    
+                    <ul class="feature-list">
+                        <li>多园区统一管理</li>
+                        <li>自动化业务发放</li>
+                        <li>可视化运维</li>
+                    </ul>
+                    
+                    <div class="competitive-tag" style="background: #db2777;">🏆 竞争力：AD-Campus国内SDN市场份额第一</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关资源 -->
+        <section class="card" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+            <div class="card-body">
+                <h3>🔗 相关资源</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <a href="education.html" class="btn btn-secondary">🎓 教育方案 →</a>
+                    <a href="healthcare.html" class="btn btn-secondary">🏥 医疗方案 →</a>
+                    <a href="documents.html" class="btn btn-primary">📚 技术文档库 →</a>
+                    <a href="../h3c-optical.html" class="btn btn-secondary">← 返回华三首页</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PON Network Portal</h4>
+                    <p>专业的 PON 网络技术资讯平台</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PON Network Portal</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>
