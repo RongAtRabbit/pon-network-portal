@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞争分析资料库 | 行业方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <style>
+        .file-browser-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        .file-browser {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .file-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #e74c3c;
+        }
+        .file-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .file-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+        .file-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+        .file-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .file-type {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .type-md { background: #dbeafe; color: #1e40af; }
+        .type-pdf { background: #fee2e2; color: #991b1b; }
+        .type-xlsx { background: #d1fae5; color: #065f46; }
+        .type-csv { background: #fef3c7; color: #92400e; }
+        .type-pptx { background: #fce7f3; color: #be185d; }
+        .folder-section {
+            margin-bottom: 40px;
+        }
+        .folder-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        .view-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .view-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/sidebar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="file-browser-header">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 20px;">
+                <a href="../../index.html">首页</a> / <a href="huawei-f5g.html">行业方案</a> / 竞争分析
+            </div>
+            <h1>⚔️ 竞争分析资料库</h1>
+            <p>点击文件卡片直接查看详细内容</p>
+        </div>
+    </header>
+
+    <main class="file-browser">
+        <!-- 说明文档 -->
+        <div class="folder-section">
+            <div class="folder-title">📋 说明文档</div>
+            <div class="file-grid">
+                <a href="competitive/README.html" class="file-card">
+                    <div class="file-icon">📋</div>
+                    <div class="file-name">README.md</div>
+                    <div class="file-desc">资料包结构说明与使用指南</div>
+                    <div class="file-meta">
+                        <span class="file-type type-md">Markdown</span>
+                    </div>
+                    <span class="view-btn">查看详情 →</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 对比文档 -->
+        <div class="folder-section">
+            <div class="folder-title">📊 对比文档</div>
+            <div class="file-grid">
+                <a href="competitive/对比文档/软件规格对比分析.html" class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">PON网络竞争对手软件规格对比分析</div>
+                    <div class="file-desc">详细技术对比分析文档，包含网管、协议、功能、安全、保护、接口等维度</div>
+                    <div class="file-meta">
+                        <span class="file-type type-md">Markdown</span>
+                    </div>
+                    <span class="view-btn">查看详情 →</span>
+                </a>
+
+                <a href="competitive/对比文档/软件规格对比表.html" class="file-card">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">PON竞争对手软件规格对比表</div>
+                    <div class="file-desc">80+对比项数据表格，覆盖网管/协议/功能/安全/保护等方面</div>
+                    <div class="file-meta">
+                        <span class="file-type type-csv">CSV</span>
+                    </div>
+                    <span class="view-btn">查看详情 →</span>
+                </a>
+
+                <a href="competitive/软件规格对比.xlsx.html" class="file-card">
+                    <div class="file-icon">📗</div>
+                    <div class="file-name">PON竞争对手软件规格对比</div>
+                    <div class="file-desc">Excel完整版，便于筛选和排序，支持数据透视分析</div>
+                    <div class="file-meta">
+                        <span class="file-type type-xlsx">Excel</span>
+                    </div>
+                    <span class="view-btn">查看详情 →</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 快速参考 -->
+        <div class="folder-section">
+            <div class="folder-title">🎯 快速参考</div>
+            <div class="file-grid">
+                <a href="competitive/快速参考/快速参考卡片.html" class="file-card">
+                    <div class="file-icon">🎯</div>
+                    <div class="file-name">PON竞争对手快速参考卡片</div>
+                    <div class="file-desc">一页纸速查，销售话术，场景化应答，客户现场快速参考</div>
+                    <div class="file-meta">
+                        <span class="file-type type-md">Markdown</span>
+                    </div>
+                    <span class="view-btn">查看详情 →</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 原始资料 -->
+        <div class="folder-section">
+            <div class="folder-title">📚 原始资料</div>
+            <div class="file-grid">
+                <a href="competitive/原始资料/华三融合全光网络白皮书.html" class="file-card">
+                    <div class="file-icon">📘</div>
+                    <div class="file-name">新华三融合全光网络白皮书</div>
+                    <div class="file-desc">H3C企业网方案完整白皮书，了解竞争对手产品定位</div>
+                    <div class="file-meta">
+                        <span class="file-type type-pdf">PDF</span>
+                    </div>
+                    <span class="view-btn">查看PDF →</span>
+                </a>
+
+                <a href="competitive/原始资料/H3C全光网络技术白皮书.html" class="file-card">
+                    <div class="file-icon">📕</div>
+                    <div class="file-name">H3C全光网络技术白皮书</div>
+                    <div class="file-desc">H3C技术详解手册，深入理解竞争对手技术实现</div>
+                    <div class="file-meta">
+                        <span class="file-type type-pdf">PDF</span>
+                    </div>
+                    <span class="view-btn">查看PDF →</span>
+                </a>
+
+                <a href="competitive/原始资料/中兴icampus方案.html" class="file-card">
+                    <div class="file-icon">📙</div>
+                    <div class="file-name">中兴通讯icampus高校全光解决方案</div>
+                    <div class="file-desc">中兴高校PON方案PPT，了解教育行业竞争态势</div>
+                    <div class="file-meta">
+                        <span class="file-type type-pptx">PPTX</span>
+                    </div>
+                    <span class="view-btn">查看PPT →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 PON Network Portal</p></div>
+    </footer>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

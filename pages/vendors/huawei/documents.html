@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为技术文档库 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <style>
+        .doc-library-header {
+            background: linear-gradient(135deg, #C41E3A, #FF6B6B);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .upload-zone {
+            border: 3px dashed var(--gray-300);
+            border-radius: var(--radius-xl);
+            padding: 50px;
+            text-align: center;
+            background: var(--bg-secondary);
+            transition: all 0.3s;
+            margin-bottom: 40px;
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--primary);
+            background: var(--primary)05;
+        }
+        .upload-zone .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        .doc-category {
+            margin-bottom: 40px;
+        }
+        .doc-category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .doc-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .doc-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        .doc-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .doc-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .doc-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .doc-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .filter-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--gray-300);
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-chip:hover, .filter-chip.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .upload-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .upload-modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="doc-library-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+            <h1>华为技术文档库</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin: 20px auto;">集中管理华为F5G相关产品方案资料</p>
+            <div style="margin-top: 30px;">
+                <a href="../huawei-f5g.html" class="btn btn-secondary">← 返回华为首页</a>
+                <button class="btn btn-primary admin-only" onclick="openUploadModal()" style="display: none;">📤 上传文档</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 上传区域 -->
+        <div class="upload-zone admin-only" id="uploadZone" style="display: none;">
+            <div class="icon">📤</div>
+            <h3>拖拽文件到此处上传</h3>
+            <p style="color: var(--text-tertiary); margin: 15px 0;">支持 PDF、Word、PPT、图片等格式，单个文件最大50MB</p>
+            <button class="btn btn-primary" onclick="openUploadModal()">选择文件</button>
+        </div>
+
+        <!-- 分类筛选 -->
+        <div class="category-filter">
+            <button class="filter-chip active" data-category="all">全部</button>
+            <button class="filter-chip" data-category="product">📦 产品资料</button>
+            <button class="filter-chip" data-category="solution">💡 方案文档</button>
+            <button class="filter-chip" data-category="case">📋 案例集</button>
+            <button class="filter-chip" data-category="tech">🔧 技术白皮书</button>
+            <button class="filter-chip" data-category="config">⚙️ 配置指南</button>
+        </div>
+
+        <!-- 文档列表 -->
+        <div id="docContainer">
+            <!-- 产品资料 -->
+            <div class="doc-category" data-category="product">
+                <div class="doc-category-header">
+                    <h3>📦 产品资料</h3>
+                    <span class="tag tag-primary">5 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('ma5800')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">MA5800 产品彩页</div>
+                        <div class="doc-desc">华为MA5800 OLT旗舰产品介绍，包含技术规格、特性亮点和典型应用场景。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-15</span>
+                            <span>📎 PDF (2.5MB)</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('ea5800')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">EA5800 产品手册</div>
+                        <div class="doc-desc">紧凑型OLT EA5800系列产品详细介绍，适用于中小型园区场景。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-10</span>
+                            <span>📎 PDF (1.8MB)</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('onu')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">OptiXstar ONU 产品指南</div>
+                        <div class="doc-desc">全系列ONU产品选型指南，包含桌面型、面板型、室外型全系列产品。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-05</span>
+                            <span>📎 PDF (3.2MB)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案文档 -->
+            <div class="doc-category" data-category="solution">
+                <div class="doc-category-header">
+                    <h3>💡 方案文档</h3>
+                    <span class="tag tag-success">4 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('edu-solution')">
+                        <div class="doc-icon">📘</div>
+                        <div class="doc-title">F5G 教育光网方案</div>
+                        <div class="doc-desc">基于POL技术的智慧校园网络解决方案，涵盖K12到高校全场景。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-18</span>
+                            <span>📎 PPT (15MB)</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('health-solution')">
+                        <div class="doc-icon">📘</div>
+                        <div class="doc-title">F5G 医疗光网方案</div>
+                        <div class="doc-desc">智慧医院网络底座，满足HIS、PACS、物联网等多业务统一承载。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-12</span>
+                            <span>📎 PDF (8.5MB)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例集 -->
+            <div class="doc-category" data-category="case">
+                <div class="doc-category-header">
+                    <h3>📋 案例集</h3>
+                    <span class="tag tag-warning">3 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('case-edu')">
+                        <div class="doc-icon">📑</div>
+                        <div class="doc-title">教育行业案例集 2025</div>
+                        <div class="doc-desc">汇集全国50+智慧校园项目案例，包含部署方案和效果评估。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-02-20</span>
+                            <span>📎 PDF (12MB)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 上传模态框 -->
+    <div class="upload-modal admin-only" id="uploadModal" style="display: none;">
+        <div class="modal-content">
+            <h2>📤 上传文档</h2>
+            
+            <form id="uploadForm" style="margin-top: 30px;">
+                <div style="margin-bottom: 20px;">
+                    <label>文档标题 *</label>
+                    <input type="text" id="docTitle" required placeholder="输入文档标题"
+                           style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); margin-top: 8px;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label>文档分类 *</label>
+                    <select id="docCategory" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); margin-top: 8px;">
+                        <option value="">选择分类</option>
+                        <option value="product">产品资料</option>
+                        <option value="solution">方案文档</option>
+                        <option value="case">案例集</option>
+                        <option value="tech">技术白皮书</option>
+                        <option value="config">配置指南</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label>文档简介</label>
+                    <textarea id="docDesc" rows="3" placeholder="输入文档简要说明"
+                              style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); margin-top: 8px; resize: vertical;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label>选择文件 *</label>
+                    <input type="file" id="docFile" required accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.png"
+                           style="margin-top: 8px;">
+                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 8px;">支持 PDF、Word、PPT、Excel、图片格式，最大50MB</p>
+                </div>
+
+                <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 30px;">
+                    <button type="button" class="btn btn-secondary" onclick="closeUploadModal()">取消</button>
+                    <button type="submit" class="btn btn-primary">📤 开始上传</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>PON Network Portal</h4><p>专业的 PON 网络技术资讯平台</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div>
+        </div>
+    </footer>
+
+    <script>
+        // 打开上传模态框
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.add('active');
+        }
+
+        // 关闭上传模态框
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.remove('active');
+        }
+
+        // 点击模态框外部关闭
+        document.getElementById('uploadModal').addEventListener('click', (e) => {
+            if (e.target.id === 'uploadModal') closeUploadModal();
+        });
+
+        // 拖拽上传
+        const uploadZone = document.getElementById('uploadZone');
+
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length) {
+                openUploadModal();
+                // 这里可以预填充文件
+            }
+        });
+
+        // 表单提交
+        document.getElementById('uploadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const title = document.getElementById('docTitle').value;
+            const category = document.getElementById('docCategory').value;
+            const desc = document.getElementById('docDesc').value;
+            const file = document.getElementById('docFile').files[0];
+
+            if (!file) {
+                alert('请选择文件');
+                return;
+            }
+
+            // 模拟上传
+            const newDoc = {
+                id: 'doc-' + Date.now(),
+                title: title,
+                category: category,
+                desc: desc || '暂无简介',
+                filename: file.name,
+                size: (file.size / 1024 / 1024).toFixed(2) + 'MB',
+                date: new Date().toISOString().split('T')[0]
+            };
+
+            // 保存到本地存储
+            let docs = JSON.parse(localStorage.getItem('huawei_docs') || '[]');
+            docs.push(newDoc);
+            localStorage.setItem('huawei_docs', JSON.stringify(docs));
+
+            alert('✅ 文档上传成功！');
+            closeUploadModal();
+            
+            // 刷新列表
+            loadDocs();
+        });
+
+        // 分类筛选
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                
+                const category = chip.dataset.category;
+                filterDocs(category);
+            });
+        });
+
+        // 筛选文档
+        function filterDocs(category) {
+            const categories = document.querySelectorAll('.doc-category');
+            categories.forEach(cat => {
+                if (category === 'all' || cat.dataset.category === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        }
+
+        // 查看文档
+        function viewDoc(docId) {
+            alert('查看文档: ' + docId + '\n\n实际项目中这里会打开文档预览或下载。');
+        }
+
+        // 加载文档列表
+        function loadDocs() {
+            // 这里可以从localStorage加载用户上传的文档
+            const userDocs = JSON.parse(localStorage.getItem('huawei_docs') || '[]');
+            console.log('用户上传的文档:', userDocs);
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDocs();
+        });
+    </script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

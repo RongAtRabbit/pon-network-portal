@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华三教育光网解决方案 | 行业方案</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / <a href="../h3c-optical.html">华三 园区光网络</a> / 教育光网
+        </div>
+
+        <h1 style="margin-bottom: 30px;">🎓 华三教育光网解决方案</h1>
+
+        <!-- 方案概述 -->
+        <section id="overview" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">📖 方案概述</h2>
+                <p style="line-height: 1.8; margin-bottom: 15px;">
+                    华三教育光网解决方案基于POL（Passive Optical LAN，无源光局域网）技术架构，
+                    以"极简架构、智慧运维、绿色节能"为核心理念，为教育行业打造面向未来的全光网络底座。
+                    该方案采用光纤直达教室/宿舍/桌面的部署方式，满足智慧校园对高带宽、低时延、高可靠、易管理的网络需求。
+                </p>
+                <p style="line-height: 1.8; margin-bottom: 15px;">
+                    方案覆盖K12基础教育、高等教育、职业教育等全场景，支持智慧教学、在线学习、VR/AR沉浸式教学、
+                    校园物联网等创新应用。通过AD-Campus智能园区解决方案与SNA（SeerEngine Network Architecture）
+                    先知网络架构的深度融合，实现网络自动化部署、智能运维和业务可视化。
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #E60012 0%, #FF3344 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">🎯 适用场景</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">高校/职校/中小学/幼儿园</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">👥 覆盖规模</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">支持1千~10万+师生规模</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">⚡ 接入带宽</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">XGS-PON 10G/50G PON</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案价值 -->
+        <section id="value" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">💡 方案价值</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #fef2f2; border-radius: 8px;">
+                        <h4 style="color: #E60012;">🏗️ 极简架构</h4>
+                        <p>POL无源光网络，汇聚+接入两层架构，无需弱电间，机房空间节省80%，布线成本降低60%</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                        <h4 style="color: #22c55e;">🌱 绿色环保</h4>
+                        <p>无源分光器替代有源交换机，设备能耗降低60%，故障点减少70%，符合绿色校园建设理念</p>
+                    </div>
+                    <div style="padding: 20px; background: #eff6ff; border-radius: 8px;">
+                        <h4 style="color: #3b82f6;">🧠 智慧运维</h4>
+                        <p>AD-Campus智能管控，SNA先知架构实现网络自感知、自优化，运维效率提升70%</p>
+                    </div>
+                    <div style="padding: 20px; background: #faf5ff; border-radius: 8px;">
+                        <h4 style="color: #a855f7;">🚀 平滑演进</h4>
+                        <p>从GPON到XGS-PON再到50G PON，光纤基础设施利旧，保护投资，支撑未来10年网络演进</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网架构 -->
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🌐 组网架构</h2>
+                <p style="margin-bottom: 20px; color: #6b7280;">
+                    华三教育光网采用三层架构设计：核心层（教育云/核心交换机）、汇聚层（OLT光线路终端）、接入层（ONU光网络单元），
+                    通过ODN无源光分配网络实现光纤到桌面的全覆盖。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">教育云/智慧校园平台</div>
+                        <div class="network-desc">教学资源库 | AI训练集群 | 管理平台</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">S12500R/S10500X</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">S7500E-XS系列</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">ODN无源光分配</div>
+                            <div class="network-desc">分光器 | 光纤配线</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">教学楼ONU</div>
+                            <div class="network-desc">S5130S-HI</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">办公楼ONU</div>
+                            <div class="network-desc">EGT310</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">宿舍ONU</div>
+                            <div class="network-desc">EGT312</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">图书馆ONU</div>
+                            <div class="network-desc">EGT306</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 架构说明 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                    <div style="padding: 15px; background: #fef2f2; border-radius: 8px; border-left: 4px solid #E60012;">
+                        <h4 style="color: #991b1b; margin-bottom: 8px;">核心层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">S12500R/S10500X交换机，负责高速数据交换和路由</p>
+                    </div>
+                    <div style="padding: 15px; background: #f0fdf4; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="color: #166534; margin-bottom: 8px;">汇聚层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">S7500E-XS OLT，光线路终端，PON口下行接入</p>
+                    </div>
+                    <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 8px;">ODN层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">无源分光器，无需供电，降低故障点</p>
+                    </div>
+                    <div style="padding: 15px; background: #faf5ff; border-radius: 8px; border-left: 4px solid #a855f7;">
+                        <h4 style="color: #7c3aed; margin-bottom: 8px;">接入层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">S5130S-HI ONU，多业务接入终端</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案组成 -->
+        <section id="components" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🛠️ 方案组成</h2>
+                
+                <h3 style="color: #E60012; margin: 25px 0 15px 0;">🔴 核心设备</h3>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 S7500E-XS OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">核心汇聚OLT，适用于大型校园网络核心</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：768Gbps</li>
+                            <li>最大96口XGS-PON</li>
+                            <li>支持100G上行</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 S12500R 核心交换机</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">数据中心级核心交换机，高可靠校园网络核心</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：387Tbps</li>
+                            <li>支持100G/400G上行</li>
+                            <li>硬件级BFD保护</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #E60012; margin: 25px 0 15px 0;">🟢 接入设备</h3>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 S5130S-HI ONU</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">企业级光网络单元，适用于教室/宿舍</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>8×GE + 2×10GE</li>
+                            <li>支持PoE++</li>
+                            <li>内置Wi-Fi 6</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 ODN无源分光器</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">高可靠性无源光分配网络组件</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>支持1:8/1:16/1:32/1:64分光比</li>
+                            <li>PLC平面波导技术</li>
+                            <li>工业级可靠性设计</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #E60012; margin: 25px 0 15px 0;">🔵 管理系统</h3>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 AD-Campus</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">智能园区网络解决方案，实现全光网络自动化运维</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>端到端网络可视化管理</li>
+                            <li>智能故障定位与预测</li>
+                            <li>业务自动发放</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华三 SNA先知网络架构</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">SeerEngine Network Architecture智能网络引擎</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>网络自感知、自优化</li>
+                            <li>AI驱动的智能运维</li>
+                            <li>意图驱动的网络配置</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键技术 -->
+        <section id="technology" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🔬 关键技术</h2>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="padding: 20px; background: linear-gradient(90deg, #fef2f2 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #E60012;">
+                        <h4 style="color: #991b1b; margin-bottom: 10px;">⚡ XGS-PON & 50G PON</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            采用对称10Gbps XGS-PON技术，上下行速率对称，满足教育场景大带宽双向传输需求。
+                            支持向50G PON平滑演进，单端口带宽提升至50Gbps，支撑未来8K/16K超高清教学、
+                            全息课堂等创新应用。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #f0fdf4 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="color: #15803d; margin-bottom: 10px;">🧠 AD-Campus智能园区</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            华三AD-Campus（Application-Driven Campus）解决方案，实现网络自动化部署、
+                            智能运维和业务可视化。支持VXLAN虚拟化、微分段安全、用户组策略随行，
+                            满足教育园区多业务隔离和灵活扩展需求。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #eff6ff 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 10px;">🔮 SNA先知网络架构</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            SeerEngine Network Architecture（SNA）先知网络架构，基于AI和大数据技术实现网络自感知、
+                            自优化。通过Telemetry秒级数据采集，结合AI算法实现故障预测性维护，
+                            网络运维效率提升70%以上。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #faf5ff 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #a855f7;">
+                        <h4 style="color: #7c3aed; margin-bottom: 10px;">📡 Wi-Fi 6/7 智能融合</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            ONU内置Wi-Fi 6/7无线模块，支持2.4GHz/5GHz/6GHz三频并发，单AP覆盖64个终端并发接入。
+                            支持智能漫游、AI调优，满足教室、图书馆、体育馆等高密场景无线覆盖需求。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #fff7ed 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #f97316;">
+                        <h4 style="color: #c2410c; margin-bottom: 10px;">🛡️ Type B/Type C保护</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            支持Type B（主干光纤冗余）和Type C（全链路冗余）保护机制，故障切换时间<50ms，
+                            满足教学业务高可靠性要求。双归属保护确保核心设备故障时业务不中断。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section id="cases" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">📋 应用案例</h2>
+
+                <div style="margin-bottom: 40px; padding: 25px; background: #fef2f2; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 某985高校智慧校园</h3>
+                        <span style="background: #E60012; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">POL全光</span>
+                    </div>
+                    <p><strong>核心方案：</strong>部署华三POL全光网络，覆盖3个校区，师生5万人</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署S7500E-XS OLT 40台，光纤直达每间教室、宿舍</li>
+                            <li>AD-Campus实现教学、科研、管理、生活四网隔离</li>
+                            <li>Wi-Fi 6全覆盖，支持4K高清互动教学</li>
+                            <li>机房空间节省70%，能耗降低60%</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.h3c.com/cn/Solution/IndustrySolution/Education/" target="_blank" style="color: #E60012; text-decoration: none;">
+                            https://www.h3c.com/cn/Solution/IndustrySolution/Education/
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px; padding: 25px; background: #fef2f2; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 某双一流大学全光园区</h3>
+                        <span style="background: #FF6B35; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">AD-Campus</span>
+                    </div>
+                    <p><strong>核心方案：</strong>华三AD-Campus智能园区方案，新建校区1500亩，师生3.5万人</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>POL无源光网络，布线成本降低50%，工期缩短4个月</li>
+                            <li>SNA先知架构实现网络自动化运维</li>
+                            <li>网络时延<1ms，满足VR/AR教学需求</li>
+                            <li>运维人员从10人减少到3人</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.h3c.com/cn/Solution/IndustrySolution/Education/" target="_blank" style="color: #E60012; text-decoration: none;">
+                            https://www.h3c.com/cn/Solution/IndustrySolution/Education/
+                        </a>
+                    </div>
+                </div>
+
+                <div style="padding: 25px; background: #fef2f2; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 某重点高中智慧校园</h3>
+                        <span style="background: #a855f7; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">K12教育</span>
+                    </div>
+                    <p><strong>核心方案：</strong>华三教育光网方案覆盖教学楼、实验楼、图书馆、宿舍，师生6000人</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署S7500E-XS OLT 6台，覆盖全部教学区域</li>
+                            <li>智慧教室支持4K互动教学、远程同步课堂</li>
+                            <li>校园安防、一卡通、广播系统统一承载</li>
+                            <li>网络建设成本较传统以太网降低40%</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.h3c.com/cn/Solution/IndustrySolution/Education/" target="_blank" style="color: #E60012; text-decoration: none;">
+                            https://www.h3c.com/cn/Solution/IndustrySolution/Education/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="../h3c-optical.html" class="btn" style="margin-right: 15px;">← 返回华三首页</a>
+            <a href="healthcare.html" class="btn btn-success">查看医疗方案 →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/data.js"></script>
+    <script src="../../../js/components.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

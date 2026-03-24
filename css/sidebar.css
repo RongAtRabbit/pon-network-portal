@@ -1,0 +1,224 @@
+/* 侧边导航栏样式 */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    overflow-y: auto;
+    z-index: 900;
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+}
+
+.sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-nav {
+    padding: 16px 0;
+}
+
+.sidebar-section {
+    margin-bottom: 8px;
+}
+
+.sidebar-section-title {
+    padding: 12px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: #f8fafc;
+    border-left-color: #3b82f6;
+}
+
+.sidebar-link.active {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-left-color: #3b82f6;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+.sidebar-arrow {
+    margin-left: auto;
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.sidebar-item.expanded .sidebar-arrow {
+    transform: rotate(90deg);
+}
+
+/* 子菜单 */
+.sidebar-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar-item.expanded .sidebar-submenu {
+    max-height: 500px;
+}
+
+.sidebar-submenu .sidebar-link {
+    padding-left: 56px;
+    font-size: 0.85rem;
+}
+
+/* 厂商标签 */
+.vendor-tag-sidebar {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.vendor-tag-sidebar.huawei { background: #C41E3A; }
+.vendor-tag-sidebar.h3c { background: #E60012; }
+.vendor-tag-sidebar.zte { background: #0066CC; }
+.vendor-tag-sidebar.fiberhome { background: #00A0E9; }
+
+/* 主内容区调整 */
+body.has-sidebar {
+    padding-left: 260px;
+}
+
+body.has-sidebar .navbar {
+    left: 260px;
+    width: calc(100% - 260px);
+}
+
+/* 移动端侧边栏 */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    body.has-sidebar {
+        padding-left: 0;
+    }
+    
+    body.has-sidebar .navbar {
+        left: 0;
+        width: 100%;
+    }
+    
+    .sidebar-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 899;
+    }
+    
+    .sidebar-overlay.show {
+        display: block;
+    }
+}
+
+/* 场景标签 */
+.scene-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.scene-tag.education { background: #dbeafe; color: #1e40af; }
+.scene-tag.healthcare { background: #d1fae5; color: #065f46; }
+.scene-tag.enterprise { background: #fef3c7; color: #92400e; }

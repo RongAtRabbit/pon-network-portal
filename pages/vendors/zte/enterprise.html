@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中兴企业/工业光网解决方案 | 行业方案</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / <a href="../zte-pon.html">中兴 PON</a> / 企业/工业光网
+        </div>
+
+        <h1 style="margin-bottom: 30px;">🏭 中兴企业/工业光网解决方案</h1>
+
+        <!-- 价值主张 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">💡 方案价值</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #fef2f2; border-radius: 8px;">
+                        <h4 style="color: #ef4444;">🤖 智能制造</h4>
+                        <p>5G+AI+机器人，柔性产线，自动化率超85%，黑灯车间无人化生产</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                        <h4 style="color: #22c55e;">⚡ 确定性时延</h4>
+                        <p>TSN over PON，时延<10ms，抖动<1ms，满足工业控制严苛要求</p>
+                    </div>
+                    <div style="padding: 20px; background: #eff6ff; border-radius: 8px;">
+                        <h4 style="color: #3b82f6;">🔄 柔性生产</h4>
+                        <p>多机器人智能协同，EasyOn·Robot极简专网，快速部署产线调整</p>
+                    </div>
+                    <div style="padding: 20px; background: #faf5ff; border-radius: 8px;">
+                        <h4 style="color: #a855f7;">🧠 AI质检</h4>
+                        <p>AI视觉质检，缺陷检出率99.9%，替代人工目检，效率提升10倍</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网架构 -->
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🌐 组网架构</h2>
+                <p style="margin-bottom: 20px; color: #6b7280;">
+                    中兴企业/工业光网采用TSN over PON架构设计，核心层（企业云/核心交换机）、汇聚层（TSN OLT）、接入层（工业ONU），
+                    通过TSN无源光分配网络实现确定性时延的工业级网络覆盖。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">企业云/工业互联网平台</div>
+                        <div class="network-desc">MES/ERP | AI质检 | 数字孪生</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">工业核心交换机</div>
+                            <div class="network-desc">ZXR10 9908</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">TSN OLT</div>
+                            <div class="network-desc">C600 TSN版</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 5G层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #8b5cf6; background: #f5f3ff;">
+                            <div class="network-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);">📶</div>
+                            <div class="network-label">5G专网基站</div>
+                            <div class="network-desc">EasyOn·Robot | 多机协同</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">CNC机床ONU</div>
+                            <div class="network-desc">时延<500μs</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">机器人ONU</div>
+                            <div class="network-desc">协同控制</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">AGV/AMR</div>
+                            <div class="network-desc">5G调度</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">视觉检测ONU</div>
+                            <div class="network-desc">AI质检</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 架构说明 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                    <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 8px;">核心层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">ZXR10工业交换机，TSN时间敏感网络支持</p>
+                    </div>
+                    <div style="padding: 15px; background: #f5f3ff; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                        <h4 style="color: #5b21b6; margin-bottom: 8px;">汇聚层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">C600 TSN OLT，确定性时延<10ms</p>
+                    </div>
+                    <div style="padding: 15px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <h4 style="color: #065f46; margin-bottom: 8px;">5G专网</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">EasyOn·Robot，多机器人智能协同</p>
+                    </div>
+                    <div style="padding: 15px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h4 style="color: #92400e; margin-bottom: 8px;">接入层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">工业级ONU，CNC/机器人/AGV/视觉检测</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">📋 典型应用案例</h2>
+
+                <!-- 案例1 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏭 南京滨江智能制造基地</h3>
+                        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">5G+AI智造</span>
+                    </div>
+                    <p><strong>核心方案：</strong>5G+AI+机器人，柔性产线，自动化率超85%，中兴自研智能制造标杆</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署5G-A专网+AI质检，实现黑灯车间无人化生产</li>
+                            <li>柔性产线支持多品种小批量生产，换线时间从4小时缩短至30分钟</li>
+                            <li>AI视觉质检替代人工目检，缺陷检出率99.9%，效率提升10倍</li>
+                            <li>自动化率超85%，产能提升30%，人力成本降低40%</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/china/about/news/20260224C1" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/china/about/news/20260224C1
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例2 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏭 武汉小米智能家电工厂</h3>
+                        <span style="background: #f97316; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">黑灯车间</span>
+                    </div>
+                    <p><strong>核心方案：</strong>5G-A+AI，99.99%高可用，黑灯车间，AI质检全覆盖</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>5G-A专网覆盖全厂，上行2Gbps+，支撑8K AI视觉质检</li>
+                            <li>黑灯车间24小时无人化生产，自动化率超90%</li>
+                            <li>AI质检覆盖100%产线，漏检率趋近于0</li>
+                            <li>网络可用性99.99%，年故障时间<1小时</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/content/zte-site/www-zte-com-cn/china/about/news/20260304C6.html" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/content/zte-site/www-zte-com-cn/china/about/news/20260304C6.html
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例3 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🤖 5G-A多机器人智能协同</h3>
+                        <span style="background: #a855f7; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">多机协同</span>
+                    </div>
+                    <p><strong>核心方案：</strong>EasyOn·Robot极简专网，人形机器人协同，时延<10ms</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>EasyOn·Robot极简专网，一键部署，5分钟开通机器人网络</li>
+                            <li>支持人形机器人、AGV、机械臂多类型设备协同作业</li>
+                            <li>确定性时延<10ms，抖动<1ms，满足精密协同要求</li>
+                            <li>动态路径规划，实时避障，提升产线柔性</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/china/about/news/20260305C3.html" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/china/about/news/20260305C3.html
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例4 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏭 辽宁鞍钢知识问答一体机</h3>
+                        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">AI知识库</span>
+                    </div>
+                    <p><strong>核心方案：</strong>钢铁行业AI问答系统，准确率99%，文档检索提效90%</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>中兴AI一体机，内置钢铁行业知识库，支持自然语言问答</li>
+                            <li>设备故障诊断、工艺参数查询，问答准确率99%</li>
+                            <li>文档检索效率提升90%，工程师找资料时间从小时级降至秒级</li>
+                            <li>私有化部署，保障企业数据安全</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="http://www.cww.net.cn/article?id=604420" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            http://www.cww.net.cn/article?id=604420
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例5 -->
+                <div style="padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🎬 5G-A演唱会直播</h3>
+                        <span style="background: #ec4899; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">超高清直播</span>
+                    </div>
+                    <p><strong>核心方案：</strong>上行2Gbps+，NodeEngine算力，多机位稳定传输</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>5G-A网络上行2Gbps+，支撑8K超高清直播回传</li>
+                            <li>NodeEngine边缘算力，本地完成视频编码和分发</li>
+                            <li>多机位同时传输，网络零卡顿，观众沉浸式体验</li>
+                            <li>万人场馆高密度覆盖，单用户速率稳定100Mbps+</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="http://m.toutiao.com/group/7613680742454903336/" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            http://m.toutiao.com/group/7613680742454903336/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关产品 -->
+        <section class="card">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🛠️ 推荐产品</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 C600 TSN OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">TSN over PON，确定性时延<10ms，满足工业控制需求</p>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 EasyOn·Robot</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">极简机器人专网，一键部署，5分钟开通，多机协同</p>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 AI Cube智算一体机</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">工业AI质检、知识问答、私有化部署，数据安全</p>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 5G-A室分</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">上行2Gbps+，NodeEngine算力，支撑8K AI视觉</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="healthcare.html" class="btn" style="margin-right: 15px;">← 查看医疗方案</a>
+            <a href="../zte-pon.html" class="btn btn-success">返回中兴PON总览 →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/data.js"></script>
+    <script src="../../../js/components.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

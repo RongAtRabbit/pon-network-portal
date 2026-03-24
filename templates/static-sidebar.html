@@ -1,0 +1,196 @@
+<!-- 静态侧边栏 - 用于所有子页面 -->
+<style>
+/* 静态侧边栏样式 */
+.static-sidebar {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    overflow-y: auto;
+    z-index: 900;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.static-sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.static-sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.static-sidebar-nav {
+    padding: 16px 0;
+}
+
+.static-sidebar-section {
+    margin-bottom: 8px;
+}
+
+.static-sidebar-section-title {
+    padding: 12px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.static-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.static-sidebar-item {
+    position: relative;
+}
+
+.static-sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+}
+
+.static-sidebar-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: #f8fafc;
+    border-left-color: #3b82f6;
+}
+
+.static-sidebar-link.active {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-left-color: #3b82f6;
+}
+
+.static-sidebar-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+body.has-static-sidebar {
+    padding-left: 260px;
+}
+
+body.has-static-sidebar .navbar {
+    left: 260px;
+    width: calc(100% - 260px);
+}
+
+@media (max-width: 1024px) {
+    .static-sidebar {
+        display: none;
+    }
+    body.has-static-sidebar {
+        padding-left: 0;
+    }
+    body.has-static-sidebar .navbar {
+        left: 0;
+        width: 100%;
+    }
+}
+</style>
+
+<!-- 侧边栏 HTML -->
+<aside class="static-sidebar">
+    <div class="static-sidebar-header">
+        <div class="static-sidebar-title">
+            <span>📑</span>
+            <span>目录导航</span>
+        </div>
+    </div>
+    
+    <nav class="static-sidebar-nav">
+        <!-- 首页 -->
+        <div class="static-sidebar-section">
+            <ul class="static-sidebar-menu">
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_ROOT/index.html" class="static-sidebar-link">
+                        <span class="static-sidebar-icon">🏠</span>
+                        <span>首页</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 厂商方案 -->
+        <div class="static-sidebar-section">
+            <div class="static-sidebar-section-title">厂商方案</div>
+            <ul class="static-sidebar-menu">
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_VENDORS/huawei-f5g.html" class="static-sidebar-link">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C41E3A;margin-right:8px;"></span>
+                        <span>华为 F5G</span>
+                    </a>
+                </li>
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_VENDORS/h3c-optical.html" class="static-sidebar-link">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#E60012;margin-right:8px;"></span>
+                        <span>华三 光网络</span>
+                    </a>
+                </li>
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_VENDORS/zte-pon.html" class="static-sidebar-link">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0066CC;margin-right:8px;"></span>
+                        <span>中兴 PON</span>
+                    </a>
+                </li>
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_VENDORS/fiberhome-pon.html" class="static-sidebar-link">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#00A0E9;margin-right:8px;"></span>
+                        <span>烽火 PON</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 其他模块 -->
+        <div class="static-sidebar-section">
+            <div class="static-sidebar-section-title">其他</div>
+            <ul class="static-sidebar-menu">
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_PAGES/news/index.html" class="static-sidebar-link">
+                        <span class="static-sidebar-icon">📰</span>
+                        <span>最新资讯</span>
+                    </a>
+                </li>
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_PAGES/docs/center.html" class="static-sidebar-link">
+                        <span class="static-sidebar-icon">📚</span>
+                        <span>技术文档</span>
+                    </a>
+                </li>
+                <li class="static-sidebar-item">
+                    <a href="PATH_TO_ROOT/insights.html" class="static-sidebar-link">
+                        <span class="static-sidebar-icon">🔮</span>
+                        <span>技术洞察</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</aside>
+
+<script>
+// 添加 body class
+document.body.classList.add('has-static-sidebar');
+</script>

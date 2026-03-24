@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中兴医疗光网解决方案 | 行业方案</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / <a href="../zte-pon.html">中兴 PON</a> / 医疗光网
+        </div>
+
+        <h1 style="margin-bottom: 30px;">🏥 中兴医疗光网解决方案</h1>
+
+        <!-- 价值主张 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">💡 方案价值</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #fef2f2; border-radius: 8px;">
+                        <h4 style="color: #ef4444;">🏥 双域双网</h4>
+                        <p>5G公网+医疗专网融合，"一网两用"，公网内网物理隔离，保障数据安全</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                        <h4 style="color: #22c55e;">📡 移动医疗</h4>
+                        <p>5G专网支持移动远程查房、移动护理、急救车影像实时回传，提升诊疗效率</p>
+                    </div>
+                    <div style="padding: 20px; background: #eff6ff; border-radius: 8px;">
+                        <h4 style="color: #3b82f6;">🤖 AI智能诊断</h4>
+                        <p>AI医疗大模型，2分钟生成体检报告，病理分析准确率95%+，辅助医生精准诊疗</p>
+                    </div>
+                    <div style="padding: 20px; background: #faf5ff; border-radius: 8px;">
+                        <h4 style="color: #a855f7;">🚁 应急救治</h4>
+                        <p>5G-A无人机血液配送，10分钟完成急救血液运输，空地一体智慧急救</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网架构 -->
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🌐 组网架构</h2>
+                <p style="margin-bottom: 20px; color: #6b7280;">
+                    中兴医疗光网采用5G+POL融合架构，核心层（医疗云/核心交换机）、汇聚层（医疗OLT）、接入层（ONU+5G终端），
+                    实现双域双网，公网内网物理隔离。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">医疗云/区域健康大数据</div>
+                        <div class="network-desc">区域影像 | 远程会诊 | 电子病历</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">医疗核心交换机</div>
+                            <div class="network-desc">ZXR10 9908</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">医疗OLT</div>
+                            <div class="network-desc">C600系列</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 5G层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #8b5cf6; background: #f5f3ff;">
+                            <div class="network-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);">📶</div>
+                            <div class="network-label">5G NodeEngine</div>
+                            <div class="network-desc">双域双网 | 医疗专网</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">诊室ONU</div>
+                            <div class="network-desc">叫号/支付</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">病房ONU</div>
+                            <div class="network-desc">床旁终端</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">影像ONU</div>
+                            <div class="network-desc">PACS传输</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">5G移动查房</div>
+                            <div class="network-desc">PAD终端</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 架构说明 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                    <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 8px;">核心层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">ZXR10核心交换机，双机热备，高可靠保障</p>
+                    </div>
+                    <div style="padding: 15px; background: #f5f3ff; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                        <h4 style="color: #5b21b6; margin-bottom: 8px;">汇聚层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">C600医疗OLT，硬切片隔离，低时延<1ms</p>
+                    </div>
+                    <div style="padding: 15px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <h4 style="color: #065f46; margin-bottom: 8px;">5G专网</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">NodeEngine双域双网，公网内网物理隔离</p>
+                    </div>
+                    <div style="padding: 15px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h4 style="color: #92400e; margin-bottom: 8px;">接入层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">ONU+5G终端，移动查房/远程会诊/急救车</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">📋 典型应用案例</h2>
+
+                <!-- 案例1 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 苏州大学附属第一医院 5G专网</h3>
+                        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">5G专网</span>
+                    </div>
+                    <p><strong>核心方案：</strong>5G "一网两用"，公网内网隔离，支撑移动医疗创新应用</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署5G医疗专网，实现公网与内网物理隔离，保障医疗数据安全</li>
+                            <li>支持5G移动查房、移动护理、远程会诊等创新应用</li>
+                            <li>影像数据实时传输，医生随时随地调阅患者病历</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/china/enterpriseindustry/Commercial-market/5G-private-network-solution-for-hospitals.html" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/china/enterpriseindustry/Commercial-market/5G-private-network-solution-for-hospitals.html
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例2 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 衢州人民医院 NodeEngine医疗专网</h3>
+                        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">双域双网</span>
+                    </div>
+                    <p><strong>核心方案：</strong>双域双链路5G专网，移动远程查房，影像数据直达医生终端</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>NodeEngine算力基站，实现5G专网本地分流，时延<10ms</li>
+                            <li>医生通过5G PAD移动查房，实时调阅患者影像和病历</li>
+                            <li>双链路备份，保障医疗业务连续性，网络可靠性99.99%</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/china/enterpriseindustry/Commercial-market/5G-private-network-solution-for-hospitals.html" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/china/enterpriseindustry/Commercial-market/5G-private-network-solution-for-hospitals.html
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例3 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 AI智能总检一体机（上海十院）</h3>
+                        <span style="background: #a855f7; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">AI诊断</span>
+                    </div>
+                    <p><strong>核心方案：</strong>中兴AI Cube智算一体机+医疗大模型，2分钟生成体检报告，准确率95%</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>AI智能总检，自动分析体检指标，2分钟生成总检报告</li>
+                            <li>异常指标智能预警，为医生提供诊断建议，准确率超95%</li>
+                            <li>总检医生工作效率提升5倍，体检报告出具时间从2天缩短至2小时</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.sh.chinanews.com.cn/kjjy/2025-07-28/138524.shtml" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.sh.chinanews.com.cn/kjjy/2025-07-28/138524.shtml
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例4 -->
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 肿瘤AI诊断应用（河北三甲医院）</h3>
+                        <span style="background: #f59e0b; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">AI病理</span>
+                    </div>
+                    <p><strong>核心方案：</strong>AiCube智算一体机，分钟级病理分析，准确率95%+</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>AI辅助病理诊断，自动识别肿瘤细胞，分钟级出结果</li>
+                            <li>病理切片数字化，支持远程会诊和多方协作</li>
+                            <li>诊断准确率95%+，显著提升早癌筛查效率</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.zte.com.cn/china/about/news/20250409c2.html" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.zte.com.cn/china/about/news/20250409c2.html
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 案例5 -->
+                <div style="padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🚁 河南安阳5G-A无人机血液配送</h3>
+                        <span style="background: #ef4444; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">5G-A应急</span>
+                    </div>
+                    <p><strong>核心方案：</strong>5G-A+AI，空地一体智慧急救，10分钟完成急救血液配送</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>5G-A网络覆盖医院至周边区域，保障无人机通信链路稳定</li>
+                            <li>AI路径规划，自动避开障碍物，选择最优配送路线</li>
+                            <li>10分钟完成血液配送，比传统方式快3倍，为急救赢得宝贵时间</li>
+                        </ul>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.iesouyin.com/share/video/7535058064387345679" target="_blank" style="color: #1d4ed8; text-decoration: none;">
+                            https://www.iesouyin.com/share/video/7535058064387345679
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关产品 -->
+        <section class="card">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🛠️ 推荐产品</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 5G NodeEngine</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">室内5G小基站，支持双域双网，医疗专网本地分流</p>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 AI Cube智算一体机</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">医疗AI大模型推理，病理分析/体检总检/辅助诊断</p>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">中兴 C600医疗OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">硬切片隔离，低时延<1ms，保障PACS影像传输</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="education.html" class="btn" style="margin-right: 15px;">← 查看教育方案</a>
+            <a href="enterprise.html" class="btn btn-success">查看企业方案 →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/data.js"></script>
+    <script src="../../../js/components.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

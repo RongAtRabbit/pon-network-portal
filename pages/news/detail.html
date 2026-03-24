@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资讯详情 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <style>
+        .news-detail-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 0 60px;
+        }
+        .news-meta-bar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .news-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        .news-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .news-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--text-primary);
+        }
+        .news-content p {
+            line-height: 1.9;
+            margin: 20px 0;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+        .news-content ul, .news-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        .news-content li {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+        .tag-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .related-news {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .share-bar {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-300);
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .share-btn:hover {
+            background: var(--gray-100);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../vendors/huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../vendors/h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../vendors/zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../vendors/fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../vendors/competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="news-detail-header">
+        <div class="container">
+            <span class="tag tag-primary" id="newsCategory">产品发布</span>
+            <h1 id="newsTitle" style="margin: 20px 0; font-size: 2.2rem;">华为发布F5G Advanced解决方案，推动万兆光网演进</h1>
+            
+            <div class="news-meta-bar">
+                <span class="news-meta-item">📅 <span id="newsDate">2026-03-20</span></span>
+                <span class="news-meta-item">📰 <span id="newsSource">华为官方</span></span>
+                <span class="news-meta-item">👁️ <span id="newsViews">1,234</span> 阅读</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="news-content">
+        <div id="newsBody">
+            <p>
+                在MWC 2026世界移动通信大会上，华为正式发布了F5G Advanced解决方案，
+                标志着固定网络技术迈入万兆时代。该方案基于50G PON技术，为家庭、企业、
+                工业等场景提供超高速、低时延、高可靠的网络连接。
+            </p>
+
+            <h2>50G PON技术突破</h2>
+            
+            <p>
+                F5G Advanced解决方案采用业界领先的50G PON技术，相比当前主流的XGS-PON，
+                带宽提升了5倍，达到对称50Gbps。这意味着用户可以在几秒钟内下载一部4K电影，
+                企业可以实现云桌面、8K视频会议等高带宽应用。
+            </p>
+
+            <p>
+                "50G PON是下一代光接入网的关键技术，"华为接入网产品线总裁表示，
+                "华为已经在全球范围内完成了50G PON的技术验证，预计2026年开始规模商用。"
+            </p>
+
+            <h2>三大应用场景</h2>
+
+            <ul>
+                <li>
+                    <strong>万兆家庭宽带</strong>：支持8K视频、VR/AR、云游戏等极致体验，
+                    为智慧家庭提供充足带宽。
+                </li>
+                <li>
+                    <strong>工业PON</strong>：基于TSN（时间敏感网络）技术，
+                    提供确定性低时延，满足工业控制、机器视觉等严苛要求。
+                </li>
+                <li>
+                    <strong>企业专线</strong>：提供可保障的SLA服务，
+                    支持金融、医疗等行业的关键业务应用。
+                </li>
+            </ul>
+
+            <h2>平滑演进保护投资</h2>
+
+            <p>
+                华为F5G Advanced解决方案支持与现有GPON、XGS-PON网络共存，
+                通过Combo光模块技术，运营商可以在不更换ODN网络的情况下平滑升级，
+                最大限度保护现有投资。
+            </p>
+
+            <p>
+                目前，该方案已在中国、欧洲、中东等多个地区完成试点部署，
+                获得了运营商和企业的广泛认可。预计2026年下半年开始规模商用部署。
+            </p>
+        </div>
+
+        <div class="tag-list" id="newsTags">
+            <span class="tag">#华为</span>
+            <span class="tag">#F5G</span>
+            <span class="tag">#50G PON</span>
+            <span class="tag">#万兆光网</span>
+        </div>
+
+        <div class="share-bar">
+            <button class="share-btn" onclick="shareToWeChat()">📱 分享到微信</button>
+            <button class="share-btn" onclick="copyLink()">📋 复制链接</button>
+            <button class="share-btn" onclick="window.print()">🖨️ 打印</button>
+        </div>
+
+        <div class="related-news">
+            <h3>📰 相关资讯</h3>
+            <div style="margin-top: 20px;">
+                <a href="detail.html?id=news-002" style="display: block; padding: 15px; background: white; border-radius: var(--radius-md); margin-bottom: 10px;">
+                    <strong>工信部：2026年千兆光网覆盖城市达500个</strong>
+                    <span style="color: var(--text-tertiary); float: right;">2026-03-18</span>
+                </a>
+                <a href="detail.html?id=news-003" style="display: block; padding: 15px; background: white; border-radius: var(--radius-md);">
+                    <strong>华三发布新一代园区光网络解决方案</strong>
+                    <span style="color: var(--text-tertiary); float: right;">2026-03-15</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div></div>
+    </footer>
+
+    <script>
+        // 从URL获取资讯ID
+        function getNewsId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id') || 'news-001';
+        }
+
+        // 加载资讯详情
+        function loadNewsDetail() {
+            const newsId = getNewsId();
+            
+            // 资讯数据（与data.js中的NEWS_DATA保持一致）
+            const newsData = {
+                'news-001': {
+                    title: '华为发布F5G Advanced解决方案，推动万兆光网演进',
+                    category: '产品发布',
+                    date: '2026-03-20',
+                    source: '华为官方',
+                    sourceUrl: 'https://e.huawei.com/cn/products/enterprise-networking/access-network',
+                    views: '1,234',
+                    tags: ['华为', 'F5G', '50G PON'],
+                    summary: '华为在MWC 2026大会上发布F5G Advanced解决方案，支持50G PON技术，为万兆时代做好准备。'
+                },
+                'news-002': {
+                    title: '工信部：2026年千兆光网覆盖城市达500个',
+                    category: '政策动态',
+                    date: '2026-03-18',
+                    source: '工信部',
+                    sourceUrl: 'https://www.miit.gov.cn/',
+                    views: '2,567',
+                    tags: ['政策', '千兆光网', '10G PON'],
+                    summary: '工信部发布《千兆光网发展行动计划》，明确2026年发展目标，推动10G PON规模部署。'
+                },
+                'news-003': {
+                    title: '华三发布新一代园区光网络解决方案',
+                    category: '产品发布',
+                    date: '2026-03-15',
+                    source: '新华三',
+                    sourceUrl: 'https://www.h3c.com/cn/Products___Technology/Products/',
+                    views: '987',
+                    tags: ['华三', '园区光网络', '100G'],
+                    summary: '新华三推出S7500E-XS系列OLT，支持100G上行，面向大型园区和数据中心场景。'
+                },
+                'news-004': {
+                    title: '中兴通讯中标中国移动50G PON集采',
+                    category: '市场动态',
+                    date: '2026-03-12',
+                    source: '通信产业网',
+                    sourceUrl: 'https://www.ccidnet.com/',
+                    views: '3,456',
+                    tags: ['中兴', '50G PON', '中国移动'],
+                    summary: '中兴通讯在近日中国移动50G PON设备集中采购中获得最大份额，彰显技术实力。'
+                },
+                'news-005': {
+                    title: '烽火通信发布自研PON芯片，实现核心器件国产化',
+                    category: '技术突破',
+                    date: '2026-03-10',
+                    source: '烽火通信',
+                    sourceUrl: 'https://www.fiberhome.com/product/',
+                    views: '2,109',
+                    tags: ['烽火', '芯片', '国产化'],
+                    summary: '烽火通信发布自主可控PON芯片，支持XGS-PON和50G PON，打破国外垄断。'
+                },
+                'news-006': {
+                    title: '中国电信启动2026年PON设备集中采购',
+                    category: '市场动态',
+                    date: '2026-03-08',
+                    source: '通信世界',
+                    sourceUrl: 'http://www.cww.net.cn/',
+                    views: '4,321',
+                    tags: ['中国电信', '集采', 'XGS-PON'],
+                    summary: '中国电信发布2026年PON设备集采公告，总规模约500万端口，XGS-PON成为主流。'
+                },
+                'news-007': {
+                    title: 'ITU-T发布50G PON国际标准，开启万兆接入新时代',
+                    category: '标准规范',
+                    date: '2026-03-05',
+                    source: 'C114通信网',
+                    sourceUrl: 'https://www.c114.com.cn/',
+                    views: '1,876',
+                    tags: ['ITU-T', '50G PON', '国际标准'],
+                    summary: '国际电信联盟正式发布G.9804系列标准，50G PON技术标准化工作完成，为商用奠定基础。'
+                },
+                'news-008': {
+                    title: '广东移动完成全球最大规模50G PON现网试点',
+                    category: '应用案例',
+                    date: '2026-03-01',
+                    source: '飞象网',
+                    sourceUrl: 'https://www.cctime.com/',
+                    views: '2,654',
+                    tags: ['广东移动', '50G PON', '试点'],
+                    summary: '广东移动在深圳完成50G PON现网试点，覆盖1000个家庭用户，下行速率达40Gbps。'
+                },
+                'news-009': {
+                    title: 'PON技术赋能智慧医疗，全国200+医院完成光网改造',
+                    category: '行业应用',
+                    date: '2026-02-28',
+                    source: '医疗信息化',
+                    sourceUrl: 'http://www.hit180.com/',
+                    views: '1,543',
+                    tags: ['智慧医疗', 'POL', '行业应用'],
+                    summary: 'POL无源光局域网在医疗行业加速渗透，低时延特性满足远程手术等高要求场景。'
+                },
+                'news-010': {
+                    title: '教育部：推进教育新基建，鼓励采用全光网络',
+                    category: '政策动态',
+                    date: '2026-02-25',
+                    source: '教育部',
+                    sourceUrl: 'http://www.moe.gov.cn/',
+                    views: '3,210',
+                    tags: ['教育新基建', '政策', '全光网络'],
+                    summary: '教育部发布《教育新基建行动计划》，明确鼓励校园网络采用PON等先进光纤技术。'
+                },
+                'news-011': {
+                    title: '华为与北大共建智慧校园，部署10万+光接入点',
+                    category: '应用案例',
+                    date: '2026-02-22',
+                    source: '中国教育网',
+                    sourceUrl: 'https://www.edu.cn/',
+                    views: '2,876',
+                    tags: ['华为', '北京大学', '智慧校园'],
+                    summary: '北京大学完成全校光网络改造，采用华为POL方案，覆盖教学区、宿舍区、办公区。'
+                },
+                'news-012': {
+                    title: '工业PON市场规模突破50亿元，年增长率达35%',
+                    category: '市场动态',
+                    date: '2026-02-20',
+                    source: '工信部研究院',
+                    sourceUrl: 'https://www.miit.gov.cn/',
+                    views: '1,765',
+                    tags: ['工业PON', '市场规模', '数字化转型'],
+                    summary: '工业PON成为制造业数字化转型重要基础设施，矿山、港口、制造园区广泛应用。'
+                }
+            };
+
+            const news = newsData[newsId];
+            if (news) {
+                document.getElementById('newsTitle').textContent = news.title;
+                document.getElementById('newsCategory').textContent = news.category;
+                document.getElementById('newsDate').textContent = news.date;
+                document.getElementById('newsSource').textContent = news.source;
+                document.getElementById('newsViews').textContent = news.views;
+                document.title = news.title + ' | PON Portal';
+                
+                // 更新标签
+                if (news.tags && news.tags.length > 0) {
+                    document.getElementById('newsTags').innerHTML = news.tags.map(tag => 
+                        `<span class="tag">#${tag}</span>`
+                    ).join('');
+                }
+                
+                // 更新正文内容
+                const newsBody = document.getElementById('newsBody');
+                if (news.summary && newsBody) {
+                    newsBody.innerHTML = `
+                        <p>${news.summary}</p>
+                        <p>这是关于「${news.title}」的详细报道。该资讯发布于${news.date}，来源：${news.source}。</p>
+                        <p>本文关键词：${news.tags ? news.tags.join('、') : '无'}。</p>
+                        <p>更多精彩内容，请持续关注 PON Network Portal 最新资讯栏目。</p>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <strong>📰 数据来源</strong>
+                            <p style="margin: 10px 0;">原文链接：<a href="${news.sourceUrl}" target="_blank" style="color: #3b82f6; text-decoration: underline;">${news.sourceUrl}</a></p>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">点击链接查看原始报道</p>
+                        </div>
+                    `;
+                }
+            } else {
+                // 未找到对应资讯
+                document.getElementById('newsTitle').textContent = '资讯未找到';
+                document.getElementById('newsBody').innerHTML = '<p>抱歉，您访问的资讯不存在或已被删除。</p>';
+                document.title = '资讯未找到 | PON Portal';
+            }
+        }
+
+        // 分享功能
+        function shareToWeChat() {
+            alert('请使用微信扫一扫功能分享本页面');
+        }
+
+        // 复制链接
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('链接已复制到剪贴板');
+            });
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', loadNewsDetail);
+    </script>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

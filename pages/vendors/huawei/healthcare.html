@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为F5G医疗光网解决方案 | 行业方案</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / <a href="../huawei-f5g.html">华为 F5G</a> / 医疗光网
+        </div>
+
+        <h1 style="margin-bottom: 30px;">🏥 华为F5G医疗光网解决方案</h1>
+
+        <!-- 方案价值 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">💡 方案价值</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #fef2f2; border-radius: 8px;">
+                        <h4 style="color: #ef4444;">🏥 硬隔离保障</h4>
+                        <p>光切片技术实现内外网硬隔离，满足等保三级要求，保障医疗数据安全</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                        <h4 style="color: #22c55e;">⚡ 超低时延</h4>
+                        <p>微秒级时延，满足PACS影像秒级调阅、远程手术等实时业务需求</p>
+                    </div>
+                    <div style="padding: 20px; background: #eff6ff; border-radius: 8px;">
+                        <h4 style="color: #3b82f6;">📡 移动医疗</h4>
+                        <p>Wi-Fi 6全覆盖，支撑移动查房、移动护理、远程会诊等无线业务</p>
+                    </div>
+                    <div style="padding: 20px; background: #faf5ff; border-radius: 8px;">
+                        <h4 style="color: #a855f7;">🛡️ 高可靠性</h4>
+                        <p>Type B/C保护，链路故障自动切换，保障医疗业务7×24小时不中断</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网架构 -->
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🌐 组网架构</h2>
+                <p style="margin-bottom: 20px; color: #6b7280;">
+                    华为F5G医疗光网采用三层架构设计：核心层（医疗云/核心交换机）、汇聚层（OLT光线路终端）、接入层（ONU光网络单元），
+                    通过ODN无源光分配网络实现光纤到病房/诊室的全覆盖。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">医疗云/区域健康大数据</div>
+                        <div class="network-desc">区域PACS | 远程会诊 | 电子病历</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">CE16800</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">EA5800-X2</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">ODN无源光分配</div>
+                            <div class="network-desc">分光器(1:32) | 光纤配线</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">门诊ONU</div>
+                            <div class="network-desc">P813E</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">病房ONU</div>
+                            <div class="network-desc">EG8240H5</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">影像ONU</div>
+                            <div class="network-desc">P613E</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">办公ONU</div>
+                            <div class="network-desc">EG8145X6</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 架构说明 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                    <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 8px;">核心层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">医院核心交换机，双机热备，高可靠保障</p>
+                    </div>
+                    <div style="padding: 15px; background: #f5f3ff; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                        <h4 style="color: #5b21b6; margin-bottom: 8px;">汇聚层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">医疗OLT，硬切片隔离，微秒级时延</p>
+                    </div>
+                    <div style="padding: 15px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <h4 style="color: #065f46; margin-bottom: 8px;">ODN层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">无源光分配，光纤到病房/诊室/医技科室</p>
+                    </div>
+                    <div style="padding: 15px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h4 style="color: #92400e; margin-bottom: 8px;">接入层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">医疗级ONU，Wi-Fi 6覆盖，PoE供电</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐网元 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🛠️ 推荐网元</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华为 EA5800-X2 OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">紧凑型OLT，适用于中小型医院网络</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：2.4Tbps</li>
+                            <li>支持XGS-PON/50G PON</li>
+                            <li>光切片硬隔离</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华为 OptiXstar P813E ONU</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">企业级ONU，适用于病房/诊室接入</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>8×GE + 4×POTS</li>
+                            <li>Wi-Fi 6 AX3000</li>
+                            <li>支持PoE供电</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">华为 AirEngine Wi-Fi 6</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">医疗级Wi-Fi 6 AP，支持移动医疗</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>Wi-Fi 6 AX6000</li>
+                            <li>智能天线，零漫游</li>
+                            <li>医疗级抗干扰</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">📋 典型应用案例</h2>
+
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 某三甲医院网络改造</h3>
+                        <span style="background: #ef4444; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">F5G医疗</span>
+                    </div>
+                    <p><strong>核心方案：</strong>部署华为F5G全光网络，覆盖门诊、住院、医技楼，2000床位</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>光切片实现内外网硬隔离，通过等保三级认证</li>
+                            <li>PACS影像秒级调阅，医生工作效率提升50%</li>
+                            <li>Wi-Fi 6全覆盖，支撑移动查房、移动护理</li>
+                            <li>网络时延<1ms，满足远程会诊需求</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e0f2fe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network" target="_blank" style="color: #0284c7; text-decoration: none;">
+                            https://e.huawei.com/cn/solutions/enterprise-optical-network
+                        </a>
+                    </div>
+                </div>
+
+                <div style="padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏥 某省级人民医院智慧医院</h3>
+                        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">智慧医院</span>
+                    </div>
+                    <p><strong>核心方案：</strong>华为POL全光网络+Wi-Fi 6，打造智慧医院标杆</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>POL无源光网络，机房空间节省60%，能耗降低35%</li>
+                            <li>统一承载HIS、PACS、LIS、物联网等业务</li>
+                            <li>智能运维，故障定位时间缩短80%</li>
+                            <li>患者满意度提升20%，医院运营效率显著提升</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e0f2fe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network" target="_blank" style="color: #0284c7; text-decoration: none;">
+                            https://e.huawei.com/cn/solutions/enterprise-optical-network
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="education.html" class="btn" style="margin-right: 15px;">← 查看教育方案</a>
+            <a href="enterprise.html" class="btn btn-success">查看企业方案 →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/data.js"></script>
+    <script src="../../../js/components.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

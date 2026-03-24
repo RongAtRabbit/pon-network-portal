@@ -1,0 +1,491 @@
+/**
+ * PON Architecture Viewer Styles
+ * 组网架构可视化样式
+ */
+
+/* 架构查看器容器 */
+.arch-viewer {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.arch-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.arch-header h3 {
+    font-size: 1.5rem;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+}
+
+.arch-header p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+}
+
+/* 架构图区域 */
+.arch-diagram {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.arch-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 层级样式 */
+.arch-layer {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arch-layer:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.arch-layer.expanded {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.layer-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.layer-icon {
+    font-size: 1.5rem;
+}
+
+.layer-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--gray-800);
+}
+
+/* 设备节点 */
+.layer-devices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.device-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    min-width: 120px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.device-node:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transform: scale(1.05);
+}
+
+.device-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* 设备类型颜色 */
+.device-icon.core {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.device-icon.olt {
+    background: linear-gradient(135deg, #c41e3a, #ff0000);
+}
+
+.device-icon.odf,
+.device-icon.occ {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.device-icon.splitter {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.device-icon.onu {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.device-icon.ap {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+.device-icon.terminal,
+.device-icon.iot {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+}
+
+.device-icon.cloud {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+.device-icon.tsn {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+.device-icon.mec {
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+}
+
+.device-icon.industrial,
+.device-icon.sensor {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.device-icon.panel {
+    background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+}
+
+.device-icon.combo {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+}
+
+.device-icon.domestic {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+/* 设备信息 */
+.device-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+    text-align: center;
+}
+
+.device-model {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* 层级连接器 */
+.layer-connector {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    opacity: 0.5;
+    margin: -10px 0;
+}
+
+/* 图例 */
+.arch-legend {
+    background: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.legend-label {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+/* 详情区域 */
+.arch-details {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.detail-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+}
+
+.detail-card h4 {
+    font-size: 0.95rem;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+}
+
+.detail-card p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+}
+
+/* 场景化架构图样式 */
+.scenario-architecture {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.scenario-architecture pre {
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+    white-space: pre;
+}
+
+/* 架构对比视图 */
+.arch-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.arch-comparison-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.arch-comparison-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.arch-comparison-item .vendor-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.arch-comparison-item .vendor-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.arch-comparison-item .vendor-logo.huawei {
+    background: linear-gradient(135deg, #c41e3a, #ff0000);
+}
+
+.arch-comparison-item .vendor-logo.h3c {
+    background: linear-gradient(135deg, #e60012, #ff3344);
+}
+
+.arch-comparison-item .vendor-logo.zte {
+    background: linear-gradient(135deg, #0066cc, #0080ff);
+}
+
+.arch-comparison-item .vendor-logo.fiberhome {
+    background: linear-gradient(135deg, #00a0e9, #00c3ff);
+}
+
+/* 架构切换器 */
+.arch-switcher {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.arch-switcher button {
+    padding: 10px 20px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.arch-switcher button:hover {
+    border-color: var(--primary);
+    background: #eff6ff;
+}
+
+.arch-switcher button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* 场景选择器 */
+.scenario-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.scenario-selector button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.scenario-selector button:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.scenario-selector button.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-color: transparent;
+}
+
+.scenario-selector button .icon {
+    font-size: 1.2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .arch-viewer {
+        padding: 15px;
+    }
+
+    .arch-diagram {
+        padding: 15px;
+    }
+
+    .layer-devices {
+        justify-content: flex-start;
+    }
+
+    .device-node {
+        min-width: 100px;
+        padding: 12px 15px;
+    }
+
+    .device-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arch-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .scenario-architecture pre {
+        font-size: 0.65rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.arch-layer {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.arch-layer:nth-child(1) { animation-delay: 0.1s; }
+.arch-layer:nth-child(2) { animation-delay: 0.2s; }
+.arch-layer:nth-child(3) { animation-delay: 0.3s; }
+.arch-layer:nth-child(4) { animation-delay: 0.4s; }
+
+/* 工具提示 */
+.device-tooltip {
+    position: absolute;
+    background: var(--gray-800);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    z-index: 1000;
+    max-width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.device-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: var(--gray-800) transparent transparent;
+}

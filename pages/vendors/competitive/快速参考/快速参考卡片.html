@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PON竞争对手快速参考卡片 | 竞争分析</title>
+    <link rel="stylesheet" href="../../../../css/main.css">
+    <link rel="stylesheet" href="../../../../css/components.css">
+    <style>
+        body { background: #f5f5f5; }
+        .print-page {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: -20px -20px 30px -20px;
+        }
+        .page-header h1 { margin-bottom: 10px; }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        @media print {
+            .print-btn, .back-btn { display: none; }
+            body { background: white; }
+            .print-page { box-shadow: none; }
+        }
+        .content { line-height: 1.8; }
+        .content h1 {
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+            margin-top: 30px;
+        }
+        .content h2 {
+            color: #4b5563;
+            margin-top: 25px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.2rem;
+        }
+        .content h3 {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.85rem;
+        }
+        .content th {
+            background: #f3f4f6;
+            padding: 8px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #e5e7eb;
+        }
+        .content td {
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .content tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .quick-card {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .check-yes { color: #10b981; font-weight: 600; }
+        .check-no { color: #ef4444; }
+        .check-partial { color: #f59e0b; }
+        .section { margin-bottom: 30px; }
+    </style>
+    <link rel="stylesheet" href="../../../../css/sidebar.css">
+</head>
+<body>
+    <a href="../../competitive.html" class="back-btn">← 返回资料库</a>
+    <button class="print-btn" onclick="window.print()">🖨️ 打印</button>
+
+    <div class="print-page">
+        <div class="page-header">
+            <h1>⚔️ PON竞争对手快速参考卡片</h1>
+            <p>售前技术支持 · 电话沟通 · 快速应答</p>
+        </div>
+
+        <div class="content">
+            <p><strong>适用对象</strong>: PON网络SE（系统工程师/解决方案工程师）<br>
+            <strong>使用场景</strong>: 客户交流、招投标、方案设计<br>
+            <strong>更新时间</strong>: 2026-03-08</p>
+
+            <div class="section">
+                <h1>一、主要竞争对手速查表</h1>
+                <table>
+                    <tr><th>厂商</th><th>核心产品</th><th>主要优势</th><th>主要劣势</th><th>应对策略</th></tr>
+                    <tr><td><strong>中兴</strong></td><td>C300/C600</td><td>价格、运营商市场</td><td>网管智能化弱</td><td>强调AI运维、Type B/C完整性</td></tr>
+                    <tr><td><strong>华三</strong></td><td>S系列OLT</td><td>EPON交换强、渠道</td><td>XGS-PON弱、保护不明确</td><td>强调XGS-PON技术领先、保护机制</td></tr>
+                    <tr><td><strong>烽火</strong></td><td>AN5516/AN6000</td><td>政府关系、国产化</td><td>三层协议弱、云化差</td><td>强调全球领先、开放接口</td></tr>
+                    <tr><td><strong>诺基亚</strong></td><td>Altiplano/7360</td><td>欧美运营商认可</td><td>中国定制化差</td><td>强调本地化、性价比</td></tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h1>二、软件功能快速对比</h1>
+                
+                <h2>2.1 协议支持对比（关键差异）</h2>
+                <table>
+                    <tr><th>协议</th><th>华为</th><th>竞争对手弱点</th></tr>
+                    <tr><td><strong>50G PON</strong></td><td><span class="check-yes">✅ 演进支持</span></td><td>华三不支持，其他规划中</td></tr>
+                    <tr><td><strong>Combo PON</strong></td><td><span class="check-yes">✅ 支持</span></td><td>华三未明确，烽火有限</td></tr>
+                    <tr><td><strong>IS-IS/BGP</strong></td><td><span class="check-yes">✅ 全支持</span></td><td>烽火不支持，中兴有限</td></tr>
+                    <tr><td><strong>Telemetry</strong></td><td><span class="check-yes">✅ 支持</span></td><td>华三/烽火不支持，中兴有限</td></tr>
+                </table>
+
+                <h2>2.2 安全能力对比（核心竞争力）</h2>
+                <table>
+                    <tr><th>安全功能</th><th>华为</th><th>竞争对手状态</th></tr>
+                    <tr><td><strong>光切片硬隔离</strong></td><td><span class="check-yes">✅ 支持</span></td><td>华三未明确，烽火不支持</td></tr>
+                    <tr><td><strong>AES-128加密</strong></td><td><span class="check-yes">✅ 支持</span></td><td>华三未明确</td></tr>
+                    <tr><td><strong>Type B/C/D保护</strong></td><td><span class="check-yes">✅ 完整</span></td><td>华三未明确，其他有限</td></tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h1>三、场景化竞争话术</h1>
+                
+                <h2>3.1 面对中兴竞争</h2>
+                <div class="quick-card">
+                    <p><strong>客户关注点</strong>: 价格、性价比</p>
+                    <p><strong>华为应对</strong>:</p>
+                    <ul>
+                        <li>"中兴C300在价格上确实有优势，但在智能化运维方面，华为的iMaster NCE可以实现AI预测性维护，减少60%故障处理时间"</li>
+                        <li>"华为是业界首家支持50G PON的厂商，未来10年无需更换设备，TCO更低"</li>
+                        <li>"华为Type B/C/D保护机制完整，支持双归属，可靠性更高"</li>
+                    </ul>
+                </div>
+
+                <h2>3.2 面对华三竞争</h2>
+                <div class="quick-card">
+                    <p><strong>客户关注点</strong>: EPON交换能力、企业网经验</p>
+                    <p><strong>华为应对</strong>:</p>
+                    <ul>
+                        <li>"华三EPON的交换能力确实不错，但在PON技术演进上，华为XGS-PON更成熟，支持10G对称带宽"</li>
+                        <li>"华三白皮书中未明确Type B/C保护支持，华为提供完整的PON层保护机制"</li>
+                        <li>"华为光切片技术可实现硬隔离，满足等保要求，华三在这方面未明确"</li>
+                    </ul>
+                </div>
+
+                <h2>3.3 面对烽火竞争</h2>
+                <div class="quick-card">
+                    <p><strong>客户关注点</strong>: 国产化、政府关系</p>
+                    <p><strong>华为应对</strong>:</p>
+                    <ul>
+                        <li>"烽火在国产化上有优势，但在三层路由协议（IS-IS/BGP）支持上较弱，不利于大型网络"</li>
+                        <li>"华为的Telemetry和开放API能力更强，便于与上层OSS集成"</li>
+                        <li>"华为在全球PON市场份额第一，技术积累和商用经验更丰富"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h1>四、技术参数速查</h1>
+                
+                <h2>4.1 PON技术参数对比表</h2>
+                <table>
+                    <tr><th>参数</th><th>华为</th><th>中兴</th><th>华三</th><th>烽火</th></tr>
+                    <tr><td><strong>最大PON口</strong></td><td>272</td><td>256</td><td>未明确</td><td>128</td></tr>
+                    <tr><td><strong>XGS-PON</strong></td><td><span class="check-yes">✅ 完整</span></td><td><span class="check-partial">⚠️ 有限</span></td><td><span class="check-partial">⚠️ 部分</span></td><td><span class="check-partial">⚠️ 有限</span></td></tr>
+                    <tr><td><strong>50G PON</strong></td><td><span class="check-yes">✅ 演进</span></td><td><span class="check-partial">⚠️ 规划</span></td><td><span class="check-no">❌ 不支持</span></td><td><span class="check-partial">⚠️ 规划</span></td></tr>
+                    <tr><td><strong>光切片</strong></td><td><span class="check-yes">✅ 支持</span></td><td><span class="check-partial">⚠️ 有限</span></td><td><span class="check-no">❌ 未明确</span></td><td><span class="check-no">❌ 不支持</span></td></tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h1>五、常见客户问题应答</h1>
+                
+                <h3>Q1: 中兴价格比华为低，为什么要选华为？</h3>
+                <div class="highlight-box">
+                    <strong>A</strong>:
+                    <ol>
+                        <li><strong>长期TCO</strong>: 华为50G PON演进能力，10年内无需更换设备</li>
+                        <li><strong>运维效率</strong>: iMaster NCE可降低60%运维成本</li>
+                        <li><strong>可靠性</strong>: Type B/C/D完整保护，减少业务中断损失</li>
+                    </ol>
+                </div>
+
+                <h3>Q2: 华三说他们的EPON交换能力更强？</h3>
+                <div class="highlight-box">
+                    <strong>A</strong>:
+                    <ol>
+                        <li><strong>技术演进</strong>: EPON已逐步被GPON/XGS-PON取代，华三XGS-PON支持有限</li>
+                        <li><strong>PON专业性</strong>: 华为PON原生功能（光功率、保护、切片）更完整</li>
+                    </ol>
+                </div>
+
+                <h3>Q3: 烽火是国产化，为什么选华为？</h3>
+                <div class="highlight-box">
+                    <strong>A</strong>:
+                    <ol>
+                        <li><strong>国产化</strong>: 华为也是完全国产化，核心芯片自研</li>
+                        <li><strong>技术领先</strong>: 华为在全球PON市场份额第一，技术更先进</li>
+                        <li><strong>三层能力</strong>: 烽火不支持IS-IS/BGP，大型网络受限</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px; text-align: center;">
+                <strong>💡 使用提示</strong><br>
+                本卡片建议打印随身携带，或在手机上保存随时查阅。定期更新以获取最新竞争信息。
+            </div>
+        </div>
+    </div>
+    <script src="../../../../js/sidebar.js"></script>
+</body>
+</html>
