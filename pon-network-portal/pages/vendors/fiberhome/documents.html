@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烽火技术文档库 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <style>
+        .doc-library-header { background: linear-gradient(135deg, #00A0E9, #33BBFF); color: white; padding: 100px 0 60px; text-align: center; }
+        .doc-card { background: white; border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: all 0.2s; }
+        .doc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #00A0E9; }
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .upload-card { background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border: 2px dashed #00A0E9; }
+        .btn-download { background: #00A0E9; color: white; padding: 8px 16px; border-radius: var(--radius-md); border: none; cursor: pointer; font-weight: 500; }
+        .btn-download:hover { background: #0090d9; }
+        .doc-actions { display: flex; gap: 10px; margin-top: 15px; }
+        .doc-format { padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="doc-library-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+            <h1>烽火技术文档库</h1>
+            <p>自主核心芯片PON方案资料中心</p>
+            <div style="margin-top: 30px;">
+                <a href="../fiberhome-pon.html" class="btn btn-secondary">← 返回烽火首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 上传区域 -->
+        <div class="card admin-only" style="margin-bottom: 40px; padding: 30px; background: var(--bg-secondary); display: none;">
+            <h3>📤 上传新文档</h3>
+            <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 15px;">
+                ⚠️ 文件大小限制: 2MB（受浏览器存储限制）
+            </p>
+            <input type="file" id="fileUpload" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" style="margin: 15px 0;">
+            <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px;">
+                <input type="text" placeholder="文档标题" id="docTitle" style="padding: 10px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); width: 300px;">
+                <select id="docCategory" style="padding: 10px; border: 1px solid var(--gray-300); border-radius: var(--radius-md);">
+                    <option value="product">产品资料</option>
+                    <option value="solution">方案文档</option>
+                    <option value="case">案例集</option>
+                </select>
+                <button class="btn btn-primary" onclick="uploadDoc()">📤 上传</button>
+            </div>
+            <p id="uploadStatus" style="margin-top: 10px; color: var(--primary);"></p>
+        </div>
+
+        <!-- 用户上传文档 -->
+        <div id="userDocsSection" class="admin-only" style="margin-bottom: 40px; display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>📤 我上传的文档</h2>
+                <span class="tag tag-success" id="userDocCount">0 个</span>
+            </div>
+            <div class="doc-grid" id="userDocsGrid"></div>
+        </div>
+
+        <h2>📁 官方文档列表</h2>
+        
+        <div class="doc-grid" style="margin-top: 30px;">
+            <div class="doc-card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div style="font-size: 2.5rem;">📄</div>
+                    <span class="doc-format">PDF</span>
+                </div>
+                <h4>AN6000 产品手册</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">超宽带OLT平台详细介绍。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                    <span>📅 2026-03-15</span>
+                    <span>📎 2.8MB</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="btn-download" onclick="alert('示例文档：AN6000产品手册')">⬇️ 下载</button>
+                    <button class="btn btn-secondary" onclick="alert('预览功能：AN6000产品手册')">👁️ 预览</button>
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div style="font-size: 2.5rem;">📘</div>
+                    <span class="doc-format">PDF</span>
+                </div>
+                <h4>智慧家庭解决方案</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">FTTH全屋光纤覆盖方案。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                    <span>📅 2026-03-08</span>
+                    <span>📎 5.5MB</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="btn-download" onclick="alert('示例文档：智慧家庭解决方案')">⬇️ 下载</button>
+                    <button class="btn btn-secondary" onclick="alert('预览功能：智慧家庭解决方案')">👁️ 预览</button>
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div style="font-size: 2.5rem;">📗</div>
+                    <span class="doc-format">PDF</span>
+                </div>
+                <h4>烽火PON芯片技术白皮书</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">自主可控PON芯片技术详解。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                    <span>📅 2026-03-10</span>
+                    <span>📎 8.2MB</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="btn-download" onclick="alert('示例文档：烽火PON芯片技术白皮书')">⬇️ 下载</button>
+                    <button class="btn btn-secondary" onclick="alert('预览功能：烽火PON芯片技术白皮书')">👁️ 预览</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div></div></footer>
+
+    <script>
+        const STORAGE_KEY = 'fiberhome_docs';
+
+        // 上传文档
+        function uploadDoc() {
+            const fileInput = document.getElementById('fileUpload');
+            const titleInput = document.getElementById('docTitle');
+            const categoryInput = document.getElementById('docCategory');
+            const statusEl = document.getElementById('uploadStatus');
+
+            if (!fileInput.files || !fileInput.files[0]) {
+                alert('❌ 请选择要上传的文件');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            
+            // 检查文件大小（限制为 2MB）
+            if (file.size > 2 * 1024 * 1024) {
+                alert('❌ 文件大小超过 2MB 限制\n\n当前文件: ' + (file.size / 1024 / 1024).toFixed(2) + ' MB\n\n提示：大文件建议使用外部链接或压缩后上传。');
+                return;
+            }
+            
+            // 检查存储空间
+            try {
+                const testKey = '__storage_test__';
+                localStorage.setItem(testKey, 'test');
+                localStorage.removeItem(testKey);
+            } catch (e) {
+                alert('❌ 本地存储空间不足\n\n请删除一些已上传的文档后再试。');
+                return;
+            }
+
+            const title = titleInput.value || file.name;
+            const category = categoryInput.value;
+            const ext = file.name.split('.').pop().toLowerCase();
+            
+            const formatMap = { 'pdf': 'PDF', 'doc': 'Word', 'docx': 'Word', 'ppt': 'PPT', 'pptx': 'PPT', 'xls': 'Excel', 'xlsx': 'Excel' };
+            const format = formatMap[ext] || ext.toUpperCase();
+
+            statusEl.textContent = '⏳ 上传中...';
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const doc = {
+                        id: 'fh-' + Date.now(),
+                        title: title,
+                        category: category,
+                        format: format,
+                        filename: file.name,
+                        size: (file.size / 1024 / 1024).toFixed(2) + ' MB',
+                        date: new Date().toISOString().split('T')[0],
+                        uploadTime: new Date().toLocaleString('zh-CN'),
+                        fileData: e.target.result
+                    };
+
+                    let docs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    docs.unshift(doc);
+                    
+                    try {
+                        localStorage.setItem(STORAGE_KEY, JSON.stringify(docs));
+                    } catch (storageError) {
+                        alert('❌ 存储空间不足，无法保存文档');
+                        statusEl.textContent = '';
+                        return;
+                    }
+
+                    statusEl.textContent = `✅ 上传成功: ${title}`;
+                    alert(`✅ 文档上传成功！\n\n📄 ${title}\n📎 ${format}\n📊 ${doc.size}`);
+                    
+                    // 清空表单
+                    fileInput.value = '';
+                    titleInput.value = '';
+                    
+                    renderUserDocs();
+                } catch (error) {
+                    alert('❌ 上传失败: ' + error.message);
+                    statusEl.textContent = '';
+                }
+            };
+            reader.onerror = function() {
+                alert('❌ 文件读取失败');
+                statusEl.textContent = '';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // 渲染用户上传的文档
+        function renderUserDocs() {
+            const docs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            const section = document.getElementById('userDocsSection');
+            const grid = document.getElementById('userDocsGrid');
+            const count = document.getElementById('userDocCount');
+
+            if (docs.length === 0) {
+                section.style.display = 'none';
+                return;
+            }
+
+            section.style.display = 'block';
+            count.textContent = docs.length + ' 个';
+
+            grid.innerHTML = docs.map(doc => `
+                <div class="doc-card" style="border-left: 4px solid #00A0E9;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div style="font-size: 2.5rem;">${getIcon(doc.format)}</div>
+                        <span class="doc-format">${doc.format}</span>
+                    </div>
+                    <h4>${doc.title}</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">
+                        分类: ${getCategoryName(doc.category)}
+                    </p>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                        <span>📅 ${doc.date}</span>
+                        <span>📎 ${doc.size}</span>
+                    </div>
+                    <div class="doc-actions">
+                        <button class="btn-download" onclick="downloadDoc('${doc.id}')">⬇️ 下载</button>
+                        <button class="btn btn-secondary" onclick="viewDoc('${doc.id}')">👁️ 预览</button>
+                    </div>
+                    <div style="margin-top: 8px; text-align: right;">
+                        <button onclick="deleteDoc('${doc.id}')" style="background: none; border: none; color: #ef4444; cursor: pointer; font-size: 0.8rem;">
+                            🗑️ 删除
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getIcon(format) {
+            const icons = { 'PDF': '📄', 'Word': '📝', 'PPT': '📊', 'Excel': '📈' };
+            return icons[format] || '📎';
+        }
+
+        function getCategoryName(cat) {
+            const map = { 'product': '产品资料', 'solution': '方案文档', 'case': '案例集' };
+            return map[cat] || cat;
+        }
+
+        function downloadDoc(docId) {
+            console.log('下载文档:', docId);
+            const docs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            const doc = docs.find(d => d.id === docId);
+            
+            if (!doc || !doc.fileData) {
+                alert('❌ 文档未找到或文件数据不存在');
+                return;
+            }
+
+            try {
+                if (doc.fileData.startsWith('data:')) {
+                    const link = document.createElement('a');
+                    link.href = doc.fileData;
+                    link.download = doc.filename || `${doc.title}.${doc.format.toLowerCase()}`;
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    
+                    const clickEvent = new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window
+                    });
+                    link.dispatchEvent(clickEvent);
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(link);
+                    }, 100);
+                    
+                    console.log(`📥 文档已下载: ${doc.title}`);
+                } else {
+                    alert('❌ 文件格式不支持下载');
+                }
+            } catch (error) {
+                console.error('下载错误:', error);
+                alert('❌ 下载失败: ' + error.message);
+            }
+        }
+
+        function viewDoc(docId) {
+            console.log('预览文档:', docId);
+            const docs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            const doc = docs.find(d => d.id === docId);
+            
+            if (!doc) {
+                alert('❌ 文档未找到');
+                return;
+            }
+
+            if (!doc.fileData) {
+                alert('❌ 文件数据不存在');
+                return;
+            }
+
+            if (doc.format === 'PDF' && doc.fileData.startsWith('data:application/pdf')) {
+                try {
+                    // 使用 Blob URL 替代 Data URL
+                    const byteString = atob(doc.fileData.split(',')[1]);
+                    const mimeString = doc.fileData.split(',')[0].split(':')[1].split(';')[0];
+                    const ab = new ArrayBuffer(byteString.length);
+                    const ia = new Uint8Array(ab);
+                    for (let i = 0; i < byteString.length; i++) {
+                        ia[i] = byteString.charCodeAt(i);
+                    }
+                    const blob = new Blob([ab], { type: mimeString });
+                    const blobUrl = URL.createObjectURL(blob);
+                    
+                    const newWindow = window.open(blobUrl, '_blank');
+                    if (!newWindow) {
+                        alert('❌ 弹窗被阻止，请允许弹窗后重试');
+                    }
+                } catch (error) {
+                    console.error('预览错误:', error);
+                    alert(`📄 ${doc.title}\n📎 ${doc.format}\n📊 ${doc.size}\n\n请使用下载按钮获取文件。`);
+                }
+            } else {
+                alert(`📄 ${doc.title}\n📎 ${doc.format}\n📊 ${doc.size}\n📅 ${doc.uploadTime}\n\n请使用下载按钮获取文件。`);
+            }
+        }
+
+        function deleteDoc(docId) {
+            if (!confirm('⚠️ 确定删除此文档？')) return;
+            let docs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            docs = docs.filter(d => d.id !== docId);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(docs));
+            renderUserDocs();
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            renderUserDocs();
+        });
+    </script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

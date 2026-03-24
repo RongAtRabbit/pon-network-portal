@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烽火 教育光网方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/network-diagram.css">
+    <style>
+        .solution-hero { background: linear-gradient(135deg, #00A0E9, #33BBFF); color: white; padding: 80px 0 60px; text-align: center; }
+        .value-card { background: linear-gradient(135deg, #00A0E905, #33BBFF10); border-left: 4px solid #00A0E9; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="solution-hero">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🎓</div>
+            <h1>烽火 教育光网方案</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">自主核心芯片，全光网端到端交付</p>
+            <div style="margin-top: 30px;">
+                <a href="../fiberhome-pon.html" class="btn btn-secondary">← 返回烽火首页</a>
+                <a href="documents.html" class="btn btn-primary">📚 技术文档库</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 60px; padding-bottom: 60px;">
+        <!-- 方案概述 -->
+        <section id="overview" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">📖 方案概述</h2>
+                <p style="line-height: 1.8; margin-bottom: 15px;">
+                    烽火教育光网方案基于自主研发的PON核心芯片，提供从核心到接入的端到端全光网络解决方案。
+                    方案采用XGS-PON技术，支持10Gbps对称带宽，满足智慧校园对高带宽、低时延、高可靠的网络需求，
+                    实现"光纤到教室、光纤到宿舍、光纤到桌面"的全覆盖。
+                </p>
+                <p style="line-height: 1.8; margin-bottom: 15px;">
+                    方案覆盖高等教育、职业教育、基础教育等全场景，支持智慧教学、在线学习、VR/AR沉浸式教学、
+                    校园物联网等创新应用，助力教育数字化转型和智慧校园建设。
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #00A0E9 0%, #33BBFF 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">🎯 适用场景</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">高校/职校/中小学/幼儿园</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">👥 覆盖规模</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">支持1万~10万+师生规模</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; padding: 15px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">⚡ 接入带宽</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">XGS-PON 10G对称</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网架构 -->
+        <section id="architecture" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🌐 组网架构</h2>
+                <p style="margin-bottom: 20px; color: #6b7280;">
+                    烽火教育光网采用三层架构设计：核心层（教育云/核心交换机）、汇聚层（OLT光线路终端）、接入层（ONU光网络单元），
+                    通过智能ODN无源光分配网络实现光纤到桌面的全覆盖。
+                </p>
+                
+                <div class="network-diagram">
+                    <!-- 云平台层 -->
+                    <div class="network-cloud">
+                        <div class="network-icon cloud"></div>
+                        <div class="network-label">教育云/智慧校园平台</div>
+                        <div class="network-desc">教学资源库 | AI训练集群 | 管理平台</div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 核心层 -->
+                    <div class="network-layer">
+                        <div class="network-node core">
+                            <div class="network-icon core"></div>
+                            <div class="network-label">核心交换机</div>
+                            <div class="network-desc">S7800/S5800</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 汇聚层 -->
+                    <div class="network-layer">
+                        <div class="network-node aggregation">
+                            <div class="network-icon olt"></div>
+                            <div class="network-label">OLT光线路终端</div>
+                            <div class="network-desc">AN6000系列</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- ODN层 -->
+                    <div class="network-layer">
+                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                            <div class="network-icon odn"></div>
+                            <div class="network-label">智能ODN无源光分配</div>
+                            <div class="network-desc">智能分光器 | 光纤管理</div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-connector"></div>
+                    
+                    <!-- 接入层 -->
+                    <div class="network-row">
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">智慧教室ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">电子阅览ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">宿舍ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                        <div class="network-node access">
+                            <div class="network-icon onu"></div>
+                            <div class="network-label">科研实验ONU</div>
+                            <div class="network-desc">HG系列</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 图例 -->
+                    <div class="network-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot core"></div>
+                            <span>核心层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot aggregation"></div>
+                            <span>汇聚层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot access"></div>
+                            <span>接入层</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot terminal"></div>
+                            <span>终端层</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 架构说明 -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                    <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #1e40af; margin-bottom: 8px;">核心层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">S7800/S5800交换机，自主核心芯片</p>
+                    </div>
+                    <div style="padding: 15px; background: #f0fdf4; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="color: #166534; margin-bottom: 8px;">汇聚层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">AN6000 OLT，XGS-PON 10G对称</p>
+                    </div>
+                    <div style="padding: 15px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <h4 style="color: #065f46; margin-bottom: 8px;">智能ODN层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">智能无源分光器，光纤智能管理</p>
+                    </div>
+                    <div style="padding: 15px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h4 style="color: #92400e; margin-bottom: 8px;">接入层</h4>
+                        <p style="font-size: 0.9rem; color: #4b5563;">HG系列ONU，Wi-Fi 6智能接入</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案组成 -->
+        <section id="components" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🛠️ 方案组成</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 AN6000-17 OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">超宽带接入OLT平台，适用于大型校园网络核心</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：14Tbps</li>
+                            <li>支持16个业务槽位</li>
+                            <li>XGS-PON 10G对称</li>
+                            <li>自主核心芯片</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 AN6000-7 OLT</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">中型OLT平台，适用于中型校园或分校区</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：6.4Tbps</li>
+                            <li>支持7个业务槽位</li>
+                            <li>XGS-PON 10G对称</li>
+                            <li>双主控冗余保护</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 HG系列 ONU</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">家庭/企业网关，Wi-Fi 6智能接入终端</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>4GE+Wi-Fi 6 AX1800/3000</li>
+                            <li>10G PON上行</li>
+                            <li>支持PoE供电</li>
+                            <li>多业务接入</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 S系列核心交换机</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">数据中心级核心交换机，高可靠校园网络核心</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>交换容量：387Tbps</li>
+                            <li>支持100G/400G上行</li>
+                            <li>硬件级冗余保护</li>
+                            <li>自主交换芯片</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 iManager U2000</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">智能网络管理系统，实现全光网络自动化运维</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>端到端网络可视化管理</li>
+                            <li>智能故障定位与预测</li>
+                            <li>业务自动发放</li>
+                            <li>智能ODN光纤管理</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h4 style="color: var(--primary);">烽火 智能ODN</h4>
+                        <p style="font-size: 0.9rem; color: #6b7280;">智能光纤分配网络，实现光纤资源可视化管理</p>
+                        <ul style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">
+                            <li>支持1:8/1:16/1:32/1:64分光比</li>
+                            <li>电子标签智能识别</li>
+                            <li>光纤资源可视化管理</li>
+                            <li>即插即用自动识别</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案价值 -->
+        <section id="value" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">💡 方案价值</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #f0f9ff; border-radius: 8px;">
+                        <h4 style="color: #0ea5e9;">🔬 自主核心芯片</h4>
+                        <p>自主研发PON芯片和交换芯片，掌握核心技术，保障供应链安全，支持国产化替代需求</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                        <h4 style="color: #22c55e;">🌐 端到端交付</h4>
+                        <p>从光纤预制棒、光器件到系统设备完整产业链，端到端交付能力强，项目交付周期短</p>
+                    </div>
+                    <div style="padding: 20px; background: #faf5ff; border-radius: 8px;">
+                        <h4 style="color: #a855f7;">📊 超大容量平台</h4>
+                        <p>业界领先OLT平台，单框支持14Tbps交换容量，支持超大规模用户接入，满足万人校园需求</p>
+                    </div>
+                    <div style="padding: 20px; background: #fff7ed; border-radius: 8px;">
+                        <h4 style="color: #f97316;">🔧 智能ODN管理</h4>
+                        <p>智能光纤网络实现光纤资源可视化管理，故障快速定位，运维效率提升60%以上</p>
+                    </div>
+                    <div style="padding: 20px; background: #fef2f2; border-radius: 8px;">
+                        <h4 style="color: #ef4444;">⚡ 极简网络架构</h4>
+                        <p>POL无源光网络，无源分光器替代有源交换机，故障点减少80%，机房空间节省70%</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fdfa; border-radius: 8px;">
+                        <h4 style="color: #14b8a6;">🚀 平滑演进能力</h4>
+                        <p>从GPON到XGS-PON再到50G PON，光纤基础设施利旧，保护投资，支撑未来10年演进</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键技术 -->
+        <section id="technology" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">🔬 关键技术</h2>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="padding: 20px; background: linear-gradient(90deg, #f0f9ff 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                        <h4 style="color: #0369a1; margin-bottom: 10px;">⚡ XGS-PON技术</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            采用对称10Gbps XGS-PON技术，上下行速率对称，满足教育场景大带宽双向传输需求。
+                            烽火自主研发PON芯片，支持向50G PON平滑演进，单端口带宽提升至50Gbps，
+                            支撑未来8K超高清教学、VR/AR沉浸式课堂等创新应用。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #f0fdf4 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="color: #15803d; margin-bottom: 10px;">🔌 智能ODN（iODN）</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            烽火智能ODN技术采用电子标签和智能管理系统，实现光纤资源可视化管理。
+                            支持光纤链路自动识别、故障精准定位、资源动态调配，大幅降低运维难度，
+                            提升光纤网络管理效率，解决传统ODN"哑资源"管理难题。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #faf5ff 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #a855f7;">
+                        <h4 style="color: #7c3aed; margin-bottom: 10px;">📡 Wi-Fi 6智能融合</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            ONU内置Wi-Fi 6无线模块，支持2.4GHz/5GHz双频并发，单AP覆盖64个终端并发接入。
+                            支持智能漫游、AI调优，满足教室、图书馆、体育馆等高密场景无线覆盖需求，
+                            提供无缝的无线网络体验。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #fff7ed 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #f97316;">
+                        <h4 style="color: #c2410c; margin-bottom: 10px;">🤖 iManager智能管控</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            基于AI的智能网络管理系统，实现网络端到端可视、故障智能定位、业务自动发放。
+                            支持Telemetry秒级数据采集，结合AI算法实现故障预测性维护，
+                            网络运维效率提升60%以上，降低运维成本。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #fef2f2 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #ef4444;">
+                        <h4 style="color: #b91c1c; margin-bottom: 10px;">🛡️  Type B/Type C保护</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            支持Type B（主干光纤冗余）和Type C（全链路冗余）保护机制，故障切换时间&lt;50ms，
+                            满足教学业务高可靠性要求。双归属保护确保核心设备故障时业务不中断，
+                            保障教学连续性。
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(90deg, #f0fdfa 0%, #ffffff 100%); border-radius: 8px; border-left: 4px solid #14b8a6;">
+                        <h4 style="color: #0f766e; margin-bottom: 10px;">💻 自主核心芯片</h4>
+                        <p style="margin: 0; color: #475569; line-height: 1.6;">
+                            烽火自主研发PON芯片和交换芯片，掌握核心技术，实现从芯片到系统的全链条自主可控。
+                            自主芯片在性能、功耗、成本方面具有竞争优势，支持国产化替代，
+                            保障教育网络基础设施安全。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section id="cases" class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">📋 应用案例</h2>
+
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 武汉大学智慧校园</h3>
+                        <span style="background: #00A0E9; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">全光网络</span>
+                    </div>
+                    <p><strong>核心方案：</strong>部署烽火XGS-PON全光网络，覆盖全校教学区、宿舍区、图书馆，师生5万+</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署AN6000-17 OLT 40余台，光纤直达每间教室、宿舍</li>
+                            <li>智能ODN实现光纤资源可视化管理，运维效率提升60%</li>
+                            <li>Wi-Fi 6全覆盖，支持4K高清互动教学和在线直播</li>
+                            <li>网络时延降低至1ms以内，在线课堂体验流畅</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e0f2fe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.fiberhome.com/news/detail/169.html" target="_blank" style="color: #0284c7; text-decoration: none;">
+                            https://www.fiberhome.com/news/detail/169.html
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px; padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 华中科技大学全光校园</h3>
+                        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">POL全光</span>
+                    </div>
+                    <p><strong>核心方案：</strong>烽火POL全光园区方案，新建校区全光覆盖，师生6万余人</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>POL无源光网络，机房空间节省70%，能耗降低40%</li>
+                            <li>布线成本降低50%，工期缩短4个月</li>
+                            <li>网络时延&lt;1ms，满足科研计算和视频会议需求</li>
+                            <li>自主核心芯片，保障网络基础设施安全</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e0f2fe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.fiberhome.com/solution/detail/45.html" target="_blank" style="color: #0284c7; text-decoration: none;">
+                            https://www.fiberhome.com/solution/detail/45.html
+                        </a>
+                    </div>
+                </div>
+
+                <div style="padding: 25px; background: #f8fafc; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--primary); margin: 0;">🏫 华中师范大学智慧教育</h3>
+                        <span style="background: #a855f7; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">智慧教育</span>
+                    </div>
+                    <p><strong>核心方案：</strong>烽火F5G全光网络覆盖教学楼、实验楼、图书馆、宿舍，师生3万余人</p>
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>项目亮点：</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>部署AN6000-7 OLT 20余台，覆盖全部教学和生活区域</li>
+                            <li>智慧教室支持4K互动教学、远程同步课堂</li>
+                            <li>校园安防、一卡通、广播系统统一承载</li>
+                            <li>网络建设成本较传统以太网降低35%</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e0f2fe; padding: 12px 15px; border-radius: 6px;">
+                        <strong>📚 来源：</strong>
+                        <a href="https://www.fiberhome.com/solution/detail/46.html" target="_blank" style="color: #0284c7; text-decoration: none;">
+                            https://www.fiberhome.com/solution/detail/46.html
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" style="background: linear-gradient(135deg, #00A0E905, #33BBFF10);">
+            <div class="card-body">
+                <h3>🔗 相关资源</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <a href="healthcare.html" class="btn btn-secondary">🏥 医疗方案</a>
+                    <a href="enterprise.html" class="btn btn-secondary">🏢 企业方案</a>
+                    <a href="documents.html" class="btn btn-primary">📚 文档库</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div></div>
+    </footer>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

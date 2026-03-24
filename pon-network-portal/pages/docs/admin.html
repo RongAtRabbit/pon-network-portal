@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档编辑 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <style>
+        .admin-layout {
+            padding-top: 80px;
+            min-height: calc(100vh - 200px);
+        }
+        .editor-wrapper {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+        }
+        .editor-toolbar {
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+        }
+        .toolbar-group {
+            display: flex;
+            gap: 4px;
+            padding-right: 12px;
+            border-right: 1px solid var(--gray-300);
+        }
+        .toolbar-group:last-child {
+            border-right: none;
+            margin-left: auto;
+        }
+        .toolbar-btn {
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .toolbar-btn:hover {
+            background: var(--gray-100);
+            border-color: var(--primary);
+        }
+        .toolbar-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .editor-content {
+            min-height: 500px;
+            padding: 30px;
+            outline: none;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .editor-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .editor-content h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 10px;
+            color: var(--primary);
+        }
+        .editor-content p {
+            margin: 15px 0;
+        }
+        .editor-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        .doc-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+        }
+        .doc-selector select {
+            padding: 10px 15px;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            min-width: 200px;
+        }
+        .upload-zone {
+            border: 2px dashed var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.2s;
+        }
+        .upload-zone:hover {
+            border-color: var(--primary);
+            background: var(--primary)05;
+        }
+        .upload-zone.dragover {
+            border-color: var(--primary);
+            background: var(--primary)10;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../vendors/huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../vendors/h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../vendors/zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../vendors/fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../vendors/competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container admin-layout">
+    <nav class="breadcrumb">
+            <a href="../../index.html">首页</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="../../index.html">技术文档</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">文档编辑</span>
+        </nav>
+
+        <h1>✏️ 文档编辑中心</h1>
+        
+        <!-- 文档选择 -->
+        <div class="doc-selector">
+            <div>
+                <label>选择分类：</label>
+                <select id="categorySelect">
+                    <option value="protocols">PON 协议</option>
+                    <option value="keyTech">关键技术</option>
+                    <option value="evolution">演进路线</option>
+                </select>
+            </div>
+            <div>
+                <label>选择章节：</label>
+                <select id="sectionSelect">
+                    <option value="gpon">GPON 详解</option>
+                    <option value="xgpon">XG/XGS-PON</option>
+                    <option value="50gpon">50G PON</option>
+                </select>
+            </div>
+            <button class="btn btn-secondary" onclick="loadDoc()">📂 加载文档</button>
+            <button class="btn btn-primary" onclick="createNewDoc()">➕ 新建文档</button>
+        </div>
+
+        <!-- 文件上传区域 -->
+        <div class="upload-zone" id="uploadZone">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📤</div>
+            <h3>拖拽文件到此处上传</h3>
+            <p style="color: var(--text-tertiary);">支持 Markdown (.md)、HTML (.html)、文本 (.txt) 格式</p>
+            <input type="file" id="fileInput" accept=".md,.html,.txt" style="display: none;">
+            <button class="btn btn-secondary btn-sm" style="margin-top: 15px;" onclick="document.getElementById('fileInput').click()">选择文件</button>
+        </div>
+
+        <!-- 编辑器 -->
+        <div class="editor-wrapper">
+            <div class="editor-toolbar">
+                <div class="toolbar-group">
+                    <button class="toolbar-btn" onclick="format('bold')" title="粗体"><b>B</b></button>
+                    <button class="toolbar-btn" onclick="format('italic')" title="斜体"><i>I</i></button>
+                    <button class="toolbar-btn" onclick="format('underline')" title="下划线"><u>U</u></button>
+                </div>
+                <div class="toolbar-group">
+                    <button class="toolbar-btn" onclick="format('insertUnorderedList')" title="无序列表">• 列表</button>
+                    <button class="toolbar-btn" onclick="format('insertOrderedList')" title="有序列表">1. 列表</button>
+                </div>
+                <div class="toolbar-group">
+                    <button class="toolbar-btn" onclick="format('formatBlock', 'H2')" title="标题2">H2</button>
+                    <button class="toolbar-btn" onclick="format('formatBlock', 'H3')" title="标题3">H3</button>
+                    <button class="toolbar-btn" onclick="format('formatBlock', 'P')" title="段落">P</button>
+                </div>
+                <div class="toolbar-group">
+                    <button class="toolbar-btn" onclick="insertTable()" title="插入表格">📊 表格</button>
+                    <button class="toolbar-btn" onclick="insertCode()" title="插入代码">📋 代码</button>
+                    <button class="toolbar-btn" onclick="insertLink()" title="插入链接">🔗 链接</button>
+                </div>
+            </div>
+            
+            <div class="editor-content" id="editor" contenteditable="true">
+                <h2>文档标题</h2>
+                <p>在此输入文档内容...</p>
+            </div>
+            
+            <div class="editor-footer">
+                <span id="editorStatus">就绪</span>
+                <div>
+                    <button class="btn btn-secondary" onclick="previewDoc()">👁️ 预览</button>
+                    <button class="btn btn-secondary" onclick="exportDoc()">💾 导出</button>
+                    <button class="btn btn-primary" onclick="saveDoc()">💾 保存</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 历史版本 -->
+        <section class="card" style="margin-top: 40px;">
+            <div class="card-header">
+                <h3>📜 编辑历史</h3>
+            </div>
+            <div class="card-body">
+                <div id="historyList">
+                    <p style="color: var(--text-tertiary);">暂无编辑历史</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>PON Network Portal</h4><p>专业的 PON 网络技术资讯平台</p></div>
+                <div class="footer-section"><h4>快速链接</h4>
+                    <ul><li><a href="../vendors/huawei-f5g.html">华为 F5G</a></li><li><a href="../news/index.html">最新资讯</a></li><li><a href="../../index.html">技术文档</a></li></ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 PON Network Portal. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../../js/data.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/main.js"></script>
+    
+    <script>
+        // 编辑器功能
+        function format(cmd, value = null) {
+            document.execCommand(cmd, false, value);
+            document.getElementById('editor').focus();
+            updateStatus('已格式化');
+        }
+        
+        function insertTable() {
+            const rows = prompt('行数:', 3);
+            const cols = prompt('列数:', 3);
+            if (rows && cols) {
+                let html = '<table><tbody>';
+                for (let i = 0; i < rows; i++) {
+                    html += '<tr>';
+                    for (let j = 0; j < cols; j++) {
+                        html += '<td>单元格</td>';
+                    }
+                    html += '</tr>';
+                }
+                html += '</tbody></table>';
+                document.execCommand('insertHTML', false, html);
+                updateStatus('已插入表格');
+            }
+        }
+        
+        function insertCode() {
+            const code = prompt('输入代码:');
+            if (code) {
+                const html = `<pre><code>${escapeHtml(code)}</code></pre><p><br></p>`;
+                document.execCommand('insertHTML', false, html);
+                updateStatus('已插入代码');
+            }
+        }
+        
+        function insertLink() {
+            const url = prompt('输入链接地址:');
+            const text = prompt('输入链接文字:');
+            if (url && text) {
+                const html = `<a href="#" target="_blank">${text}</a>`;
+                document.execCommand('insertHTML', false, html);
+                updateStatus('已插入链接');
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // 保存文档
+        function saveDoc() {
+            const content = document.getElementById('editor').innerHTML;
+            const category = document.getElementById('categorySelect').value;
+            const section = document.getElementById('sectionSelect').value;
+            
+            // 保存到本地存储
+            const key = `doc_${category}_${section}`;
+            const history = JSON.parse(localStorage.getItem(key + '_history') || '[]');
+            
+            const saveData = {
+                content: content,
+                timestamp: new Date().toISOString(),
+                version: history.length + 1
+            };
+            
+            history.unshift(saveData);
+            if (history.length > 10) history.pop(); // 保留最近10个版本
+            
+            localStorage.setItem(key, JSON.stringify(saveData));
+            localStorage.setItem(key + '_history', JSON.stringify(history));
+            
+            updateHistoryList(history);
+            updateStatus('文档已保存');
+            alert('✅ 文档保存成功！');
+        }
+        
+        // 加载文档
+        function loadDoc() {
+            const category = document.getElementById('categorySelect').value;
+            const section = document.getElementById('sectionSelect').value;
+            const key = `doc_${category}_${section}`;
+            
+            const saved = localStorage.getItem(key);
+            if (saved) {
+                const data = JSON.parse(saved);
+                document.getElementById('editor').innerHTML = data.content;
+                updateStatus('文档已加载');
+            } else {
+                // 加载默认内容
+                if (typeof DOCS_DATA !== 'undefined' && DOCS_DATA[category]) {
+                    const sectionData = DOCS_DATA[category].sections.find(s => s.id === section);
+                    if (sectionData) {
+                        document.getElementById('editor').innerHTML = `
+                            <h2>${sectionData.title}</h2>
+                            ${sectionData.content}
+                        `;
+                        updateStatus('已加载默认内容');
+                    }
+                }
+            }
+            
+            // 加载历史
+            const history = JSON.parse(localStorage.getItem(key + '_history') || '[]');
+            updateHistoryList(history);
+        }
+        
+        // 新建文档
+        function createNewDoc() {
+            if (confirm('确定要新建文档？未保存的内容将丢失。')) {
+                document.getElementById('editor').innerHTML = `
+                    <h2>新文档标题</h2>
+                    <p>在此输入文档内容...</p>
+                `;
+                updateStatus('新建文档');
+            }
+        }
+        
+        // 预览
+        function previewDoc() {
+            const content = document.getElementById('editor').innerHTML;
+            const previewWindow = window.open('', '_blank');
+            previewWindow.document.write(`
+                <html>
+                <head><title>预览</title>
+                <style>
+                    body { max-width: 800px; margin: 50px auto; padding: 20px; font-family: system-ui; line-height: 1.8; }
+                    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                    th, td { padding: 12px; border: 1px solid #ddd; }
+                    th { background: #f5f5f5; }
+                    pre { background: #1a1a1a; color: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; }
+                </style>
+                </head>
+                <body>${content}    <script src="../../js/sidebar.js"></script>
+</body>
+                </html>
+            `);
+        }
+        
+        // 导出
+        function exportDoc() {
+            const content = document.getElementById('editor').innerHTML;
+            const blob = new Blob([`
+                <!DOCTYPE html>
+                <html>
+                <head><meta charset="UTF-8"><title>导出文档</title></head>
+                <body>${content}    <script src="../../js/sidebar.js"></script>
+</body>
+                </html>
+            `], { type: 'text/html' });
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `pon-doc-${new Date().toISOString().split('T')[0]}.html`;
+            a.click();
+            URL.revokeObjectURL(url);
+            updateStatus('文档已导出');
+        }
+        
+        // 更新状态
+        function updateStatus(msg) {
+            document.getElementById('editorStatus').textContent = msg + ' | ' + new Date().toLocaleTimeString();
+        }
+        
+        // 更新历史列表
+        function updateHistoryList(history) {
+            const container = document.getElementById('historyList');
+            if (history.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-tertiary);">暂无编辑历史</p>';
+                return;
+            }
+            
+            container.innerHTML = history.map((h, i) => `
+                <div style="padding: 10px; border-bottom: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: center;">
+                    <span>版本 ${h.version} - ${new Date(h.timestamp).toLocaleString()}</span>
+                    <button class="btn btn-sm btn-secondary" onclick="restoreVersion(${i})">恢复</button>
+                </div>
+            `).join('');
+        }
+        
+        // 恢复版本
+        function restoreVersion(index) {
+            const category = document.getElementById('categorySelect').value;
+            const section = document.getElementById('sectionSelect').value;
+            const key = `doc_${category}_${section}`;
+            const history = JSON.parse(localStorage.getItem(key + '_history') || '[]');
+            
+            if (history[index]) {
+                document.getElementById('editor').innerHTML = history[index].content;
+                updateStatus('已恢复版本 ' + history[index].version);
+            }
+        }
+        
+        // 文件上传
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        
+        uploadZone.addEventListener('click', () => fileInput.click());
+        
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+        
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+        
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length) handleFile(files[0]);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length) handleFile(e.target.files[0]);
+        });
+        
+        function handleFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const content = e.target.result;
+                if (file.name.endsWith('.md')) {
+                    // 简单Markdown转HTML
+                    document.getElementById('editor').innerHTML = `
+                        <pre>${escapeHtml(content)}</pre>
+                    `;
+                } else {
+                    document.getElementById('editor').innerHTML = content;
+                }
+                updateStatus('文件已加载: ' + file.name);
+            };
+            reader.readAsText(file);
+        }
+        
+        // 自动保存
+        let autoSaveTimer;
+        document.getElementById('editor').addEventListener('input', () => {
+            updateStatus('编辑中...');
+            clearTimeout(autoSaveTimer);
+            autoSaveTimer = setTimeout(() => {
+                updateStatus('自动保存草稿');
+            }, 2000);
+        });
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 检查权限，未登录则重定向
+            if (!isLoggedIn()) {
+                alert('请先登录管理员账号');
+                window.location.href = 'index.html';
+                return;
+            }
+            loadDoc();
+        });
+    </script>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

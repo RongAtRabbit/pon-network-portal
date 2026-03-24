@@ -1,0 +1,21 @@
+/* 组网架构图样式 - 最早的 ASCII 图表版本 */
+.network-diagram-ascii {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 2.5;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    min-height: 800px;
+}
+
+.network-diagram-ascii pre {
+    margin: 0;
+    white-space: pre;
+    line-height: 2.5;
+    font-size: 1rem;
+}

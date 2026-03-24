@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术洞察 | PON Portal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <style>
+        .insight-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .insight-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .trend-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .trend-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+        .trend-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .trend-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .trend-content {
+            width: 45%;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            border-left: 5px solid var(--primary);
+        }
+        .trend-item:nth-child(odd) .trend-content {
+            border-left: none;
+            border-right: 5px solid var(--primary);
+        }
+        .trend-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 0 0 5px white;
+        }
+        .tech-category {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .tech-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .vendor-consensus {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .vendor-tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .vendor-tag.huawei { background: #C41E3A20; color: #C41E3A; }
+        .vendor-tag.h3c { background: #E6001220; color: #E60012; }
+        .vendor-tag.zte { background: #0066CC20; color: #0066CC; }
+        .vendor-tag.fiberhome { background: #00A0E920; color: #00A0E9; }
+        .insight-highlight {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 5px solid #f59e0b;
+            padding: 25px 30px;
+            border-radius: var(--radius-lg);
+            margin: 30px 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .data-table th {
+            background: var(--gray-800);
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .data-table tr:hover {
+            background: var(--gray-50);
+        }
+        .priority-high { color: #dc2626; font-weight: 600; }
+        .priority-medium { color: #d97706; font-weight: 600; }
+        .priority-low { color: #059669; font-weight: 600; }
+        @media (max-width: 768px) {
+            .trend-timeline::before { left: 20px; }
+            .trend-item { flex-direction: column !important; }
+            .trend-content { width: 100%; margin-left: 40px; }
+            .trend-year { left: 20px; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-icon">🌐</span><span class="logo-text">PON Portal</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="pages/vendors/huawei-f5g.html" class="nav-link">行业方案</a></li>
+                <li><a href="index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="pages/docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="insights.html" class="nav-link active">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="insight-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🔮</div>
+            <h1>技术洞察</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin: 20px auto;">深度整合华为、华三、中兴、烽火技术路线，洞察园区光网络演进方向</p>
+            <div style="margin-top: 30px;">
+                <span class="tag" style="background: rgba(255,255,255,0.2);">📊 四厂商技术整合</span>
+                <span class="tag" style="background: rgba(255,255,255,0.2); margin-left: 10px;">🎯 园区应用场景</span>
+                <span class="tag" style="background: rgba(255,255,255,0.2); margin-left: 10px;">🚀 演进路线预测</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 核心洞察 -->
+        <section class="insight-highlight">
+            <h2>💡 核心洞察：园区光网络五大演进方向</h2>
+            <p style="margin-top: 15px; line-height: 1.8;">
+                基于对华为F5G Advanced、华三智能园区光网、中兴云网融合、烽火自主可控四大技术路线的深度分析，
+                我们识别出园区网络正在向「超宽、智能、绿色、安全、融合」五大方向演进。
+                50G PON、AI智能运维、POL无源光局域网等成为园区数字化转型的关键使能技术。
+            </p>
+        </section>
+
+        <!-- 技术演进时间线 -->
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; margin-bottom: 60px;">📈 技术演进路线图</h2>
+            
+            <div class="trend-timeline">
+                <div class="trend-item">
+                    <div class="trend-year">2024-2025</div>
+                    <div class="trend-content">
+                        <h3>🌟 10G PON全面普及</h3>
+                        <p style="margin: 15px 0; color: var(--text-secondary);">XGS-PON成为园区主流，千兆到桌面成为标配。GPON逐步退网，10G PON进入规模部署期。</p>
+                        <div class="vendor-consensus">
+                            <span class="vendor-tag huawei">华为 XGS-PON</span>
+                            <span class="vendor-tag h3c">华三 S7500E-XS</span>
+                            <span class="vendor-tag zte">中兴 C600</span>
+                            <span class="vendor-tag fiberhome">烽火 AN6000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-year">2025-2026</div>
+                    <div class="trend-content">
+                        <h3>🚀 50G PON商用启动</h3>
+                        <p style="margin: 15px 0; color: var(--text-secondary);">万兆光网时代来临，50G PON在高端园区、工业场景率先商用。硬切片、确定性时延成为关键特性。</p>
+                        <div class="vendor-consensus">
+                            <span class="vendor-tag huawei">华为 F5G Advanced</span>
+                            <span class="vendor-tag zte">中兴 50G PON</span>
+                            <span class="vendor-tag fiberhome">烽火 50G芯片</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-year">2026-2027</div>
+                    <div class="trend-content">
+                        <h3>🧠 AI智能运维</h3>
+                        <p style="margin: 15px 0; color: var(--text-secondary);">AI技术深度融入网络运维，实现故障预测、自动优化、智能调度。数字孪生网络成为标配。</p>
+                        <div class="vendor-consensus">
+                            <span class="vendor-tag huawei">华为 iMaster NCE</span>
+                            <span class="vendor-tag h3c">华三 AD-Campus</span>
+                            <span class="vendor-tag zte">中兴 uSmartNet</span>
+                            <span class="vendor-tag fiberhome">烽火 OMC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-year">2027-2028</div>
+                    <div class="trend-content">
+                        <h3>🌿 绿色低碳网络</h3>
+                        <p style="margin: 15px 0; color: var(--text-secondary);">能耗成为核心指标，无源光网络全面替代有源交换机。液冷、智能节能技术广泛应用。</p>
+                        <div class="vendor-consensus">
+                            <span class="vendor-tag huawei">华为 零碳网络</span>
+                            <span class="vendor-tag h3c">华三 绿色POL</span>
+                            <span class="vendor-tag fiberhome">烽火 低功耗芯片</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-year">2028+</div>
+                    <div class="trend-content">
+                        <h3>🌐 全光算力网络</h3>
+                        <p style="margin: 15px 0; color: var(--text-secondary);">光网络与算力深度融合，算力调度像水电一样便捷。100G PON进入视野。</p>
+                        <div class="vendor-consensus">
+                            <span class="vendor-tag huawei">华为 算力网络</span>
+                            <span class="vendor-tag zte">中兴 算网融合</span>
+                            <span class="vendor-tag fiberhome">烽火 100G PON</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键技术矩阵 -->
+        <section style="margin: 80px 0;">
+            <h2 style="margin-bottom: 40px;">🔧 园区关键技术与厂商能力矩阵</h2>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>关键技术</th>
+                        <th>华为</th>
+                        <th>华三</th>
+                        <th>中兴</th>
+                        <th>烽火</th>
+                        <th>园区应用优先级</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>50G PON</strong></td>
+                        <td>✅ F5G Advanced</td>
+                        <td>🔄 规划中</td>
+                        <td>✅ 已商用</td>
+                        <td>✅ 自研芯片</td>
+                        <td class="priority-medium">中高 (2026+)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XGS-PON</strong></td>
+                        <td>✅ MA5800</td>
+                        <td>✅ S7500E-XS</td>
+                        <td>✅ C600</td>
+                        <td>✅ AN6000</td>
+                        <td class="priority-high">🔥 高 (当前)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POL无源光局域网</strong></td>
+                        <td>✅ F5G全光园区</td>
+                        <td>✅ 园区光网络</td>
+                        <td>✅ 智慧园区</td>
+                        <td>✅ 企业光网</td>
+                        <td class="priority-high">🔥 高 (当前)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>硬切片/确定性时延</strong></td>
+                        <td>✅ 支持</td>
+                        <td>⚠️ 部分支持</td>
+                        <td>✅ TSN over PON</td>
+                        <td>⚠️ 部分支持</td>
+                        <td class="priority-medium">中 (工业场景)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI智能运维</strong></td>
+                        <td>✅ iMaster NCE</td>
+                        <td>✅ AD-Campus</td>
+                        <td>✅ uSmartNet</td>
+                        <td>✅ 智能OMC</td>
+                        <td class="priority-high">🔥 高 (2025+)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wi-Fi 6/7融合</strong></td>
+                        <td>✅ OptiXstar</td>
+                        <td>✅ S5130S-HI</td>
+                        <td>✅ F600系列</td>
+                        <td>✅ HG系列</td>
+                        <td class="priority-high">🔥 高 (当前)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>国产化/自主可控</strong></td>
+                        <td>✅ 海思芯片</td>
+                        <td>✅ 自研芯片</td>
+                        <td>✅ 自研芯片</td>
+                        <td>✅ 自研PON芯片</td>
+                        <td class="priority-medium">中 (政务/关键行业)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 厂商关键技术详解 -->
+        <section style="margin: 80px 0;">
+            <h2 style="margin-bottom: 40px;">🔬 厂商关键技术深度对比</h2>
+            
+            <div class="tech-grid">
+                <!-- 硬切片技术 -->
+                <div class="tech-card" style="border-top-color: #C41E3A;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem;">🔒</div>
+                        <h3>硬切片与物理隔离</h3>
+                    </div>
+                    
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px;">
+                            <strong>技术原理:</strong> 通过物理层或链路层技术实现业务硬隔离，确保不同业务流之间互不干扰，满足高安全等级要求。
+                        </p>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #C41E3A; margin-bottom: 8px;">🏆 华为方案 (最成熟)</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>Flex-PON硬切片技术</li>
+                            <li>基于时隙的物理隔离</li>
+                            <li>支持50G PON硬切片</li>
+                            <li>端到端<1ms确定性时延</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #0066CC; margin-bottom: 8px;">中兴方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>FlexE+PON融合硬切片</li>
+                            <li>支持TSN over PON</li>
+                            <li>工业级可靠性设计</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #E60012; margin-bottom: 8px;">华三方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>基于VLAN的软隔离</li>
+                            <li>SRv6网络切片</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #fef3c7; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem;">
+                        <strong>💡 选型建议:</strong> 医疗/金融等强隔离场景选华为；工业控制选中兴TSN方案；普通企业园区华三软隔离即可。
+                    </div>
+                </div>
+
+                <!-- TSN确定性时延 -->
+                <div class="tech-card" style="border-top-color: #0066CC;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem;">⏱️</div>
+                        <h3>确定性时延与TSN</h3>
+                    </div>
+                    
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px;">
+                            <strong>技术原理:</strong> TSN（时间敏感网络）通过门控调度、帧抢占等机制，在以太网中实现确定性低时延传输。
+                        </p>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #0066CC; margin-bottom: 8px;">🏆 中兴方案 (最领先)</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>TSN over PON首创者</li>
+                            <li>支持IEEE 802.1Qbv门控</li>
+                            <li>端到端<100μs时延</li>
+                            <li>工业场景成熟案例</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #C41E3A; margin-bottom: 8px;">华为方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>50G PON硬切片+TSN</li>
+                            <li>支持DetNet</li>
+                            <li>确定性IP技术</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #fef3c7; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem;">
+                        <strong>💡 选型建议:</strong> 工业控制/智能制造选中兴TSN over PON；需要大带宽+低时延选华为50G PON方案。
+                    </div>
+                </div>
+
+                <!-- Combo PON -->
+                <div class="tech-card" style="border-top-color: #00A0E9;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem;">🔌</div>
+                        <h3>Combo PON演进</h3>
+                    </div>
+                    
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px;">
+                            <strong>技术原理:</strong> Combo光模块支持GPON/XGS-PON/50G PON三代技术共存，实现平滑升级保护投资。
+                        </p>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #00A0E9; margin-bottom: 8px;">🏆 烽火方案 (自研芯片)</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>自研Combo PON芯片</li>
+                            <li>三模共存支持</li>
+                            <li>成本优势明显</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #C41E3A; margin-bottom: 8px;">华为方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>Combo光模块成熟</li>
+                            <li>MA5800全系列支持</li>
+                            <li>自动速率协商</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #0066CC; margin-bottom: 8px;">中兴方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>C600支持Combo</li>
+                            <li>平滑演进方案完善</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #fef3c7; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem;">
+                        <strong>💡 选型建议:</strong> 预算敏感选烽火自研方案；追求稳定成熟选华为；已有中兴设备可平滑升级。
+                    </div>
+                </div>
+
+                <!-- AI智能运维 -->
+                <div class="tech-card" style="border-top-color: #8b5cf6;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 2.5rem;">🤖</div>
+                        <h3>AI智能运维</h3>
+                    </div>
+                    
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px;">
+                            <strong>技术原理:</strong> 利用AI算法实现故障预测、智能排障、自动优化，降低运维成本提升网络质量。
+                        </p>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #C41E3A; margin-bottom: 8px;">🏆 华为方案 (最全面)</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>iMaster NCE平台</li>
+                            <li>数字孪生网络</li>
+                            <li>主动预防性维护</li>
+                            <li>AI故障根因分析</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <p style="font-weight: 600; color: #E60012; margin-bottom: 8px;">华三方案</p>
+                        <ul style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>AD-Campus智能运维</li>
+                            <li>SDN统一管控</li>
+                            <li>可视化运维</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #fef3c7; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem;">
+                        <strong>💡 选型建议:</strong> 大型园区/多校区选华为AI运维；中小型园区华三SDN管控性价比更高。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 园区应用场景深度分析 -->
+        <section style="margin: 80px 0;">
+            <h2 style="margin-bottom: 40px;">🏢 园区应用场景技术选型建议</h2>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🎓</div>
+                    <h3>智慧校园</h3>
+                    
+                    <div style="background: var(--bg-secondary); padding: 15px; border-radius: var(--radius-md); margin: 15px 0;">
+                        <p><strong>核心需求:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>教室高密Wi-Fi接入</li>
+                            <li>智慧课堂/VR教学</li>
+                            <li>宿舍千兆宽带</li>
+                            <li>多校区统一管控</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>推荐技术:</strong></p>
+                    <div class="vendor-consensus">
+                        <span class="vendor-tag huawei">XGS-PON + FTTR</span>
+                        <span class="vendor-tag h3c">POL + Wi-Fi 6</span>
+                    </div>
+
+                    <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem;">
+                        <strong>选型建议:</strong> 推荐华为或华三方案，两者在教育行业案例丰富，
+                        华为FTTR方案适合宿舍场景，华三POL方案性价比更高。
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">🏥</div>
+                    <h3>智慧医院</h3>
+                    
+                    <div style="background: var(--bg-secondary); padding: 15px; border-radius: var(--radius-md); margin: 15px 0;">
+                        <p><strong>核心需求:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>PACS影像高速传输</li>
+                            <li>HIS系统稳定承载</li>
+                            <li>物联网设备接入</li>
+                            <li>等保合规要求</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>推荐技术:</strong></p>
+                    <div class="vendor-consensus">
+                        <span class="vendor-tag huawei">硬切片 + 确定性时延</span>
+                        <span class="vendor-tag fiberhome">国产化方案</span>
+                    </div>
+
+                    <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem;">
+                        <strong>选型建议:</strong> 推荐华为或烽火方案，华为硬切片技术成熟，
+                        烽火国产化方案满足等保和自主可控要求。
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">🏭</div>
+                    <h3>智慧工厂/工业PON</h3>
+                    
+                    <div style="background: var(--bg-secondary); padding: 15px; border-radius: var(--radius-md); margin: 15px 0;">
+                        <p><strong>核心需求:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>工业控制低时延</li>
+                            <li>机器视觉大带宽</li>
+                            <li>TSN时间敏感</li>
+                            <li>恶劣环境适应</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>推荐技术:</strong></p>
+                    <div class="vendor-consensus">
+                        <span class="vendor-tag huawei">50G PON + 硬切片</span>
+                        <span class="vendor-tag zte">TSN over PON</span>
+                    </div>
+
+                    <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem;">
+                        <strong>选型建议:</strong> 推荐华为或中兴方案，华为50G PON支持硬切片和确定性时延，
+                        中兴TSN over PON技术领先，满足工业场景严苛要求。
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">🏢</div>
+                    <h3>智慧办公园区</h3>
+                    
+                    <div style="background: var(--bg-secondary); padding: 15px; border-radius: var(--radius-md); margin: 15px 0;">
+                        <p><strong>核心需求:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>极简网络架构</li>
+                            <li>快速部署上线</li>
+                            <li>绿色节能</li>
+                            <li>TCO优化</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>推荐技术:</strong></p>
+                    <div class="vendor-consensus">
+                        <span class="vendor-tag h3c">极简POL</span>
+                        <span class="vendor-tag huawei">EA5800</span>
+                    </div>
+
+                    <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem;">
+                        <strong>选型建议:</strong> 推荐华三或华为方案，华三极简POL架构节省机房空间和能耗，
+                        华为EA5800紧凑型OLT适合中小型园区。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术洞察总结 -->
+        <section style="margin: 80px 0;">
+            <h2 style="margin-bottom: 40px;">🎯 技术洞察总结与建议</h2>
+            
+            <div class="card-grid">
+                <div class="card" style="padding: 30px; background: linear-gradient(135deg, #dbeafe, #bfdbfe);">
+                    <h3>💰 成本优化建议</h3>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        新建园区推荐直接采用XGS-PON，避免重复投资。POL架构可降低30%TCO，
+                        特别适用于弱电间空间有限的老旧园区改造。避免GPON新建，2025年后集采价格已无优势。
+                    </p>
+                </div>
+
+                <div class="card" style="padding: 30px; background: linear-gradient(135deg, #dcfce7, #bbf7d0);">
+                    <h3>🚀 技术选型建议</h3>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        教育/办公园区：华三或华为XGS-PON；医疗场景：华为硬切片方案；
+                        工业场景：中兴TSN或华为50G PON；政务/国企：烽火国产化方案优先。
+                    </p>
+                </div>
+
+                <div class="card" style="padding: 30px; background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                    <h3>⚡ 演进路线建议</h3>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        当前：XGS-PON + Wi-Fi 6；2026年：引入AI智能运维；2027年：
+                        高端场景试点50G PON；2028年：全面万兆化。选择支持Combo光模块的OLT保护投资。
+                    </p>
+                </div>
+
+                <div class="card" style="padding: 30px; background: linear-gradient(135deg, #fce7f3, #fbcfe8);">
+                    <h3>🛡️ 风险规避建议</h3>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        避免单厂商锁定，关键设备选择互通性好的型号。关注芯片供应链安全，
+                        政务/关键基础设施优先选择国产化率高的方案。合同明确技术演进升级路径。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="pages/vendors/huawei-f5g.html" class="btn btn-primary btn-lg">查看厂商方案详情 →</a>
+            <a href="pages/docs/center.html" class="btn btn-secondary btn-lg" style="margin-left: 15px;">查看技术文档 →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>PON Network Portal</h4><p>专业的 PON 网络技术资讯平台</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 PON Network Portal | 技术洞察最后更新：2026-03-21</p></div>
+        </div>
+    </footer>
+</body>
+</html>

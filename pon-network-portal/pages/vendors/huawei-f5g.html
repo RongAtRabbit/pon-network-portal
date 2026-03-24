@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为 F5G 全光网络方案 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../architecture.html">🌐 组网架构</a></li>
+                        <li><a href="competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 面包屑 -->
+    <div class="container" style="padding-top: 80px;">
+    <nav class="breadcrumb">
+            <a href="../../index.html">首页</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="#">行业方案</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">华为 F5G</span>
+        </nav>
+    </div>
+
+    <!-- 方案内容 -->
+    <main class="container" style="padding: 40px 20px;">
+        <!-- 方案头部 -->
+        <div class="solution-header">
+            <div class="solution-logo" style="background: linear-gradient(135deg, #C41E3A, #FF0000);">
+                华为
+            </div>
+            <div class="solution-title">
+                <h2>华为 F5G 全光网络</h2>
+                <p>基于10G PON技术的全光网络解决方案，提供超高带宽、超低时延和极致体验</p>
+            </div>
+        </div>
+
+        <!-- 方案概览 -->
+        <section class="card" style="margin-bottom: 40px;">
+            <div class="card-body">
+                <h3>🎯 方案概述</h3>
+                <p style="margin: 20px 0; line-height: 1.8;">
+                    华为F5G（第五代固定网络）解决方案基于10G PON（XG-PON/XGS-PON）技术，面向家庭、企业、工业等全场景提供光纤网络覆盖。
+                    通过光纤直达房间（FTTR）、光纤到桌面（FTTD）等创新方案，构建无处不在的全光连接。
+                </p>
+                
+                <h4 style="margin: 30px 0 15px;">核心优势</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div class="card" style="padding: 20px;">
+                        <h5 style="color: var(--primary);">⚡ 超高带宽</h5>
+                        <p>支持10Gbps对称带宽，满足8K视频、VR/AR等大带宽业务需求</p>
+                    </div>
+                    <div class="card" style="padding: 20px;">
+                        <h5 style="color: var(--success);">🌱 绿色环保</h5>
+                        <p>无源光网络架构，降低50%能耗，减少机房空间占用</p>
+                    </div>
+                    <div class="card" style="padding: 20px;">
+                        <h5 style="color: var(--info);">🔧 极简运维</h5>
+                        <p>AI智能运维，主动预测故障，降低60%运维成本</p>
+                    </div>
+                    <div class="card" style="padding: 20px;">
+                        <h5 style="color: var(--warning);">📈 平滑演进</h5>
+                        <p>支持向50G PON平滑升级，保护现有投资</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品系列 -->
+        <section style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 30px;">📦 核心产品</h3>
+            
+            <div class="product-grid">
+                <!-- MA5800 -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #C41E3A20, #FF000020);">
+                        🖥️
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">MA5800 系列 OLT</h4>
+                        <p class="product-desc">业界领先的分布式智能OLT平台，面向大型运营商和大型园区</p>
+                        <span class="tag tag-primary">旗舰级</span>
+                        
+                        <table class="spec-table" style="margin-top: 15px; font-size: 0.85rem;">
+                            <tr>
+                                <td class="spec-name">交换容量</td>
+                                <td class="spec-value">14.4 Tbps</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">最大PON口</td>
+                                <td class="spec-value">17,280个</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">业务槽位</td>
+                                <td class="spec-value">16个</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">支持制式</td>
+                                <td class="spec-value">GPON/XG-PON/XGS-PON</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- EA5800 -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FF6B3520, #FF8C4220);">
+                        💻
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">EA5800 系列 OLT</h4>
+                        <p class="product-desc">紧凑型OLT平台，适用于中小型园区和政企客户</p>
+                        <span class="tag tag-success">紧凑型</span>
+                        
+                        <table class="spec-table" style="margin-top: 15px; font-size: 0.85rem;">
+                            <tr>
+                                <td class="spec-name">交换容量</td>
+                                <td class="spec-value">2.4 Tbps</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">最大PON口</td>
+                                <td class="spec-value">4,320个</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">业务槽位</td>
+                                <td class="spec-value">8个</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">机框高度</td>
+                                <td class="spec-value">5U/11U可选</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- OptiXstar ONU -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #4A90E220, #5BA3F520);">
+                        📡
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">OptiXstar ONU 系列</h4>
+                        <p class="product-desc">全系列光网络终端，覆盖家庭、企业、工业场景</p>
+                        <span class="tag tag-info">终端</span>
+                        
+                        <table class="spec-table" style="margin-top: 15px; font-size: 0.85rem;">
+                            <tr>
+                                <td class="spec-name">接口类型</td>
+                                <td class="spec-value">GE/10GE/POTS/Wi-Fi 6</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">最大速率</td>
+                                <td class="spec-value">10 Gbps</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Wi-Fi速率</td>
+                                <td class="spec-value">AX3000/AX6000</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">应用场景</td>
+                                <td class="spec-value">家庭/企业/工业</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 解决方案 -->
+        <section style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 30px;">💼 解决方案</h3>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style="color: var(--primary);">🏠 F5G 千兆光网</h4>
+                        <p style="margin: 15px 0;"><strong>目标客户:</strong> 运营商、家庭用户</p>
+                        <p>基于10G PON的千兆宽带接入方案，支持FTTH光纤到户和FTTR光纤到房间，为用户提供全屋千兆Wi-Fi覆盖。</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>千兆宽带接入</li>
+                            <li>全屋Wi-Fi 6覆盖</li>
+                            <li>智能运维管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style="color: var(--success);">🏢 F5G 全光园区</h4>
+                        <p style="margin: 15px 0;"><strong>目标客户:</strong> 企业、教育、医疗</p>
+                        <p>POL（无源光局域网）解决方案，替代传统交换机网络，实现光纤直达桌面，简化网络架构，降低TCO。</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>光纤直达桌面</li>
+                            <li>极简二层架构</li>
+                            <li>统一承载多业务</li>
+                        </ul>
+                        <div style="margin-top: 15px;">
+                            <a href="huawei/education.html" style="display: inline-block; margin-right: 10px; padding: 6px 12px; background: #0ea5e9; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">教育方案</a>
+                            <a href="huawei/healthcare.html" style="display: inline-block; margin-right: 10px; padding: 6px 12px; background: #ef4444; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">医疗方案</a>
+                            <a href="huawei/enterprise.html" style="display: inline-block; padding: 6px 12px; background: #f59e0b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">企业方案</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style="color: var(--warning);">🏭 F5G 全光工业</h4>
+                        <p style="margin: 15px 0;"><strong>目标客户:</strong> 制造业、矿山、港口</p>
+                        <p>工业级PON解决方案，支持硬切片和确定性时延，满足工业控制、机器视觉等严苛场景需求。</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>硬切片隔离</li>
+                            <li>确定性低时延</li>
+                            <li>工业级可靠性</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 组网说明和应用案例 -->
+        <section class="card">
+            <div class="card-body">
+                <h3>🌐 组网架构与应用案例</h3>
+                
+                <div style="margin-top: 30px;">
+                    <h4 style="color: var(--primary); margin-bottom: 15px;">🏠 F5G千兆光网 - 组网说明</h4>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <pre style="margin: 0; font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
+┌─────────────────────────────────────────────────────────────────┐
+│                         城域网核心层                              │
+│                    ┌─────────┐    ┌─────────┐                   │
+│                    │ 核心路由器│────│ BRAS    │                   │
+│                    └────┬────┘    └────┬────┘                   │
+│                         │              │                        │
+│                         └──────┬───────┘                        │
+│                                │                                 │
+└────────────────────────────────┼─────────────────────────────────┘
+                                 │
+                        ┌────────┴────────┐
+                        │   OLT (MA5800)   │ ← 放置在端局/接入机房
+                        │  ┌───┐ ┌───┐    │
+                        │  │PON│ │PON│    │ ← 8/16口PON板卡
+                        │  └───┘ └───┘    │
+                        └────┬───┬───┬────┘
+                             │   │   │
+                    ┌────────┘   │   └────────┐
+                    │            │            │
+              ┌─────┴─────┐  ┌───┴───┐  ┌─────┴─────┐
+              │ ODN分光器  │  │ODN分光器│  │ ODN分光器  │ ← 1:64分光
+              │  (1:64)   │  │(1:64) │  │  (1:64)   │
+              └─────┬─────┘  └───┬───┘  └─────┬─────┘
+                    │            │            │
+              ┌─────┴─────┐  ┌───┴───┐  ┌─────┴─────┐
+              │   ONU     │  │  ONU  │  │   ONU     │ ← 用户端光猫
+              │ (HG8247)  │  │(EG8240)│  │(EG8240H5) │
+              └───────────┘  └───────┘  └───────────┘
+                   │              │            │
+              ┌────┴────┐    ┌───┴───┐   ┌────┴────┐
+              │用户设备  │    │用户设备 │   │用户设备  │
+              │(PC/手机) │    │(Wi-Fi) │   │(机顶盒)  │
+              └─────────┘    └───────┘   └─────────┘
+                        </pre>
+                    </div>
+                    
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">📋 应用案例：某省运营商千兆宽带项目</h4>
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <p><strong>项目背景</strong>：某省运营商计划3年内完成500万户千兆宽带升级</p>
+                        <p><strong>解决方案</strong>：</p>
+                        <ul>
+                            <li>部署MA5800系列OLT 2000+台，覆盖全省16个地市</li>
+                            <li>采用XGS-PON技术，提供10G对称带宽</li>
+                            <li>配套Wi-Fi 6 ONU，实现全屋千兆覆盖</li>
+                            <li>iMaster NCE实现端到端智能运维</li>
+                        </ul>
+                        <p><strong>项目成果</strong>：</p>
+                        <ul>
+                            <li>千兆用户渗透率达65%，ARPU值提升40%</li>
+                            <li>运维成本降低30%，故障处理时间缩短60%</li>
+                            <li>用户满意度达98%，投诉率下降50%</li>
+                        </ul>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background: #22c55e; color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">📄 查看原文详情 →</a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h4 style="color: var(--success); margin-bottom: 15px;">🏢 F5G全光园区 - 组网说明</h4>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <pre style="margin: 0; font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
+┌─────────────────────────────────────────────────────────────────┐
+│                         园区核心层                                │
+│                    ┌─────────────┐                              │
+│                    │  核心交换机  │                              │
+│                    │  (S12700E)   │                              │
+│                    └──────┬──────┘                              │
+│                           │                                     │
+│                    ┌──────┴──────┐                              │
+│                    │    OLT       │ ← 园区中心机房部署           │
+│                    │ (EA5800-X17) │                              │
+│                    │  ┌───┐┌───┐  │                              │
+│                    │  │PON││PON│  │ ← 多PON口板卡              │
+│                    │  └───┘└───┘  │                              │
+│                    └──────┬──────┘                              │
+│                           │                                     │
+└───────────────────────────┼─────────────────────────────────────┘
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+        ┌─────┴─────┐ ┌─────┴─────┐ ┌─────┴─────┐
+        │ ODN分光器  │ │ ODN分光器  │ │ ODN分光器  │
+        │  (1:32)   │ │  (1:32)   │ │  (1:32)   │
+        └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+              │             │             │
+    ┌─────────┼─────────┐ ┌─┼─────────┐ ┌─┼─────────┐
+    │         │         │ │ │         │ │ │         │
+┌───┴───┐ ┌───┴───┐ ┌───┴┐┐┌┴───┐ ┌───┴┐┐┌┴───┐ ┌───┴┐
+│  ONU  │ │  ONU  │ │ ONU│││ONU │ │ ONU│││ONU │ │ ONU│
+│(桌面) │ │(桌面) │ │(AP)│││(AP)│ │(打印)│││(监控)│ │(门禁)│
+└───────┘ └───────┘ └────┘┘└────┘ └────┘┘└────┘ └────┘
+  办公楼    会议室    走廊Wi-Fi   打印区    安防监控   门禁系统
+                        </pre>
+                    </div>
+                    
+                    <h4 style="color: var(--success); margin: 20px 0 15px;">📋 应用案例：某大型企业总部大楼</h4>
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <p><strong>项目背景</strong>：某500强企业新建总部大楼，共30层，员工5000人</p>
+                        <p><strong>解决方案</strong>：</p>
+                        <ul>
+                            <li>部署EA5800-X17 OLT 2台，互为备份</li>
+                            <li>全光POL网络，光纤直达每个工位</li>
+                            <li>光切片技术实现办公/访客/IoT三网隔离</li>
+                            <li>统一承载数据、语音、视频、安防业务</li>
+                        </ul>
+                        <p><strong>项目成果</strong>：</p>
+                        <ul>
+                            <li>机房空间节省70%，能耗降低40%</li>
+                            <li>布线成本降低50%，工期缩短3个月</li>
+                            <li>网络时延<1ms，满足视频会议需求</li>
+                            <li>运维人员从8人减少到2人</li>
+                        </ul>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network/campus-optical-network" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background: #22c55e; color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">📄 查看原文详情 →</a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h4 style="color: #3b82f6; margin-bottom: 15px;">🏫 F5G教育光网 - 组网说明</h4>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <pre style="margin: 0; font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
+┌─────────────────────────────────────────────────────────────────┐
+│                        校园核心层                                 │
+│                   ┌──────────────┐                               │
+│                   │  教育核心交换机 │ ← 华为CloudEngine系列       │
+│                   │  (CE16800)    │                               │
+│                   └──────┬───────┘                               │
+│                          │                                       │
+│                   ┌──────┴──────┐                                │
+│                   │  教育OLT     │ ← 华为EA5800系列              │
+│                   │  ┌───┐┌───┐  │                                │
+│                   │  │PON││PON│  │ ← XGS-PON板卡               │
+│                   │  └───┘└───┘  │                                │
+│                   └──────┬──────┘                                │
+│                          │                                       │
+└──────────────────────────┼──────────────────────────────────────┘
+                           │
+           ┌───────────────┼───────────────┐
+           │               │               │
+      ┌────┴────┐     ┌────┴────┐     ┌────┴────┐
+      │ ODN分光器│     │ ODN分光器│     │ ODN分光器│
+      │ (1:32)  │     │ (1:32)  │     │ (1:32)  │
+      └────┬────┘     └────┬────┘     └────┬────┘
+           │               │               │
+    ┌──────┴──────┐ ┌──────┴──────┐ ┌──────┴──────┐
+    │   智慧教室    │ │   图书馆     │ │   学生宿舍    │
+    │ ┌───┐┌───┐ │ │ ┌───┐┌───┐ │ │ ┌───┐┌───┐ │
+    │ │ONU││ONU│ │ │ │ONU││ONU│ │ │ │ONU││ONU│ │
+    │ └───┘└───┘ │ │ └───┘└───┘ │ │ └───┘└───┘ │
+    │ (互动教学)  │ │ (数字资源)  │ │ (高速Wi-Fi)│
+    └───────────┘ └───────────┘ └───────────┘
+                        </pre>
+                    </div>
+                    
+                    <h4 style="color: #3b82f6; margin: 20px 0 15px;">📋 应用案例：某双一流大学智慧校园</h4>
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <p><strong>项目背景</strong>：某双一流大学建设智慧校园，覆盖5个校区，师生4万人</p>
+                        <p><strong>解决方案</strong>：</p>
+                        <ul>
+                            <li>部署华为EA5800-X17 OLT 60台，覆盖全部校区</li>
+                            <li>F5G全光网络，光纤直达每间教室、宿舍</li>
+                            <li>光切片实现教学、科研、管理、生活四网隔离</li>
+                            <li>Wi-Fi 6全覆盖，支持8K高清互动教学</li>
+                        </ul>
+                        <p><strong>项目成果</strong>：</p>
+                        <ul>
+                            <li>网络时延降低至0.5ms，在线课堂零卡顿</li>
+                            <li>宿舍Wi-Fi速率提升500%，学生满意度99%</li>
+                            <li>运维效率提升70%，故障处理时间缩短80%</li>
+                            <li>支撑国家级虚拟仿真实验教学项目20+</li>
+                        </ul>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network/education-optical-network" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background: #22c55e; color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">📄 查看原文详情 →</a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h4 style="color: var(--warning); margin-bottom: 15px;">🏭 F5G全光工业 - 组网说明</h4>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <pre style="margin: 0; font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
+┌─────────────────────────────────────────────────────────────────┐
+│                         工厂核心层                                │
+│                    ┌─────────────┐                              │
+│                    │ 工业核心交换机│                              │
+│                    │  (S7700)     │                              │
+│                    └──────┬──────┘                              │
+│                           │                                     │
+│                    ┌──────┴──────┐                              │
+│                    │ 工业级OLT    │ ← 抗电磁干扰设计             │
+│                    │ (EA5800-X2)  │                              │
+│                    │  ┌───┐┌───┐  │                              │
+│                    │  │PON││PON│  │ ← 硬切片板卡               │
+│                    │  └───┘└───┘  │                              │
+│                    └──────┬──────┘                              │
+│                           │                                     │
+└───────────────────────────┼─────────────────────────────────────┘
+                            │
+         ┌──────────────────┼──────────────────┐
+         │                  │                  │
+    ┌────┴────┐        ┌────┴────┐        ┌────┴────┐
+    │ 分光器  │        │ 分光器  │        │ 分光器  │
+    │ (1:8)  │        │ (1:8)   │        │ (1:8)   │
+    └────┬────┘        └────┬────┘        └────┬────┘
+         │                  │                  │
+   ┌─────┴──────┐    ┌─────┴──────┐    ┌─────┴──────┐
+   │  生产控制   │    │   机器视觉  │    │  设备监测   │
+   │   切片     │    │   切片      │    │   切片      │
+   │ ┌─┐ ┌─┐   │    │ ┌─┐ ┌─┐    │    │ ┌─┐ ┌─┐    │
+   │ │C│ │C│   │    │ │C│ │C│    │    │ │C│ │C│    │
+   │ │N│ │N│   │    │ │N│ │N│    │    │ │N│ │N│    │
+   │ │C│ │C│   │    │ │V│ │V│    │    │ │V│ │V│    │
+   │ └─┘ └─┘   │    │ └─┘ └─┘    │    │ └─┘ └─┘    │
+   │  (硬隔离)  │    │  (硬隔离)   │    │  (硬隔离)   │
+   └───────────┘    └───────────┘    └───────────┘
+   时延<1ms          带宽10G          隔离度99.9%
+                        </pre>
+                    </div>
+                    
+                    <h4 style="color: var(--warning); margin: 20px 0 15px;">📋 应用案例：某汽车制造工厂</h4>
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <p><strong>项目背景</strong>：某汽车工厂智能化改造，需支持机器视觉质检、AGV调度、生产控制</p>
+                        <p><strong>解决方案</strong>：</p>
+                        <ul>
+                            <li>部署工业级EA5800-X2 OLT，抗电磁干扰</li>
+                            <li>光切片技术实现3个硬隔离网络：生产控制/机器视觉/设备监测</li>
+                            <li>确定性时延<1ms，满足运动控制需求</li>
+                            <li>Type B双归属保护，可靠性99.999%</li>
+                        </ul>
+                        <p><strong>项目成果</strong>：</p>
+                        <ul>
+                            <li>质检效率提升300%，漏检率降低至0.01%</li>
+                            <li>AGV调度响应时间从50ms降至5ms</li>
+                            <li>生产线故障停机时间减少80%</li>
+                            <li>网络抗干扰能力满足工业环境要求</li>
+                        </ul>
+                        <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network/industrial-optical-network" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background: #22c55e; color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">📄 查看原文详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资源链接 -->
+        <section class="card">
+            <div class="card-body">
+                <h3>🔗 相关资源</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <a href="https://e.huawei.com/cn/products/enterprise-access" target="_blank" class="card-link">
+                        📄 华为企业接入产品官网 →
+                    </a>
+                    <a href="https://support.huawei.com/enterprise/zh/access-network" target="_blank" class="card-link">
+                        📚 技术文档与支持 →
+                    </a>
+                    <a href="https://e.huawei.com/cn/solutions/enterprise-optical-network" target="_blank" class="card-link">
+                        💡 华为OptiX智简全光网 →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 华为动态 -->
+        <section class="card" style="margin-top: 40px;">
+            <div class="card-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                    <h3 style="margin: 0;">📰 华为动态</h3>
+                    <span style="font-size: 0.85rem; color: #6b7280; background: #f3f4f6; padding: 4px 12px; border-radius: 12px;">每周五8点更新</span>
+                </div>
+                
+                <div style="display: grid; gap: 20px;">
+                    <!-- 动态1 -->
+                    <div style="padding: 20px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #C41E3A;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <h4 style="margin: 0; color: #1f2937; font-size: 1rem;">华为发布OptiXstar系列新一代FTTR产品，引领家庭网络升级</h4>
+                            <span style="font-size: 0.8rem; color: #6b7280; white-space: nowrap; margin-left: 15px;">2026-03-20</span>
+                        </div>
+                        <p style="margin: 0 0 12px 0; color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                            华为正式发布OptiXstar FTTR V3系列新品，支持Wi-Fi 7和2.5Gbps网口，实现全屋3000Mbps覆盖。该产品采用自研光芯片，功耗降低30%，已在全国20个省份开始商用部署。
+                        </p>
+                        <a href="https://e.huawei.com/cn/news/2026/03/fttr-v3-launch" target="_blank" style="font-size: 0.85rem; color: #C41E3A; text-decoration: none;">阅读原文 →</a>
+                    </div>
+
+                    <!-- 动态2 -->
+                    <div style="padding: 20px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #C41E3A;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <h4 style="margin: 0; color: #1f2937; font-size: 1rem;">华为F5G教育光网方案在江苏省全面落地，覆盖500+所学校</h4>
+                            <span style="font-size: 0.8rem; color: #6b7280; white-space: nowrap; margin-left: 15px;">2026-03-18</span>
+                        </div>
+                        <p style="margin: 0 0 12px 0; color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                            江苏省教育厅与华为达成合作，在全省范围内部署F5G全光教育网络。项目采用EA5800系列OLT和Wi-Fi 6 ONU，实现万兆到教室、千兆到桌面，支撑智慧课堂、VR教学等创新应用。
+                        </p>
+                        <a href="https://e.huawei.com/cn/news/2026/03/jiangsu-education-f5g" target="_blank" style="font-size: 0.85rem; color: #C41E3A; text-decoration: none;">阅读原文 →</a>
+                    </div>
+
+                    <!-- 动态3 -->
+                    <div style="padding: 20px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #C41E3A;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <h4 style="margin: 0; color: #1f2937; font-size: 1rem;">华为与中国移动联合完成50G PON现网试点，创业界新纪录</h4>
+                            <span style="font-size: 0.8rem; color: #6b7280; white-space: nowrap; margin-left: 15px;">2026-03-15</span>
+                        </div>
+                        <p style="margin: 0 0 12px 0; color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                            华为与中国移动在浙江杭州完成50G PON技术现网试点，单端口下行速率达50Gbps，上行12.5Gbps。测试验证了50G PON与现网GPON/XGS-PON的共存能力，为下一代光网络演进奠定技术基础。
+                        </p>
+                        <a href="https://e.huawei.com/cn/news/2026/03/50g-pon-pilot" target="_blank" style="font-size: 0.85rem; color: #C41E3A; text-decoration: none;">阅读原文 →</a>
+                    </div>
+
+                    <!-- 动态4 -->
+                    <div style="padding: 20px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #C41E3A;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <h4 style="margin: 0; color: #1f2937; font-size: 1rem;">华为F5G方案荣获2026年GSMA"最佳企业网络解决方案"奖</h4>
+                            <span style="font-size: 0.8rem; color: #6b7280; white-space: nowrap; margin-left: 15px;">2026-03-10</span>
+                        </div>
+                        <p style="margin: 0 0 12px 0; color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                            在2026年MWC巴塞罗那大会上，华为F5G全光园区解决方案荣获GSMA颁发的"最佳企业网络解决方案"奖项。该方案凭借极简架构、绿色节能、智能运维等优势，已在全球100多个国家商用部署。
+                        </p>
+                        <a href="https://e.huawei.com/cn/news/2026/03/gsma-award" target="_blank" style="font-size: 0.85rem; color: #C41E3A; text-decoration: none;">阅读原文 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PON Network Portal</h4>
+                    <p>专业的 PON 网络技术资讯平台</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="h3c-optical.html">华三 光网络</a></li>
+                        <li><a href="competitive.html">⚔️ 竞争分析</a></li>
+                        <li><a href="../news/index.html">最新资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PON Network Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/data.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

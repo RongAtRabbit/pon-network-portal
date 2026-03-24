@@ -1,0 +1,108 @@
+<!-- 组网架构图示例 - 简洁版本 -->
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../../css/network-diagram.css">
+
+<section id="architecture" class="card" style="margin-bottom: 40px;">
+    <div class="card-body">
+        <h2 style="color: var(--primary); margin-bottom: 20px;">组网架构</h2>
+        <p style="margin-bottom: 20px; color: #6b7280;">
+            采用三层架构设计：核心层、汇聚层、接入层，通过ODN无源光分配网络实现全覆盖。
+        </p>
+        
+        <div class="network-diagram">
+            <!-- 云平台层 -->
+            <div class="network-cloud">
+                <div class="network-label">教育云/智慧校园平台</div>
+                <div class="network-desc">教学资源库 | AI训练集群 | 管理平台</div>
+            </div>
+            
+            <div class="network-connector"></div>
+            
+            <!-- 核心层 -->
+            <div class="network-layer">
+                <div class="network-node core">
+                    <div class="network-label">核心交换机</div>
+                    <div class="network-desc">CE16800/CE12800</div>
+                </div>
+            </div>
+            
+            <div class="network-connector"></div>
+            
+            <!-- 汇聚层 -->
+            <div class="network-layer">
+                <div class="network-node aggregation">
+                    <div class="network-label">OLT光线路终端</div>
+                    <div class="network-desc">EA5800-X17/X7/X2</div>
+                </div>
+            </div>
+            
+            <div class="network-connector"></div>
+            
+            <!-- ODN层 -->
+            <div class="network-layer">
+                <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
+                    <div class="network-label">ODN无源光分配</div>
+                    <div class="network-desc">分光器 | 光纤配线</div>
+                </div>
+            </div>
+            
+            <div class="network-connector"></div>
+            
+            <!-- 接入层 -->
+            <div class="network-row">
+                <div class="network-node access">
+                    <div class="network-label">教学楼ONU</div>
+                    <div class="network-desc">EG8240H5</div>
+                </div>
+                <div class="network-node access">
+                    <div class="network-label">办公楼ONU</div>
+                    <div class="network-desc">P613E</div>
+                </div>
+                <div class="network-node access">
+                    <div class="network-label">宿舍ONU</div>
+                    <div class="network-desc">EG8145X6</div>
+                </div>
+                <div class="network-node access">
+                    <div class="network-label">图书馆ONU</div>
+                    <div class="network-desc">MA5675</div>
+                </div>
+            </div>
+            
+            <!-- 图例 -->
+            <div class="network-legend">
+                <div class="legend-item">
+                    <div class="legend-dot core"></div>
+                    <span>核心层</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot aggregation"></div>
+                    <span>汇聚层</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot access"></div>
+                    <span>接入层</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 架构说明 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+            <div style="padding: 15px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                <h4 style="color: #1e40af; margin-bottom: 8px;">核心层</h4>
+                <p style="font-size: 0.9rem; color: #4b5563;">教育核心交换机，提供高可靠转发和智能管控</p>
+            </div>
+            <div style="padding: 15px; background: #f5f3ff; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                <h4 style="color: #5b21b6; margin-bottom: 8px;">汇聚层</h4>
+                <p style="font-size: 0.9rem; color: #4b5563;">OLT光线路终端，实现光信号汇聚和分发</p>
+            </div>
+            <div style="padding: 15px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981;">
+                <h4 style="color: #065f46; margin-bottom: 8px;">ODN层</h4>
+                <p style="font-size: 0.9rem; color: #4b5563;">无源光分配网络，光纤到教室/办公室/宿舍</p>
+            </div>
+            <div style="padding: 15px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                <h4 style="color: #92400e; margin-bottom: 8px;">接入层</h4>
+                <p style="font-size: 0.9rem; color: #4b5563;">ONU光网络单元，提供多业务接入能力</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PON竞争对手快速参考卡片 | 竞争分析 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <style>
+        body { background: #f5f5f5; }
+        .quick-ref-page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 297mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .quick-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: -20px -20px 20px -20px;
+        }
+        .quick-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .quick-header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .print-btn:hover {
+            background: #c0392b;
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .quick-ref-page { box-shadow: none; }
+        }
+        .vendor-section {
+            margin-bottom: 25px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .vendor-header {
+            padding: 10px 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: white;
+        }
+        .vendor-huawei { background: #c41e3a; }
+        .vendor-h3c { background: #e60012; }
+        .vendor-zte { background: #0066cc; }
+        .vendor-fiberhome { background: #00a0e9; }
+        .vendor-content {
+            padding: 15px;
+            font-size: 0.85rem;
+        }
+        .quick-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .quick-table th, .quick-table td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .quick-table th {
+            background: #f3f4f6;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-size: 0.85rem;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .advantage-list {
+            list-style: none;
+            padding: 0;
+        }
+        .advantage-list li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .advantage-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ 打印/保存PDF</button>
+    
+    <div class="quick-ref-page">
+        <header class="quick-header">
+            <h1>⚔️ PON竞争对手快速参考卡片</h1>
+            <p>售前技术支持 · 电话沟通 · 快速应答</p>
+            <a href="../competitive.html" class="nav-back">← 返回竞争分析</a>
+        </header>
+
+        <div class="highlight-box">
+            <strong>💡 使用说明：</strong>本文档为售前快速应答设计，一页纸呈现核心竞争要点。
+            建议打印随身携带，或保存到手机随时查阅。
+        </div>
+
+        <div class="two-column">
+            <!-- 华为 vs 华三 -->
+            <div class="vendor-section">
+                <div class="vendor-header vendor-huawei">华为 vs 华三 | 教育行业</div>
+                <div class="vendor-content">
+                    <strong>华三反击点：</strong>
+                    <ul style="margin: 5px 0; padding-left: 20px;">
+                        <li>EPON交换能力强</li>
+                        <li>板卡融合度高</li>
+                        <li>企业网渠道强</li>
+                    </ul>
+                    <strong>华为应对策略：</strong>
+                    <ul class="advantage-list">
+                        <li>强调GPON/XGS-PON技术优势</li>
+                        <li>Type B/C保护完整性</li>
+                        <li>光切片安全隔离</li>
+                        <li>AI智能运维能力</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 华为 vs 中兴 -->
+            <div class="vendor-section">
+                <div class="vendor-header vendor-huawei">华为 vs 中兴 | 运营商</div>
+                <div class="vendor-content">
+                    <strong>中兴反击点：</strong>
+                    <ul style="margin: 5px 0; padding-left: 20px;">
+                        <li>价格优势</li>
+                        <li>运营商市场深耕</li>
+                        <li>C300系列成熟</li>
+                    </ul>
+                    <strong>华为应对策略：</strong>
+                    <ul class="advantage-list">
+                        <li>iMaster NCE智能化</li>
+                        <li>50G PON技术领先</li>
+                        <li>AI运维能力</li>
+                        <li>全球规模商用</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <!-- 华为 vs 烽火 -->
+            <div class="vendor-section">
+                <div class="vendor-header vendor-huawei">华为 vs 烽火 | 政府项目</div>
+                <div class="vendor-content">
+                    <strong>烽火反击点：</strong>
+                    <ul style="margin: 5px 0; padding-left: 20px;">
+                        <li>政府关系强</li>
+                        <li>国产化优势</li>
+                        <li>价格竞争力</li>
+                    </ul>
+                    <strong>华为应对策略：</strong>
+                    <ul class="advantage-list">
+                        <li>全球领先性</li>
+                        <li>AI智能运维</li>
+                        <li>开放接口丰富</li>
+                        <li>安全机制完善</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 核心参数速查 -->
+            <div class="vendor-section">
+                <div class="vendor-header" style="background: #7c3aed;">核心参数速查表</div>
+                <div class="vendor-content">
+                    <table class="quick-table">
+                        <tr><th>能力项</th><th>华为</th><th>华三</th><th>中兴</th><th>烽火</th></tr>
+                        <tr><td>XGS-PON</td><td>✅✅</td><td>⚠️</td><td>✅</td><td>⚠️</td></tr>
+                        <tr><td>50G PON</td><td>✅✅</td><td>❌</td><td>⚠️</td><td>⚠️</td></tr>
+                        <tr><td>Type B/C</td><td>✅✅</td><td>❓</td><td>✅</td><td>✅</td></tr>
+                        <tr><td>AI运维</td><td>✅✅</td><td>✅</td><td>⚠️</td><td>⚠️</td></tr>
+                        <tr><td>Telemetry</td><td>✅✅</td><td>⚠️</td><td>⚠️</td><td>❌</td></tr>
+                    </table>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">
+                        ✅✅ 领先 | ✅ 支持 | ⚠️ 有限 | ❌ 不支持 | ❓ 未明确
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 话术锦囊 -->
+        <div class="vendor-section">
+            <div class="vendor-header" style="background: #059669;">💬 话术锦囊</div>
+            <div class="vendor-content">
+                <div class="two-column">
+                    <div>
+                        <strong>客户说："华三的OLT更便宜" </strong><br>
+                        <span style="color: #c41e3a;">→ "您说得对，但我们建议从TCO角度考虑。
+                        华为的AI运维可以降低30%运维成本，Type B保护避免业务中断损失，
+                        5年下来总成本反而更低。"</span>
+                    </div>
+                    <div>
+                        <strong>客户说："中兴在运营商用得很多" </strong><br>
+                        <span style="color: #c41e3a;">→ "中兴确实在运营商有部署，但华为在全球150+国家商用，
+                        服务超过30亿用户。技术领先性体现在50G PON、AI运维等下一代技术上。"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #e5e7eb; font-size: 0.8rem; color: #666;">
+            <p>PON Network Portal · 竞争分析资料</p>
+            <p>更新日期：2024-2025 | 保密级别：内部参考</p>
+        </footer>
+    </div>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PON网络竞争对手软件规格对比分析 | 竞争分析</title>
+    <link rel="stylesheet" href="../../../../css/main.css">
+    <link rel="stylesheet" href="../../../../css/components.css">
+    <style>
+        .doc-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        .doc-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .doc-content h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            font-size: 1.8rem;
+            margin-top: 40px;
+        }
+        .doc-content h2 {
+            color: #4b5563;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            font-size: 1.4rem;
+        }
+        .doc-content h3 {
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .doc-content th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .doc-content td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .doc-content tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .check-yes { color: #10b981; font-weight: 600; }
+        .check-no { color: #ef4444; }
+        .check-partial { color: #f59e0b; }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .section { margin-bottom: 50px; }
+    </style>
+    <link rel="stylesheet" href="../../../../css/sidebar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../../../index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../../../index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="doc-header">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 20px;">
+                <a href="../../../../index.html">首页</a> / 
+                <a href="../../competitive.html">竞争分析</a> / 
+                <span>软件规格对比分析</span>
+            </div>
+            <h1>📄 PON网络竞争对手软件规格对比分析</h1>
+            <p>详细技术对比 · 网管/协议/功能/安全/保护/接口</p>
+            <a href="../../competitive.html" class="back-btn">← 返回资料库</a>
+        </div>
+    </header>
+
+    <main class="doc-content">
+        <div class="info-box">
+            <strong>文档说明</strong>：本文档对比华为、华三、中兴、烽火四家主流厂商的PON软件规格，涵盖网管能力、协议支持、安全机制等核心维度，供售前技术支持参考使用。<br><br>
+            <strong>文档定位</strong>：面向PON网络SE的竞争对手软件规格参考资料<br>
+            <strong>生成时间</strong>：2026-03-08<br>
+            <strong>分析维度</strong>：软件功能、网管能力、协议支持、安全机制、开放接口
+        </div>
+
+        <div class="section">
+            <h1>一、主要竞争对手概览</h1>
+            
+            <h2>1.1 PON市场主要厂商</h2>
+            <table>
+                <thead>
+                    <tr><th>厂商</th><th>总部</th><th>市场定位</th><th>PON产品系列</th><th>主要优势领域</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong style="color: #c41e3a;">华为</strong></td><td>中国深圳</td><td>全球领导者</td><td>EA5800/MA5800系列</td><td>运营商市场、高端企业网</td></tr>
+                    <tr><td><strong style="color: #0066cc;">中兴</strong></td><td>中国深圳</td><td>全球前三</td><td>C300/C600系列</td><td>运营商市场、性价比方案</td></tr>
+                    <tr><td><strong style="color: #00a0e9;">烽火</strong></td><td>中国武汉</td><td>国内领先</td><td>AN5516/AN6000系列</td><td>运营商市场、政府项目</td></tr>
+                    <tr><td><strong style="color: #e60012;">华三</strong></td><td>中国杭州</td><td>企业网强者</td><td>S系列OLT</td><td>企业网、教育行业</td></tr>
+                </tbody>
+            </table>
+
+            <h2>1.2 软件架构对比</h2>
+            <table>
+                <thead>
+                    <tr><th>厂商</th><th>网管平台架构</th><th>软件定义能力</th><th>云化支持</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>华为</strong></td><td>iMaster NCE + eSight</td><td>完整SDN能力</td><td><span class="check-yes">✅ 支持云化部署</span></td></tr>
+                    <tr><td><strong>中兴</strong></td><td>ZENIC ONE + NetNumen</td><td>SDN能力</td><td><span class="check-yes">✅ 支持云化</span></td></tr>
+                    <tr><td><strong>烽火</strong></td><td>烽智网管平台</td><td>基础SDN</td><td><span class="check-partial">⚠️ 有限云化</span></td></tr>
+                    <tr><td><strong>华三</strong></td><td>SeerEngine + AD-Campus</td><td>SDN能力</td><td><span class="check-yes">✅ 支持云化</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h1>二、网管软件规格对比</h1>
+            
+            <h2>2.1 网管平台功能对比</h2>
+            <table>
+                <thead>
+                    <tr><th>功能项</th><th>华为</th><th>中兴</th><th>华三</th><th>烽火</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>统一管理</strong></td><td><span class="check-yes">✅ 有线/无线/PON统一</span></td><td><span class="check-yes">✅ 统一网管</span></td><td><span class="check-yes">✅ 统一运维</span></td><td><span class="check-yes">✅ 统一网管</span></td></tr>
+                    <tr><td><strong>拓扑管理</strong></td><td><span class="check-yes">✅ 物理/逻辑/业务拓扑</span></td><td><span class="check-yes">✅ 拓扑管理</span></td><td><span class="check-yes">✅ 拓扑可视化</span></td><td><span class="check-yes">✅ 拓扑管理</span></td></tr>
+                    <tr><td><strong>配置管理</strong></td><td><span class="check-yes">✅ 批量配置/模板配置</span></td><td><span class="check-yes">✅ 批量配置</span></td><td><span class="check-yes">✅ 配置管理</span></td><td><span class="check-yes">✅ 配置管理</span></td></tr>
+                    <tr><td><strong>性能管理</strong></td><td><span class="check-yes">✅ Telemetry秒级采集</span></td><td><span class="check-yes">✅ 性能管理</span></td><td><span class="check-yes">✅ 性能分析</span></td><td><span class="check-yes">✅ 性能管理</span></td></tr>
+                    <tr><td><strong>SLA管理</strong></td><td><span class="check-yes">✅ 业务级SLA保障</span></td><td><span class="check-partial">⚠️ 基础SLA</span></td><td><span class="check-partial">⚠️ 基础SLA</span></td><td><span class="check-no">❌ 弱</span></td></tr>
+                    <tr><td><strong>智能运维</strong></td><td><span class="check-yes">✅ AI智能分析/预测</span></td><td><span class="check-partial">⚠️ 基础智能分析</span></td><td><span class="check-yes">✅ 智能诊断</span></td><td><span class="check-partial">⚠️ 有限</span></td></tr>
+                    <tr><td><strong>北向接口</strong></td><td><span class="check-yes">✅ RESTful/SNMP/JSON</span></td><td><span class="check-yes">✅ CORBA/SNMP/REST</span></td><td><span class="check-yes">✅ RESTful/SNMP</span></td><td><span class="check-partial">⚠️ SNMP/CORBA</span></td></tr>
+                </tbody>
+            </table>
+
+            <h2>2.2 PON专有网管功能对比</h2>
+            <table>
+                <thead>
+                    <tr><th>功能项</th><th>华为</th><th>中兴</th><th>华三</th><th>烽火</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>流氓ONU检测</td><td><span class="check-yes">✅ 自动检测/隔离</span></td><td><span class="check-yes">✅ 流氓ONU检测</span></td><td><span class="check-partial">⚠️ 未明确</span></td><td><span class="check-partial">⚠️ 有限</span></td></tr>
+                    <tr><td>PON口保护管理</td><td><span class="check-yes">✅ Type B/C/D配置</span></td><td><span class="check-yes">✅ 保护配置</span></td><td><span class="check-partial">⚠️ 未明确</span></td><td><span class="check-yes">✅ 保护管理</span></td></tr>
+                    <tr><td>业务发放</td><td><span class="check-yes">✅ 一键业务发放</span></td><td><span class="check-yes">✅ 业务配置</span></td><td><span class="check-yes">✅ 业务配置</span></td><td><span class="check-partial">⚠️ 基础</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h1>三、协议支持规格对比</h1>
+            
+            <h2>3.1 PON层协议支持</h2>
+            <table>
+                <thead>
+                    <tr><th>协议/标准</th><th>华为</th><th>中兴</th><th>华三</th><th>烽火</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ITU-T G.984 (GPON)</td><td><span class="check-yes">✅ 完整支持</span></td><td><span class="check-yes">✅ 完整支持</span></td><td><span class="check-yes">✅ 支持</span></td><td><span class="check-yes">✅ 支持</span></td></tr>
+                    <tr><td>ITU-T G.9807 (XGS-PON)</td><td><span class="check-yes">✅ 完整支持</span></td><td><span class="check-yes">✅ 支持</span></td><td><span class="check-partial">⚠️ 部分</span></td><td><span class="check-partial">⚠️ 有限</span></td></tr>
+                    <tr><td>ITU-T G.9804 (50G PON)</td><td><span class="check-yes">✅ 演进支持</span></td><td><span class="check-partial">⚠️ 规划中</span></td><td><span class="check-no">❌ 未支持</span></td><td><span class="check-partial">⚠️ 规划中</span></td></tr>
+                    <tr><td>Combo PON</td><td><span class="check-yes">✅ 支持</span></td><td><span class="check-yes">✅ 支持</span></td><td><span class="check-no">❌ 未明确</span></td><td><span class="check-partial">⚠️ 有限</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h1>四、差异化竞争分析</h1>
+
+            <h2>4.1 华为 vs 竞争对手优势</h2>
+            <ul style="line-height: 2;">
+                <li><strong>PON技术领先</strong> - XGS-PON/50G PON成熟，Combo PON领先</li>
+                <li><strong>保护机制完整</strong> - Type B/C/D全支持，50ms倒换</li>
+                <li><strong>网管智能化</strong> - AI智能运维，Telemetry秒级采集</li>
+                <li><strong>安全机制</strong> - AES-128加密，光切片硬隔离</li>
+                <li><strong>协议完整度</strong> - IS-IS/BGP/PIM全支持</li>
+            </ul>
+
+            <h2>4.2 场景化竞争建议</h2>
+            <table>
+                <thead>
+                    <tr><th>客户场景</th><th>主要竞争对手</th><th>华为优势策略</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>运营商集采</strong></td><td>中兴、烽火</td><td>技术领先(XGS-PON/50G)、智能运维、全球规模</td></tr>
+                    <tr><td><strong>教育行业</strong></td><td>华三、锐捷</td><td>F5G方案完整性、光切片安全、AI运维</td></tr>
+                    <tr><td><strong>政府/国企</strong></td><td>烽火、华三</td><td>国产化、等保安全、Type B/C高可靠</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" style="background: #f8fafc; padding: 30px; border-radius: 12px;">
+            <h2>参考资料</h2>
+            <ul>
+                <li>华为EA5800/MA5800产品文档</li>
+                <li>华三H3C全光网络技术白皮书</li>
+                <li>中兴通讯iCampus解决方案</li>
+                <li>烽火AN5516/AN6000产品资料</li>
+            </ul>
+            <p style="margin-top: 20px; color: #666;">
+                <strong>文档版本</strong>: 2024-2025年资料整理 | 
+                <strong>更新周期</strong>: 建议季度更新 | 
+                <strong>保密级别</strong>: 内部参考
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 PON Network Portal</p></div>
+    </footer>
+    <script src="../../../../js/sidebar.js"></script>
+</body>
+</html>

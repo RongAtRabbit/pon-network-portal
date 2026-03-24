@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术文档中心 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <style>
+        .doc-center-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .upload-area {
+            border: 3px dashed var(--gray-300);
+            border-radius: var(--radius-xl);
+            padding: 60px;
+            text-align: center;
+            background: var(--bg-secondary);
+            transition: all 0.3s;
+            margin-bottom: 40px;
+        }
+        .upload-area:hover, .upload-area.dragover {
+            border-color: var(--primary);
+            background: var(--primary)05;
+        }
+        .upload-area .icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        .file-types {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .file-type-tag {
+            padding: 8px 16px;
+            background: white;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            border: 1px solid var(--gray-200);
+        }
+        .category-section {
+            margin-bottom: 50px;
+        }
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .category-icon {
+            font-size: 2rem;
+        }
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .doc-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        .doc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        .doc-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .doc-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .doc-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .doc-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+        .doc-format {
+            padding: 4px 10px;
+            background: var(--gray-100);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .doc-format.pdf { background: #FF6B6B20; color: #C92A2A; }
+        .doc-format.word { background: #339AF020; color: #1864AB; }
+        .doc-format.chm { background: #FFD43B20; color: #F08C00; }
+        .doc-format.ppt { background: #FF878720; color: #C92A2A; }
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-300);
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .upload-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .upload-modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .file-input-wrapper {
+            border: 2px dashed var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .file-input-wrapper:hover {
+            border-color: var(--primary);
+            background: var(--primary)05;
+        }
+        .file-input-wrapper input[type="file"] {
+            display: none;
+        }
+        .vendor-consensus {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .vendor-tag {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../vendors/huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../vendors/h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../vendors/zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../vendors/fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../vendors/competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="doc-center-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+            <h1>技术文档中心</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 20px auto;">标准、协议、技术白皮书、竞品方案 - 一站式PON技术资料库</p>
+            <div style="margin-top: 30px;">
+                <button class="btn btn-primary btn-lg admin-only" onclick="requireAdmin(openUploadModal)" style="display: none;">📤 上传文档</button>
+                <button class="btn btn-secondary btn-lg" onclick="showLoginModal()" id="loginBtn">🔐 登录</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 上传区域 -->
+        <div class="upload-area" id="uploadZone">
+            <div class="icon">📂</div>
+            <h2>拖拽文件到此处上传</h2>
+            <p style="color: var(--text-secondary); margin: 15px 0;">支持多种文档格式，自动分类存储</p>
+            
+            <div class="file-types">
+                <span class="file-type-tag">📄 PDF</span>
+                <span class="file-type-tag">📝 Word</span>
+                <span class="file-type-tag">📊 PPT</span>
+                <span class="file-type-tag">📑 CHM</span>
+                <span class="file-type-tag">📈 Excel</span>
+            </div>
+            
+            <button class="btn btn-primary" onclick="openUploadModal()">选择文件</button>
+        </div>
+
+        <!-- 分类筛选 -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-category="all">全部文档</button>
+            <button class="filter-tab" data-category="standard">📋 标准规范</button>
+            <button class="filter-tab" data-category="protocol">🔌 协议解读</button>
+            <button class="filter-tab" data-category="tech">🔧 关键技术</button>
+            <button class="filter-tab" data-category="vendortech">🏭 厂商关键技术</button>
+            <button class="filter-tab" data-category="competitive">⚔️ 竞品方案</button>
+            <button class="filter-tab" data-category="whitepaper">📖 白皮书</button>
+        </div>
+
+        <!-- 文档列表 -->
+        <div id="docContainer">
+            <!-- 用户上传文档 -->
+            <div class="category-section" data-category="user" id="userDocsSection">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">📤</span>
+                        <h2>用户上传文档</h2>
+                    </div>
+                    <span class="tag tag-success" id="userDocCount">0 个文档</span>
+                </div>
+                <div class="doc-grid" id="userDocsContainer">
+                    <p style="color: var(--text-tertiary); padding: 20px;">正在加载文档...</p>
+                </div>
+            </div>
+
+            <!-- 标准规范 -->
+            <div class="category-section" data-category="standard">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">📋</span>
+                        <h2>标准规范</h2>
+                    </div>
+                    <span class="tag tag-primary">8 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('g984')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">ITU-T G.984 GPON标准</div>
+                        <div class="doc-desc">GPON技术规范完整文档，包含GTC层、OMCI协议等核心技术规范。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-20</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('g987')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">ITU-T G.987 XG-PON标准</div>
+                        <div class="doc-desc">10G GPON技术标准，定义XG-PON和XGS-PON的物理层和TC层规范。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-18</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('ieee8023')">
+                        <div class="doc-icon">📑</div>
+                        <div class="doc-title">IEEE 802.3 EPON标准</div>
+                        <div class="doc-desc">以太网PON标准规范，包含1G/10G EPON技术细节。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-15</span>
+                            <span class="doc-format chm">CHM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 协议解读 -->
+            <div class="category-section" data-category="protocol">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">🔌</span>
+                        <h2>协议解读</h2>
+                    </div>
+                    <span class="tag tag-success">6 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('omci-guide')">
+                        <div class="doc-icon">📑</div>
+                        <div class="doc-title">OMCI协议详解</div>
+                        <div class="doc-desc">OLT与ONU管理接口协议深入解析，包含消息格式和操作流程。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-12</span>
+                            <span class="doc-format word">Word</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('gem-frame')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">GEM帧结构分析</div>
+                        <div class="doc-desc">GPON封装方法详解，GEM帧格式和分段重组机制。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-10</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 关键技术 -->
+            <div class="category-section" data-category="tech">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">🔧</span>
+                        <h2>关键技术</h2>
+                    </div>
+                    <span class="tag tag-info">5 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('dba-tech')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">DBA动态带宽分配技术</div>
+                        <div class="doc-desc">DBA算法原理和实现，T-CONT类型详解，带宽分配策略。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-08</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('fec-technology')">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-title">FEC前向纠错技术</div>
+                        <div class="doc-desc">RS(255,239)和LDPC编码原理，FEC增益分析。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-05</span>
+                            <span class="doc-format ppt">PPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 竞品方案 -->
+            <div class="category-section" data-category="competitive">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">⚔️</span>
+                        <h2>竞品方案</h2>
+                    </div>
+                    <span class="tag tag-warning">4 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('huawei-vs-h3c')">
+                        <div class="doc-icon">📊</div>
+                        <div class="doc-title">华为 vs 华三 PON方案对比</div>
+                        <div class="doc-desc">产品规格、方案架构、价格策略全方位对比分析。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-03-01</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 厂商关键技术 -->
+            <div class="category-section" data-category="vendortech">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">🏭</span>
+                        <h2>厂商关键技术</h2>
+                    </div>
+                    <span class="tag tag-info">6 个专题</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('hard-slice')">
+                        <div class="doc-icon">🔒</div>
+                        <div class="doc-title">硬切片与物理隔离技术</div>
+                        <div class="doc-desc">华为硬切片 vs 中兴FlexE vs 华三/烽火的隔离方案对比，包括实现原理、性能指标、应用场景。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #E6001220; color: #E60012; border-radius: 12px; font-size: 0.75rem;">华三</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                            <span style="padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: 12px; font-size: 0.75rem;">烽火</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-22</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('det-latency')">
+                        <div class="doc-icon">⏱️</div>
+                        <div class="doc-title">确定性时延与TSN技术</div>
+                        <div class="doc-desc">TSN over PON实现方案，时间敏感网络在工业场景的应用，各厂商确定性时延技术对比。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-22</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('combo-pon')">
+                        <div class="doc-icon">🔌</div>
+                        <div class="doc-title">Combo PON与平滑演进</div>
+                        <div class="doc-desc">三模Combo光模块技术，GPON/XGS-PON/50G PON共存方案，保护投资的演进路径。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                            <span style="padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: 12px; font-size: 0.75rem;">烽火</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-20</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('ai-ops')">
+                        <div class="doc-icon">🤖</div>
+                        <div class="doc-title">AI智能运维技术</div>
+                        <div class="doc-desc">各厂商AI运维平台对比：华为iMaster NCE、华三AD-Campus、中兴uSmartNet、烽火OMC智能分析。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #E6001220; color: #E60012; border-radius: 12px; font-size: 0.75rem;">华三</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                            <span style="padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: 12px; font-size: 0.75rem;">烽火</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-18</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('self-chip')">
+                        <div class="doc-icon">🔬</div>
+                        <div class="doc-title">自主芯片与国产化</div>
+                        <div class="doc-desc">各厂商PON芯片自研情况：华为海思、华三自研、中兴自研、烽火自研PON芯片技术对比。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #E6001220; color: #E60012; border-radius: 12px; font-size: 0.75rem;">华三</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                            <span style="padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: 12px; font-size: 0.75rem;">烽火</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-15</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+
+                    <div class="doc-card" onclick="viewDoc('wifi-pon')">
+                        <div class="doc-icon">📶</div>
+                        <div class="doc-title">PON+Wi-Fi融合接入</div>
+                        <div class="doc-desc">FTTR光纤到房间技术，Wi-Fi 6/7与PON融合方案，各厂商FTTR产品对比与应用场景。</div>
+                        <div class="vendor-consensus" style="margin-top: 15px;">
+                            <span style="padding: 4px 10px; background: #C41E3A20; color: #C41E3A; border-radius: 12px; font-size: 0.75rem;">华为</span>
+                            <span style="padding: 4px 10px; background: #E6001220; color: #E60012; border-radius: 12px; font-size: 0.75rem;">华三</span>
+                            <span style="padding: 4px 10px; background: #0066CC20; color: #0066CC; border-radius: 12px; font-size: 0.75rem;">中兴</span>
+                            <span style="padding: 4px 10px; background: #00A0E920; color: #00A0E9; border-radius: 12px; font-size: 0.75rem;">烽火</span>
+                        </div>
+                        <div class="doc-meta" style="margin-top: 12px;">
+                            <span>📅 2026-03-10</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 白皮书 -->
+            <div class="category-section" data-category="whitepaper">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">📖</span>
+                        <h2>白皮书</h2>
+                    </div>
+                    <span class="tag tag-primary">3 个文档</span>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card" onclick="viewDoc('f5g-whitepaper')">
+                        <div class="doc-icon">📖</div>
+                        <div class="doc-title">F5G全光网技术白皮书</div>
+                        <div class="doc-desc">ETSI F5G标准解读，技术演进路线图，应用场景分析。</div>
+                        <div class="doc-meta">
+                            <span>📅 2026-02-28</span>
+                            <span class="doc-format pdf">PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 上传模态框 -->
+    <div class="upload-modal" id="uploadModal">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2>📤 上传文档</h2>
+                <button onclick="closeUploadModal()" style="font-size: 1.5rem; background: none; border: none; cursor: pointer;">✕</button>
+            </div>
+            
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label>选择文件 *</label>
+                    <div class="file-input-wrapper" onclick="document.getElementById('docFile').click()">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">📂</div>
+                        <p>点击选择或拖拽文件到此处</p>
+                        <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 10px;">
+                            支持 PDF、Word、PPT、Excel、CHM 格式<br>
+                            <strong style="color: #10b981;">✅ 文件存储在服务器中</strong>
+                        </p>
+                        <input type="file" id="docFile" required 
+                               accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.chm"
+                               onchange="updateFileName(this)">
+                    </div>
+                    <p id="selectedFileName" style="margin-top: 10px; color: var(--primary);"></p>
+                </div>
+
+                <div class="form-group">
+                    <label>文档标题 *</label>
+                    <input type="text" id="docTitle" required placeholder="输入文档标题">
+                </div>
+
+                <div class="form-group">
+                    <label>文档分类 *</label>
+                    <select id="docCategory" required onchange="updateSubCategory()">
+                        <option value="">选择主分类</option>
+                        <option value="厂商资料">🏭 厂商资料</option>
+                        <option value="协议标准">📋 协议标准</option>
+                        <option value="关键技术">🔧 关键技术</option>
+                        <option value="解决方案">💡 解决方案</option>
+                        <option value="竞争分析">⚔️ 竞争分析</option>
+                        <option value="产品规格">📦 产品规格</option>
+                        <option value="技术白皮书">📖 技术白皮书</option>
+                        <option value="上传文档">📤 其他文档</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="subCategoryGroup" style="display: none;">
+                    <label>子分类</label>
+                    <select id="docSubCategory">
+                        <option value="">选择子分类</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>文档简介</label>
+                    <textarea id="docDesc" rows="3" placeholder="简要描述文档内容"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 15px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" onclick="closeUploadModal()">取消</button>
+                    <button type="submit" class="btn btn-primary">📤 开始上传</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>PON Network Portal</h4><p>专业的 PON 网络技术资讯平台</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div>
+        </div>
+    </footer>
+
+    <script src="../../js/doc-server.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script>
+        // 子分类映射
+        const subCategories = {
+            '厂商资料': ['华为', '华三', '中兴', '烽火', '锐捷'],
+            '协议标准': ['ITU-T标准', 'IEEE标准', '国标', '行标'],
+            '关键技术': ['PON技术', '光模块', '网络架构', '运维管理'],
+            '解决方案': ['教育', '医疗', '企业', '政务'],
+            '竞争分析': ['竞品对比', '市场分析'],
+            '产品规格': [],
+            '技术白皮书': [],
+            '上传文档': []
+        };
+
+        // 更新子分类选项
+        function updateSubCategory() {
+            const mainCategory = document.getElementById('docCategory').value;
+            const subGroup = document.getElementById('subCategoryGroup');
+            const subSelect = document.getElementById('docSubCategory');
+            
+            if (!mainCategory || !subCategories[mainCategory] || subCategories[mainCategory].length === 0) {
+                subGroup.style.display = 'none';
+                subSelect.innerHTML = '<option value="">选择子分类</option>';
+                return;
+            }
+            
+            subGroup.style.display = 'block';
+            subSelect.innerHTML = '<option value="">选择子分类</option>' +
+                subCategories[mainCategory].map(sub => 
+                    `<option value="${sub}">${sub}</option>`
+                ).join('');
+        }
+
+        // 获取完整分类路径
+        function getFullCategory() {
+            const main = document.getElementById('docCategory').value;
+            const sub = document.getElementById('docSubCategory').value;
+            if (sub && subCategories[main] && subCategories[main].length > 0) {
+                return `${main}/${sub}`;
+            }
+            return main;
+        }
+
+        // 初始化权限控制
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAdmin = isLoggedIn();
+            const uploadBtn = document.querySelector('.admin-only');
+            const loginBtn = document.getElementById('loginBtn');
+            
+            if (isAdmin) {
+                if (uploadBtn) uploadBtn.style.display = 'inline-flex';
+                if (loginBtn) loginBtn.style.display = 'none';
+            } else {
+                if (uploadBtn) uploadBtn.style.display = 'none';
+                if (loginBtn) loginBtn.style.display = 'inline-flex';
+            }
+        });
+    </script>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

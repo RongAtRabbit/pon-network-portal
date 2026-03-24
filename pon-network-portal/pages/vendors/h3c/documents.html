@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华三技术文档库 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <style>
+        .doc-library-header {
+            background: linear-gradient(135deg, #E60012, #FF3344);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .doc-card { background: white; border-radius: var(--radius-lg); padding: 20px; 
+                    box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="../../docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="doc-library-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+            <h1>华三技术文档库</h1>
+            <p>园区光网络产品与方案资料中心</p>
+            <div style="margin-top: 30px;">
+                <a href="../h3c-optical.html" class="btn btn-secondary">← 返回华三首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="card" style="margin-bottom: 40px; padding: 30px; background: var(--bg-secondary);">
+            <h3>📤 上传新文档</h3>
+            <p style="color: var(--text-secondary); margin: 15px 0;">支持 PDF、Word、PPT 格式，最大50MB</p>
+            <input type="file" id="fileUpload" accept=".pdf,.doc,.docx,.ppt,.pptx" style="margin: 15px 0;">
+            <div style="margin-top: 15px;">
+                <input type="text" placeholder="文档标题" id="docTitle" 
+                       style="padding: 10px; margin-right: 10px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); width: 300px;">
+                <select id="docCategory" 
+                        style="padding: 10px; margin-right: 10px; border: 1px solid var(--gray-300); border-radius: var(--radius-md);"
+>
+                    <option value="product">产品资料</option>
+                    <option value="solution">方案文档</option>
+                    <option value="case">案例集</option>
+                    <option value="config">配置指南</option>
+                </select>
+                <button class="btn btn-primary" onclick="uploadDoc()">上传</button>
+            </div>
+        </div>
+
+        <h2>📁 文档列表</h2>
+        
+        <div class="doc-grid" style="margin-top: 30px;">
+            <div class="doc-card">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">📄</div>
+                <h4>S7500E-XS 产品手册</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">核心OLT产品详细介绍，包含规格参数和特性说明。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary);">
+                    <span>📅 2026-03-15</span>
+                    <span>📎 PDF (2.1MB)</span>
+                </div>
+            </div>
+
+            <div class="doc-card"
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">📘</div>
+                <h4>园区光网络解决方案</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">POL方案设计与部署指南，适用于教育、医疗、企业场景。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary);">
+                    <span>📅 2026-03-10</span>
+                    <span>📎 PPT (8.5MB)</span>
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">📑</div>
+                <h4>教育行业案例集</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 10px 0;">全国30+智慧校园项目案例分享。</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-tertiary);">
+                    <span>📅 2026-02-28</span>
+                    <span>📎 PDF (5.2MB)</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2026 PON Network Portal</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function uploadDoc() {
+            const file = document.getElementById('fileUpload').files[0];
+            const title = document.getElementById('docTitle').value;
+            
+            if (!file || !title) {
+                alert('请选择文件并输入标题');
+                return;
+            }
+            
+            alert('✅ 文档上传成功！\n\n标题: ' + title + '\n文件: ' + file.name);
+        }
+    </script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

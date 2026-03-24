@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键技术 | PON Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <style>
+        .tech-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .tech-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .tech-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .tech-category-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .tech-category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        .tech-category-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .tech-category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .tech-category-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .tech-list {
+            margin-top: 20px;
+        }
+        .tech-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+            transition: all 0.2s;
+        }
+        .tech-item:hover {
+            padding-left: 10px;
+            color: var(--primary);
+        }
+        .tech-item:last-child {
+            border-bottom: none;
+        }
+        .tech-item-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .add-tech-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            font-size: 2rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        .add-tech-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../vendors/huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="../vendors/h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="../vendors/zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="../vendors/fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="../vendors/competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../news/index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../tech/index.html" class="nav-link">关键技术</a></li>
+                <li><a href="../../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="tech-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🔧</div>
+            <h1>关键技术</h1>
+            <p>PON网络核心技术详解，从原理到实践，构建专业知识体系</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container" style="padding: 60px 20px;">
+        <!-- 技术分类 -->
+        <div class="tech-categories">
+            <!-- PON技术 -->
+            <div class="tech-category-card" onclick="location.href='pon-tech.html'">
+                <div class="tech-category-icon">🔌</div>
+                <div class="tech-category-title">PON技术</div>
+                <div class="tech-category-desc">
+                    GPON/XGS-PON/50G PON技术原理、架构设计与演进路线
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>GPON技术原理与架构</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>XGS-PON对称10G技术</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>50G PON万兆光网演进</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 光模块技术 -->
+            <div class="tech-category-card" onclick="location.href='optical-module.html'">
+                <div class="tech-category-icon">💡</div>
+                <div class="tech-category-title">光模块技术</div>
+                <div class="tech-category-desc">
+                    光模块原理、封装类型、速率演进与选型指南
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>光模块基础知识</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>SFP/XFP/QSFP封装</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>Combo PON光模块</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 网络架构 -->
+            <div class="tech-category-card" onclick="location.href='network-arch.html'">
+                <div class="tech-category-icon">🏗️</div>
+                <div class="tech-category-title">网络架构</div>
+                <div class="tech-category-desc">
+                    PON网络拓扑、组网方案、保护与冗余设计
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>PON网络拓扑结构</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>FTTH/FTTB组网方案</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>网络保护与冗余</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 运维管理 -->
+            <div class="tech-category-card" onclick="location.href='ops-mgmt.html'">
+                <div class="tech-category-icon">🔍</div>
+                <div class="tech-category-title">运维管理</div>
+                <div class="tech-category-desc">
+                    网络监控、故障排查、性能优化与安全管理
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>OMCI协议详解</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>故障诊断与排查</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>性能监控与优化</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 切片技术 -->
+            <div class="tech-category-card" onclick="location.href='hard-slice.html'">
+                <div class="tech-category-icon">🔪</div>
+                <div class="tech-category-title">硬切片技术</div>
+                <div class="tech-category-desc">
+                    网络切片、物理隔离、确定性时延与TSN技术
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>硬切片技术原理</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>物理隔离实现方案</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>TSN时间敏感网络</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 竞争分析 -->
+            <div class="tech-category-card" onclick="location.href='competitor-compare.html'">
+                <div class="tech-category-icon">⚔️</div>
+                <div class="tech-category-title">竞争分析</div>
+                <div class="tech-category-desc">
+                    PON竞争对手软件规格对比，网管能力、协议支持、安全机制分析
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>PON竞争对手软件规格对比</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>网管平台功能对比</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>差异化竞争策略</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 智能运维 -->
+            <div class="tech-category-card" onclick="location.href='ai-ops.html'">
+                <div class="tech-category-icon">🤖</div>
+                <div class="tech-category-title">智能运维</div>
+                <div class="tech-category-desc">
+                    AI运维、自动化管理、智能告警与预测性维护
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>AI智能运维平台</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>自动化配置管理</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">📄</span>
+                        <span>智能告警与预测</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 补充说明 -->
+        <div style="margin-top: 60px; padding: 30px; background: var(--bg-secondary); border-radius: var(--radius-lg);">
+            <h3 style="margin-bottom: 15px;">📚 关于关键技术模块</h3>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+                本模块涵盖PON网络建设中的核心技术要点，从基础原理到高级应用，帮助技术人员建立完整的知识体系。
+                点击上方卡片进入各技术专题，内容将持续更新补充。
+            </p>
+            <div style="margin-top: 20px;">
+                <span class="tag tag-primary">持续更新</span>
+                <span class="tag tag-success">技术深度</span>
+                <span class="tag tag-info">实践导向</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加技术按钮 -->
+    <button class="add-tech-btn admin-only" onclick="requireAdmin(() => alert('添加新技术功能...'))" title="添加新技术" style="display: none;">
+        +
+    </button>
+    
+    <button class="add-tech-btn" id="loginBtn" onclick="showLoginModal()" title="登录" style="background: #6b7280; right: 100px;">
+        🔐
+    </button>
+
+    <script src="../../js/auth.js"></script>
+    <script>
+        // 初始化权限控制
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAdmin = isLoggedIn();
+            const addBtn = document.querySelector('.admin-only');
+            const loginBtn = document.getElementById('loginBtn');
+            
+            if (isAdmin) {
+                if (addBtn) addBtn.style.display = 'flex';
+                if (loginBtn) loginBtn.style.display = 'none';
+            } else {
+                if (addBtn) addBtn.style.display = 'none';
+                if (loginBtn) loginBtn.style.display = 'flex';
+            }
+        });
+    </script>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 PON Network Portal</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组网架构展示 | PON Portal</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/architecture.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .architecture-section {
+            margin: 60px 0;
+        }
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .section-nav a {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .section-nav a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .comparison-table th {
+            background: var(--gray-800);
+            color: white;
+            padding: 16px;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .comparison-table tr:hover {
+            background: #f8fafc;
+        }
+        .vendor-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .vendor-badge.huawei { background: #C41E3A20; color: #C41E3A; }
+        .vendor-badge.h3c { background: #E6001220; color: #E60012; }
+        .vendor-badge.zte { background: #0066CC20; color: #0066CC; }
+        .vendor-badge.fiberhome { background: #00A0E920; color: #00A0E9; }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">PON Portal</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">行业方案 <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="huawei-f5g.html">华为 F5G</a></li>
+                        <li><a href="h3c-optical.html">华三 园区光网络</a></li>
+                        <li><a href="zte-pon.html">中兴 PON方案</a></li>
+                        <li><a href="fiberhome-pon.html">烽火 PON方案</a></li>
+                        <li><a href="competitive.html">⚔️ 竞争分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html" class="nav-link">最新资讯</a></li>
+                <li><a href="docs/center.html" class="nav-link">技术文档</a></li>
+                <li><a href="../insights.html" class="nav-link">技术洞察</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="container">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🌐</div>
+            <h1>PON 组网架构展示</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin: 20px auto;">
+                可视化展示华为、华三、中兴、烽火四大厂商的PON组网架构<br>
+                支持场景化对比和架构细节查看
+            </p>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px;">
+        <!-- 快速导航 -->
+        <nav class="section-nav">
+            <a href="#vendor-arch">厂商架构</a>
+            <a href="#scenario-arch">场景架构</a>
+            <a href="#comparison">架构对比</a>
+            <a href="#tech-details">技术细节</a>
+        </nav>
+
+        <!-- 厂商架构展示 -->
+        <section class="architecture-section" id="vendor-arch">
+            <h2 style="text-align: center; margin-bottom: 30px;">🏢 厂商组网架构</h2>
+            
+            <!-- 厂商切换器 -->
+            <div class="arch-switcher" style="justify-content: center;">
+                <button class="active" data-vendor="huawei">
+                    <span style="color: #C41E3A;">●</span> 华为
+                </button>
+                <button data-vendor="h3c">
+                    <span style="color: #E60012;">●</span> 华三
+                </button>
+                <button data-vendor="zte">
+                    <span style="color: #0066CC;">●</span> 中兴
+                </button>
+                <button data-vendor="fiberhome">
+                    <span style="color: #00A0E9;">●</span> 烽火
+                </button>
+            </div>
+
+            <!-- 架构展示容器 -->
+            <div id="architectureViewer"></div>
+        </section>
+
+        <!-- 场景化架构 -->
+        <section class="architecture-section" id="scenario-arch">
+            <h2 style="text-align: center; margin-bottom: 30px;">🏫 场景化组网架构</h2>
+            
+            <!-- 场景选择器 -->
+            <div class="scenario-selector" style="justify-content: center;">
+                <button class="active" data-scenario="education">
+                    <span class="icon">🎓</span> 智慧校园
+                </button>
+                <button data-scenario="healthcare">
+                    <span class="icon">🏥</span> 智慧医院
+                </button>
+                <button data-scenario="enterprise">
+                    <span class="icon">🏢</span> 智慧企业
+                </button>
+                <button data-scenario="industrial">
+                    <span class="icon">🏭</span> 工业PON
+                </button>
+            </div>
+
+            <!-- 场景架构展示 -->
+            <div id="scenarioViewer" class="scenario-architecture">
+                <!-- 动态加载场景架构图 -->
+            </div>
+
+            <!-- 场景特点 -->
+            <div id="scenarioFeatures" style="margin-top: 30px;">
+                <!-- 动态加载场景特点 -->
+            </div>
+        </section>
+
+        <!-- 架构对比 -->
+        <section class="architecture-section" id="comparison">
+            <h2 style="text-align: center; margin-bottom: 30px;">⚖️ 四厂商架构对比</h2>
+            
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>对比维度</th>
+                            <th><span class="vendor-badge huawei">华为</span></th>
+                            <th><span class="vendor-badge h3c">华三</span></th>
+                            <th><span class="vendor-badge zte">中兴</span></th>
+                            <th><span class="vendor-badge fiberhome">烽火</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>架构层级</strong></td>
+                            <td>核心+ODN+接入+终端 四层</td>
+                            <td>核心+ODN+接入+终端 四层</td>
+                            <td>云网+承载+边缘+终端 四层</td>
+                            <td>核心+ODN+接入+终端 四层</td>
+                        </tr>
+                        <tr>
+                            <td><strong>核心设备</strong></td>
+                            <td>MA5800/EA5800 OLT</td>
+                            <td>S7500E-XS OLT</td>
+                            <td>C600 OLT</td>
+                            <td>AN6000 OLT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>技术特色</strong></td>
+                            <td>Flex-PON硬切片、确定性时延</td>
+                            <td>极简POL、SDN统一管控</td>
+                            <td>TSN over PON、云网融合</td>
+                            <td>自研芯片、全国产化</td>
+                        </tr>
+                        <tr>
+                            <td><strong>接入设备</strong></td>
+                            <td>OptiXstar系列ONU</td>
+                            <td>S5130S-HI/EGT300</td>
+                            <td>F600系列工业ONU</td>
+                            <td>HG系列ONU</td>
+                        </tr>
+                        <tr>
+                            <td><strong>适用场景</strong></td>
+                            <td>全场景（教育/医疗/工业）</td>
+                            <td>教育/企业园区</td>
+                            <td>工业/智能制造</td>
+                            <td>政务/信创/关键基础设施</td>
+                        </tr>
+                        <tr>
+                            <td><strong>演进能力</strong></td>
+                            <td>支持50G PON平滑演进</td>
+                            <td>支持25G/100G演进</td>
+                            <td>支持50G PON+TSN</td>
+                            <td>自研Combo PON芯片</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 技术细节 -->
+        <section class="architecture-section" id="tech-details">
+            <h2 style="text-align: center; margin-bottom: 30px;">🔧 组网技术细节</h2>
+            
+            <div class="card-grid">
+                <div class="card" style="padding: 25px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">📊 ODN网络设计</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>分光比选择：</strong>1:32（高端园区）/ 1:64（普通园区）</li>
+                        <li><strong>光纤类型：</strong>单模G.652D，支持10G/50G传输</li>
+                        <li><strong>传输距离：</strong>OLT到ONU最大20km</li>
+                        <li><strong>光功率预算：</strong>Class B+ 28dB / Class C+ 32dB</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="padding: 25px;">
+                    <h3 style="color: var(--success); margin-bottom: 15px;">⚡ 带宽规划</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>GPON：</strong>下行2.5G/上行1.25G（已淘汰）</li>
+                        <li><strong>XGS-PON：</strong>对称10G（当前主流）</li>
+                        <li><strong>50G PON：</strong>对称50G（2026+高端场景）</li>
+                        <li><strong>带宽收敛比：</strong>1:8~1:16（办公）/ 1:4（工业）</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="padding: 25px;">
+                    <h3 style="color: var(--warning); margin-bottom: 15px;">🔒 安全隔离</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>VLAN隔离：</strong>软隔离，基于802.1Q</li>
+                        <li><strong>硬切片：</strong>物理层隔离，华为Flex-PON</li>
+                        <li><strong>TSN：</strong>时间敏感网络，中兴方案</li>
+                        <li><strong>加密传输：</strong>AES-128加密</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="padding: 25px;">
+                    <h3 style="color: var(--info); margin-bottom: 15px;">🌡️ 可靠性设计</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>OLT冗余：</strong>双主控、双电源、双上联</li>
+                        <li><strong>光纤保护：</strong>Type B/C双归属保护</li>
+                        <li><strong>ONU冗余：</strong>双PON口上行</li>
+                        <li><strong>链路监测：</strong>光功率实时监测告警</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 返回链接 -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="huawei-f5g.html" class="btn btn-primary btn-lg">查看华为方案详情 →</a>
+            <a href="h3c-optical.html" class="btn btn-secondary btn-lg" style="margin-left: 15px;">查看华三方案详情 →</a>
+            <a href="../insights.html" class="btn btn-secondary btn-lg" style="margin-left: 15px;">技术洞察 →</a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PON Network Portal</h4>
+                    <p>专业的 PON 网络技术资讯平台</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 PON Network Portal | 组网架构展示</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="../js/architecture-viewer.js"></script>
+    <script>
+        // 初始化架构查看器
+        let archViewer;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化厂商架构查看器
+            archViewer = new PonArchitectureViewer('architectureViewer', {
+                vendor: 'huawei',
+                interactive: true
+            });
+
+            // 加载默认场景架构
+            loadScenario('education');
+
+            // 绑定厂商切换事件
+            document.querySelectorAll('.arch-switcher button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.arch-switcher button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    archViewer.switchVendor(this.dataset.vendor);
+                });
+            });
+
+            // 绑定场景切换事件
+            document.querySelectorAll('.scenario-selector button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.scenario-selector button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    loadScenario(this.dataset.scenario);
+                });
+            });
+        });
+
+        // 加载场景架构
+        function loadScenario(scenario) {
+            const scenarios = {
+                education: ScenarioArchitectureRenderer.renderEducation(),
+                healthcare: ScenarioArchitectureRenderer.renderHealthcare(),
+                enterprise: {
+                    title: '智慧企业园区架构',
+                    diagram: `┌─────────────────────────────────────────────────────────────┐
+│                      企业网络中心                              │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │  核心交换机  │────│    OLT      │────│  服务器群   │     │
+│  │  (S12500)   │    │  (S7500E)   │    │ (办公/业务) │     │
+│  └─────────────┘    └──────┬──────┘    └─────────────┘     │
+└─────────────────────────────┼─────────────────────────────┘
+                              │
+                    ┌─────────┼─────────┐
+                    │         │         │
+                ┌───┴───┐ ┌───┴───┐ ┌───┴───┐
+                │ 分光器 │ │ 分光器 │ │ 分光器 │
+                │ (1:32) │ │ (1:32) │ │ (1:32) │
+                └───┬───┘ └───┬───┘ └───┬───┘
+                    │         │         │
+        ┌───────────┼───┐ ┌───┼───────────┐ ┌───────┴───────┐
+        │           │   │   │           │   │               │
+    ┌───┴───┐   ┌───┴───┐   ┌───┴───┐   ┌───┴───┐   ┌───┴───┐
+    │ 办公区 │   │ 会议室 │   │ 研发区 │   │ 生产区 │   │ 仓库  │
+    │ ONU   │   │ ONU   │   │ ONU   │   │ ONU   │   │ ONU   │
+    └───┬───┘   └───┬───┘   └───┬───┘   └───┬───┘   └───┬───┘
+        │           │           │           │           │
+    ┌───┴───┐   ┌───┴───┐   ┌───┴───┐   ┌───┴───┐   ┌───┴───┐
+    │办公  │   │会议  │   │开发  │   │生产  │   │仓储  │
+    │电脑  │   │系统  │   │工作站│   │设备  │   │系统  │
+    └───────┘   └───────┘   └───────┘   └───────┘   └───────┘`,
+                    features: [
+                        '办公区：POL无源光局域网，千兆到桌面',
+                        '会议室：高清视频会议系统，支持4K传输',
+                        '研发区：高带宽需求，支持大文件传输',
+                        '生产/仓库：工业级ONU，支持IoT设备接入'
+                    ]
+                },
+                industrial: ScenarioArchitectureRenderer.renderIndustrial()
+            };
+
+            const data = scenarios[scenario];
+            
+            // 渲染架构图
+            document.getElementById('scenarioViewer').innerHTML = `
+                <h3 style="color: #e2e8f0; margin-bottom: 20px; text-align: center;">${data.title}</h3>
+                <pre>${data.diagram}</pre>
+            `;
+
+            // 渲染特点
+            document.getElementById('scenarioFeatures').innerHTML = `
+                <div class="card" style="padding: 25px;">
+                    <h3 style="margin-bottom: 20px;">✨ 场景特点</h3>
+                    <ul style="line-height: 2;">
+                        ${data.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
