@@ -66,12 +66,7 @@
     text-align: center;
     min-width: 180px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.network-node:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* 移除动画效果，避免忽大忽小闪动 */
 }
 
 .network-node .network-icon {
