@@ -280,7 +280,7 @@ const VENDOR_DATA = {
             }
         ],
         website: 'https://www.h3c.com',
-        docsUrl: 'https://www.h3c.com/cn/Products___Technology/Products/'
+        docsUrl: 'https://www.h3c.com/cn/Products_And_Solution/'
     },
     
     zte: {
@@ -418,7 +418,7 @@ const VENDOR_DATA = {
             }
         ],
         website: 'https://www.fiberhome.com',
-        docsUrl: 'https://www.fiberhome.com/product/'
+        docsUrl: 'https://www.fiberhome.com/'
     }
 };
 
