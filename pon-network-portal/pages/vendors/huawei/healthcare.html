@@ -81,91 +81,66 @@
                     通过ODN无源光分配网络实现光纤到病房/诊室的全覆盖。
                 </p>
                 
-                <div class="network-diagram">
-                    <!-- 云平台层 -->
-                    <div class="network-cloud">
-                        <div class="network-icon cloud"></div>
-                        <div class="network-label">医疗云/区域健康大数据</div>
-                        <div class="network-desc">区域PACS | 远程会诊 | 电子病历</div>
+                <div class="network-diagram-ascii">
+                    <pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          医疗云/区域健康大数据                                │
+│                    ┌─────────────────────────────────┐                       │
+│                    │    区域PACS影像中心              │                       │
+│                    │    远程会诊平台/电子病历         │                       │
+│                    └───────────────┬─────────────────┘                       │
+└────────────────────────────────────┼────────────────────────────────────────┘
+                                     │
+┌────────────────────────────────────┼────────────────────────────────────────┐
+│                         医院核心层   │                                       │
+│                   ┌────────────────┴──────────────┐                         │
+│                   │      医疗核心交换机            │ ← 华为CE16800          │
+│                   │      (双机热备/高可靠)         │   硬切片隔离           │
+│                   └───────────────┬───────────────┘                         │
+│                                   │ 10GE/100GE                                │
+└───────────────────────────────────┼─────────────────────────────────────────┘
+                                    │
+┌───────────────────────────────────┼─────────────────────────────────────────┐
+│                      汇聚/接入层   │                                         │
+│    ┌──────────────────────────────┴──────────────────────────────┐         │
+│    │                    OLT光线路终端                             │         │
+│    │              (EA5800-X2紧凑型OLT)                           │         │
+│    │              XGS-PON/光切片硬隔离                           │         │
+│    └──────────────┬──────────────┬──────────────┬───────────────┘         │
+│                   │              │              │                          │
+│                   │ 光纤          │ 光纤          │ 光纤                      │
+│                   ▼              ▼              ▼                          │
+│    ┌──────────────┴──────────────┴──────────────┴───────────────┐         │
+│    │              ODN无源光分配网络 (分光器1:32)                 │         │
+│    └──────────────┬──────────────┬──────────────┬───────────────┘         │
+│                   │              │              │                          │
+│                   ▼              ▼              ▼                          │
+│         ┌─────────┐    ┌─────────┐    ┌─────────┐                        │
+│         │门诊ONU  │    │病房ONU  │    │影像ONU  │                        │
+│         │P813E    │    │EG8240H5 │    │P613E    │                        │
+│         └─────────┘    └─────────┘    └─────────┘                        │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+                    </pre>
+                </div>
+                
+                <!-- 图例 -->
+                <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 16px; height: 16px; background: #dbeafe; border: 2px solid #3b82f6; border-radius: 4px;"></div>
+                        <span style="font-size: 0.9rem; color: #4b5563;">云平台层</span>
                     </div>
-                    
-                    <div class="network-connector"></div>
-                    
-                    <!-- 核心层 -->
-                    <div class="network-layer">
-                        <div class="network-node core">
-                            <div class="network-icon core"></div>
-                            <div class="network-label">核心交换机</div>
-                            <div class="network-desc">CE16800</div>
-                        </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 16px; height: 16px; background: #fef2f2; border: 2px solid #dc2626; border-radius: 4px;"></div>
+                        <span style="font-size: 0.9rem; color: #4b5563;">核心层</span>
                     </div>
-                    
-                    <div class="network-connector"></div>
-                    
-                    <!-- 汇聚层 -->
-                    <div class="network-layer">
-                        <div class="network-node aggregation">
-                            <div class="network-icon olt"></div>
-                            <div class="network-label">OLT光线路终端</div>
-                            <div class="network-desc">EA5800-X2</div>
-                        </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 16px; height: 16px; background: #fff7ed; border: 2px solid #ea580c; border-radius: 4px;"></div>
+                        <span style="font-size: 0.9rem; color: #4b5563;">汇聚层</span>
                     </div>
-                    
-                    <div class="network-connector"></div>
-                    
-                    <!-- ODN层 -->
-                    <div class="network-layer">
-                        <div class="network-node" style="border-color: #6b7280; background: #f3f4f6;">
-                            <div class="network-icon odn"></div>
-                            <div class="network-label">ODN无源光分配</div>
-                            <div class="network-desc">分光器(1:32) | 光纤配线</div>
-                        </div>
-                    </div>
-                    
-                    <div class="network-connector"></div>
-                    
-                    <!-- 接入层 -->
-                    <div class="network-row">
-                        <div class="network-node access">
-                            <div class="network-icon onu"></div>
-                            <div class="network-label">门诊ONU</div>
-                            <div class="network-desc">P813E</div>
-                        </div>
-                        <div class="network-node access">
-                            <div class="network-icon onu"></div>
-                            <div class="network-label">病房ONU</div>
-                            <div class="network-desc">EG8240H5</div>
-                        </div>
-                        <div class="network-node access">
-                            <div class="network-icon onu"></div>
-                            <div class="network-label">影像ONU</div>
-                            <div class="network-desc">P613E</div>
-                        </div>
-                        <div class="network-node access">
-                            <div class="network-icon onu"></div>
-                            <div class="network-label">办公ONU</div>
-                            <div class="network-desc">EG8145X6</div>
-                        </div>
-                    </div>
-                    
-                    <!-- 图例 -->
-                    <div class="network-legend">
-                        <div class="legend-item">
-                            <div class="legend-dot core"></div>
-                            <span>核心层</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-dot aggregation"></div>
-                            <span>汇聚层</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-dot access"></div>
-                            <span>接入层</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-dot terminal"></div>
-                            <span>终端层</span>
-                        </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 16px; height: 16px; background: #f0fdf4; border: 2px solid #16a34a; border-radius: 4px;"></div>
+                        <span style="font-size: 0.9rem; color: #4b5563;">接入层</span>
                     </div>
                 </div>
                 

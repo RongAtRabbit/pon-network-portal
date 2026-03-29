@@ -55,7 +55,7 @@ const NEWS_DATA = [
         id: 'news-005',
         title: '烽火通信发布自研PON芯片，实现核心器件国产化',
         source: '烽火通信',
-        sourceUrl: 'https://www.fiberhome.com/product/',
+        sourceUrl: 'https://www.fiberhome.com/',
         date: '2026-03-10',
         category: '技术突破',
         summary: '烽火通信发布自主可控PON芯片，支持XGS-PON和50G PON，打破国外垄断。',
