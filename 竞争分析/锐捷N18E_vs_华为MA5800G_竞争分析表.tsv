@@ -1254,9 +1254,12 @@ Management Features	零配置	支持免SN录入与免审批入网（仅体现设
 硬件规格	外观规格	设备重量(X17)			—	—	45 kg	持平 ✅	双方均为45kg左右大型机框	12.6SPJ48 SPEC Sheet4	华为MA5800官方规格表 / MA5800-X17
 硬件规格	PON端口密度	XGS-PON&GPON Combo端口数(X17)			✅ 最大64口/板	❌ 不支持	272口	⚠️ 华为独有	华为MA5800-X17单框272口Combo	12.6SPJ48 SPEC Sheet4	华为MA5800官方规格表 / MA5800-X17
 硬件规格	PON新技术	50G-PON&XGS-PON&GPON combo			❌ 不支持	❌ 不支持	16口	⚠️ 华为独有	华为MA5800全球首发50G-PON	12.6SPJ48 SPEC Sheet4	华为MA5800官方规格表 / MA5800-X17
-硬件规格	MAC地址容量	全局MAC地址个数			256K(512K带HCA)	512K	262143条	⚡锐捷胜出	锐捷N18E-XB带HCA时512K，N18E-HCA为512K，均超过华为262K	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_MAC_001	华为MA5800官方规格表 / MA5800-X17
-硬件规格	ARP容量	ARP表项容量			96000	95000	131072	持平 ✅	三方接近（华为略高）	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_ARP_001	华为MA5800官方规格表 / MA5800-X17
+硬件规格	MAC地址容量	全局MAC地址个数			256K(512K带HCA)	512K	262143条	⚡锐捷HCA胜出	锐捷N18E-HCA达512K，华为262K，略低	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_MAC_001	华为MA5800官方规格表 / MA5800-X17
+
+硬件规格	ARP容量	ARP表项容量			96000	95000	131072	持平 ✅	三方相近，华为略高	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_ARP_001	华为MA5800官方规格表 / MA5800-X17
+
 硬件规格	IPv4路由	FIB表项容量(硬件转发)			350K(1.5M带HCA)	1.5M	65536	⚡锐捷胜出	锐捷N18E-XB带HCA时1.5M，N18E-HCA为1.5M，远超华为65K	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_ROUTE_013	华为MA5800官方规格表 / MA5800-X17
 硬件规格	IPv6路由	路由表容量			65000(1M带HCA)	1M	16384	⚡锐捷胜出	锐捷N18E-HCA达1M，N18E-XB带HCA时1M，远超华为16K	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_V6_002	华为MA5800官方规格表 / MA5800-X17
-硬件规格	三层转发	终端数量(V4/V6双栈)			32000(95000带HCA)	95000	—	⚡锐捷胜出	锐捷N18E-HCA支持95000终端，远超竞品	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_Device_001	华为MA5800官方规格表 / MA5800-X17
+硬件规格	三层转发	终端数量(V4/V6双栈)			32000(95000带HCA)	95000	—	⚡锐捷独有	锐捷N18E-HCA支持95000终端，华为无此规格	12.6SPJ48 SPEC Sheet4 / SPEC_CAP_Device_001	华为MA5800官方规格表 / MA5800-X17
+
 硬件规格	PoE供电	PON PoE++供电			✅ 支持	✅ 支持	❌ 全系不支持	⚡锐捷必杀	华为全系OLT不支持PoE	12.6SPJ48 SPEC Sheet3	华为MA5800全系不支持
