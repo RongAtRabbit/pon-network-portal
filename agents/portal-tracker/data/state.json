@@ -1,16 +1,14 @@
 {
-  "lastCheckTime": "2026-03-30T08:01:00.000000+08:00",
-  "lastCheckTimeEpoch": 1774819260,
+  "lastCheckTime": "2026-03-30T17:03:00.000000+08:00",
+  "lastCheckTimeEpoch": 1774857780,
   "status": "ok",
   "newsCount": 12,
   "lastNewsDate": "2026-03-24",
   "daysSinceLastUpdate": 6,
-  "issues": [
-    "上次 state.json 未同步更新 lastNewsDate，现已修正为 2026-03-24"
-  ],
+  "issues": [],
   "fileChanges": {
-    "data.js": "URL 修正（华三、烽火）",
-    "其他文件": "样式和页面更新"
+    "data.js": "资讯数据完整（12条，日期2026-03-10至2026-03-24）",
+    "logs": "cron.log/link-check.log/link-errors.log 有更新"
   },
   "nextCheckDue": "2026-03-31"
 }
