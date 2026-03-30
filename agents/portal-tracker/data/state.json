@@ -1,0 +1,16 @@
+{
+  "lastCheckTime": "2026-03-30T08:01:00.000000+08:00",
+  "lastCheckTimeEpoch": 1774819260,
+  "status": "ok",
+  "newsCount": 12,
+  "lastNewsDate": "2026-03-24",
+  "daysSinceLastUpdate": 6,
+  "issues": [
+    "上次 state.json 未同步更新 lastNewsDate，现已修正为 2026-03-24"
+  ],
+  "fileChanges": {
+    "data.js": "URL 修正（华三、烽火）",
+    "其他文件": "样式和页面更新"
+  },
+  "nextCheckDue": "2026-03-31"
+}
