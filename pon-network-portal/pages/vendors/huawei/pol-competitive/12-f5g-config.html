@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为F5G配置流程 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            华为F5G配置流程
+        </div>
+        
+        <div class="sheet-header">
+            <h1>⚡ 华为F5G配置流程</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "华为F5G配置流程" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>参考</th><th>华为PON网络宿舍配置文档 </th><th></th><th></th><th></th><th></th><th></th></tr></thead>
+<tbody>
+<tr><td>阶段</td>
+<td>配置步骤</td>
+<td>配置目的</td>
+<td>示例配置命令（在 system-view 下）</td>
+<td>是否必选</td>
+<td>是否PON特有</td>
+<td>配置人员需掌握的技术</td></tr>
+<tr><td>ONT接入配置</td>
+<td>1. 创建 DBA 模板</td>
+<td>定义上行/下行带宽策略（Type4 用于互联网业务，最大带宽限制）</td>
+<td>system-view\n# 创建 DBA 配置（示例）\ndba-profile 10\n description pol_dba_hsi\n type 4\n max-bandwidth 100000\n quit</td>
+<td>是</td>
+<td>是</td>
+<td>GPON 带宽分配原理、DBA/T-CONT 概念；OLT CLI 操作</td></tr>
+<tr><td></td>
+<td>2. 配置 ONT 线路模板（LineProfile）</td>
+<td>绑定 T-CONT 与 GEM，用于承载具体业务映射</td>
+<td>system-view\nont-lineprofile gpon 10\n tcont 1 dba-profile 10\n gem add 1 eth tcont 1\n quit</td>
+<td>是</td>
+<td>是</td>
+<td>T-CONT/GEM 机制、VLAN-to-GEM 映射、OMCI 基本概念</td></tr>
+<tr><td></td>
+<td>3. 配置 ONT 业务模板（SrvProfile）</td>
+<td>定义 ONT 端口 VLAN、打标/透传等业务行为</td>
+<td>system-view\nont-srvprofile gpon 10\n port eth 1 user-vlan 10 tag-transform translate\n quit</td>
+<td>是</td>
+<td>是</td>
+<td>ONT 端口映射、VLAN 标记策略、服务模板概念</td></tr>
+<tr><td></td>
+<td>4. 在 PON 上注册 ONT（添加 ONT）</td>
+<td>将指定 ONT/ONU 注册到 OLT 并绑定模板</td>
+<td>system-view\ninterface gpon 0/1\n ont add 1 1 sn-auth &lt;ONT_SN&gt; omci ont-lineprofile 10 ont-srvprofile 10\n quit</td>
+<td>是</td>
+<td>是</td>
+<td>ONT 注册流程、SN/LOID/密码认证方式、OMCI 下发流程</td></tr>
+<tr><td></td>
+<td>5. 查看ONT接入状态</td>
+<td>查看ONT上线状态</td>
+<td>display ont info 0/1 all</td>
+<td>否（运维）</td>
+<td>是</td>
+<td>ONT 注册流程、SN/LOID/密码认证方式、OMCI 下发流程</td></tr>
+<tr><td></td>
+<td>6. 创建 VLAN（OLT 侧）</td>
+<td>管理与业务隔离（管理 VLAN、业务 VLAN）</td>
+<td>system-view\nvlan batch 1 10\n# 或\nvlan 1\nvlan 10\n</td>
+<td>是</td>
+<td>否</td>
+<td>VLAN 原理、VLAN 规划、Trunk/Access 概念</td></tr>
+<tr><td></td>
+<td>7. 配置业务端口 / service-port</td>
+<td>在 OLT 上建立业务口，将业务 VLAN 和 PON/ONT/GEM 绑定</td>
+<td>system-view\nservice-port add 100 vlan 10 gpon 0/1/1 ont 1 gemport 1 multi-service user-vlan 10\n</td>
+<td>是</td>
+<td>是</td>
+<td>service-port 机制、GEM/UNI 映射、业务 ID 管理和冲突避免</td></tr>
+<tr><td></td>
+<td>8. 查看业务端口</td>
+<td>查看业务端口配置</td>
+<td>display service-port all</td>
+<td>否（运维）</td>
+<td>是</td>
+<td>service-port 机制、GEM/UNI 映射、业务 ID 管理和冲突避免</td></tr>
+<tr><td>基础业务配置</td>
+<td>7. OLT 侧 DHCP（可选）</td>
+<td>OLT 本地提供 DHCP 服务（如无上级 DHCP）</td>
+<td>system-view\ndhcp enable\nip pool internet_pool\n network 192.168.10.0 255.255.255.0\n gateway-list 192.168.10.1\n quit</td>
+<td>可选（视网络）</td>
+<td>否</td>
+<td>DHCP 原理、IP 规划、Option 配置、作用域管理</td></tr>
+<tr><td></td>
+<td>8. CAPWAP 源接口与使能（AC）</td>
+<td>指定 CAPWAP 源接口并启用，用于 AC 与 AP 间控制通道</td>
+<td>system-view\ncapwap source-interface Vlanif1\ncapwap enable\n</td>
+<td>是（集中式 AC 管理 AP 时）</td>
+<td>否</td>
+<td>CAPWAP 工作原理、控制与数据平面概念、VLANIF 配置</td></tr>
+<tr><td></td>
+<td>9. 为 AP/STA 配置 DHCP（AC 或集中 DHCP）</td>
+<td>AP 与客户端获取 IP，Option43 指定 AC 地址（AP 引导）</td>
+<td>system-view\ndhcp server ip-pool ap_pool\n network 192.168.1.0 255.255.255.0\n gateway-list 192.168.1.1\n option 43 ascii 192.168.1.1\n quit</td>
+<td>是（若 AC 依赖 DHCP）</td>
+<td>否</td>
+<td>DHCP Option 机制、AP 引导流程、DHCP 与 CAPWAP 的配合</td></tr>
+<tr><td>无线配置</td>
+<td>10. 创建 SSID 模板</td>
+<td>定义无线 SSID 名称、广播等基本属性</td>
+<td>system-view\nwlan\n ssid-profile name ssid_profile_hsi\n ssid HUAWEI-F5G\n ssid hide disable\n quit\n</td>
+<td>是（无线需要 SSID）</td>
+<td>否</td>
+<td>SSID/SSID Profile 概念、SSID 与 VLAN 的映射理解</td></tr>
+<tr><td></td>
+<td>11. 创建安全模板（WPA2-PSK / 802.1X）</td>
+<td>定义无线接入安全策略（示例 WPA2-PSK）</td>
+<td>system-view\nwlan\n security-profile name sec_profile_hsi\n security wpa2 psk pass-phrase Huawei@123 aes\n quit\n</td>
+<td>必选（至少一种安全方式）</td>
+<td>否</td>
+<td>无线安全（WPA2/WPA3/802.1X）、密钥策略、RADIUS 工作原理</td></tr>
+<tr><td></td>
+<td>12. 创建 VAP 模板并关联 VLAN</td>
+<td>将 SSID 与业务 VLAN、安全模板绑定（VAP）</td>
+<td>system-view\nvap-profile name vap_profile_hsi\n forward-mode direct-forward\n service-vlan vlan-id 10\n ssid-profile ssid_profile_hsi\n security-profile sec_profile_hsi\n quit\n</td>
+<td>是（需 VLAN 划分无线流量时）</td>
+<td>否</td>
+<td>VAP/SSID 到 VLAN 的映射、数据转发模式（集中/直通）</td></tr>
+<tr><td></td>
+<td>13. 射频/信道模板（可选）</td>
+<td>自动信道选择、功率控制，优化覆盖与干扰</td>
+<td>system-view\nradio-2g-profile name radio_2g_default\n auto-channel-select enable\n auto-txpower-select enable\n quit\nradio-5g-profile name radio_5g_default\n auto-channel-select enable\n auto-txpower-select enable\n quit\n</td>
+<td>可选（推荐）</td>
+<td>否</td>
+<td>无线射频基础、信道规划、功率与覆盖、频谱与干扰分析</td></tr>
+<tr><td></td>
+<td>14. RRM / 漫游模板（可选）</td>
+<td>漫游、负载均衡与 QoS 优化（提升移动/高密度场景体验）</td>
+<td>system-view\nrrm-profile name rrm_profile\n smart-roam enable\n smart-roam snr-threshold 20\n dynamic-edca enable\n quit\n</td>
+<td>可选（视场景）</td>
+<td>否</td>
+<td>无线漫游机制、RRM 策略、SNR/RSSI 判定、负载均衡算法</td></tr>
+<tr><td></td>
+<td>15. 创建 AP 组并下发 VAP/射频配置</td>
+<td>统一管理 AP，批量下发模板</td>
+<td>system-view\nap-group name ap_group_hsi\n vap-profile vap_profile_hsi wlan 1\n radio-2g-profile radio_2g_default\n radio-5g-profile radio_5g_default\n quit\n</td>
+<td>建议（规模化部署强烈推荐）</td>
+<td>否</td>
+<td>AP 集中管理流程、模板化配置、批量部署与版本管理</td></tr>
+<tr><td></td>
+<td>16. 将 AP 加入 AP 组（认证/绑定）</td>
+<td>将单个 AP 绑定到 AP 组，继承组策略</td>
+<td>system-view\nap auth-mode mac-auth\nap 00e0-fc12-3456 name AP-Office-01 ap-group ap_group_hsi\n</td>
+<td>是（需管理 AP）</td>
+<td>否</td>
+<td>AP 认证方式、MAC 绑定、设备上线流程、CAPWAP 日志排查</td></tr>
+<tr><td>安全配置</td>
+<td>17. 配置 802.1X / RADIUS（可选，企业）</td>
+<td>企业级认证，提升无线安全/审计</td>
+<td>system-view\nradius-server template radius_temp\n radius-server authentication 192.168.10.100 1812 shared-key cipher Huawei@123\ndot1x enable\nquit\n</td>
+<td>可选（企业场景推荐）</td>
+<td>否</td>
+<td>RADIUS 协议、EAP 流程、证书与帐号策略、AAA 架构</td></tr>
+<tr><td></td>
+<td>18. 去使能 IP/ICMP 防护（按需）</td>
+<td>在特定场景解除防护以避免对无线业务影响（谨慎）</td>
+<td>system-view\nundo firewall defend icmp-flood enable\nundo firewall defend ip-fragment enable\n</td>
+<td>可选（谨慎）</td>
+<td>否</td>
+<td>防火墙与安全策略评估、风险意识、业务影响分析</td></tr>
+<tr><td></td>
+<td>19. 验证：检查 ONT/服务/AP/客户端 状态</td>
+<td>验证全部配置是否生效与连通性</td>
+<td>display ont info 0/1 1\ndisplay service-port 100\ndisplay ap all\ndisplay station all\n</td>
+<td>必做</td>
+<td>部分为 PON（ONT）/部分为 WLAN</td>
+<td>熟练使用 display/diagnose 命令、日志分析、链路 &amp; L2/L3 排障</td></tr>
+<tr><td></td>
+<td>20. 保存配置 / 备份</td>
+<td>保存并备份配置，防止重启丢失并便于回滚</td>
+<td>system-view\nsave\n# 或备份到文件\nbackup configuration to flash:/backup.cfg\n</td>
+<td>必做</td>
+<td>否</td>
+<td>配置管理、版本控制、回滚流程、维护窗口与变更记录</td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="11-protection-group.html" class="page-link">← 华为保护组规格</a><a href="index.html" class="page-link">目录</a><a href="13-wireless-ont-vs-ap.html" class="page-link">无线ONT能力VS企业AP →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

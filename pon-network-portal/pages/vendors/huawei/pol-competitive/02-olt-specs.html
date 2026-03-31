@@ -1,0 +1,3014 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设备端OLT规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            设备端OLT规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>⚙️ 设备端OLT规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "设备端OLT规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>一级规格</th><th>功能说明</th><th>二级规格</th><th>三级规格</th><th>四级规格</th><th>值</th><th>命令</th><th>说明</th><th>参考资料</th><th>备注</th><th>ruijie</th><th>是否需要导入</th><th>理由</th></tr></thead>
+<tbody>
+<tr><td>XPON管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>模式支持</td>
+<td>分布式模式</td>
+<td></td>
+<td></td>
+<td></td>
+<td>分布式模式下，不支持ONT的批量增加。需要对每个ONT逐一配置</td>
+<td></td>
+<td>小场景，具备少量ONU</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>模板模式</td>
+<td></td>
+<td></td>
+<td></td>
+<td>模板模式下，支持通过预先配置ONT线路模板和ONT业务模板，相同配置的ONT可通过绑定相同模板的方式批量增加，极大地提高了业务发放效率。</td>
+<td></td>
+<td>中大场景</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>XPON模板管理</td>
+<td>模板管理</td>
+<td>cos优先级模板管理</td>
+<td>创建或修改802.1p优先级与队列间的映射关系</td>
+<td>huawei(config)#cos-queue-map-profile
+{ &lt;cr&gt;|cos0&lt;K&gt;|cos1&lt;K&gt;|cos2&lt;K&gt;|cos3&lt;K&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt;|profile-id&lt;K&gt;|profile-name&lt;K&gt; }:profile-id 
+{ profile-id&lt;U&gt;&lt;1,128&gt; }:2 
+{ &lt;cr&gt;|cos0&lt;K&gt;|cos1&lt;K&gt;|cos2&lt;K&gt;|cos3&lt;K&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt;|profile-name&lt;K&gt; }:cos0
+{ cos0-queue-id&lt;U&gt;&lt;0,7&gt; }:0 
+{ &lt;cr&gt;|cos1&lt;K&gt;|cos2&lt;K&gt;|cos3&lt;K&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos1 
+{ cos1-queue-id&lt;U&gt;&lt;0,7&gt; }:0 
+{ &lt;cr&gt;|cos2&lt;K&gt;|cos3&lt;K&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos2 
+{ cos2-queue-id&lt;U&gt;&lt;0,7&gt; }:0
+{ &lt;cr&gt;|cos3&lt;K&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos3 
+{ cos3-queue-id&lt;U&gt;&lt;0,7&gt; }:1
+{ &lt;cr&gt;|cos4&lt;K&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos4 
+{ cos4-queue-id&lt;U&gt;&lt;0,7&gt; }:1
+{ &lt;cr&gt;|cos5&lt;K&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos5 
+{ cos5-queue-id&lt;U&gt;&lt;0,7&gt; }:2
+{ &lt;cr&gt;|cos6&lt;K&gt;|cos7&lt;K&gt; }:cos6 
+{ cos6-queue-id&lt;U&gt;&lt;0,7&gt; }:3
+{ &lt;cr&gt;|cos7&lt;K&gt; }:cos7 
+{ cos7-queue-id&lt;U&gt;&lt;0,7&gt; }:3</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>显示优先级队列映射</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>DBA模板管理</td>
+<td>缺省DBA模板个数</td>
+<td>10（0-9）</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DBA模板个数</td>
+<td>10-515</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DBA模板添加</td>
+<td></td>
+<td></td>
+<td>DBA（Dynamic Bandwidth Assignment）模板定义了ONU的上行接入带宽。设备根据ONU的上行突发业务量需求，动态地调整分配给它们的上行接入带宽，提高了PON系统上行带宽的使用效率。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DBA模板删除</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DBA模板修改</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看DBA绑定信息 - 离散模式（支持ONU筛选/模板ID筛选）</td>
+<td>离散模式：
+huawei#display dba-profile bound-info profile-id 3                                    
+ ----------------------------------------------------------------               
+ Bound by ONT             
+ ----------------------------------------------------------------               
+ F/S/P       ONT List
+ ----------------------------------------------------------------
+ 0/ 1/0      0,2-5
+ 0/ 1/0      0,3
+ ---------------------------------------------------------------- </td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看DBA绑定信息 - 模板模式</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>GPON ONT能力集模板在离散模式下定义了ONT的能力属性。当ONT绑定某个ONT能力集模板且模板应用到ONT时，即可指定ONT的配置数据。</td>
+<td></td>
+<td>ONT能力模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>此命令用于在离散模式下查询指定ONT能力集模板的被绑定信息</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持的能力模板个数</td>
+<td>128</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT线路模板</td>
+<td>系统缺省线路模板0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>支持</td>
+<td>N</td>
+<td>对应我们的业务模板</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>最大支持的线路模板个数</td>
+<td>数值类型，取值范围：0-8195。
+对于不同的主控板，可配置的模板最大数不同，具体请参考“规格查询工具”。</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持配置的</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>基于Id配置，基于profile name配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查询已经配置生效的GPON ONT线路模板的信息</td>
+<td></td>
+<td></td>
+<td>GPON ONT线路模板主要用于配置DBA、T-CONT和GEM Port相关信息</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查询指定GPON ONT线路模板的当前配置信息</td>
+<td>display ont-lineprofile current</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置上行FEC是否开启</td>
+<td></td>
+<td>fec-upstream</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>gem idx与tcont绑定</td>
+<td></td>
+<td>gem add gem-index service-type tcont tcontid [ encrypt encrypt | cascade cascade | { { priority-queue priority-queue | downstream-priority-queue { downstream-priority-queue | adapt } } * | gem-car { traffic-table-index | traffic-table-name traffic-table-name } } ] *</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>解除gem idx与tcont绑定</td>
+<td></td>
+<td>gem delete</td>
+<td>huawei(config-gpon-lineprofile-10)#gem delete                                  
+{ gem-index&lt;U&gt;&lt;0,1023&gt; }:1                                                       
+                                                                                
+  Command:                                                                      
+          gem delete 1 
+
+huawei(config-gpon-lineprofile-10)#commit</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>GEM Bundle绑定</td>
+<td></td>
+<td>gem-bundle</td>
+<td>设置ONT线路模板中GEM Bundle绑定关系，绑定组中主GEM Index用于创建业务流。在建立GEM Bundle前，必须创建相应的GEM Index。
+huawei(config-gpon-lineprofile-10)#gem-bundle                           
+{ gem-index&lt;U&gt;&lt;0,1023&gt; }:0                              
+{ slave-gem-index-list&lt;S&gt;&lt;Length 1-39&gt; }:2                                              
+
+  Command:                                                                      
+          gem-bundle 0 2
+huawei(config-gpon-lineprofile-10)#commit</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置gem-port的映射模式：
+vlan | priority | vlan-priority | port | port-vlan | port-priority | port-vlan-priority | iptos | vlan-iptos | vlan-bundle-priority | port-vlan-bundle-priority </td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>仅支持基于VLAN映射</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置ONU的端口对应的组播的tcont</td>
+<td></td>
+<td>huawei(config-gpon-lineprofile-1)#multicast gemport 
+{ tcont&lt;K&gt; }:tcont                  
+{ tcont-id&lt;U&gt;&lt;0,127&gt; }:5                                                      
+{ &lt;cr&gt;|eth&lt;K&gt;|port-bundle&lt;K&gt; }:port-bundle                        
+{ bundleid-index&lt;U&gt;&lt;0,7&gt; }:1                                                      
+                                                                                
+  Command:                                                                      
+          multicast gemport tcont 5 port-bundle 1 
+
+huawei(config-gpon-lineprofile-1)#commit</td>
+<td>如：对于ONU 的eth 1-3口的组播报文绑定到对应的tcont</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>omcc加密配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ont 端口绑定</td>
+<td></td>
+<td></td>
+<td>支持将ONT的多个端口绑定为端口组</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>qos-mode配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>tr069配置开关</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>vlan绑定功能</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT业务模板</td>
+<td></td>
+<td></td>
+<td>huawei#display ont-srvprofile gpon profile-id 2
+{ &lt;cr&gt;||&lt;K&gt; }:
+
+  Command:                                                                      
+          display ont-srvprofile gpon profile-id 2
+  -----------------------------------------------------------------------------
+  Profile-ID  : 2
+  Profile-name: srv-profile_2
+  Access-type : GPON
+  -----------------------------------------------------------------------------
+  Port-type     Port-number     Max-adaptive-number
+  -----------------------------------------------------------------------------
+  POTS          1               -
+  ETH           adaptive        8
+  VDSL          0               -
+  TDM           1               -
+  MOCA          1               -
+  CATV          1               -
+  -----------------------------------------------------------------------------
+  TDM port type                     : E1
+  TDM service type                  : TDMoGem
+  MAC learning function switch      : Enable
+  ONT transparent function switch   : Disable
+  Ring check switch                 : Disable
+  Ring port auto-shutdown           : Enable
+  Ring detect frequency             : 8 (pps)
+  Ring resume interval              : 300 (s)
+  Ring detect period                : 0 (s)   
+  Multicast forward mode            : Unconcern
+  Multicast forward VLAN            : -
+  Multicast mode                    : Unconcern
+  Upstream IGMP packet forward mode : Unconcern
+  Upstream IGMP packet forward VLAN : -
+  Upstream IGMP packet priority     : -
+  Native VLAN option                : Concern
+  Upstream PQ color policy          : -
+  Downstream PQ color policy        : -                                
+  Monitor link                      : Enable
+  MTU(byte)                         : Unconcern
+  L2-isolate                        : Unconcern 
+  ----------------------------------------------------------------------------- 
+  TPID-Index        TPID-Value                                                  
+  ----------------------------------------------------------------------------- 
+  0                 0x8100                                                      
+  1                 0x8818                                                      
+  -----------------------------------------------------------------------------
+  Port-type Port-ID Code-type TX-clock
+  -----------------------------------------------------------------------------
+  E1        1       HDB3      adapt
+  -----------------------------------------------------------------------------
+  Port-type Port-ID QinQmode  PriorityPolicy Inbound     Outbound
+  -----------------------------------------------------------------------------
+  ETH       1       unconcern unconcern      unconcern   unconcern
+  ETH       2       unconcern unconcern      unconcern   unconcern
+  ETH       3       unconcern unconcern      unconcern   unconcern
+  ETH       4       unconcern unconcern      unconcern   unconcern
+  ETH       5       unconcern unconcern      unconcern   unconcern
+  ETH       6       unconcern unconcern      unconcern   unconcern
+  ETH       7       unconcern unconcern      unconcern   unconcern
+  ETH       8       unconcern unconcern      unconcern   unconcern
+  IPHOST    1       unconcern unconcern      unconcern   unconcern
+  -----------------------------------------------------------------------------
+  Notes: Run the display traffic table ip command to query                      
+         traffic table configuration                                            
+  -----------------------------------------------------------------------------  
+  Port-type Port-ID  DownstreamMode  MismatchPolicy 
+-----------------------------------------------------------------------------
+  ETH             1  operation       discard
+  ETH             2  operation       discard 
+  ETH             3  operation       discard 
+  ETH             4  operation       discard 
+  ETH             5  operation       discard
+  ETH             6  operation       discard
+  ETH             7  operation       discard
+  ETH             8  operation       discard
+  -----------------------------------------------------------------------------
+  Port-type Port-ID Dscp-mapping-table-index Classification-profile-id          
+  ----------------------------------------------------------------------------- 
+  ETH       1       0                        -                                  
+  ETH       2       0                        -                                  
+  ETH       3       0                        -                                  
+  ETH       4       0                        -                                  
+  ETH       5       0                        -                                  
+  ETH       6       0                        -                                  
+  ETH       7       0                        -                                  
+  ETH       8       0                        -                                  
+  IPHOST    1       0                        -     
+  -----------------------------------------------------------------------------
+  Port   Port   Service-type Index S-VLAN S-PRI C-VLAN C-PRI ENCAP      S-PRI   
+  type   ID                                                             POLICY  
+  ----------------------------------------------------------------------------- 
+  ETH    1      Translation  1     -      7     -      2     -          -       
+  ETH    2      Translation  1     200    -     100    2     -          -       
+  ETH    20     Translation  1     10     -     10     -     -          -       
+  ETH    20     Translation  2     20     -     20     -     -          -       
+  -----------------------------------------------------------------------------
+  Notes: * indicates transparent attribute of the vlan
+  -----------------------------------------------------------------------------
+  Port    Port   Service-type Index UNI-TPID NNI-TPID                           
+  type    ID                        Index    Index                              
+  ----------------------------------------------------------------------------- 
+  ETH     1      Translation  1     0        1                                  
+  ETH     2      Translation  1     1        -                                  
+  ETH     20     Translation  1     -        -                                  
+  ETH     20     Translation  2     -        0                                  
+  ----------------------------------------------------------------------------- 
+  Port-type  Port-ID    IGMP-mode         IGMP-VLAN  IGMP-PRI  Max-MAC-Count
+  -----------------------------------------------------------------------------
+  ETH              1    -                         -         -      Unlimited
+  ETH              2    -                         -         -      Unlimited
+  ETH              3    -                         -         -      Unlimited
+  ETH              4    -                         -         -      Unlimited
+  ETH              5    -                         -         -      Unlimited
+  ETH              6    -                         -         -      Unlimited
+  ETH              7    -                         -         -      Unlimited
+  ETH              8    -                         -         -      Unlimited
+  IPHOST           1    -                         -         -      Unlimited
+  ----------------------------------------------------------------------------- 
+  Port-type Port-ID   Traffic-suppress   Traffic-suppress   Traffic-suppress    
+                      unicast(kbps)      multicast(kpbs)    broadcast(kbps)     
+  ----------------------------------------------------------------------------- 
+  ETH             1   -                  -                  0                   
+  ETH             2   -                  -                  -                   
+  ETH             3   -                  -                  -                   
+  ETH             4   -                  -                  -                   
+  ETH             5   -                  -                  -                   
+  ETH             6   -                  -                  -                   
+  ETH             7   -                  -                  -                   
+  ETH             8   -                  -                  -                   
+  -----------------------------------------------------------------------------
+  Port-type  Port-ID  L2-isolate      multicast-source                                          
+  ----------------------------------------------------------------------------- 
+  ETH              1  enable          disable                                          
+  ETH              2  enable          enable                                          
+  ETH              3  disable         enable                                          
+  ETH              4  disable         enable                                          
+  ETH              5  unconcern       disable                                           
+  ETH              6  unconcern       disable                                           
+  ETH              7  unconcern       disable                                           
+  ETH              8  unconcern       disable                                           
+  -----------------------------------------------------------------------------
+  Port  Port  PoE        PoE        PoE       Max Power  Max Power  Force Power 
+  type  ID    Switch     Mode       Priority  Class      Value(mW)  Switch      
+  ----------------------------------------------------------------------------- 
+  ETH      1  unconcern  signal     high      default    -          disable     
+  ETH      2  unconcern  signal     high      default    -          disable     
+  ETH      3  unconcern  signal     high      default    -          disable     
+  ETH      4  unconcern  signal     high      default    -          disable     
+  ETH      5  unconcern  signal     high      default    -          disable     
+  ETH      6  unconcern  signal     high      default    -          disable     
+  ETH      7  unconcern  signal     high      default    -          disable     
+  ETH      8  unconcern  signal     high      default    -          disable     
+  -----------------------------------------------------------------------------
+  Binding times : 1
+  -----------------------------------------------------------------------------</td>
+<td>GPON ONT业务模板配置为OLT采用OMCI方式管理的ONT提供业务相关的参数配置命令。
+相当于可以管理ONT业务层面的所有配置</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持配置的业务模板个数</td>
+<td>0-8192(MA5800)
+说明： 
+对于不同的主控板，可配置的模板最大数不同，具体请参考“规格查询工具”。</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置ONU基于报文的丢弃策略</td>
+<td></td>
+<td>
+color-policy { upstream-priority-queue up-pq-color-policy | downstream-priority-queue down-pq-color-policy } *
+undo color-policy { upstream-priority-queue | downstream-priority-queue } *</td>
+<td>dei：如果报文的DEI标识位设置为1，当网络出现拥塞时，对报文进行丢弃。（dei是指通过DEI位即VLAN tag中的CFI位来实现三色双速模式的颜色标记。）</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看业务模板绑定的ONT ID和所在端口</td>
+<td></td>
+<td>display ont-srvprofile gpon bound-info</td>
+<td>
+举例：查询ID为10的GPON ONT业务模板的被绑定信息。
+huawei#display ont-srvprofile gpon bound-info profile-id 10
+{ &lt;cr&gt;||&lt;K&gt; }:
+
+  Command:                                                                      
+          display ont-srvprofile gpon bound-info profile-id 10  
+  ---------------------------------------------------------------------         
+  F/S/P       ONT List
+  ---------------------------------------------------------------------         
+  0/ 1/0      0,2
+  ---------------------------------------------------------------------</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>IGMP转发模式配置</td>
+<td>透传模式|默认</td>
+<td>igmp-forward { { { translation | default } vlanid [ priority ] } | transparent | unconcern }</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持
+在宿舍网络中基本没有IGMP业务</td>
+<td>N</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>mac-learining MAC学习功能</td>
+<td></td>
+<td></td>
+<td>开启或关闭MAC地址学习功能</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>没有使用场景</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MTU配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>-</td>
+<td>AP不支持MTU配置</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>PON口状态连动UNI端口</td>
+<td></td>
+<td></td>
+<td>此命令用于配置ONT的链路状态联动功能状态。当ONT检测到GPON端口故障，需要联动关闭ONT的UNI端口时，使用此命令</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>没必要连动</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>组播模式</td>
+<td>igmp-snooping：非可控组播。
+olt-control：动态可控组播。
+unconcern：不关注，即OLT不指定ONT上的组播模式。</td>
+<td>multicast mode</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>目前没有组播需求</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>组播转发配置</td>
+<td> untag | tag { translation { vlanid | igmp-user-vlan } | transparent } | unconcern </td>
+<td>multicast-forward { untag | tag { translation { vlanid | igmp-user-vlan } | transparent } | unconcern }</td>
+<td>此命令用于设置GPON ONT业务模板中ONT的组播报文转发模式。不同的组播转发模式下，ONT向以太端口发送的下行组播报文不同</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>目前没有组播需求</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONU端口二层隔离</td>
+<td></td>
+<td>huawei(config-gpon-srvprofile-10)#port isolate eth 1-2 enable</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>-</td>
+<td>可以通过以太管理来配置</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>反向组播</td>
+<td></td>
+<td>huawei(config-gpon-srvprofile-10)#port multicast-source eth 2-4 enable
+  Set ONT port(s) Multicast Source, success: 3, failed: 0 
+
+huawei(config-gpon-srvprofile-10)#commit</td>
+<td>使能用户侧的下联eth口作为组播源</td>
+<td>MA5800 配置手册</td>
+<td>不懂</td>
+<td></td>
+<td>N</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>端口poe功能</td>
+<td></td>
+<td>port poe eth ont-portlist { { disable | enable | unconcern } | mode { signal | spare | unconcern } | priority { critical | high | low } | { max-power-class { default | class0 | class1 | class2 | class3 | class4 | class5 | class6 | class7 | class8 } | max-power max-power-value } | force-power { disable | enable } } *</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>1. AP不支持向其他设备供电
+2. 优先可以通过远程管理模板配置</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>端口上行方向优先级来源</td>
+<td></td>
+<td></td>
+<td>需要配置QINQ使用；
+此命令用于配置GPON ONT业务模板中ONT ETH端口的PoE（Power over Ethernet）功能。当需要通过GPON ONT业务模板对ONT ETH端口的供电功能、供电模式、供电优先级、最大供电等级、最大供电功率和强制供电功能进行设置时，使用该命令。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONU未知流量抑制</td>
+<td></td>
+<td></td>
+<td>port traffic-suppress eth(gpon profile)</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONU端口VLAN配置</td>
+<td></td>
+<td></td>
+<td>port vlan命令用于配置GPON ONT业务模板中ONT的端口VLAN，将ONT端口划分到指定VLAN中，对进出端口的数据报文进行VLAN Tag处理。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONU环路检测</td>
+<td></td>
+<td>ring check { detect-frequency frequency | resume-interval interval | auto-shutdown switch | detect-period period } *</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置ONU可识别的TPID</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>当前默认是0X8100，没有其他需求</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>透传配置</td>
+<td></td>
+<td></td>
+<td>
+此命令用于使能或去使能GPON ONT业务模板中ONT的透传功能。使能时，系统将用户侧（网络侧）送来的各种报文（如广播报文、多播报文）都直接转发到另一侧，而不交给CPU处理，节省了CPU的占用率。当需要在ONT设备上对将用户侧（网络侧）送来的各种报文做处理时，去使能ONT透传功能。
+缺省情况下，GPON ONT业务模板中ONT的透传功能去使能，即ONT处理用户侧（网络侧）报文。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>GPON告警模板用于设置一系列告警门限值参数，对激活的GPON ONT线路进行性能统计监控</td>
+<td></td>
+<td>ONU告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看告警模板</td>
+<td></td>
+<td>display gpon alarm-profile</td>
+<td>huawei#display gpon alarm-profile
+{ all&lt;K&gt;|bound-info&lt;K&gt;|profile-id&lt;K&gt;|profile-name&lt;K&gt; }:profile-id
+{ profile-id&lt;U&gt;&lt;1,50&gt; }:1
+
+  Command:
+          display gpon alarm-profile profile-id 1
+  --------------------------------------------------------------
+  Profile ID  : 1
+  Profile name: alarm-profile_1
+  --------------------------------------------------------------
+  GEM port loss of packets threshold:                        0
+  GEM port misinserted packets threshold:                    0
+  GEM port impaired blocks threshold:                        0
+  Ethernet FCS errors threshold:                             0
+  Ethernet excessive collision count threshold:              0
+  Ethernet late collision count threshold:                   0
+  Too long Ethernet frames threshold:                        0
+  Ethernet buffer (Rx) overflows threshold:                  0
+  Ethernet buffer (Tx) overflows threshold:                  0
+  Ethernet single collision frame count threshold:           0
+  Ethernet multiple collisions frame count threshold:        0
+  Ethernet SQE count threshold:                              0
+  Ethernet deferred transmission count threshold:            0
+  Ethernet internal MAC Tx errors threshold:                 0
+  Ethernet carrier sense errors threshold:                   0
+  Ethernet alignment errors threshold:                       0
+  Ethernet internal MAC Rx errors threshold:                 0
+  PPPOE filtered frames threshold:                           0
+  MAC bridge port discarded frames due to delay threshold:   0
+  MAC bridge port MTU exceeded discard frames threshold:     0
+  MAC bridge port received incorrect frames threshold:       0
+  CES general error time threshold:                          0
+  CES severely time threshold:                               0
+  CES bursty time threshold:                                 0
+  CES controlled slip time threshold:                        0
+  CES unavailable time threshold:                            0
+  Drop events threshold:                                     0
+  Undersize packets threshold:                               0
+  Fragments threshold:                                       0
+  Jabbers threshold:                                         0
+  Failed signal of ONU threshold (Format:1e-x):              3
+  Degraded signal of ONU threshold (Format:1e-x):            4
+  FEC uncorrectable code words threshold:                    7
+  FEC correctable code words threshold:                      7
+  Upstream PQ discarded byte alarm threshold:                6
+  Downstream PQ discarded byte alarm threshold:              6
+  Encryption key errors threshold:                           0
+  XGEM key errors threshold:                                 0
+  XGEM HEC error count threshold:                            0
+  --------------------------------------------------------------
+  Binding Times:                                             0
+  --------------------------------------------------------------</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td>N</td>
+<td>通过以太协议配置</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看告警模板绑定情况</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>告警模板删除</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>告警模板添加</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>告警模板容量</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>缺省告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>提供ONT ACL（Access Control List）模板配置的相关命令，ONT ACL模板用于统一管理ONT在802.1x认证时使用的ACL配置。</td>
+<td></td>
+<td>ONT ACL支持</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供ONT ACL（Access Control List）模板配置的相关命令，ONT ACL模板用于统一管理ONT在802.1x认证时使用的ACL配置。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ACL规则配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT FTP服务器模板配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>显示ONT服务器模板</td>
+<td></td>
+<td></td>
+<td>huawei#display ont ftp-server-profile                          
+{ all&lt;K&gt;|profile-id&lt;K&gt;|profile-name&lt;K&gt; }:profile-id                                  
+{ profile-id&lt;U&gt;&lt;0,7&gt; }:1    
+                                                                                
+  Command:
+          display ont ftp-server-profile profile-id 1
+  -----------------------------------------------------------------------
+  Profile ID               :1
+  Profile name             :ftp-profile_1
+  -----------------------------------------------------------------------
+  Address                  :ftp://127.0.0.1
+  Port                     :21
+  User Name                :hw
+  -----------------------------------------------------------------------
+  Binding Times            :1
+  -----------------------------------------------------------------------</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持FTP服务器模板个数</td>
+<td>0-7</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONT voip ftp 服务器和配置文件配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONU SNMP模板配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONT SNMP（Simple Network Management Protocol）模板为管理方式为SNMP的ONT提供SNMP相关参数配置。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>显示模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>添加模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>删除模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>修改模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持模板个数</td>
+<td>64</td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT备电业务管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td>此命令用于查询ONT备电业务管理模板信息。ONT备电业务管理模板中设置了ONT电源丢失后各业务的运行状态，用于控制实际ONT掉电时相关业务的启停状态。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT告警策略模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>alarm append</td>
+<td></td>
+<td></td>
+<td>于设置ONT告警模板中的告警所携带的附加定位信息的信息类型</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>alarm filter </td>
+<td></td>
+<td></td>
+<td>过滤ONT告警策略模板中某些或全部告警，使这些告警不向OLT上报。配置生效后，ONT根据此命令中的配置过滤告警，使某此告警不向OLT上报。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>alarm level</td>
+<td></td>
+<td></td>
+<td>设置ONT告警策略模板中的某个或全部告警的告警级别</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看模板绑定ONT</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT流分类模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONT流分类模板配置提供配置模板名称，分类规则以及分类规则下的条件的相关命令。
+classification
+classification delete
+classification-name modify
+condition add
+condition delete
+display classification
+display classification-profile
+display condition
+display rule
+rule add
+rule delete</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT住宅网关模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供ONT住宅网关模板配置的相关命令。
+display ont home-gateway-config
+display ont home-gateway-profile
+display ont home-gateway-profile bound-info
+ont home-gateway-config
+ont home-gateway-profile add
+ont home-gateway-profile delete
+ont home-gateway-profile modify</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT策略路由模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供ONT策略路由模板配置的相关命令。
+display ont policy-route-profile
+ont policy-route-profile
+policy-route</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT WAN模板配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供ONT WAN模板配置的相关命令。
+connection-type
+display ont wan-profile
+nat
+ont wan-profile</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>WAN桥接类型</td>
+<td>桥接模式| 路由模式</td>
+<td>connection-type { bridge | route }</td>
+<td>
+此命令用于在ONT WAN模板中配置ONT WAN口的连接类型。
+缺省情况下，ONT WAN口的连接为路由类型。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>NAT开关</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>TR069模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供TR069服务器模板配置的相关命令。
+display ont tr069-server-profile
+display ont tr069-server-profile bound-info
+ont tr069-server-profile add
+ont tr069-server-profile delete
+ont tr069-server-profile modify</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>光参数告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>光参数告警模板用于设置一系列光模块告警门限值，对PON端口进行性能统计监控。
+display optical-alarm-profile
+display optical-alarm-profile bound-info
+optical-alarm-profile add
+optical-alarm-profile delete
+optical-alarm-profile modify</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>显示光参数告警</td>
+<td></td>
+<td></td>
+<td>huawei#display optical-alarm-profile                                    
+{ all&lt;K&gt;|bound-info&lt;K&gt;|profile-id&lt;K&gt;|profile-name&lt;K&gt; }:profile-id                             
+{ profile-id&lt;U&gt;&lt;1,256&gt; }:3
+{ &lt;cr&gt;||&lt;K&gt; }: 
+                                                                                
+  Command:                                                                      
+          display optical-alarm-profile profile-id 3                            
+ --------------------------------------------------------------------               
+ Profile-id    :   3                                                            
+ Profile-name  :   optical_alarm_profile_3                                      
+ Binding times :   0                                                            
+ --------------------------------------------------------------------               
+ Tx optical power warning upper threshold (dBm)     : 6.00                          
+ Tx optical power warning lower threshold (dBm)     : 0.00                          
+ Tx optical power alarm upper threshold (dBm)       : 7.00                          
+ Tx optical power alarm lower threshold (dBm)       : -1.00                         
+ Rx optical power warning upper threshold (dBm)     : -1.00                         
+ Rx optical power warning lower threshold (dBm)     : -30.00                        
+ Rx optical power alarm upper threshold (dBm)       : 1.00                          
+ Rx optical power alarm lower threshold (dBm)       : -35.00                        
+ Bias current warning upper threshold (mA)          : 30.00                            
+ Bias current warning lower threshold (mA)          : 7.00                             
+ Bias current alarm upper threshold (mA)            : 70.00                            
+ Bias current alarm lower threshold (mA)            : 2.00                             
+ Supply voltage warning upper threshold (V)         : 3.47                          
+ Supply voltage warning lower threshold (V)         : 3.14                          
+ Supply voltage alarm upper threshold (V)           : 3.63                          
+ Supply voltage alarm lower threshold (V)           : 2.97                          
+ Temperature warning upper threshold (C)            : 70.00                            
+ Temperature warning lower threshold (C)            : 0.00                             
+ Temperature alarm upper threshold (C)              : 100.00                           
+ Temperature alarm lower threshold (C)              : -10.00                           
+ 10G Tx optical power warning upper threshold (dBm) : 5.00  
+ 10G Tx optical power warning lower threshold (dBm) : 3.00 
+ 10G Tx optical power alarm upper threshold (dBm)   : 6.00 
+ 10G Tx optical power alarm lower threshold (dBm)   : 1.00 
+ 10G Rx optical power warning upper threshold (dBm) : -1.00  
+ 10G Rx optical power warning lower threshold (dBm) : -30.00 
+ 10G Rx optical power alarm upper threshold (dBm)   : 1.00 
+ 10G Rx optical power alarm lower threshold (dBm)   : -35.00 
+ 10G Bias current warning upper threshold (mA)      : 30.00 
+ 10G Bias current warning lower threshold (mA)      : 7.00 
+ 10G Bias current alarm upper threshold (mA)        : 70.00 
+ 10G Bias current alarm lower threshold (mA)        : 2.00 
+ -------------------------------------------------------------------- 
+ ONT CATV rx optical power alarm upper threshold (dBm)  : 2.50   
+ ONT CATV rx optical power alarm lower threshold (dBm)  : -9.50
+ -------------------------------------------------------------------- </td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置光参数告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查看光参数告警模板绑定</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT节能模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>提供ONT节能模板配置的相关命令。
+display ont power-reduction-profile
+display ont power-reduction-profile bound-info
+display statistics ont-power-consumption
+ont power-reduction-profile add
+ont power-reduction-profile delete
+ont power-reduction-profile modify
+reset statistics ont-power-consumption</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>评估，考虑导入</td>
+<td>节能需求</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置节能模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>PON端口流量告警模板</td>
+<td></td>
+<td></td>
+<td></td>
+<td>在GPON模式下，使用port traffic-alarm-config命令绑定流量告警模板到PON端口，来监控PON端口流量性能。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>XPON全局参数配置</td>
+<td>检测流氓ONU开光</td>
+<td>仅支持长发光检测</td>
+<td>默认关闭</td>
+<td>anti-rogueont autodetect switch</td>
+<td>系统只能检测长发光的ONT。
+对应PON端口下的ONT必须全部要支持华为扩展PLOAM（Physical Layer OAM ）消息（GPON）或扩展OAM（Operation, Administration, and Management）消息（EPON）。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>查看是否存在流氓ONT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT的认证冲突检测</td>
+<td></td>
+<td></td>
+<td>display ont autofind conflict-check</td>
+<td>伪造ONT检测，核心功能是帮助管理员确认系统是否启用了对自动发现ONT的认证冲突检测机制，从而避免非法或重复的ONT设备接入网络。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>支持？</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>全局配置查看</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>查询指定SN的ONT认证信息映射关系</td>
+<td></td>
+<td></td>
+<td>display ont auth-map { sn sn-value | all }</td>
+<td>huawei#display ont auth-map all                               
+{ &lt;cr&gt;||&lt;K&gt; }:                                                                  
+
+  Command:                                                                      
+          display ont auth-map all                                              
+  ------------------------------------------------------------------------------
+  SN                      : 6877687711110000 (hwhw-11110000)                    
+  Password                : abc                                                 
+  ------------------------------------------------------------------------------
+  SN                      : 6877687711112222 (hwhw-11112222)                    
+  Loid                    : 123                                                 
+  Checkcode               : 456                                                 
+  ------------------------------------------------------------------------------</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>基于SN接入</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>自动发现ONT的认证冲突检测</td>
+<td></td>
+<td>默认关闭</td>
+<td>ont autofind conflict-check switch</td>
+<td>认证冲突有下面几种可能的原因：
+新接入ONT的SN/MAC与当前ONT冲突。
+新接入ONT的密码与当前ONT冲突。
+新接入ONT的LOID与当前ONT冲突。
+新接入ONT上线时密码校验失败
+新接入ONT上线时校验码校验失败。
+ONT的速率类型与局端配置的ONT类型不匹配。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>自动发现ONT的时间间隔</td>
+<td></td>
+<td>
+数值类型，取值范围：1-10。
+单位：s。
+缺省值：5。</td>
+<td>ont autofind distance-time</td>
+<td>开窗时间
+
+举例：设置ONT自动发现的间隔时间为8s。
+huawei(config)#ont autofind distance-time                                       
+{ time&lt;U&gt;&lt;1,10&gt; }:8                                                             
+                                                                                
+  Command:                                                                      
+          ont autofind distance-time 8 </td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>Y</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT自动发现节能开关</td>
+<td></td>
+<td></td>
+<td>ont autofind energy-saving enable </td>
+<td>
+举例：打开ONT自动发现的节能开关。
+huawei(config)#ont autofind energy-saving enable                </td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td>端口节能</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>离线ONT的老化时间</td>
+<td></td>
+<td>默认不老化</td>
+<td>huawei(config)#ont auto-aging                                             
+{ aging-time&lt;U&gt;&lt;1,365&gt;|no-aging&lt;K&gt; }:15                                                         
+                                                                                
+  Command:                                                                      
+          ont auto-aging 15</td>
+<td>
+此命令用于设置ONT的老化时间。命令执行成功后，系统将定时删除离线达到老化时间的ONT。
+缺省情况下，自动老化时间为no-aging，即系统不老化ONT。
+命令格式</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>自动发现ONT的老化时间</td>
+<td></td>
+<td>默认老化时间300s</td>
+<td>ont autofind { timeout time | no-aging }</td>
+<td>此命令用于设置自动发现ONT的老化时间。执行此命令后，系统会根据此老化时间定时清除自动发现ONT占用的注册缓存区，防止新上线的ONT因为注册缓存区满而不能正常注册。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>好像没有这个机制？需要确认？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT自动迁移</td>
+<td></td>
+<td></td>
+<td>ont auto-migration switch</td>
+<td>使能ONT自动迁移开关，原ONT连接到新PON端口下，如果符合ONT自动添加策略，则自动删除原PON端口下的ONT，在新PON端口下自动添加该ONT，OLT不再上报SN/MAC认证冲突告警。原PON端口下的ONT需满足条件：
+处于离线状态。
+OMCI管理方式或OAM管理方式。
+不是Type C或Type D保护组成员。
+SN/MAC认证方式。</td>
+<td>MA5800 配置手册</td>
+<td>即游牧替换功能，在基于SN/MAC认证模式下，需要在特定的PON口下添加ONU设备，开启后，可以支持ONU设备的移动，并继承配置</td>
+<td>不支持</td>
+<td>N</td>
+<td>我们的ONU在全局上线</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT认证信息全局冲突检测功能开关</td>
+<td></td>
+<td></td>
+<td>ont authentication conflict-check { by-sn | by-loid } switch</td>
+<td>
+去使能ONT认证信息全局冲突检测开关后，如果需要升级或者回退到不支持该特性的版本，必须删除认证信息相同的ONT数据并使能全局冲突检测开关，保证系统数据正常。
+当通过ONT SN使能全局冲突检测功能时，ONT SN全局唯一。
+当通过ONT SN去使能全局冲突检测功能时，ONT SN同端口唯一。
+当通过ONT LOID使能全局冲突检测功能时，ONT LOID全局唯一。
+当通过ONT LOID去使能全局冲突检测功能时，ONT LOID同端口唯一。
+ONT认证信息全局冲突的可能原因是：新接入ONT的认证信息（SN或者LOID）与当前ONT冲突。
+可以使用display ont global-config命令或者display xpon global-config命令查询ONT认证信息全局冲突检测功能开关。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>控制每个端口同时上线ONT的个数</td>
+<td></td>
+<td></td>
+<td>ont online-rate-control { ont-number-threshold | disable }</td>
+<td>
+此命令用于控制每个端口同时上线ONT的个数。当大量ONT同时上线产生的消息和报文可能对设备CPU产生冲击，想要控制同时上线ONT的个数时，使用此命令。命令执行成功后，系统将默认对设备下的所有GPON端口生效。
+缺省情况下，系统不控制同时上线ONT的个数。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>待确认？</td>
+<td>我们好像没这个问题？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>配置对象关闭时删除对象的活动告警开关</td>
+<td></td>
+<td></td>
+<td>xpon alarm clear-on-shutdown { enable | disable }</td>
+<td>
+使能对象关闭时删除对象的活动告警功能后，当关闭xPON端口时，如果该端口下存在ONT处于Type C或者Type D的组网中，则不删除该端口上的活动告警。
+可以使用display xpon global-config命令查询对象关闭时删除对象的活动告警开关状态。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>待确认？</td>
+<td>有必要？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>配置分支光纤LOS告警功能</td>
+<td></td>
+<td></td>
+<td>xpon alarm distribute-fiber-los { enable | disable }</td>
+<td>可以使用display xpon global-config命令或display xpon alarm global-config命令查询分支光纤LOS告警功能。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>待确认？</td>
+<td>对应是否需要打印LOS?</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>PON口下多个ONT同时掉电告警上报功能</td>
+<td></td>
+<td></td>
+<td>xpon alarm group-power-off { enable | disable }</td>
+<td>
+此命令用于使能或去使能PON口下多个ONT同时掉电告警上报功能。系统可以根据具体配置情况决定在PON口下多个ONT因掉电同时下线时（5s内掉电达到在线ONT的70%，并且掉电ONT个数达到5个），是否上报告警。当不希望接收到PON口下多个ONT同时掉电告警时，可以使用此命令去使能此功能。
+缺省情况下，去使能PON口下多个ONT同时掉电告警上报功能。</td>
+<td>MA5800 配置手册</td>
+<td>告警</td>
+<td>不支持</td>
+<td>Y</td>
+<td>对应场景：楼栋掉电会发生大量掉电告警</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>LOS告警优化功能</td>
+<td></td>
+<td></td>
+<td>
+xpon alarm los-control { dgi-threshold-time dgi-threshold-time-value | dgi-threshold-ratio { dgi-threshold-ratio-value | unconcern } } *
+xpon alarm los-control { enable | disable } [ dgi-threshold-time dgi-threshold-time-value | dgi-threshold-ratio { dgi-threshold-ratio-value | unconcern } ] *</td>
+<td>可配置，当PON口下一定时间内一定百分比用户发生掉电事件，则不产生LOS。可能仅上报DGI</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>待确认？</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>多个ONT同时掉线告警上报功能、告警产生阈值和告警恢复阈值</td>
+<td></td>
+<td></td>
+<td>xpon alarm ont-offline-monitor { switch | { alarm-threshold-ratio alarm-threshold-ratio-value | restore-threshold-ratio restore-threshold-ratio-value } * } *</td>
+<td>告警优化：此命令用于配置PON口下多个ONT同时掉线告警上报功能、告警产生阈值和告警恢复阈值。系统可以根据具体配置情况决定在PON口下多个ONT同时下线时（5s内掉线达到在线ONT的告警产生阈值比例，并且掉线ONT个数达到5个），是否上报告警。当不希望接收到PON口下多个ONT同时掉线告警时，使用此命令去使能告警上报功能。
+
+举例：使能PON口下多个ONT同时掉线告警上报功能，并配置告警产生阈值为50，告警恢复阈值为55。
+huawei(config)#xpon alarm ont-offline-monitor
+{ alarm-threshold-ratio&lt;K&gt;|restore-threshold-ratio&lt;K&gt;|switch&lt;E&gt;&lt;disable,enable&gt;
+}: enable
+{ &lt;cr&gt;|alarm-threshold-ratio&lt;K&gt;|restore-threshold-ratio&lt;K&gt; }: alarm-threshold-ratio
+{ alarm-threshold-ratio-value&lt;U&gt;&lt;0,100&gt; }: 50
+{ &lt;cr&gt;|restore-threshold-ratio&lt;K&gt; }: restore-threshold-ratio
+{ restore-threshold-ratio-value&lt;U&gt;&lt;0,100&gt; }: 55
+
+  Command:
+          xpon alarm ont-offline-monitor enable alarm-threshold-ratio 50 restore
+-threshold-ratio 55</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>配置xPON光模块告警抑制功能</td>
+<td></td>
+<td></td>
+<td>xpon alarm optical-module-alarm control { enable | disable }</td>
+<td>
+此命令用于配置xPON光模块告警抑制功能。配置成功后，系统根据配置的告警抑制功能状态、光模块所在端口的状态及初始状态抑制告警开关的配置判断是否上报光模块不在位告警。
+缺省情况下，光模块告警抑制功能为使能。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>待确认</td>
+<td>我们的现状？是会上报在线不在位告警？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>设置端到端建流自动生成gemport的加密开关。</td>
+<td></td>
+<td></td>
+<td>xpon auto-alloc gemport encrypt encrypt</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>配置光模块光功率采集的模式</td>
+<td></td>
+<td>
+high-precision
+高精度模式。在高精度模式下，对光模块接收ONT光功率进行多次采样，求平均值，精确度更高。
+-
+normal
+普通模式。在普通模式下，对光模块接收ONT光功率进行单次采样。结果可能存在误差。</td>
+<td>xpon global-config olt-rx-power { high-precision | normal }</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>默认普通模式</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>光模块信息解析模式</td>
+<td></td>
+<td>
+normal
+光模块信息解析模式为normal模式。配置此模式时，特定光模块信息显示为十六进制字符。
+-
+dt
+光模块信息解析模式配置为dt模式。配置此模式时，光模块信息显示为ASCII。</td>
+<td>xpon global-config optical-info-mode</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>好像没有可视化显示问题？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT加载文件定时删除功能</td>
+<td></td>
+<td></td>
+<td>xpon load ont-file auto-delete { disable | enable }</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>没有使用场景？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT距离值变化的阈值</td>
+<td></td>
+<td></td>
+<td>xpon ont-distance-variation-threshold { threshold-value | unlimited }</td>
+<td>此命令用于配置ONT距离值变化的阈值。当ONT距离值变化超出设置的阈值时，会上报“0x2e30a677 ONT距离变化超出阈值”事件。
+huawei(config)#xpon ont-distance-variation-threshold                        
+{ threshold-value&lt;U&gt;&lt;1,1000&gt;|unlimited&lt;K&gt; }: 10                                 
+
+  Command:                                                                      
+          xpon ont-distance-variation-threshold 10                          </td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td>可用于检测光链路是否正常？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>光参数告警模板自动监控开关</td>
+<td></td>
+<td></td>
+<td>xpon optical-alarm auto-monitor { port | ont } { disable | optical-threshold | standard-threshold }</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>配置快速查询ONT光模块DDM的开关状态。</td>
+<td></td>
+<td>
+当开关配置为disable时，通过OAM/OMCI管理消息到ONT上去查询实时数据。
+当开关配置为enable时，查询OLT本地缓存的数据，缓存数据刷新周期为1小时。</td>
+<td>xpon ont optical-ddm quick-query switch</td>
+<td>
+快速查询ONT光模块DDM开关状态。
+当开关配置为disable时，通过OAM/OMCI管理消息到ONT上去查询实时数据。
+当开关配置为enable时，查询OLT本地缓存的数据，缓存数据刷新周期为1小时。</td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>Y</td>
+<td>考虑导入，特别是占用CPU</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT节能全局开关。</td>
+<td></td>
+<td></td>
+<td>xpon ont-power-reduction { disable | enable }</td>
+<td>huawei(config)#xpon ont-power-reduction 
+{ disable&lt;K&gt;|enable&lt;K&gt; }:enable
+
+  Command:
+          xpon ont-power-reduction enable
+  Warning: The operation may increase the delay of all ONT configurations about
+hundreds of milliseconds
+  Are you sure to proceed? (y/n)[n]:y </td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>?</td>
+<td>考虑导入？</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>xPON TypeB保护组下Standby侧端口LOS告警优化功能</td>
+<td></td>
+<td>
+enable
+使能TypeB保护组Standby侧端口LOS告警优化功能。使能后，如果Standby侧端口能够检测到上行光信号，则上报LOS恢复告警，否则上报LOS告警。
+disable
+去使能TypeB保护组Standby侧端口LOS告警优化功能。去使能后，无论Standby侧端口是否能检查到上行光信号，均不会上报LOS恢复告警。</td>
+<td>xpon alarm typeb-los-control { enable | disable }</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>没啥用</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>如果Type B的主备端口测距距离不一致，Type B倒换时，ONT需要重新测距和注册上线，会导致业务中断。一般情况下，建议去使能此功能。</td>
+<td></td>
+<td>
+disable
+去使能xPON保护组距离不等长功能。去使能后，仅允许测距距离相同的两个PON端口加入同一Type B保护组。
+ 说明： 
+Type B保护组内的端口测距距离相同时，才能去使能此功能。可以使用display port info(gpon)命令查看Type B保护组内端口的测距距离，使用port range(gpon)命令配置Type B保护组内端口的测距距离。
+enable
+使能xPON保护组距离不等长功能。使能后，允许测距距离不同的两个PON端口加入同一Type B保护组。实际使用场景中，如果Type B保护组两个端口测距距离相差非常大，且用户可以接受倒换时ONT重新上线，中断业务的影响，使用此参数。
+ 说明： 
+此功能使能后，才能使用port range(gpon)命令配置Type B保护组内端口的测距距离为不同值</td>
+<td>xpon protect-group different-range</td>
+<td></td>
+<td>MA5800 配置手册</td>
+<td></td>
+<td>不支持</td>
+<td>Y</td>
+<td>考虑导入，是否可以加快倒换上线</td></tr>
+<tr><td></td>
+<td></td>
+<td>ONU管理</td>
+<td>查看ONT的主机名称</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>ONT端口管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>GEM PORT管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>N</td>
+<td>GEM PORT不可视</td></tr>
+<tr><td>开局</td>
+<td></td>
+<td>PON上行免软调功能</td>
+<td>RN配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>模板配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>ONU管理</td>
+<td></td>
+<td>ONU配置</td>
+<td>ip地址配置</td>
+<td></td>
+<td>rn ipconffg 0/14/0 0 ip-address 192.168.1.33 mask 255.255.255.0 gateway 192.168.1.1 vlan 1 priority 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT能力查看</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>ONT MAC地址信息查看</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>查看ONT的告警信息</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>建议导入</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>显示PON口光纤链路拓扑</td>
+<td></td>
+<td></td>
+<td>此命令用于查询PON端口下配置的光纤路由拓扑，以及每段光纤下直连的ONT ID列表。</td>
+<td>huawei(config-if-gpon-0/3)#display fiber-route 0
+{ &lt;cr&gt;||&lt;K&gt; }: 
+
+ Command:
+          display fiber-route 0
+.
+`-- 1
+    `-- 5
+        `-- 6
+            |-- 4: 0-6
+            `-- 5: 9,12
+  ------------------------------------------------------------------------------
+  Notes: . indicates the port;
+         |--6: 8 indicates it is an non-leaf node, which fiber-route id is 6,
+         and directly connected ONT id list is 8;
+         `--6: 8 indicates it is a leaf node, which fiber-route id is 6,
+         and directly connected ONT id list is 8.
+  ------------------------------------------------------------------------------</td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>建议导入</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>ONU升级</td>
+<td>升级</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持升级方式：
+1. OLT
+2. WEB
+3. NCE
+4. eSight</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>ONU升级时间</td>
+<td>最高：1050(不同的OLT板)
+最低：127
+平均：300~400s</td>
+<td></td>
+<td></td>
+<td>ONU升级指导书</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>版本回退</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+huawei(config-if-gpon-0/14)#ont rollback software 1 40 
+   This operation will interrupt the services of ONT                                                                                  
+   Are you sure to continue? (y/n)[n]: y</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>ONU状态信息查看</td>
+<td>ONU LLDP支持</td>
+<td>查看onu lldp邻居</td>
+<td>huawei(config-if-gpon-0/3)#display ont lldp neighbor 1 0 eth 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>ONU的NAT模式管理</td>
+<td>ONU远程管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>诊断模式</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>ONT端口管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>PON口管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td></td>
+<td>保护组类型</td>
+<td>type A</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type B 单归属</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type B双归属</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type C双归属</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>倒换参数配置</td>
+<td>防抖动时间</td>
+<td></td>
+<td></td>
+<td></td>
+<td>anti-jitter time time
+
+防止这种抖动造成保护组频繁倒换，增加了防抖时间设置功能，在第一次检测到线路质量差后的防抖时间内，线路不会因线路质量的好坏而触发倒换。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>描述符信息设置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>保护组描述信息</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组恢复等待时间配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td>保护组恢复开关为使能时：
+当保护组发生了故障引起的从工作成员到保护成员的保护倒换后，如果工作成员的状态恢复，则需要观察一段时间工作成员的状态是否恢复稳定，这段观察的时间即为恢复等待时间。
+可以修改恢复等待时间的取值。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>标准type B模式</td>
+<td></td>
+<td></td>
+<td></td>
+<td>此命令用于设置GPON端口保护组是否为标准Type B。如果Type B只使用一个N：2分光器（不限制N：1分光器数目），所有ONU到两个OLT端口距离差相等，则认为是此Type B为标准Type B。如果实际保护组采用标准的Type B组网，建议使用此命令设置保护组为标准Type B，以提高倒换成功率和倒换性能。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组查询</td>
+<td>查询双归属全局配置信息</td>
+<td></td>
+<td></td>
+<td></td>
+<td>huawei#display dual-parenting global-config
+  -----------------------------------------------------------------------
+  Synchronization switch    : disable
+  Local node IP address     : -
+  Local node TCP port       : 6076
+  -----------------------------------------------------------------------</td>
+<td>双归属之间，使用TCP通信</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查询双归属对端节点</td>
+<td></td>
+<td></td>
+<td>huawei#display dual-parenting peer-node
+{ &lt;cr&gt;|node-name&lt;S&gt;&lt;Length 1-15&gt; }:
+
+  Command:
+          display dual-parenting peer-node
+  -----------------------------------------------------------------------
+  Node name              IP address         TCP port    State
+  -----------------------------------------------------------------------
+  abc                    192.168.68.1       6076        failed
+  -----------------------------------------------------------------------</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查询保护组所有成员信息</td>
+<td></td>
+<td></td>
+<td>huawei(protect-group-1)#display protect-group 1
+  -----------------------------------------------------------------------
+  Group ID         : 1
+  Protect Target   : Port of GPON uni
+  Work Mode        : timedelay
+  Description      :
+  Admin State      : enable
+  Operation        : none
+  Reversion        : disable
+  Reversion Time(s): 720
+  Anti-jitter Time(s)  : 720
+  PPPoE Single MAC     : Unbind
+  Standard type B  : yes
+  Standby port suppress flapping: disable 
+  Standby port signal detecting based on RSSI     : enable   
+  Standby port signal detecting interval(min)     : 120   
+  Standby port signal detecting threshold(dBm)    : -28.00
+  -----------------------------------------------------------------------
+  Member        Role         Operation         State         PeerMember
+  -----------------------------------------------------------------------
+  0/3/0         work         none              active        none
+  0/3/1         protect      none              standby       none
+  -----------------------------------------------------------------------
+  Standby Member Status : ready 
+  Standby Member RSSI info:       
+  -----------------------------------------------------------------------
+   Active Member            Standby Member                  Low RSSI 
+   Max(dBm)    Min(dBm)     Max(dBm)    Predicted Min(dBm)  Risk 
+  ----------------------------------------------------------------------- 
+  -           -            -           -                   No  
+ ----------------------------------------------------------------------- 
+  Note: Yes indicates that the standby member RSSI maybe on a low level,
+        No indicates that standby member RSSI is on a normal level</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>查询保护组的同步状态</td>
+<td></td>
+<td></td>
+<td>huawei(diagnose)%%display protect-group sync-state 0/3/0
+  -----------------------------------------------------------
+  F/S/P                 : 0/3/0
+  Group ID              : 0
+  State                 : active
+  Synchronization state : Complete
+  -----------------------------------------------------------</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>跨网元双归属保护组</td>
+<td>支持跨网元双归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置双归属保护组成员（跨网元）</td>
+<td></td>
+<td></td>
+<td>
+举例：设置双归属保护组成员的本端IP地址、TCP端口和密钥：IP地址为192.168.68.1，端口号为6076，密钥为work_p4234。
+huawei(config)#dual-parenting local-node
+{ ip-address&lt;K&gt;|key&lt;K&gt;|port&lt;K&gt; }:ip-address
+{ ip-address-value&lt;I&gt;&lt;X.X.X.X&gt; }:192.168.68.1
+{ &lt;cr&gt;|key&lt;K&gt;|port&lt;K&gt; }:port
+{ port-value&lt;U&gt;&lt;1024-49151&gt; }:6076
+{ &lt;cr&gt;|key&lt;K&gt;}:key
+{ &lt;cr&gt;|key-value&lt;S&gt;&lt;Length 8-16&gt; }:
+
+  Command:
+          dual-parenting local-node ip-address 192.168.68.1 port 6076 key 
+ key-value(length&lt;8,16&gt;):
+ Confirm key-value(length&lt;8,16&gt;):</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>双归属对端成员配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>双归属同步开关</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>上行链路接口绑定</td>
+<td></td>
+<td></td>
+<td>uplink-monitor命令用于绑定与双归属保护组关联的上行链路接口，上行链路接口包括ETH端口、BFD会话和MEP会话。
+huawei(protect-group-10)#uplink-monitor
+{ bfd&lt;K&gt;|mep&lt;K&gt;|port&lt;K&gt; }:mep
+{ mdindex/maindex/mepid&lt;S&gt;&lt;Length 5-11&gt; }:1/0/1
+
+  Command:
+          uplink-monitor mep 1/0/1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type C保护组</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组倒换</td>
+<td>保护组训练倒换</td>
+<td></td>
+<td></td>
+<td>用于检测保护组成员是否能正常倒换，该功能实际不会触发倒换</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>强制倒换</td>
+<td></td>
+<td></td>
+<td>force-switch，huawei(protect-group-10)#force-switch port 0/3/0 to 0/3/1
+强制倒换的优先级：
+低于锁定操作，对保护组成员的锁定操作将取消强制倒换操作。
+高于手工倒换，如果以前执行了手工倒换命令，则强制倒换操作会覆盖手工倒换操作。
+高于故障信号，因此无论指定的目的成员是否正常，都执行倒换</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>冻结保护组</td>
+<td></td>
+<td></td>
+<td>锁定后，不能再进行倒换
+保留冻结前已生效的锁定、强制倒换、手工倒换等操作。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>保护组负载均衡模式</td>
+<td></td>
+<td></td>
+<td>命令仅在保护组工作模式为Type C单归属负荷分担工作模式时生效。
+load-balance mode { egress-ingress | ingress | ip-enhance | src-dst-ip }</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>锁定保护组成员</td>
+<td></td>
+<td></td>
+<td>锁定后该成员不能参与保护组的保护倒换。如果被锁定的成员已经参与了保护倒换，则执行锁定命令将会导致倒换清除。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>手工倒换</td>
+<td></td>
+<td></td>
+<td>用于控制保护组发生保护倒换。只有当指定的倒换目的成员正常时，才能成功执行手工倒换
+huawei(protect-group-10)#manual-switch port 0/1/0 to 0/1/1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>双归属对端成员配置</td>
+<td></td>
+<td></td>
+<td>双归属保护组对端成员信息
+huawei(protect-group-0)#peer-group-member
+{ peer-node&lt;K&gt;|peer-port&lt;K&gt; }:peer-node
+{ node-name&lt;S&gt;&lt;Length 1-15&gt; }:node1
+{ &lt;cr&gt;|peer-port&lt;K&gt; }:peer-port
+{ frameid/slotid/portid&lt;S&gt;&lt;Length 1-255&gt; }:0/1/0
+
+  Command:
+          peer-group-member peer-node node1 peer-port 0/1/0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>使能保护组</td>
+<td></td>
+<td></td>
+<td>使能后才可参与倒换</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>配置保护组成员</td>
+<td></td>
+<td></td>
+<td>huawei(protect-group-10)#protect-group member port 0/1/0 role work
+huawei(protect-group-10)#protect-group member port 0/1/1 role protect</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>保护组恢复开关</td>
+<td></td>
+<td></td>
+<td>使能保护组的恢复开关。使能保护组恢复开关后，当保护组中的工作成员状态恢复正常时，在恢复等待时间结束后，保护组将自动进行倒换，继续由工作成员承载业务</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>测量功能</td>
+<td>保护组备口测量RSSI功能</td>
+<td></td>
+<td></td>
+<td>设置是否启用Type B保护组备用端口RSSI（Received Signal Strength Indicator）测量功能。当开关设置为使能时，Type B保护组将开始测量备用端口RSSI值并在其最小值低于设置的阈值时上报告警。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>备口闪断抑制功能</td>
+<td></td>
+<td></td>
+<td>默认开关去使能。当使能此开关时，Type B保护组倒换采用传统倒换机制
+去使能备用端口flapping抑制功能。当Type B保护组备用端口闪断抑制功能为disable时，type B保护组倒换采用快速倒换机制</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td>告警</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="01-pon-network-competitor.html" class="page-link">← PON网络业内竞争</a><a href="index.html" class="page-link">目录</a><a href="03-ma5800-specs.html" class="page-link">MA5800规格 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

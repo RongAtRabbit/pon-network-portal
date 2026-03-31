@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为产品列表 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            华为产品列表
+        </div>
+        
+        <div class="sheet-header">
+            <h1>📦 华为产品列表</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "华为产品列表" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>产品类别</th><th>产品型号</th><th>产品规格</th><th>适用场景</th><th>适用规模</th><th>端口数量</th><th>上行接口</th><th>下行接口</th><th>关键特性</th></tr></thead>
+<tbody>
+<tr><td>OLT设备</td>
+<td>MA5800-X17</td>
+<td>大容量框式OLT</td>
+<td>大型园区/高校/数据中心</td>
+<td>1万-10万用户</td>
+<td>17个业务槽位</td>
+<td>10GE/100GE</td>
+<td>GPON/XGS-PON</td>
+<td>支持128个PON口 支持双主控双电源</td></tr>
+<tr><td>OLT设备</td>
+<td>MA5800-X7</td>
+<td>中容量框式OLT</td>
+<td>中型园区/企业/医院</td>
+<td>5000-5万用户</td>
+<td>7个业务槽位</td>
+<td>10GE/100GE</td>
+<td>GPON/XGS-PON</td>
+<td>支持64个PON口 高可靠性设计</td></tr>
+<tr><td>OLT设备</td>
+<td>MA5800-X2</td>
+<td>小容量框式OLT</td>
+<td>小型园区/分支机构</td>
+<td>1000-1万用户</td>
+<td>2个业务槽位</td>
+<td>10GE</td>
+<td>GPON/XGS-PON</td>
+<td>支持16个PON口 紧凑型设计</td></tr>
+<tr><td>OLT设备</td>
+<td>EA5800</td>
+<td>企业级OLT</td>
+<td>企业园区/校园/酒店</td>
+<td>500-2万用户</td>
+<td>固定配置</td>
+<td>10GE</td>
+<td>GPON/XGS-PON</td>
+<td>支持48个PON口 企业级特性</td></tr>
+<tr><td>OLT设备</td>
+<td>MA5600</td>
+<td>紧凑型OLT</td>
+<td>小型企业/社区</td>
+<td>100-5000用户</td>
+<td>固定配置</td>
+<td>GE/10GE</td>
+<td>GPON</td>
+<td>支持16-32个PON口 经济型选择</td></tr>
+<tr><td>ONT设备</td>
+<td>HG8245</td>
+<td>4口+WiFi ONT</td>
+<td>家庭/宿舍/小型办公</td>
+<td>1-4用户</td>
+<td>4个GE口</td>
+<td>GPON</td>
+<td>4xGE+WiFi 4</td>
+<td>双频WiFi 支持路由功能</td></tr>
+<tr><td>ONT设备</td>
+<td>HS8546</td>
+<td>4口+WiFi 6 ONT</td>
+<td>高端家庭/宿舍场景</td>
+<td>1-8用户</td>
+<td>4个GE口</td>
+<td>XGS-PON</td>
+<td>4xGE+WiFi 6</td>
+<td>WiFi 6技术 支持更多终端</td></tr>
+<tr><td>ONT设备</td>
+<td>OptiXstar P812E</td>
+<td>8口企业ONU</td>
+<td>企业办公/会议室</td>
+<td>8-16用户</td>
+<td>8个GE口</td>
+<td>XGS-PON</td>
+<td>8xGE+WiFi 6</td>
+<td>PoE供电 企业级WiFi</td></tr>
+<tr><td>ONT设备</td>
+<td>OptiXstar P613E</td>
+<td>24口企业ONU</td>
+<td>大型企业/办公楼</td>
+<td>24-48用户</td>
+<td>24个GE口</td>
+<td>XGS-PON</td>
+<td>24xGE+PoE</td>
+<td>大功率PoE 支持AP和摄像头</td></tr>
+<tr><td>ONT设备</td>
+<td>OptiXstar K562</td>
+<td>室外一体化ONU</td>
+<td>室外场景/园区</td>
+<td>16-32用户</td>
+<td>4个GE口</td>
+<td>GPON/XGS-PON</td>
+<td>4xGE+PoE</td>
+<td>工业级设计 IP65防护</td></tr>
+<tr><td>ONT设备</td>
+<td>OptiXstar P871E</td>
+<td>SFP ONU</td>
+<td>特殊场景/室外</td>
+<td>1-2用户</td>
+<td>1个GE口</td>
+<td>GPON/XGS-PON</td>
+<td>1xGE</td>
+<td>迷你尺寸 即插即用</td></tr>
+<tr><td>ONT设备</td>
+<td>HG8010</td>
+<td>单口ONT</td>
+<td>简单接入场景</td>
+<td>1用户</td>
+<td>1个GE口</td>
+<td>GPON</td>
+<td>1xGE</td>
+<td>超低成本 桥接模式</td></tr>
+<tr><td>分光器</td>
+<td>1:4分光器</td>
+<td>低分光比</td>
+<td>短距离/高带宽场景</td>
+<td>1-4户</td>
+<td>1分4</td>
+<td>-</td>
+<td>-</td>
+<td>低插入损耗 适合高带宽需求</td></tr>
+<tr><td>分光器</td>
+<td>1:8分光器</td>
+<td>中低分光比</td>
+<td>企业/办公楼</td>
+<td>1-8户</td>
+<td>1分8</td>
+<td>-</td>
+<td>-</td>
+<td>低损耗 适合密集部署</td></tr>
+<tr><td>分光器</td>
+<td>1:16分光器</td>
+<td>中分光比</td>
+<td>小区/宿舍</td>
+<td>1-16户</td>
+<td>1分16</td>
+<td>-</td>
+<td>-</td>
+<td>标准损耗 最常用的分光比</td></tr>
+<tr><td>分光器</td>
+<td>1:32分光器</td>
+<td>高分光比</td>
+<td>大型社区</td>
+<td>1-32户</td>
+<td>1分32</td>
+<td>-</td>
+<td>-</td>
+<td>较高损耗 适合大规模部署</td></tr>
+<tr><td>分光器</td>
+<td>1:64分光器</td>
+<td>超高分光比</td>
+<td>密集住宅区</td>
+<td>1-64户</td>
+<td>1分64</td>
+<td>-</td>
+<td>-</td>
+<td>高损耗 最大分光比</td></tr>
+<tr><td>分光器</td>
+<td>2:N分光器</td>
+<td>保护型分光器</td>
+<td>高可靠性场景</td>
+<td>1-N户</td>
+<td>2分N</td>
+<td>-</td>
+<td>-</td>
+<td>Type B/C保护 支持双归属</td></tr>
+<tr><td>光模块</td>
+<td>Class B+</td>
+<td>标准光模块</td>
+<td>标准距离10-20km</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>接收灵敏度-28dBm 标准功率</td></tr>
+<tr><td>光模块</td>
+<td>Class C+</td>
+<td>高功率光模块</td>
+<td>长距离20-30km</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>接收灵敏度-32dBm 高功率输出</td></tr>
+<tr><td>光模块</td>
+<td>Class D</td>
+<td>超高功率光模块</td>
+<td>超长距离&gt;30km</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>接收灵敏度-35dBm 最高功率</td></tr>
+<tr><td>光模块</td>
+<td>XGS-PON光模块</td>
+<td>10G对称</td>
+<td>高带宽场景</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>10G上行/10G下行 对称带宽</td></tr>
+<tr><td>光模块</td>
+<td>GPON光模块</td>
+<td>2.5G/1.2G</td>
+<td>标准带宽场景</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>2.5G下行/1.25G上行 非对称</td></tr>
+<tr><td>ODN配件</td>
+<td>光纤配线架</td>
+<td>光纤管理</td>
+<td>机房/弱电间</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>标准19英寸 高密度端口</td></tr>
+<tr><td>ODN配件</td>
+<td>光纤跳线</td>
+<td>连接线缆</td>
+<td>设备互联</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>单模光纤 多种长度规格</td></tr>
+<tr><td>ODN配件</td>
+<td>冷接子</td>
+<td>快速连接</td>
+<td>现场施工</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>免熔接 快速部署</td></tr>
+<tr><td>ODN配件</td>
+<td>光缆接头盒</td>
+<td>光缆接续</td>
+<td>室外/管道</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IP68防护 机械密封</td></tr>
+<tr><td>ODN配件</td>
+<td>预连接光缆</td>
+<td>即插即用</td>
+<td>快速部署场景</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>工厂预制 减少现场施工</td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="04-esight-specs.html" class="page-link">← 方案规格-eSight</a><a href="index.html" class="page-link">目录</a><a href="06-esight-specs-new.html" class="page-link">方案规格-eSight（new） →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

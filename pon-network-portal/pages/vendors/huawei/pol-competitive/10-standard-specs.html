@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标准规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            标准规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>📋 标准规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "标准规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>一级规格</th><th>二级规格</th><th>三级规格</th><th>四级规格</th><th>值</th><th></th><th>来源</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>性能规格</td>
+<td>光链路测量值</td>
+<td>温度测量</td>
+<td>光温度范围</td>
+<td>–45º to +90º C</td>
+<td></td>
+<td>ITU G.9807. Appendix B.II /Physical layer measurements required to support optical layer supervision </td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>温度测量精度</td>
+<td>0.25º C</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±6º C</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>1s</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>电压测量</td>
+<td>电压范围</td>
+<td>0 to 6.55 V</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>0.5% of nominal </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±3% of nominal</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>1s</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>偏执电流</td>
+<td>电流范围</td>
+<td>0 to 819 mA</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>1% of nominal</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±10% of nominal </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>1 s </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>ONT发送功率</td>
+<td>范围</td>
+<td>–28 to +20 dBm</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>0.1 dB</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±3 dB</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>300 ns</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>ONT接收功率</td>
+<td>范围</td>
+<td>–53 to –4.9 dBm </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>0.1 dB </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±3 dB </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>300 ns</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>OLT发送功率</td>
+<td>范围</td>
+<td>–28 to +20 dBm</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>0.1 dB </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±2 dB</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>300 ns </td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>OLT接收功率</td>
+<td>范围</td>
+<td>–32 to –4.9 dBm</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>精度</td>
+<td>0.1 dB</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>准确率</td>
+<td>±2 dB</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>应答时间</td>
+<td>300 ns</td>
+<td></td>
+<td></td>
+<td></td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="09-esight-alarms.html" class="page-link">← 华为eSight支持告警</a><a href="index.html" class="page-link">目录</a><a href="11-protection-group.html" class="page-link">华为保护组规格 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

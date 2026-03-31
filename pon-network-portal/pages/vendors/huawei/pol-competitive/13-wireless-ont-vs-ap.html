@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无线ONT能力VS企业AP | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            无线ONT能力VS企业AP
+        </div>
+        
+        <div class="sheet-header">
+            <h1>📶 无线ONT能力VS企业AP</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "无线ONT能力VS企业AP" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>对比维度</th><th>华为带 Wi-Fi 的 ONT（F5G 场景）</th><th>企业级 AP（AC 管理）</th><th>核心差异说明</th></tr></thead>
+<tbody>
+<tr><td>部署场景适配</td>
+<td>学校低密覆盖场景（宿舍、公寓），单 ONT 覆盖范围有限（单房间 / 小区域）</td>
+<td>全场景适配（教室、食堂、操场等低密 / 高密场景），单 AP 覆盖范围更广（大房间 / 公共区域）</td>
+<td>ONT 仅针对低密、小范围覆盖设计，企业级 AP 无场景密度限制</td></tr>
+<tr><td>管理主体</td>
+<td>由 OLT 集中管理，依赖 OMCI 协议下发配置，无独立无线控制器</td>
+<td>由专业 AC 集中管理，通过 CAPWAP 协议实现配置下发与状态监控</td>
+<td>ONT 管理依附 PON 网络，企业级 AP 管理独立于承载网络</td></tr>
+<tr><td>射频调优能力</td>
+<td>支持基础射频调优（OLT 统一指定信道、静态功率调整），无动态协同能力</td>
+<td>支持完整射频调优（动态信道选择、智能功率适配、频谱扫描避干扰），AP 间实时协同</td>
+<td>ONT 调优为静态配置，企业级 AP 调优具备动态自适应能力</td></tr>
+<tr><td>漫游支持</td>
+<td>仅支持单 ONT 内 2.4G/5G 射频切换，跨 ONT 漫游无协同（易断连）</td>
+<td>支持跨 AP 无缝漫游（802.11k/v/r 协议），切换时延 &lt; 50ms，AC 同步 STA 上下文</td>
+<td>ONT 无跨设备漫游能力，企业级 AP 漫游体验专业稳定</td></tr>
+<tr><td>负载均衡</td>
+<td>仅支持单 ONT 下 SSID 最大接入用户数限制（端口级负载控制）</td>
+<td>支持跨 AP / 跨区域负载均衡（基于用户数、带宽占用、信号强度多维度调度）</td>
+<td>ONT 无跨设备负载调度，企业级 AP 可全局均衡无线资源</td></tr>
+<tr><td>安全防护</td>
+<td>基础安全认证（WPA2/WPA3/802.1X），依赖 PON 链路 AES 加密</td>
+<td>全维度安全防护（WIPS 入侵防御、动态密钥协商、MAC 黑白名单、广播风暴抑制）</td>
+<td>ONT 安全功能简化，企业级 AP 具备企业级安全管控能力</td></tr>
+<tr><td>扩展能力</td>
+<td>受 OLT PON 口、ONT 数量限制，扩容需同步扩展 PON 资源</td>
+<td>支持万级 AP 集群管理，扩容仅需新增 AP 并接入网络，AC 自动发现配置</td>
+<td>ONT 扩展依赖 PON 网络，企业级 AP 扩展灵活无承载限制</td></tr>
+<tr><td>运维管理</td>
+<td>OLT 侧基础状态查询（在线状态、接入用户数），无无线侧故障溯源</td>
+<td>支持射频可视化、干扰源定位、用户轨迹追踪、故障原因自动分析</td>
+<td>ONT 运维功能简化，企业级 AP 运维工具专业全面</td></tr>
+<tr><td>一级特性</td>
+<td>二级特性</td>
+<td>特性内容</td>
+<td>影响场景</td></tr>
+<tr><td>WLAN漫游特性</td>
+<td>WLAN漫游特性</td>
+<td>AC内二层漫游、802.11k/r/v漫游支持、50ms漫游</td>
+<td>漫游掉线，业务中断、用户漫游粘滞</td></tr>
+<tr><td>WLAN运维监控</td>
+<td>无线日志监控</td>
+<td>无线网络关键数据统计值监控（SNC）、漫游轨迹监控</td>
+<td>体验问题无法追溯定位</td></tr>
+<tr><td>WLAN运维监控</td>
+<td>业务体验度量</td>
+<td>应用体验SLA度量、高频遥测</td>
+<td>用户无线体验不可视</td></tr>
+<tr><td>WLAN运维监控</td>
+<td>抓包诊断</td>
+<td>RPCAP远程抓包、无线关键包报文跟踪</td>
+<td>问题定位排除困难，依赖人工现场抓包</td></tr>
+<tr><td>WLAN安全特性</td>
+<td>WLAN网络安全</td>
+<td>防无线用户共享代理、无线网络隔离</td>
+<td>代理无法识别</td></tr>
+<tr><td>WLAN流量特性</td>
+<td>无线动态限速</td>
+<td>基于AP的限速
+基于WLAN的限速
+基于关键业务的智能动态限速
+基于信道利用率的智能动态限速
+基于用户的限速</td>
+<td>无法在信道利用率高时动态调整信道利用率</td></tr>
+<tr><td>WLAN流量特性</td>
+<td>无线应用优化&amp;负载均衡</td>
+<td>本地转发业务保障、基于应用识别的DSCP优先级控制、基于应用识别的限速、基于应用识别的阻断、集中转发业务保障、上行贪婪业务抑制</td>
+<td>不支持关键业务的动态调整保障，如学生在网络空闲时可最大速率下载，在网络繁忙时动态调整速率以实现协同动态负载均衡</td></tr>
+<tr><td>WLAN射频管理</td>
+<td>RRM信道功率动态网优</td>
+<td>感知并规避外部干扰
+功率自动控制(TPC)
+盲区探测与修复(补盲)
+频宽自动选择
+信道自动调整(DCA)
+信道自动调整(DCA)
+自动射频开关网优</td>
+<td>网优依赖人工规划，信道干扰排除调整困难</td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="12-f5g-config.html" class="page-link">← 华为F5G配置流程</a><a href="index.html" class="page-link">目录</a><a href="14-ea5800-specs.html" class="page-link">EA5800规格 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

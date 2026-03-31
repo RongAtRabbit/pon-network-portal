@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA5800规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            MA5800规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>🔌 MA5800规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "MA5800规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>一级规格</th><th>二级规格</th><th>三级规格</th><th>MA5800-X17</th><th>EA5800-X17</th><th>差异点</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>产品定位</td>
+<td>产品系列</td>
+<td>产品系列</td>
+<td>MA5800</td>
+<td>EA5800</td>
+<td>MA5800为新一代平台</td>
+<td>MA5800定位更高</td></tr>
+<tr><td>产品定位</td>
+<td>产品定位</td>
+<td>目标场景</td>
+<td>运营商/企业接入</td>
+<td>运营商/企业接入</td>
+<td>基本相同</td>
+<td></td></tr>
+<tr><td>产品定位</td>
+<td>规格版本</td>
+<td>文档版本</td>
+<td>特性指南09 (2023-09-30)</td>
+<td>特性指南V09 (2023-05-18)</td>
+<td>MA5800更新</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>型号(适用X17/X15/X7)</td>
+<td>H901MPLGE</td>
+<td>H901MPLGE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>每槽位带宽</td>
+<td>200 Gbit/s (负荷分担)</td>
+<td>200 Gbit/s (负荷分担)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>MAC地址表</td>
+<td>262143条</td>
+<td>262143条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>接入ONT数</td>
+<td>17408个</td>
+<td>17408个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>组播用户数</td>
+<td>17408个</td>
+<td>17408个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>IPv4路由表</td>
+<td>65536条</td>
+<td>65536条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>IPv6路由表</td>
+<td>16384条</td>
+<td>16384条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>业务端口数</td>
+<td>139264</td>
+<td>139264</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>ND表</td>
+<td>16384条</td>
+<td>16384条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>ARP表</td>
+<td>131072条</td>
+<td>131072条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>最大帧长度</td>
+<td>2052B/9216B(Jumbo)</td>
+<td>2052B/9216B(Jumbo)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>上行接口</td>
+<td>2×10GE/GE/FE + 1×100GE</td>
+<td>2×10GE/GE/FE + 1×100GE</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>功耗(静态/最大)</td>
+<td>105W / 148W</td>
+<td>105W / 148W</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板</td>
+<td>工作温度</td>
+<td>-40°C 至 +65°C</td>
+<td>-40°C 至 +65°C</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>型号(适用X2)-40G</td>
+<td>H901MPSFE</td>
+<td>H901MPSFE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>每槽位带宽(X2)</td>
+<td>40 Gbit/s (负荷分担)</td>
+<td>40 Gbit/s (负荷分担)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>MAC地址表(X2)</td>
+<td>262143条</td>
+<td>262143条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>接入ONT数(X2)</td>
+<td>4096个</td>
+<td>4096个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>组播用户数(X2)</td>
+<td>4096个</td>
+<td>4096个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>IPv4路由表(X2)</td>
+<td>65536条</td>
+<td>65536条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>IPv6路由表(X2)</td>
+<td>16384条</td>
+<td>16384条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>业务端口数(X2)</td>
+<td>32768</td>
+<td>32768</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>ARP表(X2)</td>
+<td>32768条</td>
+<td>32768条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2</td>
+<td>功耗(静态/最大)</td>
+<td>待查</td>
+<td>待查</td>
+<td>待查</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>型号(适用X2)-100G</td>
+<td>H901MPSDE</td>
+<td>H901MPSDE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>每槽位带宽(X2)</td>
+<td>100 Gbit/s (负荷分担)</td>
+<td>100 Gbit/s (负荷分担)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>MAC地址表(X2)</td>
+<td>262143条</td>
+<td>262143条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>接入ONT数(X2)</td>
+<td>4096个</td>
+<td>4096个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>IPv4路由表(X2)</td>
+<td>65536条</td>
+<td>65536条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>ARP表(X2)</td>
+<td>32768条</td>
+<td>32768条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控板X2-100G</td>
+<td>业务端口数(X2)</td>
+<td>32768</td>
+<td>32768</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>型号(16端口)</td>
+<td>H902XSHFE</td>
+<td>H902XSHFE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>转发性能</td>
+<td>160 Gbit/s</td>
+<td>160 Gbit/s</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>PON端口数</td>
+<td>16×XGS-PON (SFP+)</td>
+<td>16×XGS-PON (SFP+)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>T-CONT/PON口</td>
+<td>2048个</td>
+<td>2048个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>每板业务流数</td>
+<td>16368个</td>
+<td>16368个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>MAC地址数</td>
+<td>131072条</td>
+<td>131072条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>最大传输距离</td>
+<td>40km</td>
+<td>40km</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>最大分光比</td>
+<td>1:256</td>
+<td>1:256</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>FEC</td>
+<td>双向支持</td>
+<td>双向支持</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>HQoS</td>
+<td>4级HQoS</td>
+<td>4级HQoS</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>Jumbo帧</td>
+<td>支持(9216B)</td>
+<td>支持(9216B)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>功耗(静态/最大)</td>
+<td>51W / 96W</td>
+<td>51W / 96W</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>工作温度</td>
+<td>-40°C 至 +55°C</td>
+<td>-40°C 至 +55°C</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>XGS-PON接口板</td>
+<td>支持速率模式</td>
+<td>非对称/对称</td>
+<td>非对称/对称</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>型号(16端口)</td>
+<td>H903CSHFE</td>
+<td>H903CSHFE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>转发性能</td>
+<td>200 Gbit/s</td>
+<td>200 Gbit/s</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>端口类型</td>
+<td>16×XGS-PON&amp;GPON Combo (SFP+)</td>
+<td>16×XGS-PON&amp;GPON Combo (SFP+)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>GPON T-CONT/PON口</td>
+<td>1024个</td>
+<td>1024个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>XGS-PON T-CONT/PON口</td>
+<td>2048个</td>
+<td>2048个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>每板业务流数</td>
+<td>16352个</td>
+<td>16352个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>MAC地址数</td>
+<td>262143</td>
+<td>262143</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>最大传输距离</td>
+<td>40km</td>
+<td>40km</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>最大分光比</td>
+<td>1:256</td>
+<td>1:256</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>FEC</td>
+<td>双向支持</td>
+<td>双向支持</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>HQoS</td>
+<td>4级HQoS</td>
+<td>4级HQoS</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>支持Type B/C保护</td>
+<td>支持(单归属/双归属)</td>
+<td>支持(单归属/双归属)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>功耗(静态/最大)</td>
+<td>56W / 102W</td>
+<td>56W / 102W</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>Combo接口板</td>
+<td>工作温度</td>
+<td>-40°C 至 +55°C</td>
+<td>-40°C 至 +55°C</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>型号(16端口)</td>
+<td>H902GPHFE</td>
+<td>H902GPHFE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>转发性能</td>
+<td>40 Gbit/s</td>
+<td>40 Gbit/s</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>PON端口数</td>
+<td>16×GPON (SFP)</td>
+<td>16×GPON (SFP)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>T-CONT/PON口</td>
+<td>1024个</td>
+<td>1024个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>每板业务流数</td>
+<td>16368个</td>
+<td>16368个</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>MAC地址数</td>
+<td>131072条</td>
+<td>131072条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>最大传输距离</td>
+<td>40km</td>
+<td>40km</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>最大分光比</td>
+<td>Class B+:1:64 / Class C+/C++:1:128</td>
+<td>Class B+:1:64 / Class C+/C++:1:128</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>FEC</td>
+<td>双向支持</td>
+<td>双向支持</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>HQoS</td>
+<td>4级HQoS</td>
+<td>4级HQoS</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>支持Type B/C保护</td>
+<td>支持(单归属/双归属)</td>
+<td>支持(单归属/双归属)</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>功耗(静态/最大)</td>
+<td>20W / 46W</td>
+<td>20W / 46W</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板</td>
+<td>工作温度</td>
+<td>-40°C 至 +65°C</td>
+<td>-40°C 至 +65°C</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>GPON接口板-2</td>
+<td>型号(8端口)</td>
+<td>H901GPSFE</td>
+<td>H901GPSFE</td>
+<td>共用同型号 ✅</td>
+<td>EA5800/MA5800单板Datasheet</td></tr>
+<tr><td>硬件规格</td>
+<td>机框</td>
+<td>2U最小型号</td>
+<td>MA5800-X2</td>
+<td>EA5800-X2</td>
+<td>均有</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>机框</td>
+<td>最大业务槽位</td>
+<td>17槽(X17)</td>
+<td>17槽(X17)</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>交换容量</td>
+<td>X7/X15/X17</td>
+<td>25.6 Tbps</td>
+<td>25.6 Tbps</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>交换容量</td>
+<td>X2</td>
+<td>7.2 Tbps</td>
+<td>需查</td>
+<td>X2更大</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>包转发率</td>
+<td>X7/X15/X17</td>
+<td>9600 Mpps</td>
+<td>9600 Mpps</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>包转发率</td>
+<td>X2</td>
+<td>4800 Mpps</td>
+<td>需查</td>
+<td>X2持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>PON口密度</td>
+<td>X17最大</td>
+<td>272口</td>
+<td>272口</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>主控冗余</td>
+<td>1+1冗余</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>电源冗余</td>
+<td>1+1冗余</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>硬件规格</td>
+<td>风扇冗余</td>
+<td>N+1冗余</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>GPON</td>
+<td>GPON OLT</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td>Class B+/C+光模块</td></tr>
+<tr><td>PON接入</td>
+<td>GPON</td>
+<td>GPON Type B保护</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>GPON</td>
+<td>GPON Type C保护</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>GPON</td>
+<td>GPON Type D保护</td>
+<td>✅ 支持</td>
+<td>❓ 需确认</td>
+<td>MA5800明确支持</td>
+<td>EA5800待核实</td></tr>
+<tr><td>PON接入</td>
+<td>GPON</td>
+<td>分光比</td>
+<td>最高1:128(Class C+)</td>
+<td>最高1:64</td>
+<td>MA5800更高</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>XG-PON</td>
+<td>XG-PON OLT</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>XG-PON</td>
+<td>XG-PON Combo</td>
+<td>✅ 支持(GPON+XG-PON)</td>
+<td>✅ 支持</td>
+<td>MA5800更明确</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>XGS-PON</td>
+<td>XGS-PON OLT</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>XGS-PON</td>
+<td>XGS-PON Combo</td>
+<td>✅ 支持(GPON+XG-PON+XGS-PON三模)</td>
+<td>❌ 不支持</td>
+<td>MA5800独有 ⚡</td>
+<td>⚠️ 锐捷重点应对</td></tr>
+<tr><td>PON接入</td>
+<td>10G-EPON</td>
+<td>10G-EPON OLT</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>EPON</td>
+<td>EPON OLT</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>PON接入</td>
+<td>传输</td>
+<td>最大传输距离</td>
+<td>60km(扩展)</td>
+<td>60km</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>二层转发</td>
+<td>VLAN</td>
+<td>802.1Q VLAN</td>
+<td>✅ 支持(最多4094个)</td>
+<td>✅ 支持(最多4094个)</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>二层转发</td>
+<td>MAC</td>
+<td>MAC地址学习</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>二层转发</td>
+<td>MAC</td>
+<td>MAC地址容量</td>
+<td>262143/主控板</td>
+<td>262143/主控板</td>
+<td>相同 ✅</td>
+<td>EA5800/MA5800共用单板</td></tr>
+<tr><td>二层转发</td>
+<td>MAC</td>
+<td>MAC地址平滑扩容</td>
+<td>✅ 支持(业务板扩容无需换主控)</td>
+<td>❌ 需换主控板</td>
+<td>MA5800更优 ⚡</td>
+<td>⚡ 锐捷必杀控标点</td></tr>
+<tr><td>二层转发</td>
+<td>组播</td>
+<td>组播VLAN</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>二层转发</td>
+<td>组播</td>
+<td>组播跨VLAN转发</td>
+<td>❌ 不支持</td>
+<td>❌ 不支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>ARP</td>
+<td>ARP表容量</td>
+<td>131072条(主控H901MPLGE)</td>
+<td>131072条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>IPv4路由</td>
+<td>IPv4路由表</td>
+<td>65536条(主控H901MPLGE)</td>
+<td>65536条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>IPv6路由</td>
+<td>IPv6路由表</td>
+<td>16384条(主控H901MPLGE)</td>
+<td>16384条</td>
+<td>相同 ✅</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>IPv4路由</td>
+<td>IP FRR</td>
+<td>✅ 支持(静态/OSPF/IS-IS/BGP)</td>
+<td>✅ 支持</td>
+<td>MA5800更全</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>IPv4路由</td>
+<td>OSPF/OSPFv3</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>IPv4路由</td>
+<td>BGP-4</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>三层转发</td>
+<td>VRF</td>
+<td>VRF三层隔离</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>MPLS/VPN</td>
+<td>MPLS基础</td>
+<td>MPLS LDP/RSVP-TE/TE</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>MPLS/VPN</td>
+<td>MPLS保护</td>
+<td>MPLS FRR</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>MPLS/VPN</td>
+<td>L2VPN</td>
+<td>MPLS VPLS</td>
+<td>✅ 支持(仅LDP)</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>MPLS/VPN</td>
+<td>L2VPN</td>
+<td>MPLS PWE3</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>MPLS/VPN</td>
+<td>SRv6</td>
+<td>SRv6</td>
+<td>✅ 支持</td>
+<td>❌ 不支持</td>
+<td>MA5800独有 ⚠️</td>
+<td>⚠️ 锐捷需注意</td></tr>
+<tr><td>VXLAN</td>
+<td>VXLAN基础</td>
+<td>VXLAN</td>
+<td>✅ 支持</td>
+<td>❓ 需确认</td>
+<td>MA5800明确 ⚠️</td>
+<td>⚠️ 锐捷需确认</td></tr>
+<tr><td>VXLAN</td>
+<td>VXLAN基础</td>
+<td>EVPN-VXLAN</td>
+<td>✅ 支持</td>
+<td>❓ 需确认</td>
+<td>MA5800更优 ⚠️</td>
+<td>⚠️ 需确认锐捷支持</td></tr>
+<tr><td>QoS</td>
+<td>基础QoS</td>
+<td>端口级QoS</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>QoS</td>
+<td>HQoS</td>
+<td>4级HQoS(板级)</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td>接口板H902XSHFE/H903CSHFE规格</td></tr>
+<tr><td>QoS</td>
+<td>流量管理</td>
+<td>WRED/CAR/Shaping</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>QoS</td>
+<td>ACL</td>
+<td>ACL IPv4/IPv6</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>QoS</td>
+<td>队列规格</td>
+<td>每端口队列数</td>
+<td>8队列</td>
+<td>8队列</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播协议</td>
+<td>IGMPv2/v3</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播协议</td>
+<td>MLD</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播协议</td>
+<td>PIM-SM/SSM</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播规格</td>
+<td>组播组数量</td>
+<td>需查(板级)</td>
+<td>需查</td>
+<td>待查</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播功能</td>
+<td>可控组播(CTC)</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播功能</td>
+<td>组播CAC</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播功能</td>
+<td>组播VLAN</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>组播</td>
+<td>组播限制</td>
+<td>组播跨VLAN</td>
+<td>❌ 不支持</td>
+<td>❌ 不支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>DHCP</td>
+<td>DHCPv4</td>
+<td>DHCP Server/Relay/Proxy</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>DHCP</td>
+<td>DHCPv4</td>
+<td>DHCP Option60/82</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>DHCP</td>
+<td>DHCPv6</td>
+<td>DHCPv6 Server/Relay</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>链路保护</td>
+<td>BFD</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>链路保护</td>
+<td>VRRP</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>链路保护</td>
+<td>LAG(最多128组)</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>生成树</td>
+<td>STP/RSTP/MSTP</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>环网保护</td>
+<td>ERPS(G.8032)</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>设备保护</td>
+<td>主控1+1冗余</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>设备保护</td>
+<td>电源1+1/风扇N+1</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>可靠性</td>
+<td>软件保护</td>
+<td>ISSU/NSR/NSF</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>OAM</td>
+<td>以太OAM</td>
+<td>EFM/CFM/Y.1731</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>OAM</td>
+<td>以太OAM</td>
+<td>MEP主动测试(LB/CC)</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>管理接口</td>
+<td>Console/MGMT/USB</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>远程管理</td>
+<td>Telnet/SSH</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>网管协议</td>
+<td>SNMP/NETCONF/YANG</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>网管平台</td>
+<td>eSight</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>时钟同步</td>
+<td>SyncE/1588v2/BITS</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>网管管理</td>
+<td>监控诊断</td>
+<td>端口/流镜像/SYSLOG</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>安全</td>
+<td>接入安全</td>
+<td>AAA/802.1X/Potal/MAC</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>安全</td>
+<td>流量控制</td>
+<td>ARP限速/广播抑制</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>安全</td>
+<td>设备保护</td>
+<td>CPU保护</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>节能</td>
+<td>ONT节能</td>
+<td>Doze/Cyclic Sleep</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td></td></tr>
+<tr><td>节能</td>
+<td>板级节能</td>
+<td>业务板节能</td>
+<td>✅ 支持</td>
+<td>✅ 支持</td>
+<td>持平</td>
+<td>H902XSHFE/H903CSHFE支持</td></tr>
+<tr><td>节能</td>
+<td>节能</td>
+<td>节能模板数量</td>
+<td>最多32个</td>
+<td>需确认</td>
+<td>MA5800明确</td>
+<td></td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="02-olt-specs.html" class="page-link">← 设备端OLT规格</a><a href="index.html" class="page-link">目录</a><a href="04-esight-specs.html" class="page-link">方案规格-eSight →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

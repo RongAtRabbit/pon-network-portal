@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为POL无线规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            华为POL无线规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>📡 华为POL无线规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "华为POL无线规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>一级分类</th><th>二级分类</th><th>三级分类</th><th>四级分类</th><th>五级规格/参数</th><th>支持情况</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>部署方式</td>
+<td>eSight部署</td>
+<td>eSight平台管理</td>
+<td>设备监控和故障预防</td>
+<td>✅支持</td>
+<td>eSight 21.2.0及以上版本</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>eSight部署</td>
+<td>eSight平台管理</td>
+<td>全网设备链接状态监控</td>
+<td>✅支持</td>
+<td>提前发现异常</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>eSight部署</td>
+<td>License导入</td>
+<td>ONT Wi-Fi接入数量License</td>
+<td>✅必选</td>
+<td>需单独导入</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>CLI自动部署</td>
+<td>基于ONT型号</td>
+<td>OLT基于ONT型号配置策略</td>
+<td>✅支持</td>
+<td>不区分PON口</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>CLI自动部署</td>
+<td>离线配置</td>
+<td>不支持离线添加</td>
+<td>❌不支持</td>
+<td>自动部署不支持</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>CLI手动部署</td>
+<td>ONT配置阶段</td>
+<td>配置ONT网络侧参数</td>
+<td>✅支持</td>
+<td>支持离线添加</td>
+<td></td></tr>
+<tr><td>部署方式</td>
+<td>CLI手动部署</td>
+<td>WLAN配置阶段</td>
+<td>配置SSID/安全/VAP模板</td>
+<td>✅支持</td>
+<td>配置灵活</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>CAPWAP服务</td>
+<td>服务使能</td>
+<td>使能CAPWAP服务</td>
+<td>✅支持</td>
+<td>V100R021C10起</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>CAPWAP服务</td>
+<td>源接口类型</td>
+<td>loopback</td>
+<td>✅支持</td>
+<td>缺省</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>CAPWAP服务</td>
+<td>源接口类型</td>
+<td>vlanif</td>
+<td>✅支持</td>
+<td>可选</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>CAPWAP服务</td>
+<td>源接口类型</td>
+<td>meth0</td>
+<td>❌不支持</td>
+<td>不支持</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>DTLS加密</td>
+<td>密钥类型</td>
+<td>预共享密钥</td>
+<td>✅支持</td>
+<td>手动配置</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>DTLS加密</td>
+<td>密钥长度</td>
+<td>16-32字符</td>
+<td>✅支持</td>
+<td>四种字符组成</td>
+<td></td></tr>
+<tr><td>CAPWAP隧道</td>
+<td>DTLS加密</td>
+<td>自动轮换</td>
+<td>不支持</td>
+<td>❌不支持</td>
+<td>需手动定期修改</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>PSK预共享密钥</td>
+<td>加密协议</td>
+<td>WPA2</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>PSK预共享密钥</td>
+<td>加密算法</td>
+<td>AES</td>
+<td>✅支持</td>
+<td>推荐使用</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>PSK预共享密钥</td>
+<td>密钥长度</td>
+<td>8-63字符</td>
+<td>✅支持</td>
+<td>推荐混合组成</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>Portal认证</td>
+<td>安全策略</td>
+<td>open</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>802.1X认证</td>
+<td>加密协议</td>
+<td>WPA2</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>802.1X认证</td>
+<td>加密算法</td>
+<td>AES-TKIP</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>认证方式</td>
+<td>802.1X认证</td>
+<td>RADIUS对接</td>
+<td>RADIUS服务器IP+端口1812</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>调优模式</td>
+<td>自动定时调优</td>
+<td>全局定时调优</td>
+<td>✅支持</td>
+<td>可指定时间</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>调优模式</td>
+<td>手动调优</td>
+<td>强制射频调优</td>
+<td>✅支持</td>
+<td>会导致STA断连</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>AP组级别控制</td>
+<td>信道调优开关</td>
+<td>独立控制AP组</td>
+<td>✅支持</td>
+<td>缺省打开</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>2.4G信道集</td>
+<td>20MHz带宽</td>
+<td>1,6,11</td>
+<td>✅支持</td>
+<td>互不干扰</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>5G信道带宽</td>
+<td>20/40/80/160MHz</td>
+<td>全支持</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>射频调优-信道调优</td>
+<td>5G信道集</td>
+<td>国内常用信道</td>
+<td>36,40,44,48,52,56,60,64,149,153,157,161,165</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>射频调优-功率调优</td>
+<td>AP组级别控制</td>
+<td>功率调优开关</td>
+<td>独立控制AP组</td>
+<td>✅支持</td>
+<td>缺省打开</td>
+<td></td></tr>
+<tr><td>射频调优-功率调优</td>
+<td>功率范围</td>
+<td>最小发送功率等级</td>
+<td>可配置</td>
+<td>✅支持</td>
+<td>默认40%</td>
+<td></td></tr>
+<tr><td>射频调优-功率调优</td>
+<td>功率调整</td>
+<td>下调同频干扰AP功率</td>
+<td>降低相互干扰</td>
+<td>✅支持</td>
+<td>密集布放场景</td>
+<td></td></tr>
+<tr><td>负载均衡</td>
+<td>接入负载均衡</td>
+<td>开关控制</td>
+<td>全局负载均衡开关</td>
+<td>✅支持</td>
+<td>缺省开启</td>
+<td></td></tr>
+<tr><td>负载均衡</td>
+<td>接入负载均衡</td>
+<td>算法触发</td>
+<td>基于用户数/周期决策</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>负载均衡</td>
+<td>漫游负载均衡</td>
+<td>开关控制</td>
+<td>漫游负载均衡开关</td>
+<td>✅支持</td>
+<td>缺省开启</td>
+<td></td></tr>
+<tr><td>负载均衡</td>
+<td>漫游负载均衡</td>
+<td>均衡方式</td>
+<td>通过漫游引导用户</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>负载均衡</td>
+<td>参数配置</td>
+<td>AP间负载差值</td>
+<td>0.2</td>
+<td>✅支持</td>
+<td>默认20%</td>
+<td></td></tr>
+<tr><td>智能漫游</td>
+<td>漫游触发</td>
+<td>触发方式</td>
+<td>RSSI阈值判断</td>
+<td>⚠️有限</td>
+<td>存在约50ms断连</td>
+<td></td></tr>
+<tr><td>智能漫游</td>
+<td>漫游执行</td>
+<td>STA切换</td>
+<td>AP间客户端切换</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP管理-AP上线</td>
+<td>零配置上线</td>
+<td>自动发现</td>
+<td>AP自动发现+配置下发</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP管理-AP上线</td>
+<td>认证方式</td>
+<td>SN认证/预配置</td>
+<td>支持</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP管理-组网管理</td>
+<td>AP组</td>
+<td>模板引用</td>
+<td>射频模板+VAP模板</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP管理-AP组网</td>
+<td>AP成员</td>
+<td>跨OLT管理</td>
+<td>不支持</td>
+<td>❌不支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP管理-AP组网</td>
+<td>AP成员</td>
+<td>跨主控备份</td>
+<td>不支持</td>
+<td>❌不支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP信息查询</td>
+<td>射频信息</td>
+<td>display radio all</td>
+<td>频段/协议/信道/带宽/功率/STA数</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP信息查询</td>
+<td>AP信息</td>
+<td>显示所有AP</td>
+<td>AP ID/MAC/IP/型号/状态/用户数</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP信息查询</td>
+<td>邻居信息</td>
+<td>display ap neighbor</td>
+<td>邻居AP信道/RSSI/更新时间</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP信息查询</td>
+<td>信道切换记录</td>
+<td>display channel switch-record</td>
+<td>信道切换历史</td>
+<td>✅支持</td>
+<td>-</td>
+<td></td></tr>
+<tr><td>AP信息查询</td>
+<td>上线失败日志</td>
+<td>display ap online-fail-record</td>
+<td>失败原因记录</td>
+<td>✅支持</td>
+<td>DTLS/获取IP等</td>
+<td></td></tr>
+<tr><td>安全特性</td>
+<td>防攻击</td>
+<td>防IP攻击</td>
+<td>V100R021C10需手动去使能</td>
+<td>⚠️条件</td>
+<td>V100R022C00起自动</td>
+<td></td></tr>
+<tr><td>安全特性</td>
+<td>防攻击</td>
+<td>防ICMP攻击</td>
+<td>可配置去使能</td>
+<td>✅支持</td>
+<td>需Ping时去使能</td>
+<td></td></tr>
+<tr><td> License控制</td>
+<td>eSight License</td>
+<td>ONT Wi-Fi接入数量</td>
+<td>需单独导入</td>
+<td>✅必选</td>
+<td>-</td>
+<td></td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="06-esight-specs-new.html" class="page-link">← 方案规格-eSight（new）</a><a href="index.html" class="page-link">目录</a><a href="08-onu-specs.html" class="page-link">华为ONU规格 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

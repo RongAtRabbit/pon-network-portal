@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA5800规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            EA5800规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>🔧 EA5800规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "EA5800规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>华为EA5800系列完整规格表（一级规格</th><th>二级规格</th><th>三级规格</th><th>EA5800-X17</th><th>EA5800-X15</th><th>EA5800-X7</th><th>EA5800-X2</th><th>备注）</th><th>参考文档</th><th>参考位置</th><th></th><th></th></tr></thead>
+<tbody>
+<tr><td>硬件规格</td>
+<td>产品外观-框类型</td>
+<td>业务框类型</td>
+<td>大规格 ETSI</td>
+<td>大规格 IEC</td>
+<td>中规格业务框</td>
+<td>小规格业务框</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P4「产品外观」章节</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-框类型</td>
+<td>配套背板</td>
+<td>H901BPLB</td>
+<td>H901BPIB</td>
+<td>H901BPMB</td>
+<td>H901BPSB</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P4「产品外观」章节</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-尺寸重量</td>
+<td>尺寸(宽×深×高)</td>
+<td>493×287×486mm</td>
+<td>442×287×486mm</td>
+<td>442×268.7×263.9mm</td>
+<td>442×268.7×88.1mm</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P5「产品外观-尺寸重量」</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-尺寸重量</td>
+<td>带挂耳尺寸</td>
+<td>535×287×486mm</td>
+<td>482.6×287×486mm</td>
+<td>482.6×268.7×263.9mm</td>
+<td>482.6×268.7×88.1mm</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P5「产品外观-尺寸重量」</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-尺寸重量</td>
+<td>最大重量(带挂耳)</td>
+<td>45kg</td>
+<td>35kg</td>
+<td>26kg</td>
+<td>9.4kg</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P5「产品外观-尺寸重量」</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-槽位配置</td>
+<td>业务槽位数</td>
+<td>17槽</td>
+<td>15槽</td>
+<td>7槽</td>
+<td>2槽</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P4「产品外观」章节</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-槽位配置</td>
+<td>主控板槽位</td>
+<td>9、10</td>
+<td>8、9</td>
+<td>8、9</td>
+<td>3、4</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P4「产品外观」章节</td></tr>
+<tr><td>硬件规格</td>
+<td>产品外观-槽位配置</td>
+<td>业务/上行板槽位</td>
+<td>1~8、11~19</td>
+<td>1~7、10~17</td>
+<td>1~7</td>
+<td>1~2</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P4「产品外观」章节</td></tr>
+<tr><td>硬件规格</td>
+<td>电源与功耗-供电方式</td>
+<td>额定电压</td>
+<td>-48V / -60V DC</td>
+<td>同左</td>
+<td>同左</td>
+<td>DC: -48V/-60V / AC: 100V~240V</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「电源与功耗」</td></tr>
+<tr><td>硬件规格</td>
+<td>电源与功耗-供电方式</td>
+<td>工作电压范围</td>
+<td>-38.4V ~ -72V DC</td>
+<td>同左</td>
+<td>同左</td>
+<td>DC: -38.4V~-72V / AC: 100V~240V</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「电源与功耗」</td></tr>
+<tr><td>硬件规格</td>
+<td>电源与功耗-供电方式</td>
+<td>最大输入电流</td>
+<td>60A</td>
+<td>60A</td>
+<td>40A</td>
+<td>DC: 20A / AC: 10A</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「电源与功耗」</td></tr>
+<tr><td>硬件规格</td>
+<td>电源与功耗-供电方式</td>
+<td>供电方式</td>
+<td>直流双路备份</td>
+<td>同左</td>
+<td>同左</td>
+<td>直流/交流+蓄电池备电</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「电源与功耗」</td></tr>
+<tr><td>硬件规格</td>
+<td>电源与功耗-电源冗余</td>
+<td>电源冗余</td>
+<td>✅ 双电源板冗余</td>
+<td>✅ 同左</td>
+<td>✅ 同左</td>
+<td>✅ 1+1 冗余</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-温度</td>
+<td>工作温度</td>
+<td>-40℃~+65℃</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-温度</td>
+<td>存储温度</td>
+<td>-40℃~+70℃</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-温度</td>
+<td>低温启动</td>
+<td>-25℃</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-湿度</td>
+<td>工作湿度</td>
+<td>5%RH~95%RH</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-海拔</td>
+<td>海拔</td>
+<td>0~4000m</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>环境适应性-散热</td>
+<td>散热方式</td>
+<td>前进后出</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P6「环境适应性」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-系统级</td>
+<td>系统可用度</td>
+<td>&gt;99.999%</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「可靠性指标」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-系统级</td>
+<td>MTBF</td>
+<td>≈45年</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「可靠性指标」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-系统级</td>
+<td>满负荷误码率</td>
+<td>&lt;10⁻¹⁰</td>
+<td>同左</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「可靠性指标」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-系统级</td>
+<td>交换转发时延</td>
+<td>≤20μs（64Byte@100M）</td>
+<td>同左</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「可靠性指标」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-硬件冗余</td>
+<td>主控冗余</td>
+<td>✅ 双主控板冗余备份</td>
+<td>✅ 双主控</td>
+<td>✅ 双主控</td>
+<td>✅ 双主控</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-硬件冗余</td>
+<td>电源冗余</td>
+<td>✅ 双电源板冗余</td>
+<td>✅ 同左</td>
+<td>✅ 同左</td>
+<td>✅ 1+1</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-硬件冗余</td>
+<td>单板热插拔</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>硬件规格</td>
+<td>可靠性指标-硬件冗余</td>
+<td>单板在线检测修复</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>硬件规格</td>
+<td>交换容量与性能-交换容量</td>
+<td>主控板交换容量</td>
+<td>MPLAE: 3.6Tbit/s / MPLBE: 8Tbit/s</td>
+<td>MPSAE/MPSFE: 248Gbit/s / MPLGE: 8.3Tbit/s / MPSDE: 560Gbit/s</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「交换容量与性能」</td></tr>
+<tr><td>硬件规格</td>
+<td>交换容量与性能-每槽带宽</td>
+<td>每槽最大带宽</td>
+<td>MPLAE: 100Gbit/s / MPLBE/MPLGE: 200Gbit/s</td>
+<td>MPSAE/MPSFE: 40Gbit/s / MPSDE: 100Gbit/s</td>
+<td>40Gbit/s</td>
+<td>100Gbit/s</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「交换容量与性能」</td></tr>
+<tr><td>硬件规格</td>
+<td>交换容量与性能-视频</td>
+<td>4K视频并发用户</td>
+<td>17000</td>
+<td>7000</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「视频能力」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-PON端口</td>
+<td>GPON端口</td>
+<td>272</td>
+<td>240</td>
+<td>112</td>
+<td>32</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-PON端口</td>
+<td>XG-PON端口</td>
+<td>272</td>
+<td>240</td>
+<td>112</td>
+<td>32</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-PON端口</td>
+<td>XGS-PON端口</td>
+<td>272</td>
+<td>240</td>
+<td>112</td>
+<td>32</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-PON端口</td>
+<td>XGS-PON&amp;GPON Combo</td>
+<td>272</td>
+<td>240</td>
+<td>112</td>
+<td>32</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-以太端口</td>
+<td>GE端口</td>
+<td>816</td>
+<td>720</td>
+<td>336</td>
+<td>96</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-以太端口</td>
+<td>10GE端口</td>
+<td>408</td>
+<td>360</td>
+<td>168</td>
+<td>16</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-上行口</td>
+<td>上行口(MPLAE/MPLBE)</td>
+<td>8×10GE/GE</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-上行口</td>
+<td>上行口(MPSAE/MPSFE)</td>
+<td>—</td>
+<td>4×10GE/GE+4×GE</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-上行口</td>
+<td>上行口(MPLGE)</td>
+<td>—</td>
+<td>2×100GE+4×10GE/GE</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>硬件规格</td>
+<td>端口密度-上行口</td>
+<td>上行口(MPSDE)</td>
+<td>—</td>
+<td>8×10GE/GE</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P15「端口密度」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-VLAN</td>
+<td>VLAN数量</td>
+<td>4094</td>
+<td>4094</td>
+<td>4094</td>
+<td>4094</td>
+<td>802.1Q上限</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第3章「VLAN特性」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-VLAN</td>
+<td>VLAN聚合(Super VLAN)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第3章「VLAN特性」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-VLAN</td>
+<td>QinQ VLAN</td>
+<td>✅ 灵活QinQ</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第3章「VLAN特性」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-VLAN</td>
+<td>VLAN Stacking</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第3章「VLAN特性」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-VLAN</td>
+<td>VLAN切换</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第3章「VLAN特性」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-MAC</td>
+<td>MAC地址表</td>
+<td>262143</td>
+<td>262143</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第4章「MAC地址」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-MAC</td>
+<td>MAC地址平滑扩容</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第4章「MAC地址」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-MAC</td>
+<td>MAC学习</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第4章「MAC地址」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>VLAN+MAC转发</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第5章「二层转发」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>SVLAN+CVLAN转发</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第5章「二层转发」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>PPPoE+</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第5章「二层转发」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>DHCP option82</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第5章「二层转发」</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>Service Port Bundle</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>二层互通</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>二层转发-二层转发</td>
+<td>9K Jumbo帧</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第5章「二层转发」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>IPv4路由表(FIB)</td>
+<td>65536</td>
+<td>65,536(V100R022C10起:131,072)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>IPv6路由表(FIB)</td>
+<td>16384</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>ARP表</td>
+<td>131072</td>
+<td>131072</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>ND表</td>
+<td>16384</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>等价路由ECMP</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>IP FRR</td>
+<td>✅ 50ms收敛</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>缺省路由</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由容量</td>
+<td>路由优先级收敛</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>静态路由</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>RIP/RIPng</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>OSPF/OSPFv3</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>IS-IS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>BGP/BGP4+</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>VRF</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-路由协议</td>
+<td>PBR</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-DHCP</td>
+<td>DHCP Server</td>
+<td>✅(V100R022C10起)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第7章「DHCP特性」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-DHCP</td>
+<td>DHCPv6 Server</td>
+<td>✅(V100R022C10起)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第7章「DHCP特性」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-DHCP</td>
+<td>DHCP Relay</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第7章「DHCP特性」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-DHCP</td>
+<td>DHCP Proxy</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-DHCP</td>
+<td>DHCP Snooping</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第7章「DHCP特性」</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-其他</td>
+<td>DHCP仿真</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-其他</td>
+<td>PPPoE拨号仿真</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>三层路由与转发-其他</td>
+<td>突发流量检测</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播容量</td>
+<td>IPv4组播组</td>
+<td>17408</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播容量</td>
+<td>可配置静态节目数</td>
+<td>8192</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播容量</td>
+<td>最大在线节目(IPv4)</td>
+<td>8000</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播容量</td>
+<td>最大在线节目(IPv6)</td>
+<td>2000</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>IGMP v2/v3</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>IGMP Proxy/Snooping</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>MLD v1/v2</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>MLD Proxy/Snooping</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>PIM/PIM-SSM</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-组播协议</td>
+<td>MSDP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>组播CAC</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>组播QoS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第8章「组播特性」</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>双层VLAN Tag组播</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>组播透传</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>组播预览</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-高级特性</td>
+<td>节目预加入</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-监控</td>
+<td>eMDI视频质量监控</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-监控</td>
+<td>RTP视频质量监控</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>组播-监控</td>
+<td>组播仿真</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-队列与调度</td>
+<td>每端口队列数</td>
+<td>8</td>
+<td>8</td>
+<td>8</td>
+<td>8</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-队列与调度</td>
+<td>PQ/WRR/PQ+WRR</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-队列与调度</td>
+<td>HQoS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>基于Port+VLAN/CAR Group/xPON单板</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>流量分类</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>优先级标记</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>trTCM流量监管</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>WRED</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>流量整形</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-流量管理</td>
+<td>ACL限速粒度</td>
+<td>8Kbps@1M限速</td>
+<td>同左</td>
+<td>同左</td>
+<td>同左</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第9章「QoS特性」</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-端到端QoS</td>
+<td>FTTH端到端QoS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>QoS-端到端QoS</td>
+<td>FTTB/FTTC端到端QoS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>QoS规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>GPON Type B保护</td>
+<td>✅ 单归属/双归属</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>GPON Type C保护</td>
+<td>✅ 单归属/双归属</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>10G GPON Type B/C保护</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>xPON Type D保护</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>ERPS/G.8032</td>
+<td>✅ ≤200ms</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>MSTP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>以太网链路聚合LAG</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>LACP协议</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-链路保护</td>
+<td>Monitor Link</td>
+<td>✅(V100R018C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for IP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for OSPF</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for IS-IS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for BGP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for RSVP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for LAG</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>BFD for PW</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>VRRP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>VRRP Snooping</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-协议联动</td>
+<td>IP FRR</td>
+<td>✅ 50ms</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由与转发规格」P573「12.12.1.3 路由表和FIB表」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>双主控板冗余备份</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>双电源板冗余备份</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 12.pdf</td>
+<td>产品概述/产品外观/交换容量章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>主控板ISSU</td>
+<td>✅ 升级不中断业务</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>NSR不间断转发</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>单板在线检测和修复</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800-X17&amp;X15&amp;X7&amp;X2 产品描述 V12</td>
+<td>P14「硬件冗余」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>Type B/C双归属异地容灾</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用特性」</td></tr>
+<tr><td>软件规格</td>
+<td>高可用HA-设备保护</td>
+<td>多重上行链路保护</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-MPLS基础</td>
+<td>MPLS LDP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-MPLS基础</td>
+<td>MPLS RSVP-TE</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-MPLS基础</td>
+<td>MPLS OAM</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-MPLS基础</td>
+<td>MPLS TE</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>BGP IP VPN(PWE3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>VPLS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>TDM PWE3</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>ETH PWE3</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>PW 1:1保护</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>CR-LSP备份</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>RSVP TE FRR</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-VPN</td>
+<td>TE隧道保护组</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS VPN」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-L3VPN</td>
+<td>MPLS L3 VPN</td>
+<td>❌ 不支持</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第11章「MPLS」- 文档未列出MPLS L3 VPN，说明不支持</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-L3VPN</td>
+<td>VRF</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-其他隧道</td>
+<td>SRv6</td>
+<td>✅(V100R021C00起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>MPLS与VPN-其他隧道</td>
+<td>GRE</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>VXLAN与网络虚拟化-虚拟化</td>
+<td>VXLAN</td>
+<td>✅(V100R018C00起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VXLAN与网络虚拟化章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第12章「VXLAN与网络虚拟化」</td></tr>
+<tr><td>软件规格</td>
+<td>VXLAN与网络虚拟化-虚拟化</td>
+<td>EVPN-VXLAN</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第12章「VXLAN与网络虚拟化」</td></tr>
+<tr><td>软件规格</td>
+<td>VXLAN与网络虚拟化-虚拟化</td>
+<td>业务切片</td>
+<td>✅(V100R021C00起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VXLAN与网络虚拟化章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第12章「VXLAN与网络虚拟化」</td></tr>
+<tr><td>软件规格</td>
+<td>VXLAN与网络虚拟化-虚拟化</td>
+<td>硬隔离专网切片</td>
+<td>✅(V100R021C1X起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VXLAN与网络虚拟化章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第12章「VXLAN与网络虚拟化」</td></tr>
+<tr><td>软件规格</td>
+<td>VXLAN与网络虚拟化-虚拟化</td>
+<td>VRF</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第6章「路由协议」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-认证</td>
+<td>802.1x</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全与认证」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-认证</td>
+<td>AAA(RADIUS/TACACS)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>组播特性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全与认证」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-认证</td>
+<td>Portal认证</td>
+<td>✅(V100R021C00起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全与认证」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-认证</td>
+<td>IP+MAC绑定</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>VLAN特性/二层转发章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全与认证」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-ARP安全</td>
+<td>静态ARP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-ARP安全</td>
+<td>动态ARP检查</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-ARP安全</td>
+<td>ARP Proxy</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>路由协议规格章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全ACL」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-报文过滤</td>
+<td>ACL</td>
+<td>✅ IPv4/IPv6</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-报文过滤</td>
+<td>URPF</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全ACL」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-流量控制</td>
+<td>广播风暴抑制</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全ACL」</td></tr>
+<tr><td>软件规格</td>
+<td>安全与ACL-流量控制</td>
+<td>ACL攻击防御</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>安全与ACL章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第14章「安全ACL」</td></tr>
+<tr><td>软件规格</td>
+<td>同步时钟-频率同步</td>
+<td>同步以太时钟</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>同步时钟章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第15章「同步以太网」</td></tr>
+<tr><td>软件规格</td>
+<td>同步时钟-频率同步</td>
+<td>1588v2同步</td>
+<td>✅ 基于IEEE/G.8275.1</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>同步时钟章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第15章「同步以太网」</td></tr>
+<tr><td>软件规格</td>
+<td>同步时钟-时间同步</td>
+<td>1588ACR</td>
+<td>❌ 不支持</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>同步时钟章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第15章「同步时钟」-标注不支持</td></tr>
+<tr><td>软件规格</td>
+<td>同步时钟-时间同步</td>
+<td>BITS/TOD接口</td>
+<td>❌ 不支持</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>同步时钟章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第15章「同步时钟」-标注不支持</td></tr>
+<tr><td>软件规格</td>
+<td>同步时钟-时间同步</td>
+<td>NTP Server/Client</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>同步时钟章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>GPON(G.984.x)</td>
+<td>✅ 下行2.5G/上行1.25G</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>XG-PON(G.984.5/G.984.7)</td>
+<td>✅ 下行10G/上行2.5G</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>XGS-PON(G.9807.1)</td>
+<td>✅ 对称10G</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>Combo PON</td>
+<td>✅ GPON+XGS-PON合一</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>EPON</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON制式</td>
+<td>P2P 10GE/GE光接入</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>最大分光比</td>
+<td>1:128</td>
+<td>1:128</td>
+<td>1:128</td>
+<td>1:128</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>GPON DBA</td>
+<td>✅ 5种T-CONT类型</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>GPON FEC</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>GPON线路加密</td>
+<td>✅ AES</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>OMCI管理通道</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>ONU自动注册</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第16章「PON接入技术」</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>长发光ONU检测</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>PON接入-PON特性</td>
+<td>PON上行免软调</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-管理接口</td>
+<td>CLI命令行</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「设备管理」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-管理接口</td>
+<td>Web网管</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「设备管理」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-管理接口</td>
+<td>NETCONF</td>
+<td>✅(V100R022C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「设备管理」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-管理接口</td>
+<td>Telemetry</td>
+<td>✅(V100R022C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「设备管理」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-协议</td>
+<td>LLDP</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「管理协议」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-协议</td>
+<td>ANCP/ANCP Proxy</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「管理协议」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-协议</td>
+<td>DCN</td>
+<td>✅(V100R020C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「管理协议」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>以太OAM(802.3ah)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「运维特性」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>CFM(802.1ag/Y.1731)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「运维特性」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>PM性能监控</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>TWAMP/TWAMP Light</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>设备管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「运维特性」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>以太上行免软调</td>
+<td>✅ 基于NAC</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-运维</td>
+<td>带内管理VPN</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>MPLS与VPN章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第17章「运维特性」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-升级</td>
+<td>ISSU在线升级</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>可靠性章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第10章「高可用-设备保护」</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-升级</td>
+<td>版本回退</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>设备管理-安全</td>
+<td>设备防盗</td>
+<td>✅(V100R022C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800产品描述 12.pdf / EA5800特性指南 09.pdf</td>
+<td>规格表综合</td>
+<td>EA5800产品描述 V12 / 特性指南 V09</td>
+<td>综合规格表</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>Wi-Fi管理(CAPWAP)</td>
+<td>✅(V100R021C10起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>AP零配置上线</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>射频调优</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>负载均衡</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>智能漫游</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>Wi-Fi管理-AP管理</td>
+<td>AP管理信息查询</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>Wi-Fi管理章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第18章「Wi-Fi管理」</td></tr>
+<tr><td>软件规格</td>
+<td>绿色节能-能效</td>
+<td>欧盟CoC V8.1能效标准</td>
+<td>✅(V100R021C1xSPC300起)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第19章「绿色节能」</td></tr>
+<tr><td>软件规格</td>
+<td>绿色节能-能效</td>
+<td>能耗管理</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第19章「绿色节能」</td></tr>
+<tr><td>软件规格</td>
+<td>绿色节能-能效</td>
+<td>温度查询和高温告警</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>绿色节能章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第19章「绿色节能」</td></tr>
+<tr><td>软件规格</td>
+<td>绿色节能-PON节能</td>
+<td>GPON节能(power saving)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>EA5800特性指南 09.pdf</td>
+<td>PON接入技术章节</td>
+<td>EA5800特性指南 V09</td>
+<td>第19章「绿色节能」</td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="13-wireless-ont-vs-ap.html" class="page-link">← 无线ONT能力VS企业AP</a><a href="index.html" class="page-link">目录</a><a href="15-troubleshooting.html" class="page-link">华为排障指导 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

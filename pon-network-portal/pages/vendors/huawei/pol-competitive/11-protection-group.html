@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为保护组规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            华为保护组规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>🛡️ 华为保护组规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "华为保护组规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>保护组生命周期</th><th>三级规格</th><th>四级规格</th><th>五级规格</th><th>CLI命令</th><th>功能说明</th><th>生效模式</th><th>需求说明（应用场景）</th><th>锐捷是否支持该规格</th><th>对标说明</th><th>规划</th></tr></thead>
+<tbody>
+<tr><td></td>
+<td>保护组配置</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>type B</td>
+<td>type B单归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type B双归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>锐捷支持VSU方式的type B组网，即要求设备得摆放在一起；无法支持异地灾备</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>type C</td>
+<td>type C单归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>待规划补齐</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type C双归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>待规划补齐</td></tr>
+<tr><td></td>
+<td></td>
+<td>type D</td>
+<td>type D单归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>xPON Type D保护适用于EPON特性和10G-EPON特性</td>
+<td>不涉及</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>type D双归属</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>不涉及</td></tr>
+<tr><td></td>
+<td></td>
+<td>联动倒换</td>
+<td></td>
+<td></td>
+<td>联动倒换是指在双归属的组网场景中，在OLT上将保护组与上行以太网端口状态、BFD会话状态或者MEP会话状态绑定，即建立关联关系。这样当OLT上层网络故障或者OLT二层物理链路故障时，主用OLT会触发双归属保护组倒换到备用OLT，业务恢复正常。</td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td>本地双机可靠性：支持VSU组网的type B保护组，VSU组网的上联口配置为聚合口，当其中一个上行链路断开，可将流量引导到无故障设备
+异地灾备场景：我司当前不支持异地 灾备</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>防抖时间</td>
+<td>默认：720s
+范围：1-1440
+</td>
+<td>anti-jitter time time</td>
+<td>仅支持type B</td>
+<td>Type B单归属保护</td>
+<td>解决链路质差时候的频繁倒换</td>
+<td>不支持</td>
+<td></td>
+<td>待规划补齐</td></tr>
+<tr><td></td>
+<td></td>
+<td>为保护组绑定MAC地址</td>
+<td></td>
+<td>bind mac-pool single-mac
+undo bind mac-pool single-mac</td>
+<td>目前系统只支持GPON保护组进行绑定和释放MAC地址操作。
+bind mac-pool single-mac</td>
+<td>Type B单归属保护</td>
+<td></td>
+<td>不支持；
+当前XTS口不支持PPPOE规格</td>
+<td></td>
+<td>待规划补齐</td></tr>
+<tr><td></td>
+<td></td>
+<td>配置保护组描述信息</td>
+<td></td>
+<td>description text
+undo description</td>
+<td>description(protect-group)</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组使能</td>
+<td>使能</td>
+<td>protect-group { enable | disable }</td>
+<td>protect-group { enable | disable }
+命令用于使能一个保护组。创建了保护组后，需要保护组生效，使用此命令。执行该命令后，保护组成员可以实现保护倒换功能
+* 在保护组使能状态下：
+允许添加成员，添加后的成员处于锁定状态。由于添加后成员是锁定的，因此添加成员的操作不会中断正常运行的业务。
+允许删除处于锁定状态的成员。由于被删除的成员是锁定的，因此删除成员的操作不会中断正常运行的业务。
+除了保护组冻结时，不允许再修改保护组的检测方式。</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>待分析</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>去使能</td>
+<td></td>
+<td>* 在保护组去使能状态下：
+   允许成员的添加、删除。（删除操作不会中断正常运行的业务）
+  允许执行成员的锁定操作，不允许执行组的冻结、手动倒换、强制倒换操作。
+* 对于执行去使能保护组：
+  处于冻结状态的保护组不允许执行去使能保护组的操作。
+  会导致工作成员迁移到active状态、保护成员迁移到standby状态。
+  将清除强制倒换和手工倒换操作。</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组恢复配置</td>
+<td>开启/关闭</td>
+<td>reversion { enable | disable }</td>
+<td>reversion { enable | disable }
+可认为，开启后，保护组的工作口和保护口增加绝对优先级；默认去使能
+reversion enable命令用于使能保护组的恢复开关。使能保护组恢复开关后，当保护组中的工作成员状态恢复正常时，在恢复等待时间结束后，保护组将自动进行倒换，继续由工作成员承载业务。
+***保护组的恢复开关为使能时：
+* 保护组的工作成员承担业务的优先级比保护成员高。当保护组发生了故障引起的从工作成员到保护成员的保护倒换后，如果工作成员的故障恢复超过了恢复等待时间，则执行从保护成员到工作成员的倒换恢复。
+* 如果保护组的倒换是由手工倒换、强制倒换引起的，则不能自动恢复。
+* 如果执行取消手工倒换、取消强制倒换的操作，并且工作成员处于正常状态，则经过恢复等待时间后，执行从保护成员到工作成员的倒换恢复。</td>
+<td>Type B单归属保护,Type B双归属保护,Type C单归属保护,Type C双归属保护</td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>暂未看到场景</td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组的恢复等待时间</td>
+<td>reversion time seconds
+undo reversion time
+缺省值：720s。</td>
+<td>reversion time命令用于设置保护组的恢复等待时间。在保护组使能了保护组恢复开关的情况下，保护组中工作成员恢复正常需要经过一定延时（恢复等待时间），当工作成员状态稳定后，再进行保护组倒换。这样可以避免由于工作成员恢复状态不稳定而导致的保护组频繁倒换，以提高系统工作的稳定性。
+undo reversion time将保护组的恢复等待时间恢复为默认恢复时间</td>
+<td></td>
+<td></td>
+<td>不支持</td>
+<td></td>
+<td>暂未看到场景</td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组负荷分担模式</td>
+<td>保护组中各成员端口通过源MAC地址及目的MAC地址分发报文。</td>
+<td>load-balance mode { egress-ingress | ingress | ip-enhance | src-dst-ip }</td>
+<td>egress-ingress</td>
+<td>Type C单归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组中各成员端口通过源MAC地址分发报文</td>
+<td></td>
+<td>ingress</td>
+<td>Type C单归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组中各成员端口通过IP地址、协议号等信息分发报文</td>
+<td></td>
+<td>ip-enhance</td>
+<td>Type C单归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组中各成员端口通过源IP地址及目的IP地址分发报文</td>
+<td></td>
+<td>src-dst-ip</td>
+<td>Type C单归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护对象配置</td>
+<td>聚合组内两个端口之间的保护</td>
+<td></td>
+<td>eth-nni-lag-member 
+支持工作模式：timedelay</td>
+<td>聚合组内两个端口之间的保护</td>
+<td></td>
+<td></td>
+<td>以太保护组</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>以太上行口之间的保护 </td>
+<td></td>
+<td>eth-nni-port 
+支持工作模式：timedelay</td>
+<td>以太上行口之间的保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>GPON接入端口之间的保护</td>
+<td></td>
+<td>gpon-uni-port 
+支持工作模式：timedelay、dual-parenting</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>EPON接入端口之间的保护</td>
+<td></td>
+<td>epon-uni-port 
+支持工作模式：timedelay、dual-parenting</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>EPON接入的ONU的保护</td>
+<td></td>
+<td>epon-uni-ont
+支持工作模式：dual-parenting、portstate</td>
+<td>Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>GPON接入的ONU的保护</td>
+<td></td>
+<td>gpon-uni-ont
+支持工作模式：dual-parenting、portstate、load-balance、dual-parenting load-balance</td>
+<td>Type C单归属保护,Type C双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>GPON接入端口的通道组保护</td>
+<td></td>
+<td>twdm-channel-group 
+支持工作模式：timedelay</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组工作模式</td>
+<td>双归属保护工作模式</td>
+<td>protect-group [ pgid ] protect-target { epon-uni-port | gpon-uni-port | epon-uni-ont | gpon-uni-ont } workmode dual-parenting</td>
+<td>适配：epon-uni-port | gpon-uni-port | epon-uni-ont | gpon-uni-on</td>
+<td>Type B双归属保护,Type C双归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>负荷分担工作模式</td>
+<td>protect-group [ pgid ] protect-target gpon-uni-ont workmode [ dual-parenting ] load-balance</td>
+<td>适配保护对象：gpon 双归属
+使用此参数时，如果配置了dual-parenting参数，表示配置保护组工作模式为双归属负荷分担工作模式，否则为单归属负荷分担工作模式。</td>
+<td>Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>
+端口状态检测工作模式</td>
+<td>protect-group [ pgid ] protect-target { epon-uni-ont | gpon-uni-ont } workmode portstate</td>
+<td>适配保护对象： epon-uni-ont | gpon-uni-ont
+端口状态检测工作模式。表示同时打开保护组的active和standby端口，但只有active端口转发数据。</td>
+<td>Type C双归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>延时检测工作模式</td>
+<td>protect-group [ pgid ] protect-target { eth-nni-lag-member | eth-nni-port | gpon-uni-port | epon-uni-port | twdm-channel-group } workmode timedelay</td>
+<td>xPON端口保护对的工作模式只能为“timedelay”。
+适配保护对象： eth-nni-lag-member | eth-nni-port | gpon-uni-port | epon-uni-port | twdm-channel-group 
+表示保护组的active端口打开，standby端口关闭。当active端口故障时，再打开standby端口。</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type B双归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>双归属成员配置</td>
+<td>双归属保护组成员的本端节点</td>
+<td></td>
+<td>dual-parenting local-node { ip-address ip-address-value | port port-value | key key-value }*
+dual-parenting local-node [ ip-address ip-address-value | port port-value ] * key
+
+本端密钥，用于对双归属使能时，对双归属保护的两个设备间通信消息中的关键信息进行加密。</td>
+<td>Type B双归属保护,Type C双归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>双归属保护组成员的对端节点</td>
+<td></td>
+<td>dual-parenting peer-node node-name { ip-address ip-address-value | port port-value | key key-value }*
+dual-parenting peer-node node-name [ ip-address ip-address-value | port port-value ] * key
+undo dual-parenting peer-node node-name
+本端设备上配置的对端节点IP地址，需要和双归属保护组对端设备的本端节点IP地址保持一致，不能是组播和广播IP。
+本端设备上配置的对端节点TCP端口号，需要和双归属保护组对端设备的本端TCP端口号保持一致。
+本端设备上配置的对端密钥必须和双归属保护组对端设备配置的本端密钥保持一致。
+创建对端节点时，必须配置对端密钥。</td>
+<td>Type B双归属保护,Type C双归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>双归属同步功能</td>
+<td></td>
+<td>dual-parenting sync { enable | disable }
+此命令用于使能或去使能双归属同步开关</td>
+<td>Type B双归属保护,Type C双归属保护,Type D双归属保护</td>
+<td>当备口异常断开，可提示异常</td>
+<td>不支持</td>
+<td>备份链路的可用性检测</td>
+<td>规划补齐</td></tr>
+<tr><td></td>
+<td></td>
+<td>备用口RSSI测量</td>
+<td>使能</td>
+<td>standby-port signal-detect-policy rssi { enable [ interval interval | threshold threshold ] * | disable } </td>
+<td>使能备用端口RSSI测量功能。
+默认去使能</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>测量周期</td>
+<td></td>
+<td>保护组备用端口RSSI测量周期。如果输入值不是15的整数倍，则以15min为一个步长向上进行调整。
+默认120min</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>备用端口RSSI最小值阈值</td>
+<td></td>
+<td>保护组备用端口RSSI最小值阈值，当一个测量周期内测得的RSSI最小值小于此阈值，将会上报告警
+
+数值类型，取值范围：-99.00-100.00。
+单位：dBm。
+缺省值：-28.00</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>type B保护组备用端口闪断</td>
+<td></td>
+<td>
+standby-port suppress-flapping { enable | disable }</td>
+<td>此命令用于设置是否启用type B保护组备用端口闪断（flapping）抑制功能。默认开关去使能。当使能此开关时，Type B保护组倒换采用传统倒换机制。</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>双归属保护组关联的上行链路接口</td>
+<td></td>
+<td>
+uplink-monitor { bfd cfg-name | port frameid/slotid/port | mep mdindex/maindex/mepid }
+undo uplink-monitor</td>
+<td>uplink-monitor命令用于绑定与双归属保护组关联的上行链路接口，上行链路接口包括ETH端口、BFD会话和MEP会话。</td>
+<td>Type B双归属保护,Type C双归属保护,Type D双归属保护</td>
+<td>type B双上联时，当上行链路端口，需要连动保护组做倒换</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>标准Type B配置</td>
+<td></td>
+<td>xpon standard-typeb standard-typeb-value
+举例：
+huawei(protect-group-0)#xpon
+{ standard-typeb&lt;K&gt; }:standard-typeb
+{ standard-typeb-value&lt;E&gt;&lt;yes,no&gt; }:yes
+
+  Command: 
+        xpon standard-typeb yes</td>
+<td>
+此命令用于设置GPON端口保护组是否为标准Type B。如果Type B只使用一个N：2分光器（不限制N：1分光器数目），所有ONU到两个OLT端口距离差相等，则认为是此Type B为标准Type B。如果实际保护组采用标准的Type B组网，建议使用此命令设置保护组为标准Type B，以提高倒换成功率和倒换性能。</td>
+<td>Type B单归属保护,Type B双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>配置/状态查询</td>
+<td>查询保护组信息</td>
+<td>查询保护组信息</td>
+<td>huawei(protect-group-1)#display protect-group 1
+  -----------------------------------------------------------------------
+  Group ID         : 1
+  Protect Target   : Port of GPON uni
+  Work Mode        : timedelay
+  Description      :
+  Admin State      : enable
+  Operation        : none
+  Reversion        : disable
+  Reversion Time(s): 720
+  Anti-jitter Time(s)  : 720
+  PPPoE Single MAC     : Unbind
+  Standard type B  : yes
+  Standby port suppress flapping: disable 
+  Standby port signal detecting based on RSSI     : enable   
+  Standby port signal detecting interval(min)     : 120   
+  Standby port signal detecting threshold(dBm)    : -28.00
+  -----------------------------------------------------------------------
+  Member        Role         Operation         State         PeerMember
+  -----------------------------------------------------------------------
+  0/3/0         work         none              active        none
+  0/3/1         protect      none              standby       none
+  -----------------------------------------------------------------------
+  Standby Member Status : ready 
+  Standby Member RSSI info:       
+  -----------------------------------------------------------------------
+   Active Member            Standby Member                  Low RSSI 
+   Max(dBm)    Min(dBm)     Max(dBm)    Predicted Min(dBm)  Risk 
+  ----------------------------------------------------------------------- 
+  -           -            -           -                   No  
+ ----------------------------------------------------------------------- 
+  Note: Yes indicates that the standby member RSSI maybe on a low level,
+        No indicates that standby member RSSI is on a normal level</td>
+<td></td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>同步状态查询</td>
+<td>查询TYPE B保护组的成员的端口同步状态</td>
+<td>huawei(diagnose)%%display protect-group sync-state 0/3/0
+  -----------------------------------------------------------
+  F/S/P                 : 0/3/0
+  Group ID              : 0
+  State                 : active
+  Synchronization state : Complete
+  -----------------------------------------------------------</td>
+<td>display protect-group sync-state { frameid/slotid/portid | frameid }
+此命令用于查询加入了TYPE B保护组的成员端口的同步状态。如果同步未完成，则保护组倒换可能失败或者倒换时延长。</td>
+<td>Type B单归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>查询双归属信息</td>
+<td>查询双归属全局配置信息</td>
+<td>huawei#display dual-parenting global-config
+  -----------------------------------------------------------------------
+  Synchronization switch    : disable
+  Local node IP address     : -
+  Local node TCP port       : 6076
+  -----------------------------------------------------------------------</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>查询双归属对端节点信息</td>
+<td>huawei#display dual-parenting peer-node
+{ &lt;cr&gt;|node-name&lt;S&gt;&lt;Length 1-15&gt; }:
+
+  Command:
+          display dual-parenting peer-node
+  -----------------------------------------------------------------------
+  Node name              IP address         TCP port    State
+  -----------------------------------------------------------------------
+  abc                    192.168.68.1       6076        failed
+  -----------------------------------------------------------------------</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td>保护组操作</td>
+<td>训练倒换</td>
+<td></td>
+<td>exercise-switch { port { frameid/slotid/portid [ ont ontid ] | peer-group-member } } to { { frameid/slotid/portid [ ont ontid ] | peer-group-member } }
+undo exercise-switch { port { frameid/slotid/portid [ ont ontid ] | peer-group-member } } to { { frameid/slotid/portid [ ont ontid ] | peer-group-member } }</td>
+<td>训练倒换用于测试保护组端口APS（Automatic Protection Switching）协议，实际上业务不会被倒换。当需要检查保护组成员的状态是否正常时使用此命令。如果此命令下发成功，则保护组成员的状态正常，保护组成员的状态被置为训练倒换状态，如果此命令下发后有错误提示信息，则训练倒换失败。使用此命令后，保护组成员不会发生实际的倒换操作，仅状态变化为训练倒换状态。</td>
+<td>Type C单归属保护,Type C双归属保护</td>
+<td>1. 施工后，检测状态是否正常</td>
+<td>不支持</td>
+<td>仅适用于TYPE C；
+待分析</td>
+<td>仅适用于TYPE C；
+待分析</td></tr>
+<tr><td></td>
+<td></td>
+<td>强制倒换</td>
+<td></td>
+<td>force-switch { port { frameid/slotid/portid [ ont ontid ] | peer-group-member } } to { { frameid/slotid/portid [ ont ontid ] | peer-group-member } }
+undo force-switch { port { frameid/slotid/portid [ ont ontid ] | peer-group-member } } to { { frameid/slotid/portid [ ont ontid ] | peer-group-member } }
+force-switch { board frameid/slotid } to { frameid/slotid }
+undo force-switch { board frameid/slotid } to { frameid/slotid }</td>
+<td>force-switch
+当需要强制倒换时使用此命令。使用此命令后，无论指定的目标成员是否正常都将发生倒换</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护,Type C单归属保护,Type C双归属保护,Type D单归属保护,Type D双归属保护</td>
+<td>1. 计划内的操作，如对某个成员口做硬件/软件升级；可先执行倒换工作状态</td>
+<td>不支持</td>
+<td>暂未看到场景</td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组冻结</td>
+<td></td>
+<td>huawei(protect-group-10)#freeze</td>
+<td>freeze命令用于冻结一个保护组。当成功冻结保护组后，当前业务的承载状态保持不变，该保护组不能进行倒换。
+
+** 保护组状态为去使能状态时，不允许执行冻结保护组 的操作。
+** 保护组为冻结状态时：
+* 不允许执行去使能保护组的操作。
+* 保留冻结前已生效的锁定、强制倒换、手工倒换等操作。
+* 不能再对保护组成员执行引起保护组倒换的操作：锁定、强制倒换、手工倒换或者解除锁定、取消强制和手工倒换操作。
+* 允许删除已锁定的保护组中的成员。
+* 允许添加成员，新添加到保护组的成员默认为锁定状态。</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护</td>
+<td>-=</td>
+<td></td>
+<td></td>
+<td>待规划导入</td></tr>
+<tr><td></td>
+<td></td>
+<td>保护组成员锁定</td>
+<td>保护组成员是端口</td>
+<td>
+lockout { port frameid/slotid/portid [ ont ontid ] | board frameid/slotid }
+undo lockout { port frameid/slotid/portid [ ont ontid ] | board frameid/slotid }
+举例：
+huawei(protect-group-10)#lockout port 0/1/0
+{ &lt;cr&gt;|ont&lt;K&gt; }:
+
+  Command:
+          lockout port 0/1/0</td>
+<td>最高优先级：
+命令用于锁定保护组中的某个成员。锁定后该成员不能参与保护组的保护倒换。如果被锁定的成员已经参与了保护倒换，则执行锁定命令将会导致倒换清除
+* 如果锁定的是保护成员，则保护成员不能再作为保护倒换的目的端口，锁定后保护成员会成为standby状态。
+* 如果锁定的是工作成员，则工作成员不能再作为保护倒换的源端口，锁定后工作成员会成为active状态。
+相关状态冲突说明：
+* 主备主控板端口级和板级保护组都不支持锁定操作。
+* 在保护组冻结的情况下，不允许执行成员锁定操作。
+* 在保护组去使能的情况下，允许执行成员锁定操作。
+* 执行解除成员锁定操作时，如果保护组当前状态为去使能，无需进行倒换判决，否则需要进行倒换判决</td>
+<td>以太上行口之间的保护,聚合组内两个端口之间的保护,Type B单归属保护</td>
+<td>暂未看到场景</td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组成员是ONT</td>
+<td></td>
+<td>用于标识ONT ID号</td>
+<td>Type C单归属保护,Type C双归属保护</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+<tr><td></td>
+<td></td>
+<td></td>
+<td>保护组成员是单板</td>
+<td></td>
+<td>？保护组成员怎么会是单板？
+可能是基于整个板锁定？</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="10-standard-specs.html" class="page-link">← 标准规格</a><a href="index.html" class="page-link">目录</a><a href="12-f5g-config.html" class="page-link">华为F5G配置流程 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>

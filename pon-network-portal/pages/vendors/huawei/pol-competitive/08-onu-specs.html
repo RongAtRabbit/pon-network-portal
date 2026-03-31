@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华为ONU规格 | PON Portal</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .data-table tr:nth-child(even):hover {
+            background: #f1f5f9;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .sheet-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sheet-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .sheet-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .page-link {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .page-link:hover {
+            background: #1e40af;
+        }
+        .section-info {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">PON Portal</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../../index.html" class="nav-link">首页</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">行业方案 ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../huawei-f5g.html">华为 F5G</a></li>
+                            <li><a href="../../h3c-optical.html">华三 园区光网络</a></li>
+                            <li><a href="../../zte-pon.html">中兴 PON方案</a></li>
+                            <li><a href="../../fiberhome-pon.html">烽火 PON方案</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../pages/news/index.html" class="nav-link">最新资讯</a></li>
+                    <li><a href="../../../pages/docs/center.html" class="nav-link">技术文档</a></li>
+                    <li><a href="../../../insights.html" class="nav-link">技术洞察</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <main class="container" style="padding-top: 80px; padding-bottom: 60px;">
+        <div class="breadcrumb">
+            <a href="../../../index.html">首页</a> / 
+            <a href="../huawei-f5g.html">华为 F5G</a> / 
+            <a href="index.html">行业分析</a> / 
+            华为ONU规格
+        </div>
+        
+        <div class="sheet-header">
+            <h1>📡 华为ONU规格</h1>
+            <p>数据来源：POL竞争分析.xlsx</p>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>📥 原始文件下载</strong></p>
+            <a href="POL竞争分析.xlsx" class="download-btn" download>下载 POL竞争分析.xlsx</a>
+        </div>
+        
+        <div class="section-info">
+            <strong>📊 数据概览：</strong>该页面数据来自 Excel 文件中的 "华为ONU规格" 工作表
+        </div>
+        
+        <div class="table-wrapper"><table class="data-table">
+<thead><tr><th>产品功能</th><th>特性</th><th>OptiXstar W817H WIFI</th></tr></thead>
+<tbody>
+<tr><td>硬件规格</td>
+<td>尺寸</td>
+<td>245mm × 245mm × 54.2mm（不含背面螺钉）</td></tr>
+<tr><td>硬件规格</td>
+<td>重量</td>
+<td>约1.6kg</td></tr>
+<tr><td>硬件规格</td>
+<td>安装方式</td>
+<td>室内挂墙、吸顶</td></tr>
+<tr><td>硬件规格</td>
+<td>防护等级</td>
+<td>IP40</td></tr>
+<tr><td>硬件规格</td>
+<td>工作温度</td>
+<td>-10°C ~ +50°C</td></tr>
+<tr><td>硬件规格</td>
+<td>工作湿度</td>
+<td>5%RH～95%RH（非凝结）</td></tr>
+<tr><td>硬件规格</td>
+<td>供电方式</td>
+<td>PoF：48V DC / 0.6A；DC：12V DC / 2.5A</td></tr>
+<tr><td>硬件规格</td>
+<td>功耗</td>
+<td>静态14.0W；最大28.8W</td></tr>
+<tr><td>硬件规格</td>
+<td>防雷等级</td>
+<td>网口：2.5kV/0.5kV；PoF：4kV/2kV</td></tr>
+<tr><td>接口参数</td>
+<td>网络侧接口</td>
+<td>XGS-PON（SC/UPC）</td></tr>
+<tr><td>接口参数</td>
+<td>PON标准</td>
+<td>G.9807.1（Class N1/N2）</td></tr>
+<tr><td>接口参数</td>
+<td>PON速率</td>
+<td>上下行 9.953 Gbit/s</td></tr>
+<tr><td>接口参数</td>
+<td>光功率</td>
+<td>接收-28dBm；过载-9dBm</td></tr>
+<tr><td>接口参数</td>
+<td>用户侧接口</td>
+<td>1×GE（RJ45）</td></tr>
+<tr><td>接口参数</td>
+<td>以太特性</td>
+<td>10/100/1000M自适应，支持VLAN Tag/透传/过滤</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>协议</td>
+<td>2.4G：b/g/n/ax/be；5G：a/n/ac/ax/be</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>工作频段</td>
+<td>2.4G ISM；5G（U-NII-1/2A/3）</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>空间流</td>
+<td>2.4G：4×4 MIMO；5G：4×4 MIMO</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>频宽</td>
+<td>20/40/80/160MHz</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>空口速率</td>
+<td>2.4G：1378Mbps；5G：5765Mbps</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>发射功率</td>
+<td>最大29dBm</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>天线</td>
+<td>内置；2.4G 4dBi / 5G 6dBi</td></tr>
+<tr><td>Wi-Fi参数</td>
+<td>容量</td>
+<td>每射频8 SSID；整机256用户</td></tr>
+<tr><td>WLAN特性</td>
+<td>802.11标准</td>
+<td>支持802.11be，兼容a/b/g/n/ac/ax</td></tr>
+<tr><td>WLAN特性</td>
+<td>调制技术</td>
+<td>4096-QAM及向下兼容</td></tr>
+<tr><td>WLAN特性</td>
+<td>OFDMA</td>
+<td>多用户并发调度</td></tr>
+<tr><td>WLAN特性</td>
+<td>MU-MIMO</td>
+<td>多用户空间复用</td></tr>
+<tr><td>WLAN特性</td>
+<td>Multi-RU</td>
+<td>细粒度资源分配</td></tr>
+<tr><td>WLAN特性</td>
+<td>Beamforming</td>
+<td>定向增强信号</td></tr>
+<tr><td>WLAN特性</td>
+<td>BSS Color</td>
+<td>抗同频干扰</td></tr>
+<tr><td>WLAN特性</td>
+<td>数据聚合</td>
+<td>A-MPDU / A-MSDU</td></tr>
+<tr><td>WLAN特性</td>
+<td>DFS</td>
+<td>动态频率选择</td></tr>
+<tr><td>WLAN特性</td>
+<td>WMM</td>
+<td>业务优先级调度</td></tr>
+<tr><td>WLAN特性</td>
+<td>信道管理</td>
+<td>自动调优信道与速率</td></tr>
+<tr><td>WLAN特性</td>
+<td>自动扫描</td>
+<td>自动规避干扰</td></tr>
+<tr><td>WLAN特性</td>
+<td>SSID能力</td>
+<td>支持隐藏/中文SSID</td></tr>
+<tr><td>WLAN特性</td>
+<td>智能漫游</td>
+<td>802.11k/v</td></tr>
+<tr><td>网络特性</td>
+<td>VLAN划分</td>
+<td>基于SSID划分VLAN</td></tr>
+<tr><td>网络特性</td>
+<td>上联模式</td>
+<td>tagged / untagged</td></tr>
+<tr><td>网络特性</td>
+<td>DHCP</td>
+<td>DHCP Client</td></tr>
+<tr><td>网络特性</td>
+<td>转发模式</td>
+<td>隧道转发/本地转发</td></tr>
+<tr><td>网络特性</td>
+<td>用户隔离</td>
+<td>同VLAN隔离</td></tr>
+<tr><td>网络特性</td>
+<td>ACL</td>
+<td>IP访问控制</td></tr>
+<tr><td>网络特性</td>
+<td>LLDP</td>
+<td>链路发现</td></tr>
+<tr><td>网络特性</td>
+<td>Telemetry</td>
+<td>状态与体验采集</td></tr>
+<tr><td>网络特性</td>
+<td>IPv6</td>
+<td>支持</td></tr>
+<tr><td>QoS特性</td>
+<td>优先级映射</td>
+<td>上下行流量映射</td></tr>
+<tr><td>QoS特性</td>
+<td>队列调度</td>
+<td>多队列调度</td></tr>
+<tr><td>QoS特性</td>
+<td>用户限速</td>
+<td>单用户带宽限制</td></tr>
+<tr><td>QoS特性</td>
+<td>动态限速</td>
+<td>自适应带宽（抗拥塞）</td></tr>
+<tr><td>QoS特性</td>
+<td>Airtime调度</td>
+<td>基于时间公平调度</td></tr>
+<tr><td>QoS特性</td>
+<td>HQoS</td>
+<td>分层调度（用户/业务/队列）</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>Open / WPA2-PSK / WPA3-SAE</td></tr>
+<tr><td>WLAN安全</td>
+<td>混合模式</td>
+<td>WPA/WPA2、WPA2/WPA3</td></tr>
+<tr><td>WLAN安全</td>
+<td>管理帧保护</td>
+<td>支持</td></tr>
+<tr><td>维护特性</td>
+<td>集中管理</td>
+<td>OLT统一管理（FIT AP）</td></tr>
+<tr><td>维护特性</td>
+<td>自动上线</td>
+<td>即插即用</td></tr>
+<tr><td>维护特性</td>
+<td>自动升级</td>
+<td>批量升级</td></tr>
+<tr><td>核心机制</td>
+<td>Airtime原理</td>
+<td>基于空口时间分配资源（非带宽）</td></tr>
+<tr><td>核心机制</td>
+<td>调度逻辑</td>
+<td>优先级 ∝ 1/Airtime占用</td></tr>
+<tr><td>核心机制</td>
+<td>调度效果</td>
+<td>实现时间公平，抑制低速终端</td></tr>
+<tr><td>核心机制</td>
+<td>局限性</td>
+<td>不区分业务，不限制流量大小</td></tr>
+<tr><td>QoS</td>
+<td>优先级映射</td>
+<td>上行报文优先级映射、下行流量映射</td></tr>
+<tr><td>QoS</td>
+<td>队列能力</td>
+<td>队列映射与调度</td></tr>
+<tr><td>QoS</td>
+<td>带宽控制</td>
+<td>基于每用户的带宽限制</td></tr>
+<tr><td>QoS</td>
+<td>自适应</td>
+<td>自适应带宽管理</td></tr>
+<tr><td>QoS</td>
+<td>Airtime</td>
+<td>支持Airtime调度</td></tr>
+<tr><td>QoS</td>
+<td>空口调度</td>
+<td>空口HQoS层次化调度</td></tr>
+<tr><td>维护</td>
+<td>集中管理</td>
+<td>FIT AP模式支持通过OLT集中管理维护</td></tr>
+<tr><td>维护</td>
+<td>开局部署</td>
+<td>AP自动上线、自动加载配置、即插即用</td></tr>
+<tr><td>维护</td>
+<td>升级</td>
+<td>批量自动升级</td></tr>
+<tr><td>维护</td>
+<td>运维方式</td>
+<td>系统状态告警、OMCI / Web UI / TR069</td></tr>
+<tr><td>维护</td>
+<td>软件特性</td>
+<td>可变长OMCI、软件双备份和回滚</td></tr>
+<tr><td>维护</td>
+<td>诊断</td>
+<td>IPTV视频质量诊断（eMDI）</td></tr>
+<tr><td>维护</td>
+<td>风险控制</td>
+<td>OLT发起的流氓ONU检测和隔离</td></tr>
+<tr><td>维护</td>
+<td>测试</td>
+<td>PPPoE / DHCP仿真测试</td></tr>
+<tr><td>维护</td>
+<td>一键诊断</td>
+<td>Web一键诊断、环网检测</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>Open System</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>WPA2-PSK</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>WPA3-SAE</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>WPA-WPA2混合认证</td></tr>
+<tr><td>WLAN安全</td>
+<td>认证方式</td>
+<td>WPA2-WPA3混合认证</td></tr>
+<tr><td>WLAN安全</td>
+<td>管理帧保护</td>
+<td>Wi‑Fi管理帧加密</td></tr>
+<tr><td>安全防护</td>
+<td>攻击防护</td>
+<td>防DOS攻击</td></tr>
+<tr><td>安全防护</td>
+<td>地址控制</td>
+<td>MAC/IP地址过滤</td></tr>
+<tr><td>安全防护</td>
+<td>绑定</td>
+<td>静态MAC地址绑定、IP地址绑定</td></tr>
+<tr><td>接入认证</td>
+<td>认证方式</td>
+<td>MAC认证、802.1X、MAB认证</td></tr>
+<tr><td>策略控制</td>
+<td>动态下发</td>
+<td>用户策略（VLAN、ACL）动态下发</td></tr>
+<tr><td>组播</td>
+<td>IGMP</td>
+<td>IGMP v2/v3 snooping</td></tr>
+<tr><td>组播</td>
+<td>IGMP代理</td>
+<td>IGMP v2/v3 proxy</td></tr>
+<tr><td>组播</td>
+<td>MLD</td>
+<td>MLD v1/v2 snooping</td></tr>
+<tr><td>三层特性</td>
+<td>接入方式</td>
+<td>PPPoE / 静态IP / DHCP</td></tr>
+<tr><td>三层特性</td>
+<td>NAT</td>
+<td>NAT / NAPT</td></tr>
+<tr><td>三层特性</td>
+<td>端口能力</td>
+<td>端口转发</td></tr>
+<tr><td>三层特性</td>
+<td>应用层网关</td>
+<td>ALG、UPnP</td></tr>
+<tr><td>三层特性</td>
+<td>DNS</td>
+<td>DDNS / DNS Server / DNS Client</td></tr>
+<tr><td>三层特性</td>
+<td>双栈</td>
+<td>IPv6 / IPv4双栈、DS-Lite</td></tr>
+<tr><td>三层特性</td>
+<td>路由</td>
+<td>静态路由 / 默认路由</td></tr>
+<tr><td>三层特性</td>
+<td>WAN业务</td>
+<td>一个WAN承载多业务</td></tr>
+<tr><td>保护</td>
+<td>Type B</td>
+<td>Type B单归属、Type B双归属</td></tr>
+<tr><td>安规标准</td>
+<td>标准</td>
+<td>GB 4943.1</td></tr>
+<tr><td>电磁兼容</td>
+<td>标准</td>
+<td>GB 9254</td></tr>
+<tr><td>IEEE标准</td>
+<td>标准</td>
+<td>IEEE 802.11a/b/g/n/d/e/ac/ax/be/h/k/v/w</td></tr>
+<tr><td>安全标准</td>
+<td>标准</td>
+<td>802.11i、WPA、WPA2、WPA2-Enterprise、WPA2-PSK、WPA3、802.1X、AES、TKIP、Open</td></tr>
+<tr><td>其他</td>
+<td>认证</td>
+<td>CQC</td></tr>
+</tbody></table></div>
+        
+        <div class="pagination"><a href="07-pol-wireless-specs.html" class="page-link">← 华为POL无线规格</a><a href="index.html" class="page-link">目录</a><a href="09-esight-alarms.html" class="page-link">华为eSight支持告警 →</a></div>
+    </main>
+    
+    <footer style="text-align: center; padding: 30px; color: #6b7280; font-size: 0.9rem;">
+        <p>PON Network Portal | 行业分析 - 华为</p>
+    </footer>
+</body>
+</html>
